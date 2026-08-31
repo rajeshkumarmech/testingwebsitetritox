@@ -3231,7 +3231,7 @@ function ContactPage() {
 
 
       {/* Final CTA */}
-      <section className="contact-final-cta">
+      {/* <section className="contact-final-cta">
         <div className="container contact-final-content">
           <div>
             <p className="contact-light-eyebrow">
@@ -3254,7 +3254,7 @@ function ContactPage() {
             Start Your Free Trial →
           </Link>
         </div>
-      </section>
+      </section> */}
        {/* About Hero */}
       <section className="about-hero">
         <div className="about-hero-grid-pattern" />

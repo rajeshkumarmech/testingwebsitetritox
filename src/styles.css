@@ -6695,8 +6695,8 @@ button {
   padding: 92px 0;
   overflow: hidden;
   color: var(--white);
-  background:
-    radial-gradient(
+  background:#1e88e5;
+    /* radial-gradient(
       circle at 92% 10%,
       rgba(253, 216, 53, 0.26),
       transparent 20%
@@ -6706,7 +6706,7 @@ button {
       rgba(129, 199, 132, 0.18),
       transparent 22%
     ),
-    linear-gradient(135deg, #063675 0%, #0d5aa6 62%, #237d38 140%);
+    linear-gradient(135deg, #063675 0%, #0d5aa6 62%, #237d38 140%); */
 }
 
 .success-final-cta::before {
@@ -9388,8 +9388,8 @@ button {
   padding: 90px 0;
   overflow: hidden;
   color: #ffffff;
-  background:
-    radial-gradient(
+  background:#1e88e5;
+    /* radial-gradient(
       circle at 92% 10%,
       rgba(253, 216, 53, 0.28),
       transparent 21%
@@ -9399,7 +9399,7 @@ button {
       rgba(129, 199, 132, 0.18),
       transparent 22%
     ),
-    linear-gradient(135deg, #063675 0%, #0d5aa6 65%, #237d38 145%);
+    linear-gradient(135deg, #063675 0%, #0d5aa6 65%, #237d38 145%); */
 }
 
 .contact-final-cta::before {
