@@ -904,8 +904,8 @@ button {
 
 .footer {
   padding: 65px 0 24px;
-  color: rgba(255, 255, 255, 0.72);
-  background: #1e88e5;
+  color: #40516b;
+  background: #ffffff;
 }
 
 .footer-content {
@@ -915,9 +915,22 @@ button {
   gap: 40px;
 }
 
+/* COMPANY NAME */
+.footer-brand {
+  color: #06162e;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.footer-brand span {
+  color: #74c900;
+}
+
 .footer-content p {
   max-width: 360px;
   margin-top: 17px;
+  color: #40516b;
   font-size: 0.87rem;
   line-height: 1.75;
 }
@@ -928,19 +941,21 @@ button {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.78);
+  color: #06162e;
   font-size: 0.84rem;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--yellow);
+  color: #f5b82e;
 }
 
 .footer-bottom {
   margin-top: 42px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid #d9e2ec;
+  color: #40516b;
   font-size: 0.75rem;
 }
 
