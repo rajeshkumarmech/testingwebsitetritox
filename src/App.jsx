@@ -794,37 +794,39 @@ function ServicesPage() {
       shortName: "AZ",
       name: "AgencyZoom",
       className: "agencyzoom-logo",
+      logo: "/images/crm/Agency_Zoom.png",
     },
     {
       shortName: "LG",
       name: "Little Giant",
       className: "little-giant-logo",
+      logo: "/images/crm/Little_Giant.png",
     },
     {
       shortName: "AM",
       name: "Agency MVP",
       className: "agency-mvp-logo",
+      logo: "/images/crm/Agency_MVP.png",
     },
     {
       shortName: "EZ",
       name: "EZLynx",
       className: "ezlynx-logo",
+      logo: "/images/crm/EZLynx.png",
     },
     {
       shortName: "AC",
       name: "Agent CRM",
       className: "agent-crm-logo",
+      logo: "/images/crm/Agent_CRM.png",
     },
     {
       shortName: "AMS",
       name: "AMS360",
       className: "ams-logo",
+      logo: "/images/crm/AMS_360.png",
     },
-    {
-      shortName: "HS",
-      name: "HawkSoft",
-      className: "hawksoft-logo",
-    },
+    
   ];
 
   return (
@@ -966,9 +968,19 @@ function ServicesPage() {
                 key={platform.name}
                 className={`crm-platform-card ${platform.className}`}
               >
-                <span className="crm-platform-mark">
-                  {platform.shortName}
-                </span>
+                <div className="crm-platform-logo-wrapper">
+                  {platform.logo ? (
+                    <img
+                      src={platform.logo}
+                      alt={`${platform.name} logo`}
+                      className="crm-platform-logo-image"
+                    />
+                  ) : (
+                    <span className="crm-platform-mark">
+                      {platform.shortName}
+                    </span>
+                  )}
+                </div>
 
                 <strong>{platform.name}</strong>
               </article>
@@ -978,7 +990,9 @@ function ServicesPage() {
           <div className="crm-details-grid">
             <article className="crm-detail-card">
               <span className="crm-detail-icon">01</span>
+
               <h3>Lead Information Management</h3>
+
               <p>
                 Maintain organized lead records with accurate customer
                 information and consistent data handling across the CRM
@@ -988,7 +1002,9 @@ function ServicesPage() {
 
             <article className="crm-detail-card">
               <span className="crm-detail-icon">02</span>
+
               <h3>Pipeline and Opportunity Updates</h3>
+
               <p>
                 Keep pipeline stages, opportunities, and sales activity updated
                 so agency teams have a clearer view of active business.
@@ -997,7 +1013,9 @@ function ServicesPage() {
 
             <article className="crm-detail-card">
               <span className="crm-detail-icon">03</span>
+
               <h3>Quote Documentation Support</h3>
+
               <p>
                 Help maintain quote notes, supporting documentation, and
                 record details for more organized follow-up workflows.
@@ -1006,7 +1024,9 @@ function ServicesPage() {
 
             <article className="crm-detail-card">
               <span className="crm-detail-icon">04</span>
+
               <h3>Record Accuracy</h3>
+
               <p>
                 Support cleaner CRM records to help reduce missing information,
                 improve visibility, and strengthen day-to-day sales operations.
@@ -1032,10 +1052,13 @@ function ServicesPage() {
         <div className="container operational-grid">
           <div className="operational-visual">
             <div className="operation-panel operation-panel-main">
-              <span className="operation-panel-label">TRITOX OPERATIONS</span>
+              <span className="operation-panel-label">
+                TRITOX OPERATIONS
+              </span>
 
               <div className="operation-bar">
                 <span className="bar-label">Documentation</span>
+
                 <div className="bar-track">
                   <span className="bar-fill green-fill" />
                 </div>
@@ -1043,6 +1066,7 @@ function ServicesPage() {
 
               <div className="operation-bar">
                 <span className="bar-label">Process execution</span>
+
                 <div className="bar-track">
                   <span className="bar-fill yellow-fill" />
                 </div>
@@ -1050,6 +1074,7 @@ function ServicesPage() {
 
               <div className="operation-bar">
                 <span className="bar-label">Daily consistency</span>
+
                 <div className="bar-track">
                   <span className="bar-fill blue-fill" />
                 </div>
@@ -1058,6 +1083,7 @@ function ServicesPage() {
 
             <div className="operation-floating-card">
               <span>✓</span>
+
               <div>
                 <strong>Reliable Support</strong>
                 <small>Built for agency operations</small>
