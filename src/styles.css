@@ -3863,8 +3863,8 @@ button {
   padding: 110px 0;
   overflow: hidden;
   color: var(--white);
-  background:
-    radial-gradient(
+  background:#1e88e5;
+    /* radial-gradient(
       circle at 92% 9%,
       rgba(253, 216, 53, 0.27),
       transparent 18%
@@ -3880,7 +3880,7 @@ button {
       #063675 40%,
       #1261a8 75%,
       #1d7737 140%
-    );
+    ); */
 }
 
 .comparison-container {
@@ -4074,8 +4074,8 @@ button {
   padding: 92px 0;
   overflow: hidden;
   color: var(--white);
-  background:
-    radial-gradient(
+  background:white;
+    /* radial-gradient(
       circle at 91% 10%,
       rgba(253, 216, 53, 0.3),
       transparent 21%
@@ -4085,7 +4085,7 @@ button {
       rgba(129, 199, 132, 0.23),
       transparent 22%
     ),
-    var(--main-blue);
+    var(--main-blue); */
 }
 
 .pricing-final-cta::before {
@@ -4109,12 +4109,11 @@ button {
 }
 
 .pricing-light-eyebrow {
-  color: var(--yellow-light);
+  color: #f5b82e;
 }
-
 .pricing-final-cta h2 {
   max-width: 700px;
-  color: var(--white);
+  color: var(--deep-blue);
   font-family: "Manrope", sans-serif;
   font-size: clamp(2rem, 4vw, 3.15rem);
   line-height: 1.15;
@@ -4123,7 +4122,7 @@ button {
 .pricing-final-cta p:not(.eyebrow) {
   max-width: 660px;
   margin-top: 18px;
-  color: rgba(255, 255, 255, 0.84);
+  color: var(--deep-blue);
   font-size: 0.96rem;
   line-height: 1.8;
 }
@@ -4155,14 +4154,14 @@ button {
 }
 
 .pricing-trial-button:hover {
-  background: var(--white);
+  background: var(--yellow);
   transform: translateY(-4px);
 }
 
 .pricing-services-button {
-  border: 1px solid rgba(255, 255, 255, 0.58);
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--deep-blue);
+  color: white;
+  background: green;
 }
 
 .pricing-services-button:hover {
@@ -7892,12 +7891,7 @@ button {
 }
 
 .onboarding-intro-content h2 {
-  background: linear-gradient(
-    90deg,
-    var(--deep-blue),
-    var(--main-blue),
-    var(--green)
-  );
+  background: #1e88e5;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -8265,24 +8259,8 @@ button {
   padding: 110px 0;
   overflow: hidden;
   color: #ffffff;
-  background:
-    radial-gradient(
-      circle at 92% 8%,
-      rgba(253, 216, 53, 0.28),
-      transparent 18%
-    ),
-    radial-gradient(
-      circle at 7% 90%,
-      rgba(129, 199, 132, 0.2),
-      transparent 22%
-    ),
-    linear-gradient(
-      135deg,
-      #04285b 0%,
-      #063675 40%,
-      #1261a8 78%,
-      #1c7437 145%
-    );
+  background:#1e88e5;
+    
 }
 
 .onboarding-workflow-container {
