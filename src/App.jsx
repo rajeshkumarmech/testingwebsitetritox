@@ -5,14 +5,14 @@ const navigationItems = [
   { label: "Home", path: "/" },
   { label: "Services", path: "/services" },
   { label: "The Tritox Advantage", path: "/tritox-advantage" },
-  { label: "Quote Team Impact", path: "/quote-team-impact" },
+  { label: "Resource", path: "/quote-team-impact" },
   { label: "Pricing", path: "/pricing" },
   {label:"SuccessStoryPage", path: "/success-stories"},
-  {
-    label:"OnboardingPage",
-    path: "/onboarding"
-  },
-  { label: "About", path: "/about" },
+  // {
+  //   label:"OnboardingPage",
+  //   path: "/onboarding"
+  // },
+  // { label: "About", path: "/about" },
   { label: "Contact Us", path: "/contact" },
 ];
 
@@ -45,8 +45,9 @@ function Navbar() {
   );
 }
 
-
 function SuccessStoryPage() {
+  const [openFaq, setOpenFaq] = useState(null);
+
   const testimonials = [
     {
       rating: "5.0",
@@ -79,6 +80,99 @@ function SuccessStoryPage() {
       service: "Quote Preparation",
     },
   ];
+
+  const faqs = [
+    {
+      id: 1,
+      question:
+        "What is the process for onboarding the Tritox team with my agency?",
+      answers: [
+        "Tritox team members may already hold existing Farmers Dashboard IDs and have completed the required background verification checks.",
+        "To link Tritox with your agency using an existing Farmers Dashboard ID held by one of our team members, you can initiate the appropriate access setup through Farmers APEX → MASS (My Agent Self Service). The required documentation, system access, and Cloud PC configuration are then completed before Tritox aligns with your agency’s workflow and begins support.",
+      ],
+    },
+    {
+      id: 2,
+      question:
+        "How does Tritox safeguard my agency’s systems and customer data?",
+      answers: [
+        "Tritox operates through agency-authorized, individual system access using a Farmers-approved Microsoft Windows 365 Cloud PC environment.",
+        "Each team member is granted access only to the systems and information required for their assigned responsibilities, helping maintain clear access control, confidentiality, and secure handling of agency and customer data.",
+      ],
+    },
+    {
+      id: 3,
+      question: "How does Tritox maintain quality and accuracy?",
+      answers: [
+        "Tritox maintains quality through your agency’s defined quoting standards, structured review procedures, and our proprietary quality-check tool used after quote preparation.",
+        "Each completed quote is reviewed for data accuracy, coverage alignment, and documentation completeness before the lead advances to the next CRM stage.",
+      ],
+    },
+    {
+      id: 4,
+      question:
+        "If my agency has a lower quote volume, how can Tritox still add value?",
+      answers: [
+        "Even at lower quote volumes, Tritox can take on backend quoting workload so producers spend less time on preparation, respond to customers more quickly, and focus more on prospect engagement and follow-up.",
+        "As producer capacity improves, the agency can pursue higher lead volume with greater confidence, knowing dedicated quote support is available to manage the increased workload.",
+      ],
+    },
+    {
+      id: 5,
+      question:
+        "Will I need to change my existing systems or workflow to work with Tritox?",
+      answers: [
+        "No. Tritox is designed to work within your existing systems, quoting standards, and operating procedures.",
+        "Our pre-trained team aligns with your CRM, Farmers APEX, ALTA, PolicyCenter, documentation requirements, and internal workflow so support can be integrated without disrupting the way your agency already operates.",
+      ],
+    },
+    {
+      id: 6,
+      question:
+        "Will Tritox support my existing team, or is it intended to replace in-house staff?",
+      answers: [
+        "Tritox is designed to complement and extend your existing team, not replace in-house staff.",
+        "Our support helps free producer time from backend responsibilities so they can remain focused on customers, relationships, follow-ups, and new business.",
+      ],
+    },
+    {
+      id: 7,
+      question:
+        "Does Farmers Insurance allow agencies to outsource quoting support to teams in other countries?",
+      answers: [
+        "Farmers allows approved international staff to support applicable non-licensed, non-appointed activities through authorized system access. Tritox operates from India, which is one of the countries approved by Farmers for international staff access.",
+        "Farmers’ approved countries currently include Argentina, Brazil, Colombia, India, Mexico, and the Philippines.",
+      ],
+    },
+    {
+      id: 8,
+      question: "Do you offer a service agreement?",
+      answers: [
+        "If your agency requires a contract or NDA, Tritox can provide or sign the required agreement before support begins.",
+      ],
+    },
+    {
+      id: 9,
+      question:
+        "What happens if my agency’s quote volume increases or changes?",
+      answers: [
+        "As your quote volume changes, Tritox adjusts trained, dedicated support capacity to match your agency’s demand.",
+        "This helps maintain rapid quote preparation, consistent workflow execution, and service continuity without placing additional administrative workload on your producers.",
+      ],
+    },
+    {
+      id: 10,
+      question:
+        "Can Tritox align support with my agency’s preferred business hours and time zone?",
+      answers: [
+        "Yes. Tritox can coordinate support around your agency’s preferred business hours and time zone, helping maintain consistent availability and workflow continuity within your established operating schedule.",
+      ],
+    },
+  ];
+
+  const toggleFaq = (index) => {
+    setOpenFaq((currentFaq) => (currentFaq === index ? null : index));
+  };
 
   return (
     <main className="success-page">
@@ -321,7 +415,7 @@ function SuccessStoryPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* First CTA */}
       <section className="success-final-cta">
         <div className="container success-final-cta-content">
           <div>
@@ -346,6 +440,123 @@ function SuccessStoryPage() {
               View Our Services
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <div className="container">
+          <div className="faq-heading">
+            <div>
+              <p className="eyebrow">Frequently Asked Questions</p>
+
+              <h2>Clear Answers About How Tritox Supports Your Agency</h2>
+            </div>
+
+            <p>
+              Learn more about onboarding, systems access, quote preparation
+              support, data handling, quality procedures, pricing flexibility,
+              and agency workflow alignment.
+            </p>
+          </div>
+
+          <div className="faq-layout">
+            <aside className="faq-side-card">
+              <span className="faq-side-card-label">TRITOX SUPPORT</span>
+
+              <h3>Have questions about your agency workflow?</h3>
+
+              <p>
+                Our team can help you understand how Tritox can align with your
+                quote preparation, CRM, and operational support requirements.
+              </p>
+
+              <div className="faq-side-card-points">
+                <span>
+                  <i>✓</i>
+                  Agency workflow alignment
+                </span>
+
+                <span>
+                  <i>✓</i>
+                  Dedicated support capacity
+                </span>
+
+                <span>
+                  <i>✓</i>
+                  Flexible operational support
+                </span>
+              </div>
+
+              <Link to="/contact" className="faq-contact-button">
+                Contact Our Team →
+              </Link>
+            </aside>
+
+            <div className="faq-list">
+              {faqs.map((faq, index) => {
+                const isOpen = openFaq === index;
+
+                return (
+                  <article
+                    key={faq.id}
+                    className={`faq-item ${isOpen ? "faq-open" : ""}`}
+                  >
+                    <button
+                      type="button"
+                      className="faq-question"
+                      onClick={() => toggleFaq(index)}
+                      aria-expanded={isOpen}
+                    >
+                      <span className="faq-number">
+                        {String(faq.id).padStart(2, "0")}
+                      </span>
+
+                      <span className="faq-question-text">
+                        {faq.question}
+                      </span>
+
+                      <span className="faq-toggle-icon">
+                        {isOpen ? "−" : "+"}
+                      </span>
+                    </button>
+
+                    <div className="faq-answer">
+                      <div className="faq-answer-inner">
+                        {faq.answers.map((answer, answerIndex) => (
+                          <p key={answerIndex}>{answer}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Contact CTA */}
+      <section className="contact-final-cta">
+        <div className="container contact-final-content">
+          <div>
+            <p className="contact-light-eyebrow">Ready to Get Started?</p>
+
+            <h2>
+              Build a more efficient quote preparation workflow for your
+              agency.
+            </h2>
+
+            <p>
+              Start your free trial and discover how Tritox can help your
+              agency expand backend capacity while keeping producers focused on
+              customers and new business.
+            </p>
+          </div>
+
+          <Link to="/contact" className="contact-final-button">
+            Start Your Free Trial →
+          </Link>
         </div>
       </section>
     </main>
@@ -968,6 +1179,7 @@ function AdvantagePage() {
         "Authorized Farmers APEX access",
         "CRM lead review",
         "Customer information validation",
+        " AgencyZoom, Little Giant, Agency MVP, EZLynx, Agent CRM, AMS360, and HawkSoft"
       ],
       systems: [
         "AgencyZoom",
@@ -1126,65 +1338,65 @@ function AdvantagePage() {
       </section>
 
       {/* Workflow Section */}
-      <section className="workflow-section">
-        <div className="workflow-grid-pattern" />
-        <div className="workflow-circle workflow-circle-one" />
-        <div className="workflow-circle workflow-circle-two" />
+     <section className="workflow-section">
+  <div className="workflow-grid-pattern" />
+  <div className="workflow-circle workflow-circle-one" />
+  <div className="workflow-circle workflow-circle-two" />
 
-        <div className="container workflow-container">
-          <div className="workflow-heading">
-            <p className="eyebrow workflow-eyebrow">Workflow</p>
+  <div className="container workflow-container">
+    <div className="workflow-heading">
+      <p className="eyebrow workflow-eyebrow">Workflow</p>
 
-            <h2>
-              A Structured Quote Preparation Process Integrated With Your
-              Agency’s Existing Systems
-            </h2>
+      <h2>
+        A Structured Quote Preparation Process Integrated With Your Agency’s
+        Existing Systems
+      </h2>
 
-            <p>
-              Our workflow integrates with your agency’s existing systems,
-              supporting the quoting lifecycle from CRM lead access through
-              quote generation, documentation, and workflow completion.
-            </p>
+      <p>
+        Our workflow integrates with your agency’s existing systems,
+        supporting the quoting lifecycle from CRM lead access through quote
+        generation, documentation, and workflow completion.
+      </p>
+    </div>
+
+    <div className="workflow-timeline">
+      {workflowSteps.map((step, index) => (
+        <article
+          key={step.number}
+          className={`workflow-card ${step.color}`}
+        >
+          <div className="workflow-card-top">
+            <span className="workflow-number">{step.number}</span>
+
+            <span className="workflow-status">
+              {index === workflowSteps.length - 1
+                ? "Complete"
+                : "Workflow Step"}
+            </span>
           </div>
 
-          <div className="workflow-timeline">
-            {workflowSteps.map((step, index) => (
-              <article
-                key={step.number}
-                className={`workflow-card ${step.color}`}
-              >
-                <div className="workflow-card-top">
-                  <span className="workflow-number">{step.number}</span>
+          <h3>{step.title}</h3>
 
-                  <span className="workflow-status">
-                    {index === workflowSteps.length - 1
-                      ? "Complete"
-                      : "Workflow Step"}
-                  </span>
-                </div>
+          <p className="workflow-description">{step.description}</p>
 
-                <h3>{step.title}</h3>
-
-                <p>{step.description}</p>
-
-                <div className="workflow-point-list">
-                  {step.points.map((point) => (
-                    <span key={point}>
-                      <i>✓</i>
-                      {point}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="workflow-system-list">
-                  {step.systems.map((system) => (
-                    <span key={system}>{system}</span>
-                  ))}
-                </div>
-              </article>
+          <div className="workflow-point-list">
+            {step.points.map((point) => (
+              <span key={point}>
+                <i>✓</i>
+                {point}
+              </span>
             ))}
           </div>
 
+          {/* <div className="workflow-system-list">
+            {step.systems.map((system) => (
+              <span key={system}>{system}</span>
+            ))}
+          </div> */}
+        </article>
+      ))}
+      
+    </div>
           <div className="workflow-bottom-card">
             <div className="workflow-bottom-left">
               <span className="workflow-complete-icon">✓</span>
@@ -1261,6 +1473,96 @@ function ImpactPage() {
     "Follow-Up",
     "Business Close",
   ];
+    const approvedCountries = [
+    "Argentina",
+    "Brazil",
+    "Colombia",
+    "India",
+    "Mexico",
+    "Philippines",
+  ];
+
+  const onboardingSteps = [
+    {
+      number: "01",
+      title: "Confirm Eligibility & Compliance",
+      description:
+        "The international team member must reside in an approved country. The agency is responsible for confirming work eligibility, completing applicable background checks, and ensuring assigned duties remain within permitted non-licensed activities.",
+      details: [
+        "Approved-country eligibility",
+        "Work authorization confirmation",
+        "Background verification",
+        "Non-licensed duty alignment",
+      ],
+      type: "onboarding-blue-step",
+    },
+    {
+      number: "02",
+      title: "Link Your Agency to an Existing Farmers ID",
+      description:
+        "If an existing international staff member requires dual-code system access, the agent or district manager can submit the request through MASS (My Agent Self Service).",
+      details: [
+        "MASS request submission",
+        "DocuSign link received by email",
+        "Required information completed",
+        "Farmers review and approval",
+      ],
+      type: "onboarding-green-step",
+    },
+    {
+      number: "03",
+      title: "Add a New International Staff Member",
+      description:
+        "Using MASS (My Agent Self Service), the agency can add a new international staff member and begin the required access and onboarding process.",
+      details: [
+        "New staff request initiated",
+        "Background review completed",
+        "DocuSign documents completed",
+        "Farmers review and approval",
+      ],
+      type: "onboarding-yellow-step",
+    },
+    {
+      number: "04",
+      title: "Configure the Farmers Access Environment",
+      description:
+        "Approved staff access Farmers systems through a U.S.-provisioned Microsoft Windows 365 Cloud PC with the required cyber protection in place.",
+      details: [
+        "Windows 365 Cloud PC",
+        "Authorized access environment",
+        "Required cyber protection",
+        "Active Farmers workflow access",
+      ],
+      type: "onboarding-blue-step",
+    },
+    {
+      number: "05",
+      title: "Create Agency CRM Access",
+      description:
+        "Once Farmers system setup is complete, the agency creates a dedicated CRM account for the assigned Tritox team member.",
+      details: [
+        "Dedicated CRM account",
+        "Agency-defined access level",
+        "Role-based responsibilities",
+        "CRM workflow alignment",
+      ],
+      type: "onboarding-green-step",
+    },
+    {
+      number: "06",
+      title: "Establish the Payment Method",
+      description:
+        "The agency can establish the preferred payment method before ongoing production support begins.",
+      details: [
+        "Gusto",
+        "Wise",
+        "Wire transfer",
+        "Rippling or agreed payment option",
+      ],
+      type: "onboarding-yellow-step",
+    },
+  ];
+
 
   const growthSteps = [
     {
@@ -1649,6 +1951,377 @@ function ImpactPage() {
           </div>
         </div>
       </section>
+        <PageBanner
+        eyebrow="International Staff Onboarding"
+        title="Authorized International Staff Setup for Farmers Agency Support"
+        description="A structured onboarding process for approved international staff supporting Farmers agency operations through authorized access and defined responsibilities."
+      />
+
+      {/* Onboarding introduction */}
+      <section className="section onboarding-intro-section">
+        <div className="onboarding-intro-shape onboarding-intro-shape-one" />
+        <div className="onboarding-intro-shape onboarding-intro-shape-two" />
+
+        <div className="container onboarding-intro-container">
+          <div className="onboarding-intro-grid">
+            <div className="onboarding-intro-content">
+              <p className="eyebrow">International Staff Setup</p>
+
+              <h2>
+                A clear process for authorized international agency support.
+              </h2>
+
+              <p>
+                Farmers allows approved international staff to access its
+                systems and support agency operations as non-licensed staff,
+                once the required onboarding and access steps are completed.
+              </p>
+
+              <p>
+                Team members may already hold existing Farmers Dashboard IDs
+                and have completed required background verification checks.
+                Depending on the agency’s requirement, you can either link
+                your agency to an existing staff member’s Farmers ID or add a
+                new international staff member.
+              </p>
+            </div>
+
+            <div className="onboarding-status-card">
+              <div className="onboarding-status-header">
+                <span>ONBOARDING OVERVIEW</span>
+                <i>✓</i>
+              </div>
+
+              <div className="onboarding-status-item">
+                <span className="status-item-number">01</span>
+
+                <div>
+                  <strong>Eligibility & Compliance</strong>
+                  <small>Agency confirms eligibility and assigned duties</small>
+                </div>
+              </div>
+
+              <div className="onboarding-status-item">
+                <span className="status-item-number">02</span>
+
+                <div>
+                  <strong>Farmers System Access</strong>
+                  <small>Existing ID link or new staff request process</small>
+                </div>
+              </div>
+
+              <div className="onboarding-status-item">
+                <span className="status-item-number">03</span>
+
+                <div>
+                  <strong>CRM & Production Setup</strong>
+                  <small>Dedicated CRM access and support readiness</small>
+                </div>
+              </div>
+
+              <div className="onboarding-status-footer">
+                <span>✓</span>
+                Structured agency-led onboarding process
+              </div>
+            </div>
+          </div>
+
+          <div className="approved-countries-card">
+            <div className="approved-countries-icon">✓</div>
+
+            <div>
+              <span className="countries-label">APPROVED COUNTRY ELIGIBILITY</span>
+
+              <h3>International team members must reside in an approved country.</h3>
+
+              <div className="country-list">
+                {approvedCountries.map((country) => (
+                  <span key={country}>{country}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Choose onboarding path */}
+      <section className="section onboarding-path-section">
+        <div className="container">
+          <div className="onboarding-path-heading">
+            <div>
+              <p className="eyebrow">Choose the Appropriate Setup Path</p>
+
+              <h2>
+                Link an existing Farmers ID or add a new international staff
+                member.
+              </h2>
+            </div>
+
+            <p>
+              The onboarding process depends on whether the assigned team
+              member already has an existing Farmers Dashboard ID or requires
+              new access setup.
+            </p>
+          </div>
+
+          <div className="onboarding-path-grid">
+            <article className="onboarding-path-card existing-id-card">
+              <div className="path-card-top">
+                <span className="path-icon">ID</span>
+                <span className="path-label">EXISTING STAFF MEMBER</span>
+              </div>
+
+              <h3>Link Your Agency to an Existing Farmers ID</h3>
+
+              <p>
+                If an existing international staff member requires dual-code
+                system access, the agent or district manager can submit the
+                request through MASS (My Agent Self Service).
+              </p>
+
+              <div className="path-step-list">
+                <div>
+                  <span>01</span>
+                  Submit the dual-code access request through MASS
+                </div>
+
+                <div>
+                  <span>02</span>
+                  Staff member receives a DocuSign link by email
+                </div>
+
+                <div>
+                  <span>03</span>
+                  Required information is completed and submitted
+                </div>
+
+                <div>
+                  <span>04</span>
+                  Farmers reviews and approves system access
+                </div>
+              </div>
+            </article>
+
+            <article className="onboarding-path-card new-staff-card">
+              <div className="path-card-top">
+                <span className="path-icon">+</span>
+                <span className="path-label">NEW INTERNATIONAL STAFF</span>
+              </div>
+
+              <h3>Add a New International Staff Member</h3>
+
+              <p>
+                Using the same MASS (My Agent Self Service) portal, the agency
+                can add a new international staff member and begin the required
+                access and onboarding process.
+              </p>
+
+              <div className="path-step-list">
+                <div>
+                  <span>01</span>
+                  New staff request is initiated through MASS
+                </div>
+
+                <div>
+                  <span>02</span>
+                  Required background review is completed
+                </div>
+
+                <div>
+                  <span>03</span>
+                  Staff member receives DocuSign documents by email
+                </div>
+
+                <div>
+                  <span>04</span>
+                  Documents are submitted for review and approval
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Full onboarding process */}
+      <section className="onboarding-workflow-section">
+        <div className="onboarding-workflow-pattern" />
+        <div className="onboarding-workflow-circle onboarding-circle-one" />
+        <div className="onboarding-workflow-circle onboarding-circle-two" />
+
+        <div className="container onboarding-workflow-container">
+          <div className="onboarding-workflow-heading">
+            <p className="onboarding-light-eyebrow">
+              Onboarding Workflow
+            </p>
+
+            <h2>
+              Six structured steps from eligibility review to production-ready
+              support.
+            </h2>
+
+            <p>
+              This process helps agencies create the required setup,
+              authorized access, CRM responsibilities, and payment arrangements
+              before ongoing support begins.
+            </p>
+          </div>
+
+          <div className="onboarding-steps-grid">
+            {onboardingSteps.map((step) => (
+              <article
+                key={step.number}
+                className={`onboarding-step-card ${step.type}`}
+              >
+                <div className="onboarding-step-top">
+                  <span className="onboarding-step-number">{step.number}</span>
+
+                  <span className="step-status">Setup Step</span>
+                </div>
+
+                <h3>{step.title}</h3>
+
+                <p>{step.description}</p>
+
+                <div className="onboarding-detail-list">
+                  {step.details.map((detail) => (
+                    <span key={detail}>
+                      <i>✓</i>
+                      {detail}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Access environment and CRM */}
+      <section className="section access-environment-section">
+        <div className="container access-environment-grid">
+          <div className="access-visual">
+            <div className="cloud-access-card">
+              <div className="cloud-card-header">
+                <span>AUTHORIZED ACCESS ENVIRONMENT</span>
+                <i>✓</i>
+              </div>
+
+              <div className="cloud-computer-icon">
+                <div className="cloud-icon">☁</div>
+                <div className="computer-icon">▣</div>
+              </div>
+
+              <strong>Windows 365 Cloud PC</strong>
+
+              <p>
+                U.S.-provisioned environment configured for authorized Farmers
+                workflow access.
+              </p>
+
+              <div className="cloud-access-list">
+                <div>
+                  <span>✓</span>
+                  Secure connectivity
+                </div>
+
+                <div>
+                  <span>✓</span>
+                  Defined access responsibilities
+                </div>
+
+                <div>
+                  <span>✓</span>
+                  Controlled workflow environment
+                </div>
+              </div>
+            </div>
+
+            <div className="crm-access-floating-card">
+              <span>CRM</span>
+
+              <div>
+                <strong>Dedicated CRM Access</strong>
+                <small>Role-aligned account setup</small>
+              </div>
+            </div>
+          </div>
+
+          <div className="access-environment-content">
+            <p className="eyebrow">Access & CRM Configuration</p>
+
+            <h2>
+              Configure the working environment before production support
+              begins.
+            </h2>
+
+            <p>
+              Approved staff access Farmers systems through a U.S.-provisioned
+              Microsoft Windows 365 Cloud PC with the required cyber protection
+              in place.
+            </p>
+
+            <p>
+              Once the environment is configured and access is active, the team
+              member can begin working within the authorized Farmers workflow.
+              The agency then creates a dedicated CRM account with access
+              aligned to the assigned Tritox team member’s approved
+              responsibilities.
+            </p>
+
+            <div className="access-check-list">
+              <span>
+                <i>✓</i>
+                Authorized Farmers access environment
+              </span>
+
+              <span>
+                <i>✓</i>
+                Dedicated agency CRM account
+              </span>
+
+              <span>
+                <i>✓</i>
+                Role-based system permissions
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Payment */}
+      <section className="section onboarding-payment-section">
+        <div className="container payment-grid">
+          <div className="payment-content">
+            <p className="eyebrow">Payment Setup</p>
+
+            <h2>Establish the preferred payment method before support begins.</h2>
+
+            <p>
+              The agency can establish the preferred payment method before
+              ongoing production support begins. Payment arrangements are
+              confirmed as part of the onboarding process.
+            </p>
+          </div>
+
+          <div className="payment-method-card">
+            <p className="payment-card-label">PAYMENT OPTIONS</p>
+
+            <div className="payment-method-list">
+              <span>Gusto</span>
+              <span>Wise</span>
+              <span>Wire Transfer</span>
+              <span>Rippling</span>
+              <span>Mutually Agreed Option</span>
+            </div>
+
+            <div className="payment-card-footer">
+              <span>✓</span>
+              Payment arrangement confirmed before ongoing support.
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Final CTA */}
       <section className="impact-final-cta">
@@ -2064,7 +2737,357 @@ function PricingPage() {
   );
 }
 
-function AboutPage() {
+// function AboutPage() {
+//   const values = [
+//     {
+//       number: "01",
+//       title: "Professional Discipline",
+//       description:
+//         "We operate through defined processes, clear accountability, consistent communication, and disciplined execution. Every engagement is managed with a strong focus on operational accuracy, reliability, and adherence to client-specific requirements.",
+//       icon: "✓",
+//     },
+//     {
+//       number: "02",
+//       title: "Insurance Workflow Knowledge",
+//       description:
+//         "Our teams are trained in the systems, terminology, quoting requirements, and operational workflows associated with Farmers Insurance agency operations. This enables Tritox to work effectively within established agency environments with minimal disruption to existing processes.",
+//       icon: "◈",
+//     },
+//     {
+//       number: "03",
+//       title: "Confidentiality & Responsible Access",
+//       description:
+//         "Agency and customer information is handled through authorized, role-based access controls and defined confidentiality procedures. Team members are provided only the access required to perform their assigned responsibilities.",
+//       icon: "⌁",
+//     },
+//     {
+//       number: "04",
+//       title: "Long-Term Operational Alignment",
+//       description:
+//         "Tritox works to align with each client’s systems, standards, and operating model rather than introducing a separate process. This creates stronger continuity between our support functions and the client’s internal operations over time.",
+//       icon: "↗",
+//     },
+//   ];
+
+//   return (
+//     <main className="about-page">
+//       {/* About Hero */}
+//       <section className="about-hero">
+//         <div className="about-hero-grid-pattern" />
+//         <div className="about-hero-circle about-hero-circle-one" />
+//         <div className="about-hero-circle about-hero-circle-two" />
+
+//         <div className="container about-hero-content">
+//           <p className="about-eyebrow">About Tritox Technologies</p>
+
+//           <h1>
+//             Structured Operations.
+//             <span>Reliable Backend Support.</span>
+//           </h1>
+
+//           <p>
+//             Tritox Technologies Private Limited is a specialized business
+//             operations and backend support company serving clients worldwide.
+//           </p>
+//         </div>
+//       </section>
+
+//       {/* Company introduction */}
+//       <section className="section about-introduction-section">
+//         <div className="container about-introduction-grid">
+//           <div className="about-introduction-content">
+//             <p className="eyebrow">Who We Are</p>
+
+//             <h2>
+//               A dependable operations partner built around disciplined
+//               execution.
+//             </h2>
+
+//             <p>
+//               Tritox Technologies Private Limited provides specialized business
+//               operations and backend support services for organizations that
+//               need structured, reliable, and scalable operational assistance.
+//             </p>
+
+//             <p>
+//               Our capabilities include Farmers Insurance Quote Preparation
+//               Support, Real Estate Backend Support, Broker Price Opinions
+//               (BPO), and Data Entry Services—delivered through structured
+//               processes aligned with each client’s operational requirements.
+//             </p>
+
+//             <Link to="/contact" className="about-primary-button">
+//               Speak With Our Team →
+//             </Link>
+//           </div>
+
+//           <div className="about-company-card">
+//             <div className="company-card-header">
+//               <span>TRITOX TECHNOLOGIES</span>
+//               <i>●</i>
+//             </div>
+
+//             <div className="company-card-main">
+//               <div className="company-monogram">T</div>
+
+//               <div>
+//                 <h3>Tritox Technologies Private Limited</h3>
+//                 <p>Business Operations & Backend Support</p>
+//               </div>
+//             </div>
+
+//             <div className="company-info-grid">
+//               <div>
+//                 <small>Founded</small>
+//                 <strong>2023</strong>
+//               </div>
+
+//               <div>
+//                 <small>Headquartered</small>
+//                 <strong>Tamil Nadu, India</strong>
+//               </div>
+
+//               <div>
+//                 <small>Structure</small>
+//                 <strong>Private Limited Company</strong>
+//               </div>
+
+//               <div>
+//                 <small>Service Model</small>
+//                 <strong>Global Client Support</strong>
+//               </div>
+//             </div>
+
+//             <div className="company-card-footer">
+//               <span>✓</span>
+//               Structured processes aligned with client operations.
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Operating model */}
+//       <section className="about-operating-section">
+//         <div className="container about-operating-grid">
+//           <div className="operating-visual-card">
+//             <div className="operating-card-top">
+//               <span>TRITOX OPERATING MODEL</span>
+//               <i>✓</i>
+//             </div>
+
+//             <div className="operating-flow">
+//               <div className="operating-flow-item">
+//                 <span>01</span>
+//                 <p>Defined Process</p>
+//               </div>
+
+//               <i className="operating-flow-line" />
+
+//               <div className="operating-flow-item">
+//                 <span>02</span>
+//                 <p>Responsible Access</p>
+//               </div>
+
+//               <i className="operating-flow-line" />
+
+//               <div className="operating-flow-item">
+//                 <span>03</span>
+//                 <p>Consistent Execution</p>
+//               </div>
+//             </div>
+
+//             <div className="operating-card-bottom">
+//               <div>
+//                 <strong>Client-Aligned</strong>
+//                 <small>Built around established workflows</small>
+//               </div>
+
+//               <span>→</span>
+//             </div>
+//           </div>
+
+//           <div className="about-operating-content">
+//             <p className="about-light-eyebrow">Built for Consistency</p>
+
+//             <h2>
+//               A practical operating model aligned with client systems and
+//               standards.
+//             </h2>
+
+//             <p>
+//               Founded in 2023 in Tamil Nadu, India, Tritox has built its
+//               operating model around disciplined execution, domain expertise,
+//               secure information handling, and consistent process alignment.
+//             </p>
+
+//             <p>
+//               As a registered Private Limited Company, we operate with a strong
+//               emphasis on corporate accountability, confidentiality,
+//               operational consistency, and responsible business practices.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* What we stand for */}
+//       <section className="section values-section">
+//         <div className="container">
+//           <div className="values-heading">
+//             <div>
+//               <p className="eyebrow">What We Stand For</p>
+
+//               <h2>
+//                 Professional support delivered through clarity, discipline, and
+//                 responsible execution.
+//               </h2>
+//             </div>
+
+//             <p>
+//               Our approach is built to support long-term operational alignment
+//               and reliable day-to-day collaboration with every client.
+//             </p>
+//           </div>
+
+//           <div className="values-grid">
+//             {values.map((value) => (
+//               <article key={value.number} className="value-card">
+//                 <div className="value-card-top">
+//                   <span className="value-icon">{value.icon}</span>
+//                   <span className="value-number">{value.number}</span>
+//                 </div>
+
+//                 <h3>{value.title}</h3>
+
+//                 <p>{value.description}</p>
+
+//                 <span className="value-card-line" />
+//               </article>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Security section */}
+//       <section className="section security-section">
+//         <div className="container security-grid">
+//           <div className="security-content">
+//             <p className="eyebrow">Security & Infrastructure</p>
+
+//             <h2>Secure Access. Controlled Operations. Responsible Data Handling.</h2>
+
+//             <p>
+//               Tritox maintains a structured operating environment designed to
+//               support secure, controlled, and consistent client operations.
+//             </p>
+
+//             <p>
+//               Our teams work through authorized system access, secure
+//               connectivity, defined access responsibilities, and controlled
+//               data-handling practices to help safeguard agency and customer
+//               information throughout day-to-day operations.
+//             </p>
+
+//             <div className="security-list">
+//               <span>
+//                 <i>✓</i>
+//                 Authorized system access
+//               </span>
+
+//               <span>
+//                 <i>✓</i>
+//                 Role-based responsibilities
+//               </span>
+
+//               <span>
+//                 <i>✓</i>
+//                 Controlled data handling practices
+//               </span>
+
+//               <span>
+//                 <i>✓</i>
+//                 Consistent operational processes
+//               </span>
+//             </div>
+//           </div>
+
+//           <div className="security-visual">
+//             <div className="security-panel">
+//               <div className="security-panel-header">
+//                 <span>SECURE OPERATIONS</span>
+//                 <i>●</i>
+//               </div>
+
+//               <div className="security-lock">
+//                 <div className="lock-shackle" />
+//                 <div className="lock-body">✓</div>
+//               </div>
+
+//               <strong>Controlled Client Access</strong>
+
+//               <p>
+//                 Access responsibilities aligned with assigned operational
+//                 requirements.
+//               </p>
+
+//               <div className="security-status-list">
+//                 <div>
+//                   <span />
+//                   Authorized Access
+//                 </div>
+
+//                 <div>
+//                   <span />
+//                   Defined Responsibilities
+//                 </div>
+
+//                 <div>
+//                   <span />
+//                   Controlled Operations
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div className="security-floating-label">
+//               <span>✓</span>
+//               Confidentiality-focused operations
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Final call to action */}
+//       <section className="about-final-cta">
+//         <div className="container about-final-cta-content">
+//           <div>
+//             <p className="about-light-eyebrow">Work With Tritox</p>
+
+//             <h2>
+//               Build a more structured and reliable backend support model.
+//             </h2>
+
+//             <p>
+//               Discover how Tritox can align with your existing workflows and
+//               support your operational requirements.
+//             </p>
+//           </div>
+
+//           <div className="about-final-buttons">
+//             <Link to="/contact" className="about-cta-main-button">
+//               Contact Our Team →
+//             </Link>
+
+//             <Link to="/services" className="about-cta-secondary-button">
+//               Explore Services
+//             </Link>
+//           </div>
+//         </div>
+//       </section>
+//     </main>
+//   );
+// }
+
+function ContactPage() {
+  
   const values = [
     {
       number: "01",
@@ -2096,9 +3119,143 @@ function AboutPage() {
     },
   ];
 
+  
   return (
-    <main className="about-page">
-      {/* About Hero */}
+    <main>
+      <PageBanner
+        eyebrow="Contact Us"
+        title="Start Your Free Trial"
+        description="Tell us about your agency and quote preparation requirements. Our team will help you understand the next steps."
+      />
+
+      {/* Contact form section */}
+      <section className="section white-section">
+        <div className="container contact-grid">
+          <div className="contact-information">
+            <p className="eyebrow">Get Started</p>
+
+            <h2>Ready to strengthen your agency workflow?</h2>
+
+            <p>
+              Request a free trial to learn how Tritox can support your Auto,
+              Home, and Bundle quote preparation process.
+            </p>
+
+            <div className="contact-list">
+              <div>
+                <span>✓</span>
+                Auto quote preparation support
+              </div>
+
+              <div>
+                <span>✓</span>
+                Home quote preparation support
+              </div>
+
+              <div>
+                <span>✓</span>
+                Bundle quote preparation support
+              </div>
+            </div>
+
+            <div className="contact-info-note">
+              <span>✓</span>
+
+              <p>
+                Tritox works within your existing agency workflow, quoting
+                standards, CRM process, and operational requirements.
+              </p>
+            </div>
+          </div>
+
+          <form
+            className="contact-form"
+            onSubmit={(event) => {
+              event.preventDefault();
+              alert("Thank you. Your free trial request has been submitted.");
+            }}
+          >
+            <div className="contact-form-heading">
+              <p>REQUEST YOUR FREE TRIAL</p>
+              <h3>Tell us about your agency.</h3>
+            </div>
+
+            <label>
+              Full Name
+              <input type="text" placeholder="Enter your name" required />
+            </label>
+
+            <label>
+              Agency Name
+              <input type="text" placeholder="Enter agency name" required />
+            </label>
+
+            <label>
+              Email Address
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </label>
+
+            <label>
+              Quote Support Required
+              <select defaultValue="" required>
+                <option value="" disabled>
+                  Select quote support
+                </option>
+
+                <option value="auto">Auto Quote Support</option>
+                <option value="home">Home Quote Support</option>
+                <option value="bundle">Bundle Quote Support</option>
+                <option value="crm">CRM Management Support</option>
+                <option value="all">All Services</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea
+                rows="5"
+                placeholder="Tell us about your agency requirements"
+              />
+            </label>
+
+            <button type="submit" className="primary-button submit-button">
+              Request Free Trial →
+            </button>
+          </form>
+        </div>
+      </section>
+
+
+      {/* Final CTA */}
+      <section className="contact-final-cta">
+        <div className="container contact-final-content">
+          <div>
+            <p className="contact-light-eyebrow">
+              Ready to Get Started?
+            </p>
+
+            <h2>
+              Build a more efficient quote preparation workflow for your
+              agency.
+            </h2>
+
+            <p>
+              Start your free trial and discover how Tritox can help your
+              agency expand backend capacity while keeping producers focused on
+              customers and new business.
+            </p>
+          </div>
+
+          <Link to="/contact" className="contact-final-button">
+            Start Your Free Trial →
+          </Link>
+        </div>
+      </section>
+       {/* About Hero */}
       <section className="about-hero">
         <div className="about-hero-grid-pattern" />
         <div className="about-hero-circle about-hero-circle-one" />
@@ -2413,328 +3570,6 @@ function AboutPage() {
   );
 }
 
-function ContactPage() {
-  const [openFaq, setOpenFaq] = useState(0);
-
-  const faqs = [
-    {
-      id: 1,
-      question: "What is the process for onboarding the Tritox team with my agency?",
-      answers: [
-        "Tritox team members may already hold existing Farmers Dashboard IDs and have completed the required background verification checks.",
-        "To link Tritox with your agency using an existing Farmers Dashboard ID held by one of our team members, you can initiate the appropriate access setup through Farmers APEX → MASS (My Agent Self Service). The required documentation, system access, and Cloud PC configuration are then completed before Tritox aligns with your agency’s workflow and begins support.",
-      ],
-    },
-    {
-      id: 2,
-      question: "How does Tritox safeguard my agency’s systems and customer data?",
-      answers: [
-        "Tritox operates through agency-authorized, individual system access using a Farmers-approved Microsoft Windows 365 Cloud PC environment.",
-        "Each team member is granted access only to the systems and information required for their assigned responsibilities, helping maintain clear access control, confidentiality, and secure handling of agency and customer data.",
-      ],
-    },
-    {
-      id: 3,
-      question: "How does Tritox maintain quality and accuracy?",
-      answers: [
-        "Tritox maintains quality through your agency’s defined quoting standards, structured review procedures, and our proprietary quality-check tool used after quote preparation.",
-        "Each completed quote is reviewed for data accuracy, coverage alignment, and documentation completeness before the lead advances to the next CRM stage.",
-      ],
-    },
-    {
-      id: 4,
-      question: "If my agency has a lower quote volume, how can Tritox still add value?",
-      answers: [
-        "Even at lower quote volumes, Tritox can take on backend quoting workload so producers spend less time on preparation, respond to customers more quickly, and focus more on prospect engagement and follow-up.",
-        "As producer capacity improves, the agency can pursue higher lead volume with greater confidence, knowing dedicated quote support is available to manage the increased workload.",
-      ],
-    },
-    {
-      id: 5,
-      question: "Will I need to change my existing systems or workflow to work with Tritox?",
-      answers: [
-        "No. Tritox is designed to work within your existing systems, quoting standards, and operating procedures.",
-        "Our pre-trained team aligns with your CRM, Farmers APEX, ALTA, PolicyCenter, documentation requirements, and internal workflow so support can be integrated without disrupting the way your agency already operates.",
-      ],
-    },
-    {
-      id: 6,
-      question:
-        "Will Tritox support my existing team, or is it intended to replace in-house staff?",
-      answers: [
-        "Tritox is designed to complement and extend your existing team, not replace in-house staff.",
-        "Our support helps free producer time from backend responsibilities so they can remain focused on customers, relationships, follow-ups, and new business.",
-      ],
-    },
-    {
-      id: 7,
-      question:
-        "Does Farmers Insurance allow agencies to outsource quoting support to teams in other countries?",
-      answers: [
-        "Farmers allows approved international staff to support applicable non-licensed, non-appointed activities through authorized system access. Tritox operates from India, which is one of the countries approved by Farmers for international staff access.",
-        "Farmers’ approved countries currently include Argentina, Brazil, Colombia, India, Mexico, and the Philippines.",
-      ],
-    },
-    {
-      id: 8,
-      question: "Do you offer a service agreement?",
-      answers: [
-        "If your agency requires a contract or NDA, Tritox can provide or sign the required agreement before support begins.",
-      ],
-    },
-    {
-      id: 9,
-      question: "What happens if my agency’s quote volume increases or changes?",
-      answers: [
-        "As your quote volume changes, Tritox adjusts trained, dedicated support capacity to match your agency’s demand.",
-        "This helps maintain rapid quote preparation, consistent workflow execution, and service continuity without placing additional administrative workload on your producers.",
-      ],
-    },
-    {
-      id: 10,
-      question:
-        "Can Tritox align support with my agency’s preferred business hours and time zone?",
-      answers: [
-        "Yes. Tritox can coordinate support around your agency’s preferred business hours and time zone, helping maintain consistent availability and workflow continuity within your established operating schedule.",
-      ],
-    },
-  ];
-
-  const toggleFaq = (index) => {
-    setOpenFaq((currentFaq) => (currentFaq === index ? null : index));
-  };
-
-  return (
-    <main>
-      <PageBanner
-        eyebrow="Contact Us"
-        title="Start Your Free Trial"
-        description="Tell us about your agency and quote preparation requirements. Our team will help you understand the next steps."
-      />
-
-      {/* Contact form section */}
-      <section className="section white-section">
-        <div className="container contact-grid">
-          <div className="contact-information">
-            <p className="eyebrow">Get Started</p>
-
-            <h2>Ready to strengthen your agency workflow?</h2>
-
-            <p>
-              Request a free trial to learn how Tritox can support your Auto,
-              Home, and Bundle quote preparation process.
-            </p>
-
-            <div className="contact-list">
-              <div>
-                <span>✓</span>
-                Auto quote preparation support
-              </div>
-
-              <div>
-                <span>✓</span>
-                Home quote preparation support
-              </div>
-
-              <div>
-                <span>✓</span>
-                Bundle quote preparation support
-              </div>
-            </div>
-
-            <div className="contact-info-note">
-              <span>✓</span>
-
-              <p>
-                Tritox works within your existing agency workflow, quoting
-                standards, CRM process, and operational requirements.
-              </p>
-            </div>
-          </div>
-
-          <form
-            className="contact-form"
-            onSubmit={(event) => {
-              event.preventDefault();
-              alert("Thank you. Your free trial request has been submitted.");
-            }}
-          >
-            <div className="contact-form-heading">
-              <p>REQUEST YOUR FREE TRIAL</p>
-              <h3>Tell us about your agency.</h3>
-            </div>
-
-            <label>
-              Full Name
-              <input type="text" placeholder="Enter your name" required />
-            </label>
-
-            <label>
-              Agency Name
-              <input type="text" placeholder="Enter agency name" required />
-            </label>
-
-            <label>
-              Email Address
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                required
-              />
-            </label>
-
-            <label>
-              Quote Support Required
-              <select defaultValue="" required>
-                <option value="" disabled>
-                  Select quote support
-                </option>
-
-                <option value="auto">Auto Quote Support</option>
-                <option value="home">Home Quote Support</option>
-                <option value="bundle">Bundle Quote Support</option>
-                <option value="crm">CRM Management Support</option>
-                <option value="all">All Services</option>
-              </select>
-            </label>
-
-            <label>
-              Message
-              <textarea
-                rows="5"
-                placeholder="Tell us about your agency requirements"
-              />
-            </label>
-
-            <button type="submit" className="primary-button submit-button">
-              Request Free Trial →
-            </button>
-          </form>
-        </div>
-      </section>
-
-      {/* FAQ section */}
-      <section className="faq-section">
-        <div className="container">
-          <div className="faq-heading">
-            <div>
-              <p className="eyebrow">Frequently Asked Questions</p>
-
-              <h2>Clear Answers About How Tritox Supports Your Agency</h2>
-            </div>
-
-            <p>
-              Learn more about onboarding, systems access, quote preparation
-              support, data handling, quality procedures, pricing flexibility,
-              and agency workflow alignment.
-            </p>
-          </div>
-
-          <div className="faq-layout">
-            <aside className="faq-side-card">
-              <span className="faq-side-card-label">TRITOX SUPPORT</span>
-
-              <h3>Have questions about your agency workflow?</h3>
-
-              <p>
-                Our team can help you understand how Tritox can align with your
-                quote preparation, CRM, and operational support requirements.
-              </p>
-
-              <div className="faq-side-card-points">
-                <span>
-                  <i>✓</i>
-                  Agency workflow alignment
-                </span>
-
-                <span>
-                  <i>✓</i>
-                  Dedicated support capacity
-                </span>
-
-                <span>
-                  <i>✓</i>
-                  Flexible operational support
-                </span>
-              </div>
-
-              <Link to="/contact" className="faq-contact-button">
-                Contact Our Team →
-              </Link>
-            </aside>
-
-            <div className="faq-list">
-              {faqs.map((faq, index) => {
-                const isOpen = openFaq === index;
-
-                return (
-                  <article
-                    key={faq.id}
-                    className={`faq-item ${isOpen ? "faq-open" : ""}`}
-                  >
-                    <button
-                      type="button"
-                      className="faq-question"
-                      onClick={() => toggleFaq(index)}
-                      aria-expanded={isOpen}
-                    >
-                      <span className="faq-number">
-                        {String(faq.id).padStart(2, "0")}
-                      </span>
-
-                      <span className="faq-question-text">
-                        {faq.question}
-                      </span>
-
-                      <span className="faq-toggle-icon">
-                        {isOpen ? "−" : "+"}
-                      </span>
-                    </button>
-
-                    <div className="faq-answer">
-                      <div className="faq-answer-inner">
-                        {faq.answers.map((answer, answerIndex) => (
-                          <p key={answerIndex}>{answer}</p>
-                        ))}
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="contact-final-cta">
-        <div className="container contact-final-content">
-          <div>
-            <p className="contact-light-eyebrow">
-              Ready to Get Started?
-            </p>
-
-            <h2>
-              Build a more efficient quote preparation workflow for your
-              agency.
-            </h2>
-
-            <p>
-              Start your free trial and discover how Tritox can help your
-              agency expand backend capacity while keeping producers focused on
-              customers and new business.
-            </p>
-          </div>
-
-          <Link to="/contact" className="contact-final-button">
-            Start Your Free Trial →
-          </Link>
-        </div>
-      </section>
-    </main>
-  );
-}
-
 function NotFoundPage() {
   return (
     <main className="not-found-page">
@@ -2752,502 +3587,502 @@ function NotFoundPage() {
 }
 
 
-function OnboardingPage() {
-  const approvedCountries = [
-    "Argentina",
-    "Brazil",
-    "Colombia",
-    "India",
-    "Mexico",
-    "Philippines",
-  ];
-
-  const onboardingSteps = [
-    {
-      number: "01",
-      title: "Confirm Eligibility & Compliance",
-      description:
-        "The international team member must reside in an approved country. The agency is responsible for confirming work eligibility, completing applicable background checks, and ensuring assigned duties remain within permitted non-licensed activities.",
-      details: [
-        "Approved-country eligibility",
-        "Work authorization confirmation",
-        "Background verification",
-        "Non-licensed duty alignment",
-      ],
-      type: "onboarding-blue-step",
-    },
-    {
-      number: "02",
-      title: "Link Your Agency to an Existing Farmers ID",
-      description:
-        "If an existing international staff member requires dual-code system access, the agent or district manager can submit the request through MASS (My Agent Self Service).",
-      details: [
-        "MASS request submission",
-        "DocuSign link received by email",
-        "Required information completed",
-        "Farmers review and approval",
-      ],
-      type: "onboarding-green-step",
-    },
-    {
-      number: "03",
-      title: "Add a New International Staff Member",
-      description:
-        "Using MASS (My Agent Self Service), the agency can add a new international staff member and begin the required access and onboarding process.",
-      details: [
-        "New staff request initiated",
-        "Background review completed",
-        "DocuSign documents completed",
-        "Farmers review and approval",
-      ],
-      type: "onboarding-yellow-step",
-    },
-    {
-      number: "04",
-      title: "Configure the Farmers Access Environment",
-      description:
-        "Approved staff access Farmers systems through a U.S.-provisioned Microsoft Windows 365 Cloud PC with the required cyber protection in place.",
-      details: [
-        "Windows 365 Cloud PC",
-        "Authorized access environment",
-        "Required cyber protection",
-        "Active Farmers workflow access",
-      ],
-      type: "onboarding-blue-step",
-    },
-    {
-      number: "05",
-      title: "Create Agency CRM Access",
-      description:
-        "Once Farmers system setup is complete, the agency creates a dedicated CRM account for the assigned Tritox team member.",
-      details: [
-        "Dedicated CRM account",
-        "Agency-defined access level",
-        "Role-based responsibilities",
-        "CRM workflow alignment",
-      ],
-      type: "onboarding-green-step",
-    },
-    {
-      number: "06",
-      title: "Establish the Payment Method",
-      description:
-        "The agency can establish the preferred payment method before ongoing production support begins.",
-      details: [
-        "Gusto",
-        "Wise",
-        "Wire transfer",
-        "Rippling or agreed payment option",
-      ],
-      type: "onboarding-yellow-step",
-    },
-  ];
-
-  return (
-    <main className="onboarding-page">
-      <PageBanner
-        eyebrow="International Staff Onboarding"
-        title="Authorized International Staff Setup for Farmers Agency Support"
-        description="A structured onboarding process for approved international staff supporting Farmers agency operations through authorized access and defined responsibilities."
-      />
-
-      {/* Onboarding introduction */}
-      <section className="section onboarding-intro-section">
-        <div className="onboarding-intro-shape onboarding-intro-shape-one" />
-        <div className="onboarding-intro-shape onboarding-intro-shape-two" />
-
-        <div className="container onboarding-intro-container">
-          <div className="onboarding-intro-grid">
-            <div className="onboarding-intro-content">
-              <p className="eyebrow">International Staff Setup</p>
-
-              <h2>
-                A clear process for authorized international agency support.
-              </h2>
-
-              <p>
-                Farmers allows approved international staff to access its
-                systems and support agency operations as non-licensed staff,
-                once the required onboarding and access steps are completed.
-              </p>
-
-              <p>
-                Team members may already hold existing Farmers Dashboard IDs
-                and have completed required background verification checks.
-                Depending on the agency’s requirement, you can either link
-                your agency to an existing staff member’s Farmers ID or add a
-                new international staff member.
-              </p>
-            </div>
-
-            <div className="onboarding-status-card">
-              <div className="onboarding-status-header">
-                <span>ONBOARDING OVERVIEW</span>
-                <i>✓</i>
-              </div>
-
-              <div className="onboarding-status-item">
-                <span className="status-item-number">01</span>
-
-                <div>
-                  <strong>Eligibility & Compliance</strong>
-                  <small>Agency confirms eligibility and assigned duties</small>
-                </div>
-              </div>
-
-              <div className="onboarding-status-item">
-                <span className="status-item-number">02</span>
-
-                <div>
-                  <strong>Farmers System Access</strong>
-                  <small>Existing ID link or new staff request process</small>
-                </div>
-              </div>
-
-              <div className="onboarding-status-item">
-                <span className="status-item-number">03</span>
-
-                <div>
-                  <strong>CRM & Production Setup</strong>
-                  <small>Dedicated CRM access and support readiness</small>
-                </div>
-              </div>
-
-              <div className="onboarding-status-footer">
-                <span>✓</span>
-                Structured agency-led onboarding process
-              </div>
-            </div>
-          </div>
-
-          <div className="approved-countries-card">
-            <div className="approved-countries-icon">✓</div>
-
-            <div>
-              <span className="countries-label">APPROVED COUNTRY ELIGIBILITY</span>
-
-              <h3>International team members must reside in an approved country.</h3>
-
-              <div className="country-list">
-                {approvedCountries.map((country) => (
-                  <span key={country}>{country}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Choose onboarding path */}
-      <section className="section onboarding-path-section">
-        <div className="container">
-          <div className="onboarding-path-heading">
-            <div>
-              <p className="eyebrow">Choose the Appropriate Setup Path</p>
-
-              <h2>
-                Link an existing Farmers ID or add a new international staff
-                member.
-              </h2>
-            </div>
-
-            <p>
-              The onboarding process depends on whether the assigned team
-              member already has an existing Farmers Dashboard ID or requires
-              new access setup.
-            </p>
-          </div>
-
-          <div className="onboarding-path-grid">
-            <article className="onboarding-path-card existing-id-card">
-              <div className="path-card-top">
-                <span className="path-icon">ID</span>
-                <span className="path-label">EXISTING STAFF MEMBER</span>
-              </div>
-
-              <h3>Link Your Agency to an Existing Farmers ID</h3>
-
-              <p>
-                If an existing international staff member requires dual-code
-                system access, the agent or district manager can submit the
-                request through MASS (My Agent Self Service).
-              </p>
-
-              <div className="path-step-list">
-                <div>
-                  <span>01</span>
-                  Submit the dual-code access request through MASS
-                </div>
-
-                <div>
-                  <span>02</span>
-                  Staff member receives a DocuSign link by email
-                </div>
-
-                <div>
-                  <span>03</span>
-                  Required information is completed and submitted
-                </div>
-
-                <div>
-                  <span>04</span>
-                  Farmers reviews and approves system access
-                </div>
-              </div>
-            </article>
-
-            <article className="onboarding-path-card new-staff-card">
-              <div className="path-card-top">
-                <span className="path-icon">+</span>
-                <span className="path-label">NEW INTERNATIONAL STAFF</span>
-              </div>
-
-              <h3>Add a New International Staff Member</h3>
-
-              <p>
-                Using the same MASS (My Agent Self Service) portal, the agency
-                can add a new international staff member and begin the required
-                access and onboarding process.
-              </p>
-
-              <div className="path-step-list">
-                <div>
-                  <span>01</span>
-                  New staff request is initiated through MASS
-                </div>
-
-                <div>
-                  <span>02</span>
-                  Required background review is completed
-                </div>
-
-                <div>
-                  <span>03</span>
-                  Staff member receives DocuSign documents by email
-                </div>
-
-                <div>
-                  <span>04</span>
-                  Documents are submitted for review and approval
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* Full onboarding process */}
-      <section className="onboarding-workflow-section">
-        <div className="onboarding-workflow-pattern" />
-        <div className="onboarding-workflow-circle onboarding-circle-one" />
-        <div className="onboarding-workflow-circle onboarding-circle-two" />
-
-        <div className="container onboarding-workflow-container">
-          <div className="onboarding-workflow-heading">
-            <p className="onboarding-light-eyebrow">
-              Onboarding Workflow
-            </p>
-
-            <h2>
-              Six structured steps from eligibility review to production-ready
-              support.
-            </h2>
-
-            <p>
-              This process helps agencies create the required setup,
-              authorized access, CRM responsibilities, and payment arrangements
-              before ongoing support begins.
-            </p>
-          </div>
-
-          <div className="onboarding-steps-grid">
-            {onboardingSteps.map((step) => (
-              <article
-                key={step.number}
-                className={`onboarding-step-card ${step.type}`}
-              >
-                <div className="onboarding-step-top">
-                  <span className="onboarding-step-number">{step.number}</span>
-
-                  <span className="step-status">Setup Step</span>
-                </div>
-
-                <h3>{step.title}</h3>
-
-                <p>{step.description}</p>
-
-                <div className="onboarding-detail-list">
-                  {step.details.map((detail) => (
-                    <span key={detail}>
-                      <i>✓</i>
-                      {detail}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Access environment and CRM */}
-      <section className="section access-environment-section">
-        <div className="container access-environment-grid">
-          <div className="access-visual">
-            <div className="cloud-access-card">
-              <div className="cloud-card-header">
-                <span>AUTHORIZED ACCESS ENVIRONMENT</span>
-                <i>✓</i>
-              </div>
-
-              <div className="cloud-computer-icon">
-                <div className="cloud-icon">☁</div>
-                <div className="computer-icon">▣</div>
-              </div>
-
-              <strong>Windows 365 Cloud PC</strong>
-
-              <p>
-                U.S.-provisioned environment configured for authorized Farmers
-                workflow access.
-              </p>
-
-              <div className="cloud-access-list">
-                <div>
-                  <span>✓</span>
-                  Secure connectivity
-                </div>
-
-                <div>
-                  <span>✓</span>
-                  Defined access responsibilities
-                </div>
-
-                <div>
-                  <span>✓</span>
-                  Controlled workflow environment
-                </div>
-              </div>
-            </div>
-
-            <div className="crm-access-floating-card">
-              <span>CRM</span>
-
-              <div>
-                <strong>Dedicated CRM Access</strong>
-                <small>Role-aligned account setup</small>
-              </div>
-            </div>
-          </div>
-
-          <div className="access-environment-content">
-            <p className="eyebrow">Access & CRM Configuration</p>
-
-            <h2>
-              Configure the working environment before production support
-              begins.
-            </h2>
-
-            <p>
-              Approved staff access Farmers systems through a U.S.-provisioned
-              Microsoft Windows 365 Cloud PC with the required cyber protection
-              in place.
-            </p>
-
-            <p>
-              Once the environment is configured and access is active, the team
-              member can begin working within the authorized Farmers workflow.
-              The agency then creates a dedicated CRM account with access
-              aligned to the assigned Tritox team member’s approved
-              responsibilities.
-            </p>
-
-            <div className="access-check-list">
-              <span>
-                <i>✓</i>
-                Authorized Farmers access environment
-              </span>
-
-              <span>
-                <i>✓</i>
-                Dedicated agency CRM account
-              </span>
-
-              <span>
-                <i>✓</i>
-                Role-based system permissions
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Payment */}
-      <section className="section onboarding-payment-section">
-        <div className="container payment-grid">
-          <div className="payment-content">
-            <p className="eyebrow">Payment Setup</p>
-
-            <h2>Establish the preferred payment method before support begins.</h2>
-
-            <p>
-              The agency can establish the preferred payment method before
-              ongoing production support begins. Payment arrangements are
-              confirmed as part of the onboarding process.
-            </p>
-          </div>
-
-          <div className="payment-method-card">
-            <p className="payment-card-label">PAYMENT OPTIONS</p>
-
-            <div className="payment-method-list">
-              <span>Gusto</span>
-              <span>Wise</span>
-              <span>Wire Transfer</span>
-              <span>Rippling</span>
-              <span>Mutually Agreed Option</span>
-            </div>
-
-            <div className="payment-card-footer">
-              <span>✓</span>
-              Payment arrangement confirmed before ongoing support.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="onboarding-final-cta">
-        <div className="container onboarding-final-content">
-          <div>
-            <p className="onboarding-light-eyebrow">
-              Ready to Begin?
-            </p>
-
-            <h2>
-              Start the onboarding process for dedicated agency support.
-            </h2>
-
-            <p>
-              Contact Tritox to discuss your agency’s quote preparation,
-              onboarding, CRM access, and operational support requirements.
-            </p>
-          </div>
-
-          <div className="onboarding-final-actions">
-            <Link to="/contact" className="onboarding-contact-button">
-              Contact Our Team →
-            </Link>
-
-            <Link to="/services" className="onboarding-services-button">
-              View Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
+// function OnboardingPage() {
+//   const approvedCountries = [
+//     "Argentina",
+//     "Brazil",
+//     "Colombia",
+//     "India",
+//     "Mexico",
+//     "Philippines",
+//   ];
+
+//   const onboardingSteps = [
+//     {
+//       number: "01",
+//       title: "Confirm Eligibility & Compliance",
+//       description:
+//         "The international team member must reside in an approved country. The agency is responsible for confirming work eligibility, completing applicable background checks, and ensuring assigned duties remain within permitted non-licensed activities.",
+//       details: [
+//         "Approved-country eligibility",
+//         "Work authorization confirmation",
+//         "Background verification",
+//         "Non-licensed duty alignment",
+//       ],
+//       type: "onboarding-blue-step",
+//     },
+//     {
+//       number: "02",
+//       title: "Link Your Agency to an Existing Farmers ID",
+//       description:
+//         "If an existing international staff member requires dual-code system access, the agent or district manager can submit the request through MASS (My Agent Self Service).",
+//       details: [
+//         "MASS request submission",
+//         "DocuSign link received by email",
+//         "Required information completed",
+//         "Farmers review and approval",
+//       ],
+//       type: "onboarding-green-step",
+//     },
+//     {
+//       number: "03",
+//       title: "Add a New International Staff Member",
+//       description:
+//         "Using MASS (My Agent Self Service), the agency can add a new international staff member and begin the required access and onboarding process.",
+//       details: [
+//         "New staff request initiated",
+//         "Background review completed",
+//         "DocuSign documents completed",
+//         "Farmers review and approval",
+//       ],
+//       type: "onboarding-yellow-step",
+//     },
+//     {
+//       number: "04",
+//       title: "Configure the Farmers Access Environment",
+//       description:
+//         "Approved staff access Farmers systems through a U.S.-provisioned Microsoft Windows 365 Cloud PC with the required cyber protection in place.",
+//       details: [
+//         "Windows 365 Cloud PC",
+//         "Authorized access environment",
+//         "Required cyber protection",
+//         "Active Farmers workflow access",
+//       ],
+//       type: "onboarding-blue-step",
+//     },
+//     {
+//       number: "05",
+//       title: "Create Agency CRM Access",
+//       description:
+//         "Once Farmers system setup is complete, the agency creates a dedicated CRM account for the assigned Tritox team member.",
+//       details: [
+//         "Dedicated CRM account",
+//         "Agency-defined access level",
+//         "Role-based responsibilities",
+//         "CRM workflow alignment",
+//       ],
+//       type: "onboarding-green-step",
+//     },
+//     {
+//       number: "06",
+//       title: "Establish the Payment Method",
+//       description:
+//         "The agency can establish the preferred payment method before ongoing production support begins.",
+//       details: [
+//         "Gusto",
+//         "Wise",
+//         "Wire transfer",
+//         "Rippling or agreed payment option",
+//       ],
+//       type: "onboarding-yellow-step",
+//     },
+//   ];
+
+//   return (
+//     <main className="onboarding-page">
+//       <PageBanner
+//         eyebrow="International Staff Onboarding"
+//         title="Authorized International Staff Setup for Farmers Agency Support"
+//         description="A structured onboarding process for approved international staff supporting Farmers agency operations through authorized access and defined responsibilities."
+//       />
+
+//       {/* Onboarding introduction */}
+//       <section className="section onboarding-intro-section">
+//         <div className="onboarding-intro-shape onboarding-intro-shape-one" />
+//         <div className="onboarding-intro-shape onboarding-intro-shape-two" />
+
+//         <div className="container onboarding-intro-container">
+//           <div className="onboarding-intro-grid">
+//             <div className="onboarding-intro-content">
+//               <p className="eyebrow">International Staff Setup</p>
+
+//               <h2>
+//                 A clear process for authorized international agency support.
+//               </h2>
+
+//               <p>
+//                 Farmers allows approved international staff to access its
+//                 systems and support agency operations as non-licensed staff,
+//                 once the required onboarding and access steps are completed.
+//               </p>
+
+//               <p>
+//                 Team members may already hold existing Farmers Dashboard IDs
+//                 and have completed required background verification checks.
+//                 Depending on the agency’s requirement, you can either link
+//                 your agency to an existing staff member’s Farmers ID or add a
+//                 new international staff member.
+//               </p>
+//             </div>
+
+//             <div className="onboarding-status-card">
+//               <div className="onboarding-status-header">
+//                 <span>ONBOARDING OVERVIEW</span>
+//                 <i>✓</i>
+//               </div>
+
+//               <div className="onboarding-status-item">
+//                 <span className="status-item-number">01</span>
+
+//                 <div>
+//                   <strong>Eligibility & Compliance</strong>
+//                   <small>Agency confirms eligibility and assigned duties</small>
+//                 </div>
+//               </div>
+
+//               <div className="onboarding-status-item">
+//                 <span className="status-item-number">02</span>
+
+//                 <div>
+//                   <strong>Farmers System Access</strong>
+//                   <small>Existing ID link or new staff request process</small>
+//                 </div>
+//               </div>
+
+//               <div className="onboarding-status-item">
+//                 <span className="status-item-number">03</span>
+
+//                 <div>
+//                   <strong>CRM & Production Setup</strong>
+//                   <small>Dedicated CRM access and support readiness</small>
+//                 </div>
+//               </div>
+
+//               <div className="onboarding-status-footer">
+//                 <span>✓</span>
+//                 Structured agency-led onboarding process
+//               </div>
+//             </div>
+//           </div>
+
+//           <div className="approved-countries-card">
+//             <div className="approved-countries-icon">✓</div>
+
+//             <div>
+//               <span className="countries-label">APPROVED COUNTRY ELIGIBILITY</span>
+
+//               <h3>International team members must reside in an approved country.</h3>
+
+//               <div className="country-list">
+//                 {approvedCountries.map((country) => (
+//                   <span key={country}>{country}</span>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Choose onboarding path */}
+//       <section className="section onboarding-path-section">
+//         <div className="container">
+//           <div className="onboarding-path-heading">
+//             <div>
+//               <p className="eyebrow">Choose the Appropriate Setup Path</p>
+
+//               <h2>
+//                 Link an existing Farmers ID or add a new international staff
+//                 member.
+//               </h2>
+//             </div>
+
+//             <p>
+//               The onboarding process depends on whether the assigned team
+//               member already has an existing Farmers Dashboard ID or requires
+//               new access setup.
+//             </p>
+//           </div>
+
+//           <div className="onboarding-path-grid">
+//             <article className="onboarding-path-card existing-id-card">
+//               <div className="path-card-top">
+//                 <span className="path-icon">ID</span>
+//                 <span className="path-label">EXISTING STAFF MEMBER</span>
+//               </div>
+
+//               <h3>Link Your Agency to an Existing Farmers ID</h3>
+
+//               <p>
+//                 If an existing international staff member requires dual-code
+//                 system access, the agent or district manager can submit the
+//                 request through MASS (My Agent Self Service).
+//               </p>
+
+//               <div className="path-step-list">
+//                 <div>
+//                   <span>01</span>
+//                   Submit the dual-code access request through MASS
+//                 </div>
+
+//                 <div>
+//                   <span>02</span>
+//                   Staff member receives a DocuSign link by email
+//                 </div>
+
+//                 <div>
+//                   <span>03</span>
+//                   Required information is completed and submitted
+//                 </div>
+
+//                 <div>
+//                   <span>04</span>
+//                   Farmers reviews and approves system access
+//                 </div>
+//               </div>
+//             </article>
+
+//             <article className="onboarding-path-card new-staff-card">
+//               <div className="path-card-top">
+//                 <span className="path-icon">+</span>
+//                 <span className="path-label">NEW INTERNATIONAL STAFF</span>
+//               </div>
+
+//               <h3>Add a New International Staff Member</h3>
+
+//               <p>
+//                 Using the same MASS (My Agent Self Service) portal, the agency
+//                 can add a new international staff member and begin the required
+//                 access and onboarding process.
+//               </p>
+
+//               <div className="path-step-list">
+//                 <div>
+//                   <span>01</span>
+//                   New staff request is initiated through MASS
+//                 </div>
+
+//                 <div>
+//                   <span>02</span>
+//                   Required background review is completed
+//                 </div>
+
+//                 <div>
+//                   <span>03</span>
+//                   Staff member receives DocuSign documents by email
+//                 </div>
+
+//                 <div>
+//                   <span>04</span>
+//                   Documents are submitted for review and approval
+//                 </div>
+//               </div>
+//             </article>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Full onboarding process */}
+//       <section className="onboarding-workflow-section">
+//         <div className="onboarding-workflow-pattern" />
+//         <div className="onboarding-workflow-circle onboarding-circle-one" />
+//         <div className="onboarding-workflow-circle onboarding-circle-two" />
+
+//         <div className="container onboarding-workflow-container">
+//           <div className="onboarding-workflow-heading">
+//             <p className="onboarding-light-eyebrow">
+//               Onboarding Workflow
+//             </p>
+
+//             <h2>
+//               Six structured steps from eligibility review to production-ready
+//               support.
+//             </h2>
+
+//             <p>
+//               This process helps agencies create the required setup,
+//               authorized access, CRM responsibilities, and payment arrangements
+//               before ongoing support begins.
+//             </p>
+//           </div>
+
+//           <div className="onboarding-steps-grid">
+//             {onboardingSteps.map((step) => (
+//               <article
+//                 key={step.number}
+//                 className={`onboarding-step-card ${step.type}`}
+//               >
+//                 <div className="onboarding-step-top">
+//                   <span className="onboarding-step-number">{step.number}</span>
+
+//                   <span className="step-status">Setup Step</span>
+//                 </div>
+
+//                 <h3>{step.title}</h3>
+
+//                 <p>{step.description}</p>
+
+//                 <div className="onboarding-detail-list">
+//                   {step.details.map((detail) => (
+//                     <span key={detail}>
+//                       <i>✓</i>
+//                       {detail}
+//                     </span>
+//                   ))}
+//                 </div>
+//               </article>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Access environment and CRM */}
+//       <section className="section access-environment-section">
+//         <div className="container access-environment-grid">
+//           <div className="access-visual">
+//             <div className="cloud-access-card">
+//               <div className="cloud-card-header">
+//                 <span>AUTHORIZED ACCESS ENVIRONMENT</span>
+//                 <i>✓</i>
+//               </div>
+
+//               <div className="cloud-computer-icon">
+//                 <div className="cloud-icon">☁</div>
+//                 <div className="computer-icon">▣</div>
+//               </div>
+
+//               <strong>Windows 365 Cloud PC</strong>
+
+//               <p>
+//                 U.S.-provisioned environment configured for authorized Farmers
+//                 workflow access.
+//               </p>
+
+//               <div className="cloud-access-list">
+//                 <div>
+//                   <span>✓</span>
+//                   Secure connectivity
+//                 </div>
+
+//                 <div>
+//                   <span>✓</span>
+//                   Defined access responsibilities
+//                 </div>
+
+//                 <div>
+//                   <span>✓</span>
+//                   Controlled workflow environment
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div className="crm-access-floating-card">
+//               <span>CRM</span>
+
+//               <div>
+//                 <strong>Dedicated CRM Access</strong>
+//                 <small>Role-aligned account setup</small>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div className="access-environment-content">
+//             <p className="eyebrow">Access & CRM Configuration</p>
+
+//             <h2>
+//               Configure the working environment before production support
+//               begins.
+//             </h2>
+
+//             <p>
+//               Approved staff access Farmers systems through a U.S.-provisioned
+//               Microsoft Windows 365 Cloud PC with the required cyber protection
+//               in place.
+//             </p>
+
+//             <p>
+//               Once the environment is configured and access is active, the team
+//               member can begin working within the authorized Farmers workflow.
+//               The agency then creates a dedicated CRM account with access
+//               aligned to the assigned Tritox team member’s approved
+//               responsibilities.
+//             </p>
+
+//             <div className="access-check-list">
+//               <span>
+//                 <i>✓</i>
+//                 Authorized Farmers access environment
+//               </span>
+
+//               <span>
+//                 <i>✓</i>
+//                 Dedicated agency CRM account
+//               </span>
+
+//               <span>
+//                 <i>✓</i>
+//                 Role-based system permissions
+//               </span>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Payment */}
+//       <section className="section onboarding-payment-section">
+//         <div className="container payment-grid">
+//           <div className="payment-content">
+//             <p className="eyebrow">Payment Setup</p>
+
+//             <h2>Establish the preferred payment method before support begins.</h2>
+
+//             <p>
+//               The agency can establish the preferred payment method before
+//               ongoing production support begins. Payment arrangements are
+//               confirmed as part of the onboarding process.
+//             </p>
+//           </div>
+
+//           <div className="payment-method-card">
+//             <p className="payment-card-label">PAYMENT OPTIONS</p>
+
+//             <div className="payment-method-list">
+//               <span>Gusto</span>
+//               <span>Wise</span>
+//               <span>Wire Transfer</span>
+//               <span>Rippling</span>
+//               <span>Mutually Agreed Option</span>
+//             </div>
+
+//             <div className="payment-card-footer">
+//               <span>✓</span>
+//               Payment arrangement confirmed before ongoing support.
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Final CTA */}
+//       <section className="onboarding-final-cta">
+//         <div className="container onboarding-final-content">
+//           <div>
+//             <p className="onboarding-light-eyebrow">
+//               Ready to Begin?
+//             </p>
+
+//             <h2>
+//               Start the onboarding process for dedicated agency support.
+//             </h2>
+
+//             <p>
+//               Contact Tritox to discuss your agency’s quote preparation,
+//               onboarding, CRM access, and operational support requirements.
+//             </p>
+//           </div>
+
+//           <div className="onboarding-final-actions">
+//             <Link to="/contact" className="onboarding-contact-button">
+//               Contact Our Team →
+//             </Link>
+
+//             <Link to="/services" className="onboarding-services-button">
+//               View Our Services
+//             </Link>
+//           </div>
+//         </div>
+//       </section>
+//     </main>
+//   );
+// }
 
 function Footer() {
   return (
@@ -3272,7 +4107,7 @@ function Footer() {
         <div className="footer-links">
           <Link to="/services">Services</Link>
           <Link to="/pricing">Pricing</Link>
-          <Link to="/about">About</Link>
+          {/* <Link to="/about">About</Link> */}
           <Link to="/success-stories">Success Stories</Link>
           <Link to="/contact">Contact Us</Link>
         </div>
@@ -3300,8 +4135,8 @@ function App() {
         <Route path="/quote-team-impact" element={<ImpactPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/success-stories" element={<SuccessStoryPage />} />
-        <Route path="/onboarding" element={<OnboardingPage />} />
-        <Route path="/about" element={<AboutPage />} />
+        {/* <Route path="/onboarding" element={<OnboardingPage />} /> */}
+        {/* <Route path="/about" element={<AboutPage />} /> */}
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

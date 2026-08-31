@@ -624,7 +624,7 @@ button {
 
 .home-cta-section {
   color: var(--white);
-  background: var(--deep-blue);
+  background: #1e88e5;
 }
 
 .home-cta-content {
@@ -2028,18 +2028,8 @@ button {
   padding: 90px 0;
   overflow: hidden;
   color: var(--white);
-  background:
-    radial-gradient(
-      circle at 88% 12%,
-      rgba(253, 216, 53, 0.28),
-      transparent 22%
-    ),
-    radial-gradient(
-      circle at 10% 90%,
-      rgba(129, 199, 132, 0.25),
-      transparent 25%
-    ),
-    linear-gradient(135deg, #063675 0%, #0c63b6 52%, #1d7938 120%);
+  background:#1e88e5;
+    
 }
 
 .services-bottom-cta::before {
@@ -2680,7 +2670,7 @@ button {
   overflow: hidden;
   color: var(--white);
   background:
-    radial-gradient(
+    /* radial-gradient(
       circle at 94% 8%,
       rgba(253, 216, 53, 0.27),
       transparent 18%
@@ -2689,13 +2679,14 @@ button {
       circle at 8% 92%,
       rgba(129, 199, 132, 0.24),
       transparent 23%
-    ),
+    ), */
     linear-gradient(
-      135deg,
+      #1e88e5
+      /* 135deg,
       #04285b 0%,
       #063675 38%,
       #1261a8 75%,
-      #1d7737 130%
+      #1d7737 130% */
     );
 }
 
@@ -3012,18 +3003,7 @@ button {
   padding: 95px 0;
   overflow: hidden;
   color: var(--white);
-  background:
-    radial-gradient(
-      circle at 93% 10%,
-      rgba(253, 216, 53, 0.3),
-      transparent 21%
-    ),
-    radial-gradient(
-      circle at 6% 88%,
-      rgba(129, 199, 132, 0.22),
-      transparent 23%
-    ),
-    var(--main-blue);
+  background:white;
 }
 
 .advantage-final-cta::before {
@@ -3047,12 +3027,12 @@ button {
 }
 
 .advantage-light-eyebrow {
-  color: var(--yellow-light);
+  color: green;
 }
 
 .advantage-final-cta h2 {
   max-width: 710px;
-  color: var(--white);
+  color: black;
   font-family: "Manrope", sans-serif;
   font-size: clamp(2rem, 4vw, 3.15rem);
   line-height: 1.15;
@@ -3061,7 +3041,7 @@ button {
 .advantage-final-cta p:not(.eyebrow) {
   max-width: 690px;
   margin-top: 18px;
-  color: rgba(255, 255, 255, 0.84);
+  color:black;
   font-size: 0.96rem;
   line-height: 1.8;
 }
@@ -3099,13 +3079,13 @@ button {
 
 .advantage-services-button {
   border: 1px solid rgba(255, 255, 255, 0.58);
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  background:green;
 }
 
 .advantage-services-button:hover {
   border-color: var(--green-light);
-  background: var(--green);
+  background: green;
   transform: translateY(-4px);
 }
 
