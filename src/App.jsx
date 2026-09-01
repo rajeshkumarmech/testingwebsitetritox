@@ -575,7 +575,7 @@ function HomePage() {
             
 
             <h1>
-             Farmers Insurance Quote Preparation Support Quote Preparation SupportLess Than $1 per Quote
+             Farmers Insurance Quote Preparation support Less Than $1 per Quote
               
             </h1>
 
