@@ -187,9 +187,9 @@ function SuccessStoryPage() {
         <div className="container">
           <div className="success-story-heading">
             <div>
-              <p className="eyebrow">Success Story</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Success Story</p>
 
-              <h2>Supporting a Michigan President’s Council Agency Owner</h2>
+              <h2 >Supporting a Michigan President’s Council Agency Owner</h2>
             </div>
 
             <p>
@@ -331,7 +331,7 @@ function SuccessStoryPage() {
         <div className="container">
           <div className="testimonials-heading">
             <div>
-              <p className="eyebrow">Testimonials</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Testimonials</p>
 
               <h2>Recommended by the best in the business.</h2>
             </div>
@@ -419,7 +419,7 @@ function SuccessStoryPage() {
       <section className="success-final-cta">
         <div className="container success-final-cta-content">
           <div>
-            <p className="success-light-eyebrow">Build More Capacity</p>
+            <p className="success-light-eyebrow"style={{ fontSize: "18px" }}>Build More Capacity</p>
 
             <h2>
               Give your producers more time to focus on customers and growth.
@@ -448,7 +448,7 @@ function SuccessStoryPage() {
         <div className="container">
           <div className="faq-heading">
             <div>
-              <p className="eyebrow">Frequently Asked Questions</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Frequently Asked Questions</p>
 
               <h2>Clear Answers About How Tritox Supports Your Agency</h2>
             </div>
@@ -540,7 +540,7 @@ function SuccessStoryPage() {
       <section className="contact-final-cta">
         <div className="container contact-final-content">
           <div>
-            <p className="contact-light-eyebrow">Ready to Get Started?</p>
+            <p className="contact-light-eyebrow"style={{ fontSize: "18px" }}>Ready to Get Started?</p>
 
             <h2>
               Build a more efficient quote preparation workflow for your
@@ -572,14 +572,11 @@ function HomePage() {
 
         <div className="container hero-grid">
           <div className="hero-content">
-            <div className="support-label">
-              <span className="support-dot" />
-              Farmers Insurance Quote Preparation Support
-            </div>
+            
 
             <h1>
-              Quote Preparation Support
-              <span>Less Than $1 per Quote</span>
+             Farmers Insurance Quote Preparation Support Quote Preparation SupportLess Than $1 per Quote
+              
             </h1>
 
             <p className="hero-description">
@@ -636,15 +633,12 @@ function HomePage() {
               <div className="logo-card-line" />
 
               <img
-                src="/tritox_logo_cropped.jpg"
-                alt="Tritox Technologies logo"
+                src="/farmer_img.png"
+                
                 className="hero-logo"
               />
 
-              <div className="logo-card-footer">
-                <span />
-                TRITOX TECHNOLOGIES
-              </div>
+              
             </div>
 
             <div className="logo-caption">
@@ -662,7 +656,7 @@ function HomePage() {
       <section className="section white-section">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Why Tritox</p>
+            <p className="eyebrow" style={{ fontSize: "18px" }}>Why Tritox</p>
 
             <h2>Support your agency with a better quote workflow.</h2>
 
@@ -701,7 +695,7 @@ function HomePage() {
       <section className="section home-cta-section">
         <div className="container home-cta-content">
           <div>
-            <p className="eyebrow light-eyebrow">Start Today</p>
+            <p className="eyebrow light-eyebrow"style={{ fontSize: "18px" }}>Start Today</p>
 
             <h2>Ready to improve your quote preparation workflow?</h2>
           </div>
@@ -732,7 +726,7 @@ function PageBanner({ eyebrow, title, description }) {
       <div className="page-banner-circle-two" />
 
       <div className="container page-banner-content">
-        <p className="eyebrow page-eyebrow">{eyebrow}</p>
+        <p className="eyebrow page-eyebrow"style={{ fontSize: "18px" }}>{eyebrow}</p>
 
         <h1>{title}</h1>
 
@@ -842,7 +836,7 @@ function ServicesPage() {
         <div className="container">
           <div className="service-heading-layout">
             <div>
-              <p className="eyebrow">Quote Preparation Services</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Quote Preparation Services</p>
 
               <h2>
                 Complete quote preparation support for Auto, Home, and Bundle
@@ -946,7 +940,7 @@ function ServicesPage() {
         <div className="container">
           <div className="crm-header">
             <div>
-              <p className="eyebrow crm-eyebrow">CRM Management</p>
+              <p className="eyebrow crm-eyebrow"style={{ fontSize: "18px" }}>CRM Management</p>
 
               <h2>
                 Accurate CRM data. Clear pipeline visibility. Better sales
@@ -1052,7 +1046,7 @@ function ServicesPage() {
         <div className="container operational-grid">
           <div className="operational-visual">
             <div className="operation-panel operation-panel-main">
-              <span className="operation-panel-label">
+              <span className="operation-panel-label"style={{ fontSize: "18px" }}>
                 TRITOX OPERATIONS
               </span>
 
@@ -1092,7 +1086,7 @@ function ServicesPage() {
           </div>
 
           <div className="operational-content">
-            <p className="eyebrow">Operational Support</p>
+            <p className="eyebrow"style={{ fontSize: "18px" }}>Operational Support</p>
 
             <h2>
               Disciplined backend support for reliable day-to-day agency
@@ -1130,7 +1124,7 @@ function ServicesPage() {
       <section className="services-bottom-cta">
         <div className="container services-bottom-cta-content">
           <div>
-            <p className="eyebrow light-eyebrow">Work With Tritox</p>
+            <p className="eyebrow light-eyebrow"style={{ fontSize: "18px" }}>Work With Tritox</p>
 
             <h2>
               Strengthen your quote process, CRM workflow, and daily
@@ -1296,7 +1290,7 @@ function AdvantagePage() {
         <div className="container advantage-benefits-container">
           <div className="advantage-section-heading">
             <div>
-              <p className="eyebrow">The Tritox Advantage</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>The Tritox Advantage</p>
 
               <h2>
                 Smarter costs. Greater producer capacity. Flexible support
@@ -1371,7 +1365,7 @@ function AdvantagePage() {
 
   <div className="container workflow-container">
     <div className="workflow-heading">
-      <p className="eyebrow workflow-eyebrow">Workflow</p>
+      <p className="eyebrow workflow-eyebrow"style={{ fontSize: "18px" }}>Workflow</p>
 
       <h2>
         A Structured Quote Preparation Process Integrated With Your Agency’s
@@ -1447,7 +1441,7 @@ function AdvantagePage() {
       <section className="advantage-final-cta">
         <div className="container advantage-final-cta-content">
           <div>
-            <p className="eyebrow advantage-light-eyebrow">
+            <p className="eyebrow advantage-light-eyebrow"style={{ fontSize: "18px" }}>
               Ready to Scale Smarter?
             </p>
 
@@ -1644,7 +1638,7 @@ function ImpactPage() {
         <div className="container impact-intro-container">
           <div className="impact-team-grid">
             <div className="impact-team-content">
-              <p className="eyebrow">Focused Team Structure</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Focused Team Structure</p>
 
               <h2>
                 A dedicated quote team keeps producers focused on customers and
@@ -1679,7 +1673,7 @@ function ImpactPage() {
 
             <div className="team-structure-card">
               <div className="team-structure-top">
-                <span>NEW-BUSINESS OPERATING MODEL</span>
+                <span style={{ fontSize: "18px" }}>NEW-BUSINESS OPERATING MODEL</span>
                 <i>✓</i>
               </div>
 
@@ -1725,7 +1719,7 @@ function ImpactPage() {
         <div className="container">
           <div className="dedicated-team-heading">
             <div>
-              <p className="eyebrow dedicated-team-eyebrow">
+              <p className="eyebrow dedicated-team-eyebrow"style={{ fontSize: "18px" }}>
                 Dedicated Quoting Team
               </p>
 
@@ -1805,7 +1799,7 @@ function ImpactPage() {
 
         <div className="container lead-to-close-container">
           <div className="lead-to-close-heading">
-            <p className="eyebrow impact-light-eyebrow">
+            <p className="eyebrow impact-light-eyebrow"style={{ fontSize: "18px" }}>
               A Connected Lead-to-Close Operating Model
             </p>
 
@@ -1854,7 +1848,7 @@ function ImpactPage() {
           <div className="scale-visual">
             <div className="scale-main-panel">
               <div className="scale-panel-header">
-                <span>SCALABLE QUOTE CAPACITY</span>
+                <span style={{ fontSize: "18px" }}>SCALABLE QUOTE CAPACITY</span>
                 <i>↗</i>
               </div>
 
@@ -1888,7 +1882,7 @@ function ImpactPage() {
           </div>
 
           <div className="scale-content">
-            <p className="eyebrow">A Structure Built to Scale</p>
+            <p className="eyebrow"style={{ fontSize: "18px" }}>A Structure Built to Scale</p>
 
             <h2>Expand quote capacity as lead volume grows.</h2>
 
@@ -1922,7 +1916,7 @@ function ImpactPage() {
         <div className="container">
           <div className="growth-model-heading">
             <div>
-              <p className="eyebrow">Growth-Focused Agency Model</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Growth-Focused Agency Model</p>
 
               <h2>How growth-focused agencies are scaling their growth.</h2>
             </div>
@@ -1991,7 +1985,7 @@ function ImpactPage() {
         <div className="container onboarding-intro-container">
           <div className="onboarding-intro-grid">
             <div className="onboarding-intro-content">
-              <p className="eyebrow">International Staff Setup</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>International Staff Setup</p>
 
               <h2>
                 A clear process for authorized international agency support.
@@ -2075,7 +2069,7 @@ function ImpactPage() {
         <div className="container">
           <div className="onboarding-path-heading">
             <div>
-              <p className="eyebrow">Choose the Appropriate Setup Path</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Choose the Appropriate Setup Path</p>
 
               <h2>
                 Link an existing Farmers ID or add a new international staff
@@ -2176,7 +2170,7 @@ function ImpactPage() {
 
         <div className="container onboarding-workflow-container">
           <div className="onboarding-workflow-heading">
-            <p className="onboarding-light-eyebrow">
+            <p className="onboarding-light-eyebrow"style={{ fontSize: "18px" }}>
               Onboarding Workflow
             </p>
 
@@ -2228,7 +2222,7 @@ function ImpactPage() {
           <div className="access-visual">
             <div className="cloud-access-card">
               <div className="cloud-card-header">
-                <span>AUTHORIZED ACCESS ENVIRONMENT</span>
+                <span style={{ fontSize: "18px" }}>AUTHORIZED ACCESS ENVIRONMENT</span>
                 <i>✓</i>
               </div>
 
@@ -2273,7 +2267,7 @@ function ImpactPage() {
           </div>
 
           <div className="access-environment-content">
-            <p className="eyebrow">Access & CRM Configuration</p>
+            <p className="eyebrow"style={{ fontSize: "18px" }}>Access & CRM Configuration</p>
 
             <h2>
               Configure the working environment before production support
@@ -2318,7 +2312,7 @@ function ImpactPage() {
       <section className="section onboarding-payment-section">
         <div className="container payment-grid">
           <div className="payment-content">
-            <p className="eyebrow">Payment Setup</p>
+            <p className="eyebrow"style={{ fontSize: "18px" }}>Payment Setup</p>
 
             <h2>Establish the preferred payment method before support begins.</h2>
 
@@ -2330,7 +2324,7 @@ function ImpactPage() {
           </div>
 
           <div className="payment-method-card">
-            <p className="payment-card-label">PAYMENT OPTIONS</p>
+            <p className="payment-card-label"style={{ fontSize: "18px" }}>PAYMENT OPTIONS</p>
 
             <div className="payment-method-list">
               <span>Gusto</span>
@@ -2353,7 +2347,7 @@ function ImpactPage() {
       <section className="impact-final-cta">
         <div className="container impact-final-cta-content">
           <div>
-            <p className="eyebrow impact-light-eyebrow">
+            <p className="eyebrow impact-light-eyebrow"style={{ fontSize: "18px" }}>
               Build a Stronger Workflow
             </p>
 
@@ -2470,7 +2464,7 @@ function PricingPage() {
         <div className="container pricing-main-container">
           <div className="pricing-intro-grid">
             <div className="pricing-intro-content">
-              <p className="eyebrow">Quote Preparation Pricing</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Quote Preparation Pricing</p>
 
               <h2>
                 Quote Preparation Starting at
@@ -2504,7 +2498,7 @@ function PricingPage() {
             <div className="main-price-card">
               <div className="price-card-top-line" />
 
-              <span className="price-card-label">QUOTE PREPARATION SUPPORT</span>
+              <span className="price-card-label"style={{ fontSize: "18px" }}>QUOTE PREPARATION SUPPORT</span>
 
               <strong className="price-card-price">
                 &lt; <span>$1</span>
@@ -2539,7 +2533,7 @@ function PricingPage() {
             <div className="eligible-icon">✓</div>
 
             <div>
-              <span>PAY FOR COMPLETED ELIGIBLE QUOTES</span>
+              <span style={{ fontSize: "18px" }}>PAY FOR COMPLETED ELIGIBLE QUOTES</span>
 
               <h3>Costs stay aligned with your actual quote volume.</h3>
 
@@ -2559,7 +2553,7 @@ function PricingPage() {
         <div className="container">
           <div className="pricing-factors-heading">
             <div>
-              <p className="eyebrow">Pricing Built Around Your Agency</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>Pricing Built Around Your Agency</p>
 
               <h2>Pricing Aligned to Your Agency’s Requirements</h2>
             </div>
@@ -2599,7 +2593,7 @@ function PricingPage() {
           <div className="monthly-billing-visual">
             <div className="billing-card">
               <div className="billing-card-header">
-                <span>TRITOX MONTHLY BILLING</span>
+                <span style={{ fontSize: "18px" }}>TRITOX MONTHLY BILLING</span>
                 <i>✓</i>
               </div>
 
@@ -2631,7 +2625,7 @@ function PricingPage() {
           </div>
 
           <div className="monthly-billing-content">
-            <p className="eyebrow">Simple Monthly Billing</p>
+            <p className="eyebrow" style={{ fontSize: "18px" }}>Simple Monthly Billing</p>
 
             <h2>A transparent cost structure designed for your workflow.</h2>
 
@@ -2662,7 +2656,7 @@ function PricingPage() {
 
         <div className="container comparison-container">
           <div className="comparison-heading">
-            <p className="eyebrow comparison-eyebrow">
+            <p className="eyebrow comparison-eyebrow"style={{ fontSize: "18px" }}>
               Cost Structure & Operational Efficiency
             </p>
 
@@ -2686,7 +2680,7 @@ function PricingPage() {
           <div className="pricing-comparison-card">
             <div className="comparison-card-header">
               <div>
-                <span className="comparison-small-label">
+                <span className="comparison-small-label"style={{ fontSize: "18px" }}>
                   COST COMPARISON
                 </span>
 
@@ -2736,7 +2730,7 @@ function PricingPage() {
       <section className="pricing-final-cta">
         <div className="container pricing-final-cta-content">
           <div>
-            <p className="eyebrow pricing-light-eyebrow">
+            <p className="eyebrow pricing-light-eyebrow"style={{ fontSize: "18px" }}>
               Start With a Free Trial
             </p>
 
@@ -3158,7 +3152,7 @@ function ContactPage() {
       <section className="section white-section">
         <div className="container contact-grid">
           <div className="contact-information">
-            <p className="eyebrow">Get Started</p>
+            <p className="eyebrow"style={{ fontSize: "18px" }}>Get Started</p>
 
             <h2>Ready to strengthen your agency workflow?</h2>
 
@@ -3202,7 +3196,7 @@ function ContactPage() {
             }}
           >
             <div className="contact-form-heading">
-              <p>REQUEST YOUR FREE TRIAL</p>
+              <p style={{ fontSize: "18px" }}>REQUEST YOUR FREE TRIAL</p>
               <h3>Tell us about your agency.</h3>
             </div>
 
@@ -3288,7 +3282,7 @@ function ContactPage() {
         <div className="about-hero-circle about-hero-circle-two" />
 
         <div className="container about-hero-content">
-          <p className="about-eyebrow">About Tritox Technologies</p>
+          <p className="about-eyebrow"style={{ fontSize: "18px" }}>About Tritox Technologies</p>
 
           <h1>
             Structured Operations.
@@ -3306,7 +3300,7 @@ function ContactPage() {
       <section className="section about-introduction-section">
         <div className="container about-introduction-grid">
           <div className="about-introduction-content">
-            <p className="eyebrow">Who We Are</p>
+            <p className="eyebrow"style={{ fontSize: "18px" }}>Who We Are</p>
 
             <h2>
               A dependable operations partner built around disciplined
@@ -3333,7 +3327,7 @@ function ContactPage() {
 
           <div className="about-company-card">
             <div className="company-card-header">
-              <span>TRITOX TECHNOLOGIES</span>
+              <span style={{ fontSize: "18px" }}>TRITOX TECHNOLOGIES</span>
               <i>●</i>
             </div>
 
@@ -3381,7 +3375,7 @@ function ContactPage() {
         <div className="container about-operating-grid">
           <div className="operating-visual-card">
             <div className="operating-card-top">
-              <span>TRITOX OPERATING MODEL</span>
+              <span style={{ fontSize: "18px" }}>TRITOX OPERATING MODEL</span>
               <i>✓</i>
             </div>
 
@@ -3417,7 +3411,7 @@ function ContactPage() {
           </div>
 
           <div className="about-operating-content">
-            <p className="about-light-eyebrow">Built for Consistency</p>
+            <p className="about-light-eyebrow"style={{ fontSize: "18px" }}>Built for Consistency</p>
 
             <h2>
               A practical operating model aligned with client systems and
@@ -3444,7 +3438,7 @@ function ContactPage() {
         <div className="container">
           <div className="values-heading">
             <div>
-              <p className="eyebrow">What We Stand For</p>
+              <p className="eyebrow"style={{ fontSize: "18px" }}>What We Stand For</p>
 
               <h2>
                 Professional support delivered through clarity, discipline, and
@@ -3481,7 +3475,7 @@ function ContactPage() {
       <section className="section security-section">
         <div className="container security-grid">
           <div className="security-content">
-            <p className="eyebrow">Security & Infrastructure</p>
+            <p className="eyebrow"style={{ fontSize: "18px" }}>Security & Infrastructure</p>
 
             <h2>Secure Access. Controlled Operations. Responsible Data Handling.</h2>
 
@@ -3569,7 +3563,7 @@ function ContactPage() {
       <section className="about-final-cta">
         <div className="container about-final-cta-content">
           <div>
-            <p className="about-light-eyebrow">Work With Tritox</p>
+            <p className="about-light-eyebrow"style={{ fontSize: "18px" }}>Work With Tritox</p>
 
             <h2>
               Build a more structured and reliable backend support model.

@@ -250,7 +250,7 @@ button {
   border-radius: 999px;
   color: #dbf6dc;
   background: rgba(4, 66, 136, 0.2);
-  font-size: 0.74rem;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.55px;
   text-transform: uppercase;
@@ -408,7 +408,7 @@ button {
   justify-content: center;
   width: min(405px, 100%);
   min-height: 425px;
-  padding: 23px;
+  
   border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: 22px;
   background: var(--white);
@@ -420,10 +420,10 @@ button {
 
 .logo-card-line {
   position: absolute;
-  top: 0;
+  /* top: 0;
   left: 10%;
   width: 80%;
-  height: 5px;
+  height: 5px; */
   border-radius: 0 0 999px 999px;
   background: linear-gradient(
     90deg,
@@ -436,7 +436,7 @@ button {
 
 .hero-logo {
   width: 100%;
-  max-height: 315px;
+  max-height: 100%;
   border-radius: 14px;
   object-fit: contain;
 }
@@ -1280,12 +1280,7 @@ button {
 }
 
 .service-heading-layout h2 {
-  background: linear-gradient(
-    90deg,
-    var(--blue-dark) 0%,
-    var(--main-blue) 48%,
-    var(--green-dark) 100%
-  );
+  background:  #0d47a1;;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2330,12 +2325,13 @@ button {
 .advantage-section-heading h2 {
   max-width: 750px;
   color: var(--blue-dark);
-  background: linear-gradient(
+  background:#0d47a1;
+  /* background: linear-gradient(
     90deg,
     var(--blue-dark) 0%,
     var(--main-blue) 45%,
     var(--green-dark) 100%
-  );
+  ); */
   font-family: "Manrope", sans-serif;
   font-size: clamp(2.1rem, 4vw, 3.35rem);
   font-weight: 800;
@@ -4385,12 +4381,13 @@ button {
 }
 
 .impact-team-content h2 {
-  background: linear-gradient(
+  background:#0d47a1;
+  /* background: linear-gradient(
     90deg,
     var(--blue-dark) 0%,
     var(--main-blue) 52%,
     var(--green-dark) 100%
-  );
+  ); */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5273,12 +5270,13 @@ button {
 }
 
 .growth-model-heading h2 {
-  background: linear-gradient(
+  background:#0d47a1;
+  /* background: linear-gradient(
     90deg,
     var(--blue-dark),
     var(--main-blue),
     var(--green-dark)
-  );
+  ); */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -7321,12 +7319,7 @@ button {
 .success-story-heading h2 {
   max-width: 790px;
   color: #063675;
-  background: linear-gradient(
-    90deg,
-    #063675 0%,
-    #1e88e5 55%,
-    #2e7d32 100%
-  );
+  background: #0d47a1;
   font-family: "Manrope", sans-serif;
   font-size: clamp(2.1rem, 4vw, 3.35rem);
   font-weight: 800;
