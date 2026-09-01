@@ -7,7 +7,7 @@ const navigationItems = [
   { label: "The Tritox Advantage", path: "/tritox-advantage" },
   { label: "Resource", path: "/quote-team-impact" },
   { label: "Pricing", path: "/pricing" },
-  {label:"SuccessStoryPage", path: "/success-stories"},
+  {label:"SuccessStory", path: "/success-stories"},
   // {
   //   label:"OnboardingPage",
   //   path: "/onboarding"
@@ -3186,6 +3186,7 @@ function ContactPage() {
                 standards, CRM process, and operational requirements.
               </p>
             </div>
+            
           </div>
 
           <form
@@ -3199,8 +3200,49 @@ function ContactPage() {
               <p style={{ fontSize: "18px" }}>REQUEST YOUR FREE TRIAL</p>
               <h3>Tell us about your agency.</h3>
             </div>
+           {/* MAINTENANCE MESSAGE */}
+<div
+  style={{
+    marginTop: "20px",
+    textAlign: "center",
+  }}
+>
+  <p
+    style={{
+      fontSize: "18px",
+      fontWeight: "700",
+      color: "#0d47a1",
+      marginBottom: "10px",
+    }}
+  >
+    Website Under Maintenance
+  </p>
 
-            <label>
+  <p
+    style={{
+      fontSize: "15px",
+      color: "#555",
+      marginBottom: "15px",
+    }}
+  >
+    We are currently updating our website. Please contact us directly for
+    more information.
+  </p>
+
+  <a
+    href="mailto:Info@tritoxtechnologies.com"
+    style={{
+      color: "#0d47a1",
+      fontSize: "16px",
+      fontWeight: "700",
+      textDecoration: "none",
+    }}
+  >
+    Email Us: Info@tritoxtechnologies.com
+  </a>
+</div>
+
+            {/* <label>
               Full Name
               <input type="text" placeholder="Enter your name" required />
             </label>
@@ -3244,7 +3286,7 @@ function ContactPage() {
 
             <button type="submit" className="primary-button submit-button">
               Request Free Trial →
-            </button>
+            </button> */}
           </form>
         </div>
       </section>
