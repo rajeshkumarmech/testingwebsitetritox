@@ -1,6 +1,7 @@
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 //import { useState } from "react";
 import "./HomePage.css";
+import "./ServicesPage.css";
 
 
 import { useEffect, useState } from "react";
@@ -970,6 +971,8 @@ function PageBanner({ eyebrow, title, description }) {
 //   );
 // }
 
+
+
 function ServicesPage() {
   const crmPlatforms = [
     {
@@ -1008,132 +1011,461 @@ function ServicesPage() {
       className: "ams-logo",
       logo: "/images/crm/AMS_360.png",
     },
-    
   ];
 
   return (
-    <main>
+    <main className="services-page">
+
+      {/* =====================================================
+          SERVICES BANNER
+      ====================================================== */}
+      <section className="services-network-hero">
+        <div className="services-network-overlay"></div>
+
+        <div className="services-network-content container">
+          <div className="services-hero-badge">
+            <span className="pulse-dot"></span>
+            INSURANCE BPO OPERATIONS
+          </div>
+
+          <h1>
+            Complete Support for
+            <span> Smarter Agency Operations</span>
+          </h1>
+
+          <p>
+            Structured quote preparation, CRM management, documentation,
+            and backend operational support designed to help Farmers agencies
+            improve workflow efficiency and maintain consistent daily operations.
+          </p>
+
+          <div className="services-hero-buttons">
+            <a href="#contact" className="services-primary-btn">
+              Start Your Free Trial →
+            </a>
+
+            <a href="#pricing" className="services-secondary-btn">
+              View Pricing
+            </a>
+          </div>
+
+          <div className="services-hero-stats">
+            <div>
+              <strong>03</strong>
+              <span>Core Services</span>
+            </div>
+
+            <div>
+              <strong>06+</strong>
+              <span>CRM Platforms</span>
+            </div>
+
+            <div>
+              <strong>24/7</strong>
+              <span>Operational Focus</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero-network-lines"></div>
+      </section>
+
+
+      {/* =====================================================
+          PAGE BANNER
+      ====================================================== */}
       <PageBanner
         eyebrow="Our Services"
         title="Integrated Operational, CRM, and Quote Preparation Support for Farmers Agencies"
         description="Tritox provides structured backend support that helps Farmers agencies maintain efficient quote workflows, organized CRM activity, and reliable day-to-day operations."
       />
 
-      {/* Quote Preparation Section */}
+
+      {/* =====================================================
+          QUOTE PREPARATION
+      ====================================================== */}
       <section className="section white-section service-intro-section">
         <div className="container">
-          <div className="service-heading-layout">
+
+          <div className="premium-section-heading">
             <div>
-              <p className="eyebrow"style={{ fontSize: "18px" }}>Quote Preparation Services</p>
+              <p className="eyebrow">
+                QUOTE PREPARATION SERVICES
+              </p>
 
               <h2>
-                Complete quote preparation support for Auto, Home, and Bundle
-                opportunities.
+                Complete quote preparation support for
+                <span> Auto, Home, and Bundle opportunities.</span>
               </h2>
             </div>
 
-            <p className="service-heading-description">
+            <p>
               Tritox provides specialized backend quote preparation support for
               Auto, Home, and Bundle opportunities, aligned with each Farmers
-              agency’s established coverage standards, quoting criteria, and
+              agency's established coverage standards, quoting criteria, and
               operational requirements.
             </p>
           </div>
 
-          <div className="quote-service-grid">
-            <article className="quote-service-card auto-service-card">
-              <div className="service-card-icon auto-icon">A</div>
 
-              <span className="service-card-number">01</span>
+          {/* Animated Workflow */}
+          <div className="quote-network-flow">
 
-              <h3>Auto Quote Preparation</h3>
+            <div className="network-line network-line-one"></div>
+            <div className="network-line network-line-two"></div>
 
-              <p>
-                Comprehensive support covering customer and prior-insurance
-                information validation, driver and vehicle data review, coverage
-                entry based on agency standards, and premium option comparison.
-              </p>
+            <div className="network-flow-node node-auto">
+              <div className="network-icon">A</div>
+              <strong>Auto</strong>
+              <small>Quote Processing</small>
+            </div>
 
-              <div className="service-tag-list">
-                <span>Customer data review</span>
-                <span>Driver validation</span>
-                <span>Vehicle information</span>
-                <span>Coverage entry</span>
-              </div>
+            <div className="network-flow-center">
+              <span className="center-ring"></span>
+              <strong>TRITOX</strong>
+              <small>QUOTE HUB</small>
+            </div>
 
-              <p className="service-card-note">
-                Support for Farmers and Bristol West quote comparisons in
-                accordance with agency-defined quoting criteria.
-              </p>
-            </article>
+            <div className="network-flow-node node-home">
+              <div className="network-icon">H</div>
+              <strong>Home</strong>
+              <small>Quote Processing</small>
+            </div>
 
-            <article className="quote-service-card home-service-card">
-              <div className="service-card-icon home-icon">H</div>
+            <div className="network-flow-node node-bundle">
+              <div className="network-icon">B</div>
+              <strong>Bundle</strong>
+              <small>Opportunity Support</small>
+            </div>
 
-              <span className="service-card-number">02</span>
-
-              <h3>Home Quote Preparation</h3>
-
-              <p>
-                Structured support covering property address validation, home
-                characteristics and feature review, and applicable coverage
-                entry aligned with the agency’s established Home quoting
-                standards.
-              </p>
-
-              <div className="service-tag-list">
-                <span>Address validation</span>
-                <span>Property review</span>
-                <span>Home features</span>
-                <span>Coverage details</span>
-              </div>
-
-              <p className="service-card-note">
-                Consistent preparation support designed around your agency’s
-                Home quoting workflow.
-              </p>
-            </article>
-
-            <article className="quote-service-card bundle-service-card">
-              <div className="service-card-icon bundle-icon">B</div>
-
-              <span className="service-card-number">03</span>
-
-              <h3>Bundle Quote Preparation</h3>
-
-              <p>
-                Coordinated preparation of Auto and Home opportunities,
-                covering customer, vehicle, property, and coverage information
-                across both lines.
-              </p>
-
-              <div className="service-tag-list">
-                <span>Auto + Home data</span>
-                <span>Coverage alignment</span>
-                <span>Complete records</span>
-                <span>Bundle consistency</span>
-              </div>
-
-              <p className="service-card-note">
-                Maintain complete, accurate, and consistent quote data within
-                bundled opportunities.
-              </p>
-            </article>
           </div>
+
+
+          <div className="quote-service-grid">
+
+            {/* AUTO */}
+            <article className="quote-service-card auto-service-card">
+
+              <div className="quote-card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=85"
+                  alt="Auto insurance quote preparation"
+                />
+
+                <div className="quote-image-label">
+                  AUTO
+                </div>
+              </div>
+
+              <div className="quote-card-content">
+
+                <div className="service-card-top">
+                  <div className="service-card-icon auto-icon">
+                    A
+                  </div>
+
+                  <span className="service-card-number">
+                    01
+                  </span>
+                </div>
+
+                <h3>Auto Quote Preparation</h3>
+
+                <p>
+                  Comprehensive support covering customer and prior-insurance
+                  information validation, driver and vehicle data review,
+                  coverage entry based on agency standards, and premium option
+                  comparison.
+                </p>
+
+                <div className="service-tag-list">
+                  <span>Customer data review</span>
+                  <span>Driver validation</span>
+                  <span>Vehicle information</span>
+                  <span>Coverage entry</span>
+                </div>
+
+                {/* <p className="service-card-note">
+                  Support for Farmers and Bristol West quote comparisons in
+                  accordance with agency-defined quoting criteria.
+                </p> */}
+
+              </div>
+              <p className="service-card-note">
+                  Support for Farmers and Bristol West quote comparisons in
+                  accordance with agency-defined quoting criteria.
+                </p>
+            </article>
+
+
+            {/* HOME */}
+            <article className="quote-service-card home-service-card">
+
+              <div className="quote-card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                  alt="Home insurance quote preparation"
+                />
+
+                <div className="quote-image-label">
+                  HOME
+                </div>
+              </div>
+
+              <div className="quote-card-content">
+
+                <div className="service-card-top">
+                  <div className="service-card-icon home-icon">
+                    H
+                  </div>
+
+                  <span className="service-card-number">
+                    02
+                  </span>
+                </div>
+
+                <h3>Home Quote Preparation</h3>
+
+                <p>
+                  Structured support covering property address validation,
+                  home characteristics and feature review, and applicable
+                  coverage entry aligned with the agency's established Home
+                  quoting standards.
+                </p>
+
+                <div className="service-tag-list">
+                  <span>Address validation</span>
+                  <span>Property review</span>
+                  <span>Home features</span>
+                  <span>Coverage details</span>
+                </div>
+
+                {/* <p className="service-card-note">
+                  Consistent preparation support designed around your agency's
+                  Home quoting workflow.
+                </p> */}
+
+              </div>
+              <p className="service-card-note">
+                  Consistent preparation support designed around your agency's
+                  Home quoting workflow.
+                </p>
+            </article>
+
+
+            {/* BUNDLE */}
+            <article className="quote-service-card bundle-service-card">
+
+              <div className="quote-card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85"
+                  alt="Bundle insurance opportunity"
+                />
+
+                <div className="quote-image-label">
+                  BUNDLE
+                </div>
+              </div>
+
+              <div className="quote-card-content">
+
+                <div className="service-card-top">
+                  <div className="service-card-icon bundle-icon">
+                    B
+                  </div>
+
+                  <span className="service-card-number">
+                    03
+                  </span>
+                </div>
+
+                <h3>Bundle Quote Preparation</h3>
+
+                <p>
+                  Coordinated preparation of Auto and Home opportunities,
+                  covering customer, vehicle, property, and coverage information
+                  across both lines.
+                </p>
+
+                <div className="service-tag-list">
+                  <span>Auto + Home data</span>
+                  <span>Coverage alignment</span>
+                  <span>Complete records,Bundle consistency</span>
+                  
+                </div>
+
+                {/* <p className="service-card-note">
+                  Maintain complete, accurate, and consistent quote data within
+                  bundled opportunities.
+                </p> */}
+
+              </div>
+              <p className="service-card-note">
+                  Maintain complete, accurate, and consistent quote data within
+                  bundled opportunities.
+                </p> 
+            </article>
+
+          </div>
+
         </div>
       </section>
 
-      {/* CRM Management Section */}
-      <section className="section crm-management-section">
+
+      {/* =====================================================
+          BPO OPERATIONS
+      ====================================================== */}
+      <section className="bpo-support-section">
+
         <div className="container">
-          <div className="crm-header">
+
+          <div className="premium-section-heading center-heading">
+
             <div>
-              <p className="eyebrow crm-eyebrow"style={{ fontSize: "18px" }}>CRM Management</p>
+              <p className="eyebrow">
+                BPO OPERATIONS SUPPORT
+              </p>
 
               <h2>
-                Accurate CRM data. Clear pipeline visibility. Better sales
-                operations.
+                A reliable backend team behind
+                <span> your agency workflow.</span>
               </h2>
+            </div>
+
+            <p>
+              Tritox supports insurance agencies with structured backend
+              operations, quote preparation, CRM management, documentation,
+              and daily workflow support.
+            </p>
+
+          </div>
+
+
+          <div className="bpo-support-grid">
+
+            {/* IMAGE */}
+            <div className="bpo-image-card">
+
+              <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+                alt="Insurance BPO operations team"
+              />
+
+              <div className="bpo-image-overlay"></div>
+
+              <div className="bpo-image-caption">
+                <span className="live-dot"></span>
+
+                <div>
+                  <strong>TEAM ACTIVE</strong>
+                  <small>Backend operations in progress</small>
+                </div>
+              </div>
+
+              <div className="bpo-floating-status">
+
+                <div className="status-check">
+                  ✓
+                </div>
+
+                <div>
+                  <strong>Operations Online</strong>
+                  <small>Workflow monitoring</small>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* CARDS */}
+            <div className="bpo-operation-cards">
+
+              <article>
+                <span>01</span>
+
+                <div>
+                  <h3>Quote Preparation</h3>
+
+                  <p>
+                    Structured Auto, Home and Bundle quote preparation
+                    support for agency teams.
+                  </p>
+                </div>
+              </article>
+
+
+              <article>
+                <span>02</span>
+
+                <div>
+                  <h3>CRM Management</h3>
+
+                  <p>
+                    Organized lead, opportunity and documentation management
+                    across CRM platforms.
+                  </p>
+                </div>
+              </article>
+
+
+              <article>
+                <span>03</span>
+
+                <div>
+                  <h3>Backend Operations</h3>
+
+                  <p>
+                    Consistent operational assistance that helps agencies
+                    maintain reliable daily workflows.
+                  </p>
+                </div>
+              </article>
+
+
+              <article>
+                <span>04</span>
+
+                <div>
+                  <h3>Quality & Accuracy</h3>
+
+                  <p>
+                    Focused data validation and process consistency to
+                    reduce missing information.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          CRM MANAGEMENT
+      ====================================================== */}
+      <section className="section crm-management-section">
+
+        <div className="container">
+
+          <div className="premium-section-heading">
+
+            <div>
+
+              <p className="eyebrow crm-eyebrow">
+                CRM MANAGEMENT
+              </p>
+
+              <h2>
+                Accurate CRM data.
+                <span> Clear pipeline visibility.</span>
+                Better sales operations.
+              </h2>
+
             </div>
 
             <p>
@@ -1142,34 +1474,72 @@ function ServicesPage() {
               accurate, organized, and actionable lead and opportunity data
               throughout the quoting lifecycle.
             </p>
+
           </div>
 
-          <div className="crm-platform-grid">
-            {crmPlatforms.map((platform) => (
-              <article
-                key={platform.name}
-                className={`crm-platform-card ${platform.className}`}
-              >
-                <div className="crm-platform-logo-wrapper">
-                  {platform.logo ? (
-                    <img
-                      src={platform.logo}
-                      alt={`${platform.name} logo`}
-                      className="crm-platform-logo-image"
-                    />
-                  ) : (
-                    <span className="crm-platform-mark">
-                      {platform.shortName}
-                    </span>
-                  )}
-                </div>
 
-                <strong>{platform.name}</strong>
-              </article>
-            ))}
+          {/* CRM IMAGE + PLATFORM AREA */}
+          <div className="crm-visual-section">
+
+            <div className="crm-dashboard-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85"
+                alt="CRM analytics dashboard"
+              />
+
+              <div className="dashboard-overlay">
+                <span>LIVE CRM WORKFLOW</span>
+              </div>
+
+            </div>
+
+
+            <div className="crm-platform-grid">
+
+              {crmPlatforms.map((platform) => (
+
+                <article
+                  key={platform.name}
+                  className={`crm-platform-card ${platform.className}`}
+                >
+
+                  <div className="crm-platform-logo-wrapper">
+
+                    {platform.logo ? (
+                      <img
+                        src={platform.logo}
+                        alt={`${platform.name} logo`}
+                        className="crm-platform-logo-image"
+                      />
+                    ) : (
+                      <span className="crm-platform-mark">
+                        {platform.shortName}
+                      </span>
+                    )}
+
+                  </div>
+
+                  <strong>
+                    {platform.name}
+                  </strong>
+
+                  <span className="platform-arrow">
+                    →
+                  </span>
+
+                </article>
+
+              ))}
+
+            </div>
+
           </div>
 
+
+          {/* CRM DETAILS */}
           <div className="crm-details-grid">
+
             <article className="crm-detail-card">
               <span className="crm-detail-icon">01</span>
 
@@ -1182,16 +1552,18 @@ function ServicesPage() {
               </p>
             </article>
 
+
             <article className="crm-detail-card">
               <span className="crm-detail-icon">02</span>
 
               <h3>Pipeline and Opportunity Updates</h3>
 
               <p>
-                Keep pipeline stages, opportunities, and sales activity updated
-                so agency teams have a clearer view of active business.
+                Keep pipeline stages, opportunities, and sales activity
+                updated so agency teams have a clearer view of active business.
               </p>
             </article>
+
 
             <article className="crm-detail-card">
               <span className="crm-detail-icon">03</span>
@@ -1204,6 +1576,7 @@ function ServicesPage() {
               </p>
             </article>
 
+
             <article className="crm-detail-card">
               <span className="crm-detail-icon">04</span>
 
@@ -1214,10 +1587,15 @@ function ServicesPage() {
                 improve visibility, and strengthen day-to-day sales operations.
               </p>
             </article>
+
           </div>
 
+
           <div className="crm-summary-box">
-            <span className="summary-check">✓</span>
+
+            <span className="summary-check">
+              ✓
+            </span>
 
             <p>
               Our team manages lead information, pipeline updates, quote
@@ -1225,60 +1603,118 @@ function ServicesPage() {
               visibility into active opportunities and supporting consistent
               day-to-day sales operations.
             </p>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Operational Support Section */}
+
+      {/* =====================================================
+          OPERATIONAL SUPPORT
+      ====================================================== */}
       <section className="section white-section operational-section">
+
         <div className="container operational-grid">
+
           <div className="operational-visual">
+
+            <div className="operation-image-card">
+
+              <img
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1100&q=85"
+                alt="Business operations support team"
+              />
+
+              <div className="operation-image-overlay"></div>
+
+            </div>
+
+
             <div className="operation-panel operation-panel-main">
-              <span className="operation-panel-label"style={{ fontSize: "18px" }}>
+
+              <span className="operation-panel-label">
                 TRITOX OPERATIONS
               </span>
 
-              <div className="operation-bar">
-                <span className="bar-label">Documentation</span>
-
-                <div className="bar-track">
-                  <span className="bar-fill green-fill" />
-                </div>
-              </div>
 
               <div className="operation-bar">
-                <span className="bar-label">Process execution</span>
+
+                <div className="bar-heading">
+                  <span>Documentation</span>
+                  <strong>96%</strong>
+                </div>
 
                 <div className="bar-track">
-                  <span className="bar-fill yellow-fill" />
+                  <span
+                    className="bar-fill green-fill"
+                    style={{ width: "96%" }}
+                  />
                 </div>
+
               </div>
+
 
               <div className="operation-bar">
-                <span className="bar-label">Daily consistency</span>
+
+                <div className="bar-heading">
+                  <span>Process execution</span>
+                  <strong>93%</strong>
+                </div>
 
                 <div className="bar-track">
-                  <span className="bar-fill blue-fill" />
+                  <span
+                    className="bar-fill yellow-fill"
+                    style={{ width: "93%" }}
+                  />
                 </div>
+
               </div>
+
+
+              <div className="operation-bar">
+
+                <div className="bar-heading">
+                  <span>Daily consistency</span>
+                  <strong>98%</strong>
+                </div>
+
+                <div className="bar-track">
+                  <span
+                    className="bar-fill blue-fill"
+                    style={{ width: "98%" }}
+                  />
+                </div>
+
+              </div>
+
             </div>
 
+
             <div className="operation-floating-card">
+
               <span>✓</span>
 
               <div>
                 <strong>Reliable Support</strong>
                 <small>Built for agency operations</small>
               </div>
+
             </div>
+
           </div>
 
+
           <div className="operational-content">
-            <p className="eyebrow"style={{ fontSize: "18px" }}>Operational Support</p>
+
+            <p className="eyebrow">
+              OPERATIONAL SUPPORT
+            </p>
 
             <h2>
-              Disciplined backend support for reliable day-to-day agency
-              performance.
+              Disciplined backend support for reliable
+              <span> day-to-day agency performance.</span>
             </h2>
 
             <p>
@@ -1294,40 +1730,87 @@ function ServicesPage() {
               day-to-day performance.
             </p>
 
+
             <ul className="operational-list">
-              <li>Agency operations support</li>
-              <li>Documentation management</li>
-              <li>Process execution assistance</li>
-              <li>Consistent backend workflow support</li>
+
+              <li>
+                <span>✓</span>
+                Agency operations support
+              </li>
+
+              <li>
+                <span>✓</span>
+                Documentation management
+              </li>
+
+              <li>
+                <span>✓</span>
+                Process execution assistance
+              </li>
+
+              <li>
+                <span>✓</span>
+                Consistent backend workflow support
+              </li>
+
             </ul>
 
-            <Link to="/contact" className="primary-button">
-              Start Your Free Trial
-            </Link>
+
+            <a
+              href="#contact"
+              className="primary-button"
+            >
+              Start Your Free Trial →
+            </a>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Bottom CTA */}
+
+      {/* =====================================================
+          BOTTOM CTA
+      ====================================================== */}
       <section className="services-bottom-cta">
+
         <div className="container services-bottom-cta-content">
+
           <div>
-            <p className="eyebrow light-eyebrow"style={{ fontSize: "18px" }}>Work With Tritox</p>
+
+            <p className="eyebrow light-eyebrow">
+              WORK WITH TRITOX
+            </p>
 
             <h2>
-              Strengthen your quote process, CRM workflow, and daily
-              operations.
+              Strengthen your quote process, CRM workflow,
+              and daily operations.
             </h2>
+
+            <p>
+              Let Tritox handle the backend while your agency
+              focuses on customers and growth.
+            </p>
+
           </div>
 
-          <Link to="/contact" className="cta-yellow-button">
+
+          <a
+            href="#contact"
+            className="cta-yellow-button"
+          >
             Request Free Trial →
-          </Link>
+          </a>
+
         </div>
+
       </section>
+
     </main>
   );
 }
+
 function AdvantagePage() {
   const benefits = [
     {
