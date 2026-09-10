@@ -5,6 +5,7 @@ import "./ServicesPage.css";
 import "./AdvantagePage.css";
 import "./SuccessStoryPage.css";
 import "./PricingPage.css";
+import "./AboutPage.css";
 
 
 import { useEffect, useState } from "react";
@@ -972,7 +973,7 @@ function SuccessStoryPage() {
       {/* =====================================================
           FINAL CONTACT CTA
       ===================================================== */}
-
+{/* 
       <section className="contact-final-cta">
 
         <div className="container contact-final-content">
@@ -1007,9 +1008,9 @@ function SuccessStoryPage() {
             Start Your Free Trial →
           </Link> */}
 
-        </div>
+        {/* </div> */}
 
-      </section>
+      {/* </section> */} 
 
     </main>
   );
@@ -1166,7 +1167,7 @@ function HomePage() {
 
 
             {/* Price floating card */}
-            <div className="floating-price-card">
+            {/* <div className="floating-price-card">
 
               <span className="price-label">
                 Support from
@@ -1180,17 +1181,17 @@ function HomePage() {
                 per quote
               </span>
 
-            </div>
+            </div> */}
 
 
             {/* Quote types card */}
-            <div className="floating-types-card">
+            {/* <div className="floating-types-card">
 
               <span>Auto</span>
               <span>Home</span>
               <span>Bundle</span>
 
-            </div>
+            </div> */}
 
 
             {/* Caption */}
@@ -1529,11 +1530,11 @@ function ServicesPage() {
               <small>Quote Processing</small>
             </div>
 
-            <div className="network-flow-center">
+            {/* <div className="network-flow-center">
               <span className="center-ring"></span>
               <strong>TRITOX</strong>
               <small>QUOTE HUB</small>
-            </div>
+            </div> */}
 
             <div className="network-flow-node node-home">
               <div className="network-icon">H</div>
@@ -5141,25 +5142,180 @@ function ContactPage() {
       </section> */}
        {/* About Hero */}
       <section className="about-hero">
-        <div className="about-hero-grid-pattern" />
-        <div className="about-hero-circle about-hero-circle-one" />
-        <div className="about-hero-circle about-hero-circle-two" />
 
-        <div className="container about-hero-content">
-          <p className="about-eyebrow"style={{ fontSize: "18px" }}>About Tritox Technologies</p>
+  {/* Network background */}
+  <div className="about-network-bg" />
 
-          <h1>
-            Structured Operations.
-            <span>Reliable Backend Support.</span>
-          </h1>
+  {/* Dark/blue overlay */}
+  <div className="about-hero-overlay" />
 
-          <p>
-            Tritox Technologies Private Limited is a specialized business
-            operations and backend support company serving clients worldwide.
-          </p>
+  {/* Grid */}
+  <div className="about-hero-grid-pattern" />
+
+  {/* Decorative circles */}
+  <div className="about-hero-circle about-hero-circle-one" />
+  <div className="about-hero-circle about-hero-circle-two" />
+  <div className="about-hero-circle about-hero-circle-three" />
+
+  {/* Animated glowing nodes */}
+  <span className="about-network-node about-node-one" />
+  <span className="about-network-node about-node-two" />
+  <span className="about-network-node about-node-three" />
+  <span className="about-network-node about-node-four" />
+  <span className="about-network-node about-node-five" />
+
+  <div className="container about-hero-content">
+
+    <div className="about-hero-text">
+
+      <div className="about-eyebrow">
+        <span className="about-eyebrow-dot" />
+        ABOUT TRITOX TECHNOLOGIES
+      </div>
+
+      <h1>
+        Structured Operations.
+        <span>Reliable Backend Support.</span>
+      </h1>
+
+      <p>
+        Tritox Technologies Private Limited is a specialized business
+        operations and backend support company serving clients worldwide.
+        We help businesses build dependable operational capacity through
+        structured processes, dedicated support, and scalable solutions.
+      </p>
+
+      <div className="about-hero-actions">
+
+        <button
+          className="about-primary-button"
+          onClick={() =>
+            document.getElementById("contact")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+        >
+          Talk With Our Team
+          <span>→</span>
+        </button>
+
+        <button
+          className="about-secondary-button"
+          onClick={() =>
+            document.getElementById("services")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+        >
+          Explore Our Services
+          <span>↓</span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    {/* Right side visual */}
+    <div className="about-hero-visual">
+
+      <div className="about-glow" />
+
+      <div className="about-operation-card">
+
+        <div className="about-card-header">
+
+          <div>
+            <span>TRITOX TECHNOLOGIES</span>
+            <h3>Operational Support</h3>
+          </div>
+
+          <div className="about-status">
+            <span />
+            Active
+          </div>
+
         </div>
-      </section>
 
+
+        <div className="about-card-divider" />
+
+
+        <div className="about-operation-item">
+
+          <div className="about-operation-icon">
+            ✓
+          </div>
+
+          <div>
+            <strong>Structured Workflows</strong>
+            <span>Process-driven operations</span>
+          </div>
+
+        </div>
+
+
+        <div className="about-operation-item">
+
+          <div className="about-operation-icon">
+            ↗
+          </div>
+
+          <div>
+            <strong>Scalable Capacity</strong>
+            <span>Support built around demand</span>
+          </div>
+
+        </div>
+
+
+        <div className="about-operation-item">
+
+          <div className="about-operation-icon">
+            ⚡
+          </div>
+
+          <div>
+            <strong>Reliable Execution</strong>
+            <span>Focused on consistency</span>
+          </div>
+
+        </div>
+
+
+        <div className="about-card-footer">
+
+          <span>Business Operations</span>
+
+          <strong>01</strong>
+
+        </div>
+
+      </div>
+
+
+      <div className="about-floating-badge badge-one">
+        <span>✓</span>
+        <div>
+          <strong>Reliable</strong>
+          <small>Backend Support</small>
+        </div>
+      </div>
+
+
+      <div className="about-floating-badge badge-two">
+        <span>↗</span>
+        <div>
+          <strong>Scalable</strong>
+          <small>Operations</small>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
       {/* Company introduction */}
       <section className="section about-introduction-section">
         <div className="container about-introduction-grid">
@@ -6050,6 +6206,7 @@ function App() {
         {/* Contact */}
         <section id="contact" className="page-section">
           <ContactPage />
+          <Footer />
           
         </section>
 
