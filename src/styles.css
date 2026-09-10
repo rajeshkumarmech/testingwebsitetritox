@@ -25,6 +25,9 @@
 html {
   scroll-behavior: smooth;
 }
+section {
+  scroll-margin-top: 80px;
+}
 
 body {
   color: var(--dark);
@@ -95,7 +98,7 @@ section {
 
 /* Navbar */
 
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -106,9 +109,9 @@ section {
   background: #1e88e5;
   box-shadow: 0 5px 18px rgba(0, 36, 88, 0.2);
   backdrop-filter: blur(14px);
-}
+} */
 
-.navbar-content {
+/* .navbar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -174,7 +177,7 @@ section {
 .nav-links a:hover::after,
 .nav-links a.active::after {
   transform: scaleX(1);
-}
+} */
 
 /* Home hero */
 

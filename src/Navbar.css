@@ -1,0 +1,192 @@
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  background: #ffffff;
+
+  z-index: 1000;
+
+  border-bottom: 1px solid #e6edf5;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==============================
+   NAVBAR CONTENT
+================================ */
+
+.navbar-content {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ==============================
+   BRAND
+================================ */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  color: #12345a;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+}
+
+
+/* ==============================
+   NAVIGATION
+================================ */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #12345a;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  transition: all 0.25s ease;
+}
+
+
+/* ==============================
+   HOVER
+================================ */
+
+.nav-links a:hover {
+  background: #eaf5ff;
+
+  color: #1e88e5;
+
+  transform: translateY(-1px);
+}
+
+
+/* ==============================
+   ACTIVE BLUE BOX
+================================ */
+
+.nav-links a.active {
+  background: #1e88e5;
+
+  color: #ffffff;
+
+  box-shadow: 0 5px 12px rgba(30, 136, 229, 0.25);
+}
+
+
+/* ==============================
+   ACTIVE HOVER
+================================ */
+
+.nav-links a.active:hover {
+  background: #1565c0;
+
+  color: #ffffff;
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 1000px) {
+
+  .brand span {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 3px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}
+
+
+@media (max-width: 750px) {
+
+  .navbar {
+    height: auto;
+    min-height: 70px;
+  }
+
+  .navbar-content {
+    flex-direction: column;
+
+    padding: 10px 0;
+
+    gap: 8px;
+  }
+
+  .brand span {
+    display: block;
+    font-size: 18px;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    overflow-x: auto;
+
+    justify-content: flex-start;
+
+    padding-bottom: 4px;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+
+    font-size: 12px;
+
+    padding: 8px 11px;
+  }
+}

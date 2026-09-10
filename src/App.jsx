@@ -1,49 +1,90 @@
 import { Link, NavLink, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+//import { useState } from "react";
+import "./HomePage.css";
+
+
+import { useEffect, useState } from "react";
+import "./Navbar.css";
 
 const navigationItems = [
-  { label: "Home", path: "/" },
-  { label: "Services", path: "/services" },
-  { label: "The Tritox Advantage", path: "/tritox-advantage" },
-  { label: "Resource", path: "/quote-team-impact" },
-  { label: "Pricing", path: "/pricing" },
-  {label:"SuccessStory", path: "/success-stories"},
-  // {
-  //   label:"OnboardingPage",
-  //   path: "/onboarding"
-  // },
-  // { label: "About", path: "/about" },
-  { label: "Contact Us", path: "/contact" },
+  { label: "Home", path: "home" },
+  { label: "Services", path: "services" },
+  { label: "The Tritox Advantage", path: "tritox-advantage" },
+  { label: "Resource", path: "quote-team-impact" },
+  { label: "Pricing", path: "pricing" },
+  { label: "Success Story", path: "success-stories" },
+  { label: "Contact Us", path: "contact" },
 ];
 
 function Navbar() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navigationItems.map((item) =>
+        document.getElementById(item.path)
+      );
+
+      let currentSection = "home";
+
+      sections.forEach((section) => {
+        if (section) {
+          const sectionTop = section.getBoundingClientRect().top;
+
+          if (sectionTop <= 150) {
+            currentSection = section.id;
+          }
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header className="navbar">
       <div className="container navbar-content">
-        <Link to="/" className="brand">
-                  <img
-    src="/tritox_logo.png"
-    
-    className="brand-logo"
-  />
-          <span>Tritox Technologies</span>
-        </Link>
 
+        {/* Logo */}
+        <a href="#home" className="brand">
+          <img
+            src="/tritox_logo.png"
+            className="brand-logo"
+            
+          />
+
+          <span style={{ color: "#1565c0" }}>Tritox Technologies</span>
+        </a>
+
+        {/* Navigation */}
         <nav className="nav-links">
           {navigationItems.map((item) => (
-            <NavLink
+            <a
               key={item.path}
-              to={item.path}
-              end={item.path === "/"}
+              href={`#${item.path}`}
+              className={
+                activeSection === item.path ? "active" : ""
+              }
             >
               {item.label}
-            </NavLink>
+            </a>
           ))}
         </nav>
+
       </div>
     </header>
   );
 }
+
+
+
+
 
 function SuccessStoryPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -563,20 +604,45 @@ function SuccessStoryPage() {
   );
 }
 
+
 function HomePage() {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <main>
-      <section className="home-hero">
+
+      {/* ================= HERO ================= */}
+
+      <section className="home-hero" id="home">
+
+        {/* Animated background */}
         <div className="hero-circle hero-circle-top" />
         <div className="hero-circle hero-circle-bottom" />
+        <div className="hero-glow hero-glow-one" />
+        <div className="hero-glow hero-glow-two" />
 
         <div className="container hero-grid">
+
+          {/* LEFT CONTENT */}
           <div className="hero-content">
-            
+
+            <div className="hero-small-badge">
+              <span className="badge-dot" />
+              Built for Farmers Insurance Agencies
+            </div>
 
             <h1>
-             Farmers Insurance Quote Preparation support Less Than $1 per Quote
-              
+              Farmers Insurance Quote Preparation Support
+              <span> Less Than $1 per Quote</span>
             </h1>
 
             <p className="hero-description">
@@ -586,21 +652,34 @@ function HomePage() {
               strengthen day-to-day operational efficiency.
             </p>
 
+            {/* Buttons */}
             <div className="hero-buttons">
-              <Link to="/contact" className="start-trial-button">
+
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="start-trial-button"
+              >
                 Start Your Free Trial
                 <span>→</span>
-              </Link>
+              </button>
 
-              <Link to="/pricing" className="view-pricing-button">
+              <button
+                onClick={() => scrollToSection("pricing")}
+                className="view-pricing-button"
+              >
                 View Pricing
                 <span>→</span>
-              </Link>
+              </button>
+
             </div>
 
+            {/* Benefits */}
             <div className="hero-benefits">
+
               <div className="hero-benefit">
-                <span className="benefit-icon yellow-benefit">✓</span>
+                <span className="benefit-icon yellow-benefit">
+                  ✓
+                </span>
 
                 <div>
                   <strong>Auto, Home & Bundle</strong>
@@ -609,65 +688,149 @@ function HomePage() {
               </div>
 
               <div className="hero-benefit">
-                <span className="benefit-icon green-benefit">✓</span>
+                <span className="benefit-icon green-benefit">
+                  ✓
+                </span>
 
                 <div>
                   <strong>Efficient operations</strong>
                   <small>Support built for agencies</small>
                 </div>
               </div>
+
             </div>
+
           </div>
 
+
+          {/* ================= RIGHT VISUAL ================= */}
+
           <div className="hero-logo-side">
-            <div className="logo-badge">
-              <span>✓</span>
+
+            {/* Floating top badge */}
+            <div className="floating-badge floating-badge-top">
+
+              <div className="floating-icon">
+                ✓
+              </div>
 
               <div>
-                <strong>Agency Support</strong>
-                <small>Built for efficiency</small>
+                <strong>Quote Support</strong>
+                <small>Ready for your agency</small>
               </div>
+
             </div>
 
+
+            {/* Main image card */}
             <div className="logo-card">
+
+              <div className="card-shine" />
+
               <div className="logo-card-line" />
 
               <img
                 src="/farmer_img.png"
-                
                 className="hero-logo"
+                alt="Farmers Insurance quote support"
               />
 
-              
+              {/* Bottom card information */}
+              <div className="image-card-info">
+
+                <div>
+                  <span className="status-dot" />
+                  Operational Support
+                </div>
+
+                <strong>
+                  Quote Preparation
+                </strong>
+
+              </div>
+
             </div>
 
+
+            {/* Price floating card */}
+            <div className="floating-price-card">
+
+              <span className="price-label">
+                Support from
+              </span>
+
+              <strong>
+                &lt; $1
+              </strong>
+
+              <span className="price-per">
+                per quote
+              </span>
+
+            </div>
+
+
+            {/* Quote types card */}
+            <div className="floating-types-card">
+
+              <span>Auto</span>
+              <span>Home</span>
+              <span>Bundle</span>
+
+            </div>
+
+
+            {/* Caption */}
             <div className="logo-caption">
+
               <span className="caption-line" />
 
               <p>
                 Enhancing Agency Efficiency Through
-                <strong> Specialized Quote Preparation Support.</strong>
+                <strong>
+                  {" "}Specialized Quote Preparation Support.
+                </strong>
               </p>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      <section className="section white-section">
-        <div className="container">
-          <div className="section-heading">
-            <p className="eyebrow" style={{ fontSize: "18px" }}>Why Tritox</p>
 
-            <h2>Support your agency with a better quote workflow.</h2>
+      {/* ================= WHY TRITOX ================= */}
+
+      <section className="section white-section">
+
+        <div className="container">
+
+          <div className="section-heading">
+
+            <p
+              className="eyebrow"
+              style={{ fontSize: "18px" }}
+            >
+              Why Tritox
+            </p>
+
+            <h2>
+              Support your agency with a better quote workflow.
+            </h2>
 
             <p>
               Our specialized operational support helps your agency team
               reduce repetitive preparation work and spend more time serving
               customers.
             </p>
+
           </div>
 
+
           <div className="feature-grid">
+
             <FeatureCard
               number="01"
               title="Quote Preparation"
@@ -688,26 +851,51 @@ function HomePage() {
               description="Receive specialized quote preparation support at less than $1 per quote."
               type="yellow"
             />
+
           </div>
+
         </div>
+
       </section>
+
+
+      {/* ================= CTA ================= */}
 
       <section className="section home-cta-section">
-        <div className="container home-cta-content">
-          <div>
-            <p className="eyebrow light-eyebrow"style={{ fontSize: "18px" }}>Start Today</p>
 
-            <h2>Ready to improve your quote preparation workflow?</h2>
+        <div className="container home-cta-content">
+
+          <div>
+
+            <p
+              className="eyebrow light-eyebrow"
+              style={{ fontSize: "18px" }}
+            >
+              Start Today
+            </p>
+
+            <h2>
+              Ready to improve your quote preparation workflow?
+            </h2>
+
           </div>
 
-          <Link to="/contact" className="cta-yellow-button">
+
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="cta-yellow-button"
+          >
             Start Your Free Trial →
-          </Link>
+          </button>
+
         </div>
+
       </section>
+
     </main>
   );
 }
+
 
 function FeatureCard({ number, title, description, type }) {
   return (
@@ -4185,25 +4373,52 @@ function Footer() {
 
 
 
+
 function App() {
   return (
     <>
+      {/* Navbar */}
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/tritox-advantage" element={<AdvantagePage />} />
-        <Route path="/quote-team-impact" element={<ImpactPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/success-stories" element={<SuccessStoryPage />} />
-        {/* <Route path="/onboarding" element={<OnboardingPage />} /> */}
-        {/* <Route path="/about" element={<AboutPage />} /> */}
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      {/* Single Page Content */}
+      <main className="single-page">
 
-      <Footer />
+        {/* Home */}
+        <section id="home" className="page-section">
+          <HomePage />
+        </section>
+
+        {/* Services */}
+        <section id="services" className="page-section">
+          <ServicesPage />
+        </section>
+
+        {/* Tritox Advantage */}
+        <section id="tritox-advantage" className="page-section">
+          <AdvantagePage />
+        </section>
+
+        {/* Resource / Quote Team Impact */}
+        <section id="quote-team-impact" className="page-section">
+          <ImpactPage />
+        </section>
+
+        {/* Pricing */}
+        <section id="pricing" className="page-section">
+          <PricingPage />
+        </section>
+
+        {/* Success Stories */}
+        <section id="success-stories" className="page-section">
+          <SuccessStoryPage />
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="page-section">
+          <ContactPage />
+        </section>
+
+      </main>
     </>
   );
 }

@@ -1,0 +1,1529 @@
+/* =========================================================
+   TRITOX TECHNOLOGIES - HOME PAGE
+   PRIMARY BRAND COLOR: #1e88e5
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.home-hero,
+.white-section,
+.home-cta-section {
+  font-family:
+    Inter,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-hero {
+  position: relative;
+
+  min-height: 720px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  /*
+     Main Tritox blue background
+  */
+  background:
+    linear-gradient(
+      135deg,
+      #1e88e5 0%,
+      #1976d2 55%,
+      #1565c0 100%
+    );
+
+  padding: 115px 0 90px;
+}
+
+
+/* =========================================================
+   HERO BACKGROUND DECORATIONS
+========================================================= */
+
+.hero-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+.hero-circle-top {
+  width: 450px;
+  height: 450px;
+
+  right: -160px;
+  top: -210px;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  animation:
+    circleFloat 8s ease-in-out infinite;
+}
+
+
+.hero-circle-bottom {
+  width: 350px;
+  height: 350px;
+
+  left: -170px;
+  bottom: -180px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  animation:
+    circleFloat 10s ease-in-out infinite reverse;
+}
+
+
+.hero-glow {
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+.hero-glow-one {
+  top: 20%;
+  right: 30%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  animation:
+    glowMove 7s ease-in-out infinite;
+}
+
+
+.hero-glow-two {
+  bottom: 10%;
+  left: 35%;
+
+  background: rgba(242, 201, 76, 0.12);
+
+  animation:
+    glowMove 9s ease-in-out infinite reverse;
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.hero-grid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(420px, 0.95fr);
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   HERO LEFT CONTENT
+========================================================= */
+
+.hero-content {
+  animation:
+    heroContentIn 0.9s ease-out both;
+}
+
+
+/* =========================================================
+   SMALL BADGE
+========================================================= */
+
+.hero-small-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 16px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 22px;
+
+  backdrop-filter: blur(8px);
+}
+
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #f2c94c;
+
+  box-shadow:
+    0 0 0 5px rgba(242, 201, 76, 0.15);
+
+  animation:
+    pulseDot 2s infinite;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.hero-content h1 {
+  margin: 0;
+
+  max-width: 720px;
+
+  font-size: clamp(42px, 5vw, 64px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.8px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+
+/*
+   Highlight important pricing message
+*/
+
+.hero-content h1 span {
+  display: inline;
+
+  color: #f2c94c;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 660px;
+
+  margin-top: 26px;
+
+  margin-bottom: 0;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 32px;
+
+  flex-wrap: wrap;
+}
+
+
+.start-trial-button,
+.view-pricing-button {
+  border: none;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 54px;
+
+  padding: 0 27px;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* Primary */
+
+.start-trial-button {
+  background: #f2c94c;
+
+  color: #183b56;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+
+.start-trial-button:hover {
+  transform: translateY(-4px);
+
+  background: #ffd85c;
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+/* Secondary */
+
+.view-pricing-button {
+  background: rgba(255, 255, 255, 0.10);
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.40);
+
+  backdrop-filter: blur(8px);
+}
+
+
+.view-pricing-button:hover {
+  transform: translateY(-4px);
+
+  background: #ffffff;
+
+  color: #1e88e5;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+
+.start-trial-button span,
+.view-pricing-button span {
+  font-size: 20px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.start-trial-button:hover span,
+.view-pricing-button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.hero-benefits {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+  margin-top: 38px;
+}
+
+
+.hero-benefit {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+
+.benefit-icon {
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-weight: 800;
+
+  font-size: 15px;
+}
+
+
+.yellow-benefit {
+  background: #fff3bd;
+
+  color: #9a7600;
+}
+
+
+.green-benefit {
+  background: #dff5e3;
+
+  color: #26752b;
+}
+
+
+.hero-benefit strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+.hero-benefit small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.hero-logo-side {
+  position: relative;
+
+  min-height: 550px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  animation:
+    heroVisualIn 1s ease-out 0.15s both;
+}
+
+
+/* =========================================================
+   MAIN IMAGE CARD
+========================================================= */
+
+.logo-card {
+  position: relative;
+
+  width: min(100%, 490px);
+
+  height: 430px;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 5px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 30px 70px rgba(5, 45, 90, 0.28);
+
+  animation:
+    imageFloat 5s ease-in-out infinite;
+}
+
+
+.logo-card-line {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 7px;
+
+  background: #f2c94c;
+
+  z-index: 3;
+}
+
+
+.hero-logo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s ease;
+}
+
+
+.logo-card:hover .hero-logo {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   IMAGE SHINE
+========================================================= */
+
+.card-shine {
+  position: absolute;
+
+  z-index: 4;
+
+  top: -100%;
+  left: -100%;
+
+  width: 60%;
+  height: 250%;
+
+  transform: rotate(25deg);
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+
+  animation:
+    cardShine 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   IMAGE CARD INFO
+========================================================= */
+
+.image-card-info {
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+  bottom: 20px;
+
+  z-index: 5;
+
+  padding: 15px 18px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.14);
+}
+
+
+.image-card-info div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #52657a;
+
+  font-size: 12px;
+
+  margin-bottom: 5px;
+}
+
+
+.image-card-info strong {
+  font-size: 17px;
+
+  font-weight: 750;
+
+  color: #12345a;
+}
+
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #43a047;
+}
+
+
+/* =========================================================
+   FLOATING SUPPORT BADGE
+========================================================= */
+
+.floating-badge {
+  position: absolute;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 17px;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.15);
+
+  animation:
+    badgeFloat 4s ease-in-out infinite;
+}
+
+
+.floating-badge-top {
+  top: 25px;
+
+  left: -10px;
+}
+
+
+.floating-icon {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #e7f5e9;
+
+  color: #2e7d32;
+
+  font-weight: 800;
+}
+
+
+.floating-badge strong {
+  display: block;
+
+  color: #183b56;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.floating-badge small {
+  display: block;
+
+  color: #718096;
+
+  font-size: 11px;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   PRICE CARD
+========================================================= */
+
+.floating-price-card {
+  position: absolute;
+
+  z-index: 10;
+
+  right: -20px;
+
+  top: 125px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 17px 20px;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  color: #12345a;
+
+  border-left: 5px solid #f2c94c;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.17);
+
+  animation:
+    badgeFloat 4.5s ease-in-out 0.5s infinite;
+}
+
+
+.price-label {
+  font-size: 11px;
+
+  color: #718096;
+}
+
+
+.floating-price-card strong {
+  font-size: 30px;
+
+  line-height: 1.1;
+
+  margin-top: 3px;
+
+  color: #1e88e5;
+}
+
+
+.price-per {
+  font-size: 11px;
+
+  color: #718096;
+}
+
+
+/* =========================================================
+   TYPES CARD
+========================================================= */
+
+.floating-types-card {
+  position: absolute;
+
+  z-index: 10;
+
+  right: 0;
+
+  bottom: 90px;
+
+  display: flex;
+
+  gap: 6px;
+
+  padding: 9px;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+
+  animation:
+    badgeFloat 5s ease-in-out 1s infinite;
+}
+
+
+.floating-types-card span {
+  padding: 7px 10px;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: #1e88e5;
+
+  background: #eaf5ff;
+}
+
+
+/* =========================================================
+   CAPTION
+========================================================= */
+
+.logo-caption {
+  position: absolute;
+
+  bottom: -5px;
+
+  left: 20px;
+  right: 20px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+
+.caption-line {
+  width: 4px;
+
+  min-width: 4px;
+
+  height: 45px;
+
+  border-radius: 10px;
+
+  background: #f2c94c;
+}
+
+
+.logo-caption p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+.logo-caption strong {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   WHY TRITOX SECTION
+========================================================= */
+
+.white-section {
+  background: #ffffff;
+}
+
+
+.section {
+  padding: 100px 0;
+}
+
+
+.section-heading {
+  max-width: 760px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+
+.eyebrow {
+  margin: 0 0 12px;
+
+  color: #1e88e5;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #12345a;
+
+  font-size: clamp(34px, 4vw, 48px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+
+  font-weight: 800;
+}
+
+
+.section-heading > p:last-child {
+  max-width: 680px;
+
+  margin: 20px auto 0;
+
+  color: #60758a;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/*
+  Works with your existing FeatureCard.
+*/
+
+.feature-grid > * {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.feature-grid > *:hover {
+  transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.home-cta-section {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1e88e5 0%,
+      #1565c0 100%
+    );
+
+  color: #ffffff;
+}
+
+
+.home-cta-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -150px;
+  top: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  animation:
+    circleFloat 8s ease-in-out infinite;
+}
+
+
+.home-cta-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  left: -120px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(242, 201, 76, 0.08);
+}
+
+
+.home-cta-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+
+.light-eyebrow {
+  color: #f2c94c;
+}
+
+
+.home-cta-content h2 {
+  margin: 0;
+
+  max-width: 700px;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+
+  font-weight: 800;
+}
+
+
+.cta-yellow-button {
+  border: none;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  padding: 16px 26px;
+
+  border-radius: 10px;
+
+  background: #f2c94c;
+
+  color: #183b56;
+
+  font-weight: 800;
+
+  font-size: 15px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.cta-yellow-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroContentIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-45px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+
+}
+
+
+@keyframes heroVisualIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(45px)
+      scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0)
+      scale(1);
+  }
+
+}
+
+
+@keyframes imageFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-10px);
+  }
+
+}
+
+
+@keyframes badgeFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-9px);
+  }
+
+}
+
+
+@keyframes circleFloat {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(20px, 25px);
+  }
+
+}
+
+
+@keyframes glowMove {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(30px, -20px);
+  }
+
+}
+
+
+@keyframes pulseDot {
+
+  0% {
+    box-shadow:
+      0 0 0 0
+      rgba(242, 201, 76, 0.35);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 8px
+      rgba(242, 201, 76, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0
+      rgba(242, 201, 76, 0);
+  }
+
+}
+
+
+@keyframes cardShine {
+
+  0% {
+    left: -100%;
+  }
+
+  30%,
+  100% {
+    left: 150%;
+  }
+
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    text-align: center;
+  }
+
+
+  .hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+
+  .hero-description {
+    max-width: 720px;
+  }
+
+
+  .hero-logo-side {
+    width: 100%;
+
+    max-width: 620px;
+
+    margin: auto;
+  }
+
+
+  .floating-badge-top {
+    left: 0;
+  }
+
+
+  .floating-price-card {
+    right: -5px;
+  }
+
+
+  .home-cta-content {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+
+  .feature-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .home-hero {
+    padding:
+      105px 0
+      70px;
+  }
+
+
+  .hero-content h1 {
+    font-size: 46px;
+  }
+
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 600px;
+
+    margin: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .home-hero {
+    padding:
+      100px 0
+      55px;
+
+    min-height: auto;
+  }
+
+
+  .hero-small-badge {
+    font-size: 11px;
+
+    padding:
+      8px
+      12px;
+  }
+
+
+  .hero-content h1 {
+    font-size: 37px;
+
+    line-height: 1.12;
+
+    letter-spacing: -1px;
+  }
+
+
+  .hero-description {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  .hero-buttons {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+
+  .start-trial-button,
+  .view-pricing-button {
+    width: 100%;
+  }
+
+
+  .hero-benefits {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: left;
+
+    gap: 18px;
+  }
+
+
+  .hero-logo-side {
+    min-height: 490px;
+  }
+
+
+  .logo-card {
+    width: 100%;
+
+    height: 350px;
+
+    border-radius: 23px;
+  }
+
+
+  .floating-badge-top {
+    top: 0;
+
+    left: -5px;
+
+    transform: scale(0.85);
+  }
+
+
+  .floating-price-card {
+    right: -5px;
+
+    top: 85px;
+
+    transform: scale(0.82);
+  }
+
+
+  .floating-types-card {
+    right: 0;
+
+    bottom: 105px;
+
+    transform: scale(0.82);
+  }
+
+
+  .logo-caption {
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+  }
+
+
+  .logo-caption p {
+    font-size: 12px;
+  }
+
+
+  .section {
+    padding:
+      70px 0;
+  }
+
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+
+  .section-heading > p:last-child {
+    font-size: 15px;
+  }
+
+
+  .home-cta-content h2 {
+    font-size: 32px;
+  }
+
+
+  .cta-yellow-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-content h1 {
+    font-size: 33px;
+  }
+
+
+  .hero-logo-side {
+    min-height: 440px;
+  }
+
+
+  .logo-card {
+    height: 320px;
+  }
+
+
+  .floating-badge-top {
+    transform: scale(0.76);
+  }
+
+
+  .floating-price-card {
+    transform: scale(0.75);
+  }
+
+
+  .floating-types-card {
+    transform: scale(0.75);
+  }
+
+}
