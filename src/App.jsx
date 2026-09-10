@@ -1025,18 +1025,15 @@ function ServicesPage() {
         <div className="services-network-content container">
           <div className="services-hero-badge">
             <span className="pulse-dot"></span>
-            INSURANCE BPO OPERATIONS
+            INSURANCE  OPERATIONS
           </div>
 
           <h1>
-            Complete Support for
-            <span> Integrated Operational, CRM, and Quote Preparation Support for Farmers Agencies</span>
+            Integrated Operational
+            <span>  CRM, and Quote Preparation Support for Farmers Agencies</span>
           </h1>
 
-          <p>
-            Structured quote preparation, CRM management, documentation,
-            and backend operational support designed to help Farmers agencies
-            improve workflow efficiency and maintain consistent daily operations.
+          <p>Tritox provides structured backend support that helps Farmers agencies maintain efficient quote workflows, organized CRM activity, and reliable day-to-day operations.
           </p>
 
           <div className="services-hero-buttons">
@@ -1074,11 +1071,11 @@ function ServicesPage() {
       {/* =====================================================
           PAGE BANNER
       ====================================================== */}
-      <PageBanner
+      {/* <PageBanner
         eyebrow="Our Services"
         title="Integrated Operational, CRM, and Quote Preparation Support for Farmers Agencies"
         description="Tritox provides structured backend support that helps Farmers agencies maintain efficient quote workflows, organized CRM activity, and reliable day-to-day operations."
-      />
+      /> */}
 
 
       {/* =====================================================
@@ -1462,7 +1459,15 @@ function ServicesPage() {
 
               <h2>
                 Accurate CRM data.
-                <span> Clear pipeline visibility.</span>
+              <span
+  style={{
+    
+    color: "#ffffff",
+    
+  }}
+>
+  Clear pipeline visibility.
+</span>
                 Better sales operations.
               </h2>
 
@@ -1692,7 +1697,7 @@ function ServicesPage() {
             </div>
 
 
-            <div className="operation-floating-card">
+            {/* <div className="operation-floating-card">
 
               <span>✓</span>
 
@@ -1701,7 +1706,7 @@ function ServicesPage() {
                 <small>Built for agency operations</small>
               </div>
 
-            </div>
+            </div> */}
 
           </div>
 
@@ -1773,7 +1778,7 @@ function ServicesPage() {
       {/* =====================================================
           BOTTOM CTA
       ====================================================== */}
-      <section className="services-bottom-cta">
+      {/* <section className="services-bottom-cta">
 
         <div className="container services-bottom-cta-content">
 
@@ -1805,7 +1810,7 @@ function ServicesPage() {
 
         </div>
 
-      </section>
+      </section> */}
 
     </main>
   );
