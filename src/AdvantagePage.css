@@ -1,0 +1,3658 @@
+/* =========================================================
+   TRITOX TECHNOLOGIES
+   THE TRITOX ADVANTAGE
+   PREMIUM DESIGN
+========================================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+#workflow,
+#contact {
+  scroll-margin-top: 100px;
+}
+.advantage-page {
+  position: relative;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  color: #52657a;
+}
+
+
+/* =========================================================
+   GLOBAL TYPOGRAPHY
+========================================================= */
+
+.advantage-page h1,
+.advantage-page h2,
+.advantage-page h3,
+.advantage-page h4 {
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    sans-serif;
+}
+
+.advantage-page p {
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   BENEFITS SECTION
+========================================================= */
+
+.advantage-benefits-section {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7fbff 100%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.advantage-bg-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.35;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(30, 136, 229, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(30, 136, 229, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    55px 55px;
+}
+
+
+/* =========================================================
+   BACKGROUND ORBS
+========================================================= */
+
+.advantage-bg-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(2px);
+
+  pointer-events: none;
+}
+
+.advantage-bg-orb-one {
+  width: 420px;
+  height: 420px;
+
+  top: 80px;
+  right: -220px;
+
+  background:
+    rgba(30, 136, 229, 0.08);
+
+  animation:
+    advantageOrbFloat 9s ease-in-out infinite;
+}
+
+.advantage-bg-orb-two {
+  width: 300px;
+  height: 300px;
+
+  left: -170px;
+  bottom: 150px;
+
+  background:
+    rgba(242, 201, 76, 0.08);
+
+  animation:
+    advantageOrbFloat 11s ease-in-out infinite reverse;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.advantage-benefits-container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PREMIUM SECTION HEADING
+========================================================= */
+
+.advantage-section-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(320px, 0.9fr);
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 55px;
+}
+
+.advantage-heading-left {
+  position: relative;
+}
+
+.advantage-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 18px;
+
+  color: #1e88e5;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+.advantage-eyebrow-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #f2c94c;
+
+  box-shadow:
+    0 0 0 6px
+    rgba(242, 201, 76, 0.14);
+
+  animation:
+    advantagePulse 2s infinite;
+}
+
+.advantage-heading-left h2 {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #12345a;
+
+  font-size:
+    clamp(38px, 4.4vw, 58px);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -1.7px;
+}
+
+.advantage-heading-left h2 span {
+  color: #1e88e5;
+}
+
+.advantage-heading-right {
+  padding-bottom: 5px;
+}
+
+.advantage-heading-right p {
+  margin: 0;
+
+  color: #607487;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+}
+
+.advantage-heading-line {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 22px;
+
+  color: #12345a;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.advantage-heading-line span {
+  width: 34px;
+  height: 3px;
+
+  border-radius: 20px;
+
+  background: #f2c94c;
+}
+
+
+/* =========================================================
+   BENEFIT GRID
+========================================================= */
+
+.advantage-benefit-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   BENEFIT CARD
+========================================================= */
+
+.advantage-benefit-card {
+  position: relative;
+
+  min-height: 465px;
+
+  padding: 32px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e4edf6;
+
+  box-shadow:
+    0 18px 50px rgba(18, 52, 90, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.advantage-benefit-card:hover {
+  transform:
+    translateY(-12px);
+
+  border-color:
+    rgba(30, 136, 229, 0.25);
+
+  box-shadow:
+    0 30px 70px rgba(18, 52, 90, 0.15);
+}
+
+
+/* =========================================================
+   CARD TOP ACCENT
+========================================================= */
+
+.advantage-benefit-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1e88e5,
+      #f2c94c
+    );
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.benefit-card-number {
+  position: absolute;
+
+  top: 24px;
+  right: 27px;
+
+  color: #e9f2fa;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 44px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.benefit-card-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 28px;
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #eaf5ff;
+
+  color: #1e88e5;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 21px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 20px
+    rgba(30, 136, 229, 0.12);
+}
+
+.benefit-label {
+  color: #607487;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   METRIC
+========================================================= */
+
+.benefit-metric {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #1e88e5;
+
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(34px, 3vw, 48px);
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.advantage-benefit-card h3 {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 15px 0 13px;
+
+  color: #12345a;
+
+  font-size: 22px;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.advantage-benefit-card > p {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  color: #607487;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.benefit-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 24px 0;
+
+  background:
+    #e7eef5;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.benefit-detail-list {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.benefit-detail-list span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #415a70;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+}
+
+.benefit-detail-list i {
+  width: 20px;
+  height: 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #e5f5e8;
+
+  color: #2e7d32;
+
+  font-size: 11px;
+
+  font-style: normal;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CARD GLOW
+========================================================= */
+
+.benefit-card-glow {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -100px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(30, 136, 229, 0.08);
+
+  filter: blur(10px);
+
+  transition:
+    transform 0.5s ease;
+}
+
+.advantage-benefit-card:hover
+.benefit-card-glow {
+  transform:
+    scale(1.6);
+}
+
+
+/* =========================================================
+   DIFFERENT CARD ACCENTS
+========================================================= */
+
+.cost-benefit-card .benefit-icon {
+  background: #eaf5ff;
+  color: #1e88e5;
+}
+
+.productivity-benefit-card .benefit-icon {
+  background: #e7f5e9;
+  color: #2e7d32;
+}
+
+.productivity-benefit-card .benefit-metric {
+  color: #2e7d32;
+}
+
+.scale-benefit-card .benefit-icon {
+  background: #fff7d6;
+  color: #b08a00;
+}
+
+.scale-benefit-card .benefit-metric {
+  color: #b08a00;
+}
+
+
+/* =========================================================
+   GROWTH IMAGE AREA
+========================================================= */
+
+.advantage-growth-area {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.75fr)
+    minmax(0, 1.25fr);
+
+  gap: 25px;
+
+  margin-top: 35px;
+}
+
+
+/* =========================================================
+   GROWTH IMAGE
+========================================================= */
+
+.advantage-growth-image {
+  position: relative;
+
+  min-height: 310px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 55px
+    rgba(18, 52, 90, 0.14);
+}
+
+.advantage-growth-image img {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  inset: 0;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease;
+}
+
+.advantage-growth-image:hover img {
+  transform:
+    scale(1.07);
+}
+
+.growth-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(13, 71, 161, 0.68),
+      rgba(30, 136, 229, 0.15)
+    );
+}
+
+
+/* =========================================================
+   IMAGE FLOATING CARD
+========================================================= */
+
+.growth-floating-card {
+  position: absolute;
+
+  left: 20px;
+  bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 17px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.16);
+
+  backdrop-filter:
+    blur(10px);
+
+  animation:
+    growthCardFloat 4s ease-in-out infinite;
+}
+
+.growth-floating-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e5f5e8;
+
+  color: #2e7d32;
+
+  font-weight: 800;
+}
+
+.growth-floating-card strong {
+  display: block;
+
+  color: #12345a;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.growth-floating-card span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #718096;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   HIGHLIGHT BANNER
+========================================================= */
+
+.advantage-highlight-banner {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 30px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f3f9ff 100%
+    );
+
+  border:
+    1px solid #dceaf7;
+
+  box-shadow:
+    0 20px 55px
+    rgba(18, 52, 90, 0.08);
+
+  overflow: hidden;
+}
+
+.advantage-highlight-banner::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #1e88e5,
+      #f2c94c
+    );
+}
+
+.highlight-banner-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 17px;
+
+  background: #1e88e5;
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 25px
+    rgba(30, 136, 229, 0.22);
+}
+
+.highlight-banner-content {
+  flex: 1;
+}
+
+.highlight-small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #1e88e5;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.highlight-banner-content strong {
+  display: block;
+
+  color: #12345a;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 750;
+}
+
+.highlight-banner-content p {
+  margin: 6px 0 0;
+
+  color: #607487;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   HIGHLIGHT BUTTON
+========================================================= */
+
+.highlight-banner-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  padding: 14px 19px;
+
+  border-radius: 10px;
+
+  background: #1e88e5;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px
+    rgba(30, 136, 229, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.highlight-banner-button:hover {
+  transform:
+    translateY(-3px);
+
+  background: #0d47a1;
+
+  box-shadow:
+    0 15px 30px
+    rgba(13, 71, 161, 0.25);
+}
+
+.highlight-banner-button span {
+  font-size: 18px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.highlight-banner-button:hover span {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   WORKFLOW SECTION
+========================================================= */
+
+.workflow-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 110px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0d47a1 0%,
+      #1565c0 50%,
+      #1e88e5 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   WORKFLOW GRID
+========================================================= */
+
+.workflow-grid-pattern {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.13;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.4) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.4) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    55px 55px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   WORKFLOW CIRCLES
+========================================================= */
+
+.workflow-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.workflow-circle-one {
+  width: 480px;
+  height: 480px;
+
+  right: -230px;
+  top: -230px;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  animation:
+    workflowCircleFloat 9s ease-in-out infinite;
+}
+
+.workflow-circle-two {
+  width: 330px;
+  height: 330px;
+
+  left: -170px;
+  bottom: -160px;
+
+  background:
+    rgba(242, 201, 76, 0.08);
+
+  animation:
+    workflowCircleFloat 11s ease-in-out infinite reverse;
+}
+
+
+/* =========================================================
+   WORKFLOW CONTAINER
+========================================================= */
+
+.workflow-container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   WORKFLOW HEADING
+========================================================= */
+
+.workflow-heading {
+  max-width: 900px;
+
+  margin:
+    0 auto 55px;
+
+  text-align: center;
+}
+
+.workflow-eyebrow-wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 15px;
+}
+
+.workflow-eyebrow {
+  margin: 0;
+
+  color: #f2c94c;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.workflow-live-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #f2c94c;
+
+  box-shadow:
+    0 0 0 6px
+    rgba(242, 201, 76, 0.12);
+
+  animation:
+    advantagePulse 2s infinite;
+}
+
+.workflow-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(36px, 4.5vw, 56px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+.workflow-heading h2 span {
+  color: #f2c94c;
+}
+
+.workflow-heading > p:last-child {
+  max-width: 780px;
+
+  margin:
+    22px auto 0;
+
+  color:
+    rgba(255, 255, 255, 0.78);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   WORKFLOW VISUAL
+========================================================= */
+
+.workflow-visual {
+  position: relative;
+
+  height: 320px;
+
+  margin-bottom: 55px;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 30px 70px
+    rgba(0, 0, 0, 0.20);
+}
+
+.workflow-visual img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+.workflow-visual:hover img {
+  transform:
+    scale(1.04);
+}
+
+.workflow-visual-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 35, 75, 0.92) 0%,
+      rgba(13, 71, 161, 0.60) 55%,
+      rgba(13, 71, 161, 0.15) 100%
+    );
+}
+
+.workflow-visual-content {
+  position: absolute;
+
+  left: 40px;
+  top: 50%;
+
+  max-width: 560px;
+
+  transform:
+    translateY(-50%);
+}
+
+.workflow-visual-content span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #f2c94c;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.workflow-visual-content strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size:
+    clamp(28px, 3.5vw, 44px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.workflow-visual-content p {
+  margin: 15px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.workflow-visual-status {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 14px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  backdrop-filter:
+    blur(10px);
+}
+
+.workflow-status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #52d66a;
+
+  box-shadow:
+    0 0 0 5px
+    rgba(82, 214, 106, 0.12);
+
+  animation:
+    advantagePulseGreen 2s infinite;
+}
+
+
+/* =========================================================
+   WORKFLOW TIMELINE
+========================================================= */
+
+.workflow-timeline {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 15px;
+}
+
+.workflow-progress-line {
+  position: absolute;
+
+  top: 35px;
+  left: 7%;
+
+  width: 86%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(242, 201, 76, 0.15),
+      rgba(242, 201, 76, 0.8),
+      rgba(242, 201, 76, 0.15)
+    );
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   WORKFLOW CARD
+========================================================= */
+
+.workflow-card {
+  position: relative;
+
+  z-index: 1;
+
+  min-height: 390px;
+
+  padding: 24px 20px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  backdrop-filter:
+    blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.workflow-card:hover {
+  transform:
+    translateY(-10px);
+
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    0 25px 50px
+    rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   WORKFLOW TOP
+========================================================= */
+
+.workflow-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+.workflow-number {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #f2c94c;
+
+  color: #183b56;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 20px
+    rgba(0, 0, 0, 0.14);
+}
+
+.workflow-status {
+  padding: 7px 9px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   WORKFLOW CARD TITLE
+========================================================= */
+
+.workflow-card h3 {
+  margin: 0 0 13px;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  line-height: 1.35;
+
+  font-weight: 750;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   WORKFLOW DESCRIPTION
+========================================================= */
+
+.workflow-description {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.70);
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   WORKFLOW POINTS
+========================================================= */
+
+.workflow-point-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+.workflow-point-list span {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.86);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  font-weight: 500;
+}
+
+.workflow-point-list i {
+  width: 17px;
+  height: 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(242, 201, 76, 0.15);
+
+  color: #f2c94c;
+
+  font-size: 9px;
+
+  font-style: normal;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.workflow-card-arrow {
+  position: absolute;
+
+  right: 20px;
+  bottom: 18px;
+
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 25px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.workflow-card:hover .workflow-card-arrow {
+  color: #f2c94c;
+
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================================
+   WORKFLOW BOTTOM CARD
+========================================================= */
+
+.workflow-bottom-card {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 35px;
+
+  padding: 25px 28px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.10);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.18);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+.workflow-bottom-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.workflow-complete-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background: #f2c94c;
+
+  color: #183b56;
+
+  font-weight: 800;
+}
+
+.workflow-bottom-left p {
+  margin: 0 0 4px;
+
+  color: #f2c94c;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.workflow-bottom-left strong {
+  color: #ffffff;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.45;
+
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   WORKFLOW BUTTON
+========================================================= */
+
+.workflow-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 20px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #1e88e5;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.workflow-button:hover {
+  transform:
+    translateY(-3px);
+
+  background: #f2c94c;
+
+  color: #183b56;
+
+  box-shadow:
+    0 12px 25px
+    rgba(0, 0, 0, 0.18);
+}
+
+.workflow-button span {
+  font-size: 18px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.workflow-button:hover span {
+  transform:
+    translateX(4px);
+}
+
+
+
+/* =========================================================
+   PREMIUM FINAL CTA
+   WHITE • CLEAN • MODERN • B2B
+========================================================= */
+
+.advantage-final-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.advantage-final-cta::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -320px;
+  right: -280px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(30, 136, 229, 0.12) 0%,
+    rgba(30, 136, 229, 0.04) 45%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.advantage-final-cta::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: -280px;
+  bottom: -320px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(242, 201, 76, 0.10) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.advantage-final-cta-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 60px 65px;
+  border: 1px solid #dceaf7;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    #f7fbff 0%,
+    #ffffff 55%,
+    #f2f8ff 100%
+  );
+  box-shadow: 0 25px 70px rgba(18, 52, 90, 0.10);
+  overflow: hidden;
+}
+
+.advantage-final-cta-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0d47a1, #1e88e5, #43a047);
+}
+
+.advantage-final-text {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.advantage-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 50px;
+  background: #eaf5ff;
+  color: #1e88e5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.advantage-cta-badge span {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #43a047;
+  box-shadow: 0 0 0 5px rgba(67, 160, 71, 0.10);
+}
+
+.advantage-final-text h2 {
+  margin: 0;
+  color: #12345a;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1.10;
+  letter-spacing: -1.6px;
+}
+
+.advantage-final-text h2 span {
+  display: block;
+  color: #1e88e5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.advantage-final-text > p,
+.advantage-final-text > p:last-child {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: #607487;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.advantage-final-actions {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 215px;
+}
+
+.advantage-trial-button,
+.advantage-services-button {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.advantage-trial-button {
+  color: #ffffff;
+  background: linear-gradient(135deg, #1e88e5, #0d47a1);
+  box-shadow: 0 12px 28px rgba(30, 136, 229, 0.28);
+}
+
+.advantage-trial-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(30, 136, 229, 0.35);
+}
+
+.advantage-trial-button span {
+  display: inline-block;
+  font-size: 20px;
+  transition: transform 0.25s ease;
+}
+
+.advantage-trial-button:hover span {
+  transform: translateX(5px);
+}
+
+.advantage-services-button {
+  color: #1e88e5;
+  background: #ffffff;
+  border: 1px solid #cfe2f3;
+}
+
+.advantage-services-button:hover {
+  transform: translateY(-3px);
+  color: white;
+  background: #eaf5ff;
+  border-color: #1e88e5;
+  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.10);
+}
+
+.advantage-cta-orb-one {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  top: 12%;
+  right: 8%;
+  border: 1px solid rgba(30, 136, 229, 0.10);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.advantage-cta-orb-two {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  right: 17%;
+  bottom: 15%;
+  border-radius: 50%;
+  background: rgba(242, 201, 76, 0.08);
+  pointer-events: none;
+}
+
+/* =========================================================
+   FINAL CTA RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .advantage-final-cta {
+    padding: 80px 0;
+  }
+
+  .advantage-final-cta-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    padding: 48px;
+  }
+
+  .advantage-final-actions {
+    flex-direction: row;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .advantage-trial-button,
+  .advantage-services-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .advantage-final-cta {
+    padding: 60px 0;
+  }
+
+  .advantage-final-cta-content {
+    padding: 38px 26px;
+    border-radius: 22px;
+    gap: 28px;
+  }
+
+  .advantage-cta-badge {
+    margin-bottom: 16px;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .advantage-final-text h2 {
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+
+  .advantage-final-text > p,
+  .advantage-final-text > p:last-child {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .advantage-final-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .advantage-trial-button,
+  .advantage-services-button {
+    width: 100%;
+    flex: none;
+  }
+
+  .advantage-cta-orb-one,
+  .advantage-cta-orb-two {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .advantage-final-cta {
+    padding: 50px 0;
+  }
+
+  .advantage-final-cta-content {
+    padding: 32px 20px;
+  }
+
+  .advantage-final-text h2 {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+  }
+
+  .advantage-final-text > p,
+  .advantage-final-text > p:last-child {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes advantagePulse {
+  0% {
+    box-shadow:
+      0 0 0 0
+      rgba(242, 201, 76, 0.35);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 9px
+      rgba(242, 201, 76, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0
+      rgba(242, 201, 76, 0);
+  }
+}
+
+@keyframes advantagePulseGreen {
+  0% {
+    box-shadow:
+      0 0 0 0
+      rgba(82, 214, 106, 0.35);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 8px
+      rgba(82, 214, 106, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0
+      rgba(82, 214, 106, 0);
+  }
+}
+
+@keyframes advantageOrbFloat {
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(25px, -20px);
+  }
+}
+
+@keyframes workflowCircleFloat {
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(25px, 25px);
+  }
+}
+
+@keyframes growthCardFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .advantage-section-heading {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .advantage-benefit-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .advantage-benefit-card:last-child {
+    grid-column:
+      1 / -1;
+
+    max-width: 550px;
+
+    width: 100%;
+
+    margin: auto;
+  }
+
+  .advantage-growth-area {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-timeline {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .workflow-progress-line {
+    display: none;
+  }
+
+  .advantage-final-cta-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .advantage-final-actions {
+    width: 100%;
+
+    flex-direction: row;
+  }
+
+  .advantage-trial-button,
+  .advantage-services-button {
+    flex: 1;
+  }
+}
+
+
+/* =========================================================
+   TABLET SMALL
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .advantage-section-heading {
+    text-align: center;
+  }
+
+  .advantage-heading-left h2 {
+    font-size: 42px;
+  }
+
+  .advantage-heading-right {
+    text-align: center;
+  }
+
+  .advantage-heading-line {
+    justify-content: center;
+  }
+
+  .advantage-benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage-benefit-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+  .workflow-section {
+    padding: 80px 0;
+  }
+
+  .workflow-heading h2 {
+    font-size: 40px;
+  }
+
+  .workflow-visual {
+    height: 300px;
+  }
+
+  .workflow-visual-content {
+    left: 25px;
+
+    max-width: 75%;
+  }
+
+  .workflow-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-card {
+    min-height: auto;
+  }
+
+  .workflow-bottom-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .workflow-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .advantage-section-heading {
+    margin-bottom: 40px;
+  }
+
+  .advantage-eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .advantage-heading-left h2 {
+    font-size: 34px;
+
+    line-height: 1.14;
+
+    letter-spacing: -1px;
+  }
+
+  .advantage-heading-right p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .advantage-benefit-card {
+    min-height: auto;
+
+    padding: 26px;
+
+    border-radius: 20px;
+  }
+
+  .benefit-card-number {
+    font-size: 35px;
+
+    top: 20px;
+    right: 20px;
+  }
+
+  .benefit-metric {
+    font-size: 38px;
+  }
+
+  .advantage-benefit-card h3 {
+    font-size: 20px;
+  }
+
+  .advantage-benefit-card > p {
+    font-size: 13px;
+  }
+
+  .advantage-growth-image {
+    min-height: 270px;
+  }
+
+  .advantage-highlight-banner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 25px;
+  }
+
+  .highlight-banner-button {
+    width: 100%;
+  }
+
+  .workflow-heading h2 {
+    font-size: 33px;
+
+    line-height: 1.15;
+  }
+
+  .workflow-heading > p:last-child {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .workflow-visual {
+    height: 280px;
+
+    border-radius: 20px;
+  }
+
+  .workflow-visual-content {
+    left: 20px;
+
+    max-width: 82%;
+  }
+
+  .workflow-visual-content strong {
+    font-size: 28px;
+  }
+
+  .workflow-visual-content p {
+    font-size: 12px;
+  }
+
+  .workflow-visual-status {
+    top: 15px;
+    right: 15px;
+
+    transform:
+      scale(0.85);
+
+    transform-origin:
+      top right;
+  }
+
+  .workflow-card {
+    padding: 22px 18px;
+
+    border-radius: 18px;
+  }
+
+  .workflow-card h3 {
+    font-size: 18px;
+  }
+
+  .workflow-bottom-card {
+    padding: 22px;
+  }
+
+  .workflow-bottom-left {
+    align-items: flex-start;
+  }
+
+  .workflow-bottom-left strong {
+    font-size: 14px;
+  }
+
+  .advantage-final-cta {
+    padding: 70px 0;
+  }
+
+  .advantage-final-cta-content {
+    padding: 35px 25px;
+
+    border-radius: 23px;
+  }
+
+  .advantage-final-text h2 {
+    font-size: 32px;
+  }
+
+  .advantage-final-text > p:last-child {
+    font-size: 14px;
+  }
+
+  .advantage-final-actions {
+    flex-direction: column;
+  }
+
+  .advantage-trial-button,
+  .advantage-services-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .advantage-heading-left h2 {
+    font-size: 30px;
+  }
+
+  .benefit-metric {
+    font-size: 34px;
+  }
+
+  .advantage-benefit-card {
+    padding: 23px;
+  }
+
+  .workflow-heading h2 {
+    font-size: 29px;
+  }
+
+  .workflow-visual {
+    height: 250px;
+  }
+
+  .workflow-visual-content strong {
+    font-size: 24px;
+  }
+
+  .advantage-final-text h2 {
+    font-size: 28px;
+  }
+}
+
+
+
+/* =========================================================
+   TRITOX ADVANTAGE - PREMIUM HERO
+========================================================= */
+
+.advantage-hero {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0d47a1 0%,
+      #1565c0 45%,
+      #1e88e5 100%
+    );
+
+  color: #fff;
+}
+
+
+/* Background grid */
+
+.advantage-hero-grid-pattern {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.35;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  pointer-events: none;
+}
+
+
+/* Glow circles */
+
+.advantage-hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(2px);
+
+  pointer-events: none;
+}
+
+.advantage-hero-glow-one {
+  width: 500px;
+  height: 500px;
+
+  right: -180px;
+  top: -250px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  animation:
+    advantageGlowFloat 9s ease-in-out infinite;
+}
+
+.advantage-hero-glow-two {
+  width: 400px;
+  height: 400px;
+
+  left: -200px;
+  bottom: -240px;
+
+  background:
+    rgba(242,201,76,0.10);
+
+  animation:
+    advantageGlowFloat 11s ease-in-out infinite reverse;
+}
+
+
+/* Container */
+
+.advantage-hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(420px, 0.95fr);
+
+  gap: 70px;
+
+  align-items: center;
+
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.advantage-hero-content {
+  animation:
+    advantageHeroContentIn 0.9s ease-out both;
+}
+
+
+/* Badge */
+
+.advantage-hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 17px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(255,255,255,0.10);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.25);
+
+  color: #f2c94c;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,0.10);
+}
+
+
+/* Live dot */
+
+.advantage-live-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #f2c94c;
+
+  box-shadow:
+    0 0 0 6px
+    rgba(242,201,76,0.12);
+
+  animation:
+    advantagePulse 2s infinite;
+}
+
+
+/* Main heading */
+
+.advantage-hero h1 {
+  max-width: 760px;
+
+  margin: 24px 0 0;
+
+  color: #fff;
+
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(44px, 5vw, 68px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2.2px;
+
+  font-weight: 800;
+}
+
+
+/* Highlight */
+
+.advantage-hero h1 span {
+  display: block;
+
+  color: #f2c94c;
+}
+
+
+/* Description */
+
+.advantage-hero-content > p {
+  max-width: 680px;
+
+  margin: 25px 0 0;
+
+  color:
+    rgba(255,255,255,0.84);
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.advantage-hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+
+  margin-top: 32px;
+}
+
+.advantage-hero-primary,
+.advantage-hero-secondary {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 54px;
+
+  padding: 0 25px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+
+.advantage-hero-primary {
+  background: #f2c94c;
+
+  color: #183b56;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0,0,0,0.18);
+}
+
+.advantage-hero-primary:hover {
+  transform: translateY(-4px);
+
+  background: #ffd85c;
+
+  box-shadow:
+    0 18px 38px
+    rgba(0,0,0,0.25);
+}
+
+.advantage-hero-primary span {
+  font-size: 20px;
+
+  transition:
+    transform .25s ease;
+}
+
+.advantage-hero-primary:hover span {
+  transform:
+    translateX(5px);
+}
+
+
+.advantage-hero-secondary {
+  color: #fff;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.35);
+
+  background:
+    rgba(255,255,255,0.08);
+
+  backdrop-filter:
+    blur(8px);
+}
+
+.advantage-hero-secondary:hover {
+  transform: translateY(-4px);
+
+  background: #fff;
+
+  color: #1e88e5;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0,0,0,0.15);
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.advantage-hero-stats {
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  margin-top: 42px;
+}
+
+.advantage-stat {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.advantage-stat strong {
+  color: #fff;
+
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.advantage-stat span {
+  color:
+    rgba(255,255,255,0.65);
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+.advantage-stat-divider {
+  width: 1px;
+  height: 38px;
+
+  background:
+    rgba(255,255,255,0.20);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.advantage-hero-visual {
+  position: relative;
+
+  min-height: 470px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  animation:
+    advantageHeroVisualIn 1s ease-out .15s both;
+}
+
+
+/* Dashboard */
+
+.advantage-visual-card {
+  position: relative;
+
+  width: min(100%, 480px);
+
+  min-height: 390px;
+
+  padding: 28px;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255,255,255,0.96);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.8);
+
+  box-shadow:
+    0 35px 80px
+    rgba(3,35,75,0.30);
+
+  animation:
+    advantageDashboardFloat 5s ease-in-out infinite;
+}
+
+
+/* Card top */
+
+.advantage-card-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.advantage-card-eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #1e88e5;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.advantage-card-top h3 {
+  margin: 0;
+
+  color: #12345a;
+
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 23px;
+
+  font-weight: 800;
+}
+
+
+/* Live status */
+
+.advantage-card-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border-radius: 20px;
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.advantage-card-status span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #43a047;
+}
+
+
+/* Chart */
+
+.advantage-chart {
+  margin-top: 35px;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  background: #f5f9fd;
+
+  border:
+    1px solid #e5eef7;
+}
+
+.chart-labels {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.chart-labels span {
+  color: #607487;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.chart-labels strong {
+  color: #1e88e5;
+
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+
+/* Bars */
+
+.chart-bars {
+  height: 150px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  padding:
+    0 8px;
+}
+
+.chart-bars span {
+  flex: 1;
+
+  min-height: 20px;
+
+  border-radius:
+    7px 7px 3px 3px;
+
+  background:
+    linear-gradient(
+      to top,
+      #1e88e5,
+      #64b5f6
+    );
+
+  transform-origin: bottom;
+
+  animation:
+    chartBarGrow 1.2s ease-out both;
+}
+
+.chart-bars span:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.chart-bars span:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.chart-bars span:nth-child(4) {
+  animation-delay: .3s;
+}
+
+.chart-bars span:nth-child(5) {
+  animation-delay: .4s;
+}
+
+.chart-bars span:nth-child(6) {
+  animation-delay: .5s;
+}
+
+.chart-bars span:nth-child(7) {
+  animation-delay: .6s;
+}
+
+
+/* Mini cards */
+
+.advantage-mini-cards {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: 16px;
+}
+
+.advantage-mini-cards div {
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  border:
+    1px solid #e6eef6;
+}
+
+.advantage-mini-cards span {
+  display: block;
+
+  color: #718096;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+}
+
+.advantage-mini-cards strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #12345a;
+
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.advantage-floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 14px 17px;
+
+  border-radius: 15px;
+
+  background: #fff;
+
+  box-shadow:
+    0 18px 40px
+    rgba(0,0,0,0.16);
+
+  animation:
+    advantageFloatingCard 4s ease-in-out infinite;
+}
+
+.advantage-floating-one {
+  left: -25px;
+  top: 65px;
+}
+
+.advantage-floating-two {
+  right: -25px;
+  bottom: 65px;
+
+  animation-delay:
+    .8s;
+}
+
+.floating-check,
+.floating-arrow {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.floating-arrow {
+  background: #eaf5ff;
+
+  color: #1e88e5;
+}
+
+.advantage-floating-card strong {
+  display: block;
+
+  color: #183b56;
+
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.advantage-floating-card small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #718096;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes advantageHeroContentIn {
+  from {
+    opacity: 0;
+    transform:
+      translateX(-45px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateX(0);
+  }
+}
+
+@keyframes advantageHeroVisualIn {
+  from {
+    opacity: 0;
+    transform:
+      translateX(45px)
+      scale(.94);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateX(0)
+      scale(1);
+  }
+}
+
+@keyframes advantageDashboardFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-10px);
+  }
+}
+
+@keyframes advantageFloatingCard {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-9px);
+  }
+}
+
+@keyframes advantageGlowFloat {
+  0%,
+  100% {
+    transform:
+      translate(0,0);
+  }
+
+  50% {
+    transform:
+      translate(25px,20px);
+  }
+}
+
+@keyframes advantagePulse {
+  0% {
+    box-shadow:
+      0 0 0 0
+      rgba(242,201,76,.35);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 8px
+      rgba(242,201,76,0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0
+      rgba(242,201,76,0);
+  }
+}
+
+@keyframes chartBarGrow {
+  from {
+    transform:
+      scaleY(0);
+  }
+
+  to {
+    transform:
+      scaleY(1);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .advantage-hero-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 50px;
+  }
+
+  .advantage-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .advantage-hero-actions {
+    justify-content: center;
+  }
+
+  .advantage-hero-stats {
+    justify-content: center;
+  }
+
+  .advantage-hero-visual {
+    max-width: 600px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .advantage-hero {
+    min-height: auto;
+  }
+
+  .advantage-hero-container {
+    padding-top: 70px;
+    padding-bottom: 65px;
+
+    gap: 45px;
+  }
+
+  .advantage-hero-badge {
+    font-size: 10px;
+
+    letter-spacing: 1.4px;
+
+    padding: 9px 13px;
+  }
+
+  .advantage-hero h1 {
+    margin-top: 20px;
+
+    font-size: 38px;
+
+    line-height: 1.12;
+
+    letter-spacing: -1.2px;
+  }
+
+  .advantage-hero-content > p {
+    margin-top: 18px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .advantage-hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 25px;
+  }
+
+  .advantage-hero-primary,
+  .advantage-hero-secondary {
+    width: 100%;
+  }
+
+  .advantage-hero-stats {
+    gap: 12px;
+
+    margin-top: 32px;
+  }
+
+  .advantage-stat strong {
+    font-size: 17px;
+  }
+
+  .advantage-stat span {
+    font-size: 9px;
+  }
+
+  .advantage-stat-divider {
+    height: 32px;
+  }
+
+  .advantage-hero-visual {
+    min-height: 410px;
+  }
+
+  .advantage-visual-card {
+    width: 100%;
+
+    padding: 20px;
+
+    border-radius: 22px;
+
+    min-height: 350px;
+  }
+
+  .advantage-card-top h3 {
+    font-size: 19px;
+  }
+
+  .advantage-floating-one {
+    left: -5px;
+    top: 25px;
+
+    transform: scale(.82);
+  }
+
+  .advantage-floating-two {
+    right: -5px;
+    bottom: 25px;
+
+    transform: scale(.82);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .advantage-hero h1 {
+    font-size: 32px;
+  }
+
+  .advantage-hero-content > p {
+    font-size: 14px;
+  }
+
+  .advantage-hero-stats {
+    gap: 8px;
+  }
+
+  .advantage-stat strong {
+    font-size: 15px;
+  }
+
+  .advantage-stat span {
+    font-size: 8px;
+  }
+
+  .advantage-hero-visual {
+    min-height: 360px;
+  }
+
+  .advantage-visual-card {
+    padding: 16px;
+  }
+
+  .chart-bars {
+    gap: 7px;
+  }
+
+  .advantage-floating-card {
+    padding: 10px 12px;
+  }
+
+  .advantage-floating-card strong {
+    font-size: 10px;
+  }
+
+  .advantage-floating-card small {
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   FINAL CTA - LAST OVERRIDES
+========================================================= */
+
+@media (max-width: 900px) {
+  .advantage-final-cta-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .advantage-final-actions {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .advantage-trial-button,
+  .advantage-services-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .advantage-final-cta {
+    padding: 60px 0;
+  }
+
+  .advantage-final-cta-content {
+    padding: 38px 26px;
+    border-radius: 22px;
+    gap: 28px;
+  }
+
+  .advantage-final-text h2 {
+    font-size: 34px;
+    line-height: 1.12;
+  }
+
+  .advantage-final-actions {
+    flex-direction: column;
+  }
+
+  .advantage-trial-button,
+  .advantage-services-button {
+    width: 100%;
+    flex: none;
+  }
+
+  .advantage-cta-orb-one,
+  .advantage-cta-orb-two {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .advantage-final-cta {
+    padding: 50px 0;
+  }
+
+  .advantage-final-cta-content {
+    padding: 32px 20px;
+  }
+
+  .advantage-final-text h2 {
+    font-size: 30px;
+  }
+}
+

@@ -2,6 +2,7 @@ import { Link, NavLink, Route, Routes } from "react-router-dom";
 //import { useState } from "react";
 import "./HomePage.css";
 import "./ServicesPage.css";
+import "./AdvantagePage.css";
 
 
 import { useEffect, useState } from "react";
@@ -1816,6 +1817,8 @@ function ServicesPage() {
   );
 }
 
+
+
 function AdvantagePage() {
   const benefits = [
     {
@@ -1875,16 +1878,7 @@ function AdvantagePage() {
         "Authorized Farmers APEX access",
         "CRM lead review",
         "Customer information validation",
-        " AgencyZoom, Little Giant, Agency MVP, EZLynx, Agent CRM, AMS360, and HawkSoft"
-      ],
-      systems: [
-        "AgencyZoom",
-        "Little Giant",
-        "Agency MVP",
-        "EZLynx",
-        "Agent CRM",
-        "AMS360",
-        "HawkSoft",
+        "AgencyZoom, Little Giant, Agency MVP, EZLynx, Agent CRM, AMS360, and HawkSoft",
       ],
       color: "blue-workflow-card",
     },
@@ -1900,7 +1894,6 @@ function AdvantagePage() {
         "Coverage selection",
         "Farmers and Bristol West premium review",
       ],
-      systems: ["Farmers APEX", "ALTA", "Bristol West"],
       color: "green-workflow-card",
     },
     {
@@ -1915,7 +1908,6 @@ function AdvantagePage() {
         "360Value assessment",
         "Coverage guideline alignment",
       ],
-      systems: ["Farmers APEX", "360Value", "Home Guidelines"],
       color: "yellow-workflow-card",
     },
     {
@@ -1930,7 +1922,6 @@ function AdvantagePage() {
         "Quote generation",
         "Document download",
       ],
-      systems: ["Guidewire", "PolicyCenter", "Quote Documents"],
       color: "blue-workflow-card",
     },
     {
@@ -1945,206 +1936,583 @@ function AdvantagePage() {
         "Pipeline stage update",
         "Workflow completion",
       ],
-      systems: ["CRM Record", "Lead Pipeline", "Customer Email"],
       color: "green-workflow-card",
     },
   ];
 
   return (
     <main className="advantage-page">
-      <PageBanner
-        eyebrow="Benefits · The Tritox Advantage"
-        title="Built for Agency Growth"
-        description="Smarter costs. Greater producer capacity. Flexible support built around your business."
-      />
 
-      {/* Benefits Section */}
-      <section className="section advantage-benefits-section">
-        <div className="advantage-shape advantage-shape-one" />
-        <div className="advantage-shape advantage-shape-two" />
+      {/* =====================================================
+          PAGE BANNER
+      ===================================================== */}
 
-        <div className="container advantage-benefits-container">
-          <div className="advantage-section-heading">
-            <div>
-              <p className="eyebrow"style={{ fontSize: "18px" }}>The Tritox Advantage</p>
+      <section className="advantage-hero">
+  <div className="advantage-hero-glow advantage-hero-glow-one" />
+  <div className="advantage-hero-glow advantage-hero-glow-two" />
+  <div className="advantage-hero-grid-pattern" />
 
-              <h2>
-                Smarter costs. Greater producer capacity. Flexible support
-                built around your business.
-              </h2>
-            </div>
+  <div className="container advantage-hero-container">
 
-            <p>
-              Tritox helps Farmers agencies expand backend capacity without
-              adding unnecessary fixed staffing costs, administrative burden,
-              or operational complexity.
-            </p>
+    <div className="advantage-hero-content">
+
+      <div className="advantage-hero-badge">
+        <span className="advantage-live-dot" />
+        THE TRITOX ADVANTAGE
+      </div>
+
+      <h1>
+        Turn Your Backend
+        <span> Into a Growth Advantage.</span>
+      </h1>
+
+      <p>
+        Reduce operational costs, increase producer capacity, and scale
+        your agency with flexible quote preparation and structured
+        backend support.
+      </p>
+
+      <div className="advantage-hero-actions">
+
+  <a
+    href="#contact"
+    className="advantage-hero-primary"
+  >
+    Start Your Free Trial
+    <span>→</span>
+  </a>
+
+  <a href="#workflow" className="advantage-hero-secondary">
+  Explore Our Workflow
+  <span>↓</span>
+</a>
+  
+
+</div>
+
+      <div className="advantage-hero-stats">
+
+        <div className="advantage-stat">
+          <strong>70%</strong>
+          <span>Potential Cost Savings</span>
+        </div>
+
+        <div className="advantage-stat-divider" />
+
+        <div className="advantage-stat">
+          <strong>24/7</strong>
+          <span>Flexible Backend Support</span>
+        </div>
+
+        <div className="advantage-stat-divider" />
+
+        <div className="advantage-stat">
+          <strong>100%</strong>
+          <span>Workflow Focused</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="advantage-hero-visual">
+
+      <div className="advantage-visual-card">
+
+        <div className="advantage-card-top">
+          <div>
+            <span className="advantage-card-eyebrow">
+              AGENCY PERFORMANCE
+            </span>
+
+            <h3>Growth Dashboard</h3>
           </div>
 
+          <div className="advantage-card-status">
+            <span />
+            Live
+          </div>
+        </div>
+
+        <div className="advantage-chart">
+
+          <div className="chart-labels">
+            <span>Capacity</span>
+            <strong>+70%</strong>
+          </div>
+
+          <div className="chart-bars">
+            <span style={{ height: "38%" }} />
+            <span style={{ height: "52%" }} />
+            <span style={{ height: "45%" }} />
+            <span style={{ height: "68%" }} />
+            <span style={{ height: "61%" }} />
+            <span style={{ height: "82%" }} />
+            <span style={{ height: "94%" }} />
+          </div>
+
+        </div>
+
+        <div className="advantage-mini-cards">
+
+          <div>
+            <span>Producer Time</span>
+            <strong>↑ 42%</strong>
+          </div>
+
+          <div>
+            <span>Support Cost</span>
+            <strong>↓ 70%</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div className="advantage-floating-card advantage-floating-one">
+        <span className="floating-check">✓</span>
+
+        {/* <div>
+          <strong>Lower Costs</strong>
+          <small>Smarter staffing model</small>
+        </div> */}
+      </div>
+
+      <div className="advantage-floating-card advantage-floating-two">
+        <span className="floating-arrow">↗</span>
+
+        <div>
+          <strong>More Producer Time</strong>
+          <small>Focus on revenue</small>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+      {/* =====================================================
+          BENEFITS SECTION
+      ===================================================== */}
+
+      <section className="section advantage-benefits-section">
+
+        <div className="advantage-bg-orb advantage-bg-orb-one" />
+        <div className="advantage-bg-orb advantage-bg-orb-two" />
+        <div className="advantage-bg-grid" />
+
+        <div className="container advantage-benefits-container">
+
+          {/* SECTION HEADING */}
+
+          <div className="advantage-section-heading">
+
+            <div className="advantage-heading-left">
+
+              <div className="advantage-eyebrow">
+                <span className="advantage-eyebrow-dot" />
+                THE TRITOX ADVANTAGE
+              </div>
+
+              <h2>
+                Smarter costs.
+                <span> Greater producer capacity.</span>
+                Flexible support.
+              </h2>
+
+            </div>
+
+            <div className="advantage-heading-right">
+
+              <p>
+                Tritox helps Farmers agencies expand backend capacity without
+                adding unnecessary fixed staffing costs, administrative burden,
+                or operational complexity.
+              </p>
+
+              <div className="advantage-heading-line">
+                <span />
+                <strong>Built around your agency</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* BENEFIT CARDS */}
+
           <div className="advantage-benefit-grid">
-            {benefits.map((benefit) => (
+
+            {benefits.map((benefit, index) => (
+
               <article
                 key={benefit.title}
                 className={`advantage-benefit-card ${benefit.type}`}
               >
-                <div className="benefit-card-top">
-                  <span className="benefit-icon">{benefit.icon}</span>
 
-                  <span className="benefit-label">{benefit.label}</span>
+                <div className="benefit-card-number">
+                  0{index + 1}
                 </div>
 
-                <strong className="benefit-metric">{benefit.metric}</strong>
+                <div className="benefit-card-top">
 
-                <h3>{benefit.title}</h3>
+                  <span className="benefit-icon">
+                    {benefit.icon}
+                  </span>
 
-                <p>{benefit.description}</p>
+                  <span className="benefit-label">
+                    {benefit.label}
+                  </span>
+
+                </div>
+
+                <strong className="benefit-metric">
+                  {benefit.metric}
+                </strong>
+
+                <h3>
+                  {benefit.title}
+                </h3>
+
+                <p>
+                  {benefit.description}
+                </p>
 
                 <div className="benefit-divider" />
 
                 <div className="benefit-detail-list">
+
                   {benefit.details.map((detail) => (
+
                     <span key={detail}>
                       <i>✓</i>
                       {detail}
                     </span>
+
                   ))}
+
                 </div>
+
+                <div className="benefit-card-glow" />
+
               </article>
+
             ))}
+
           </div>
 
-          <div className="advantage-highlight-banner">
-            <div className="highlight-banner-icon">✓</div>
 
-            <div>
-              <strong>Built to support agency growth</strong>
+          {/* IMAGE + HIGHLIGHT */}
 
-              <p>
-                Tritox manages structured quote preparation and backend
-                workflows, allowing producers to focus on high-value,
-                client-facing, and revenue-generating responsibilities.
-              </p>
+          <div className="advantage-growth-area">
+
+            <div className="advantage-growth-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85"
+                alt="Professional insurance operations team"
+              />
+
+              <div className="growth-image-overlay" />
+
+              <div className="growth-floating-card">
+
+                <div className="growth-floating-icon">
+                  ✓
+                </div>
+
+                <div>
+                  <strong>Agency Growth Support</strong>
+                  <span>Reliable backend operations</span>
+                </div>
+
+              </div>
+
             </div>
 
-            <Link to="/contact" className="highlight-banner-button">
-              Start Free Trial →
-            </Link>
+
+            <div className="advantage-highlight-banner">
+
+              <div className="highlight-banner-icon">
+                ✓
+              </div>
+
+              <div className="highlight-banner-content">
+
+                <span className="highlight-small">
+                  TRITOX ADVANTAGE
+                </span>
+
+                <strong>
+                  Built to support agency growth
+                </strong>
+
+                <p>
+                  Tritox manages structured quote preparation and backend
+                  workflows, allowing producers to focus on high-value,
+                  client-facing, and revenue-generating responsibilities.
+                </p>
+
+              </div>
+
+              <a
+                href="#contact"
+                className="highlight-banner-button"
+              >
+                Start Free Trial
+                <span>→</span>
+              </a>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Workflow Section */}
-     <section className="workflow-section">
-  <div className="workflow-grid-pattern" />
-  <div className="workflow-circle workflow-circle-one" />
-  <div className="workflow-circle workflow-circle-two" />
 
-  <div className="container workflow-container">
-    <div className="workflow-heading">
-      <p className="eyebrow workflow-eyebrow"style={{ fontSize: "18px" }}>Workflow</p>
+      {/* =====================================================
+          WORKFLOW SECTION
+      ===================================================== */}
 
-      <h2>
-        A Structured Quote Preparation Process Integrated With Your Agency’s
-        Existing Systems
-      </h2>
+      <section id="workflow" className="workflow-section">
 
-      <p>
-        Our workflow integrates with your agency’s existing systems,
-        supporting the quoting lifecycle from CRM lead access through quote
-        generation, documentation, and workflow completion.
-      </p>
-    </div>
+        <div className="workflow-grid-pattern" />
 
-    <div className="workflow-timeline">
-      {workflowSteps.map((step, index) => (
-        <article
-          key={step.number}
-          className={`workflow-card ${step.color}`}
-        >
-          <div className="workflow-card-top">
-            <span className="workflow-number">{step.number}</span>
+        <div className="workflow-circle workflow-circle-one" />
+        <div className="workflow-circle workflow-circle-two" />
 
-            <span className="workflow-status">
-              {index === workflowSteps.length - 1
-                ? "Complete"
-                : "Workflow Step"}
-            </span>
-          </div>
+        <div className="container workflow-container">
 
-          <h3>{step.title}</h3>
+          {/* WORKFLOW HEADING */}
 
-          <p className="workflow-description">{step.description}</p>
+          <div className="workflow-heading">
 
-          <div className="workflow-point-list">
-            {step.points.map((point) => (
-              <span key={point}>
-                <i>✓</i>
-                {point}
+            <div className="workflow-eyebrow-wrapper">
+
+              <span className="workflow-live-dot" />
+
+              <p className="eyebrow workflow-eyebrow">
+                WORKFLOW
+              </p>
+
+            </div>
+
+            <h2>
+              A Structured Quote Preparation Process
+              <span>
+                {" "}Integrated With Your Agency’s Existing Systems
               </span>
-            ))}
+            </h2>
+
+            <p>
+              Our workflow integrates with your agency’s existing systems,
+              supporting the quoting lifecycle from CRM lead access through
+              quote generation, documentation, and workflow completion.
+            </p>
+
           </div>
 
-          {/* <div className="workflow-system-list">
-            {step.systems.map((system) => (
-              <span key={system}>{system}</span>
+
+          {/* WORKFLOW VISUAL IMAGE */}
+
+          <div className="workflow-visual">
+
+            <img
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1800&q=85"
+              alt="Business workflow collaboration"
+            />
+
+            <div className="workflow-visual-overlay" />
+
+            <div className="workflow-visual-content">
+
+              <span>TRITOX WORKFLOW</span>
+
+              <strong>
+                Connected. Structured. Scalable.
+              </strong>
+
+              <p>
+                From lead access to quote completion and CRM documentation.
+              </p>
+
+            </div>
+
+            <div className="workflow-visual-status">
+
+              <span className="workflow-status-dot" />
+
+              Workflow Active
+
+            </div>
+
+          </div>
+
+
+          {/* TIMELINE */}
+
+          <div className="workflow-timeline">
+
+            <div className="workflow-progress-line" />
+
+            {workflowSteps.map((step, index) => (
+
+              <article
+                key={step.number}
+                className={`workflow-card ${step.color}`}
+              >
+
+                <div className="workflow-card-top">
+
+                  <span className="workflow-number">
+                    {step.number}
+                  </span>
+
+                  <span className="workflow-status">
+
+                    {index === workflowSteps.length - 1
+                      ? "Complete"
+                      : "Workflow Step"}
+
+                  </span>
+
+                </div>
+
+                <h3>
+                  {step.title}
+                </h3>
+
+                <p className="workflow-description">
+                  {step.description}
+                </p>
+
+                <div className="workflow-point-list">
+
+                  {step.points.map((point) => (
+
+                    <span key={point}>
+                      <i>✓</i>
+                      {point}
+                    </span>
+
+                  ))}
+
+                </div>
+
+                <div className="workflow-card-arrow">
+                  →
+                </div>
+
+              </article>
+
             ))}
-          </div> */}
-        </article>
-      ))}
-      
-    </div>
+
+          </div>
+
+
+          {/* BOTTOM WORKFLOW CARD */}
+
           <div className="workflow-bottom-card">
+
             <div className="workflow-bottom-left">
-              <span className="workflow-complete-icon">✓</span>
+
+              <span className="workflow-complete-icon">
+                ✓
+              </span>
 
               <div>
-                <p>Complete workflow visibility</p>
+
+                <p>
+                  Complete workflow visibility
+                </p>
+
                 <strong>
                   From CRM lead access to quote documentation and next-stage
                   follow-up.
                 </strong>
+
               </div>
+
             </div>
 
-            <Link to="/contact" className="workflow-button">
-              Discuss Your Workflow →
-            </Link>
+            <a
+              href="#contact"
+              className="workflow-button"
+            >
+              Discuss Your Workflow
+              <span>→</span>
+            </a>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Final CTA */}
+
+      {/* =====================================================
+          FINAL CTA
+      ===================================================== */}
+
       <section className="advantage-final-cta">
+
+        <div className="advantage-cta-orb-one" />
+        <div className="advantage-cta-orb-two" />
+
         <div className="container advantage-final-cta-content">
-          <div>
-            <p className="eyebrow advantage-light-eyebrow"style={{ fontSize: "18px" }}>
-              Ready to Scale Smarter?
+
+          <div className="advantage-final-text">
+
+            <p className="eyebrow advantage-light-eyebrow">
+              READY TO SCALE SMARTER?
             </p>
 
             <h2>
-              Get flexible quote preparation support built around your agency.
+              Get flexible quote preparation support
+              <span> built around your agency.</span>
             </h2>
 
             <p>
               Strengthen your backend capacity, improve producer productivity,
               and maintain a consistent workflow as your agency grows.
             </p>
+
           </div>
+
 
           <div className="advantage-final-actions">
-            <Link to="/contact" className="advantage-trial-button">
-              Start Your Free Trial
-            </Link>
 
-            <Link to="/services" className="advantage-services-button">
-              View Our Services →
-            </Link>
+            <a
+              href="#contact"
+              className="advantage-trial-button"
+            >
+              Start Your Free Trial
+              <span>→</span>
+            </a>
+
+            <a
+              href="#services"
+              className="advantage-services-button"
+            >
+              View Our Services
+              <span>→</span>
+            </a>
+
           </div>
+
         </div>
+
       </section>
+
     </main>
   );
 }
+
 
 function ImpactPage() {
   const quoteTeamTasks = [
@@ -4904,6 +5272,7 @@ function App() {
         {/* Contact */}
         <section id="contact" className="page-section">
           <ContactPage />
+          
         </section>
 
       </main>
