@@ -3,6 +3,8 @@ import { Link, NavLink, Route, Routes } from "react-router-dom";
 import "./HomePage.css";
 import "./ServicesPage.css";
 import "./AdvantagePage.css";
+import "./SuccessStoryPage.css";
+import "./PricingPage.css";
 
 
 import { useEffect, useState } from "react";
@@ -83,6 +85,8 @@ function Navbar() {
     </header>
   );
 }
+
+
 
 
 
@@ -214,75 +218,163 @@ function SuccessStoryPage() {
   ];
 
   const toggleFaq = (index) => {
-    setOpenFaq((currentFaq) => (currentFaq === index ? null : index));
+    setOpenFaq((currentFaq) =>
+      currentFaq === index ? null : index
+    );
   };
 
   return (
     <main className="success-page">
-      <PageBanner
-        eyebrow="Success Stories"
-        title="Supporting Agency Growth Through Dedicated Quote Preparation"
-        description="See how dedicated backend quote support can help agencies expand capacity, manage higher lead volume, and keep producers focused on customers and new business."
-      />
 
-      {/* Success Story */}
+      {/* =====================================================
+          PAGE BANNER
+      ===================================================== */}
+
+      {/* <section className="success-network-hero">
+  <div className="success-network-overlay"></div>
+
+  <div className="success-network-container">
+    <div className="success-network-content">
+
+      <span className="success-eyebrow">
+        Success Stories
+      </span>
+
+      <h1>
+        Supporting Agency Growth
+        <span> Through Dedicated Quote Preparation</span>
+      </h1>
+
+      <p>
+        See how dedicated backend quote support helps agencies expand
+        capacity, manage higher lead volume, and keep producers focused
+        on customers and new business.
+      </p>
+
+      <div className="success-hero-stats">
+        <div className="success-stat-card">
+          <strong>Faster</strong>
+          <span>Quote Processing</span>
+        </div>
+
+        <div className="success-stat-card">
+          <strong>More</strong>
+          <span>Agency Capacity</span>
+        </div>
+
+        <div className="success-stat-card">
+          <strong>Better</strong>
+          <span>Producer Focus</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> */}
+
+      {/* =====================================================
+          SUCCESS STORY
+      ===================================================== */}
+
       <section className="success-story-section">
         <div className="container">
-          <div className="success-story-heading">
-            <div>
-              <p className="eyebrow"style={{ fontSize: "18px" }}>Success Story</p>
 
-              <h2 >Supporting a Michigan President’s Council Agency Owner</h2>
+          <div className="success-story-heading">
+
+            <div>
+              <p
+                className="eyebrow"
+                style={{ fontSize: "18px" }}
+              >
+                Success Story
+              </p>
+
+              <h2>
+                Supporting a Michigan President’s Council Agency Owner
+              </h2>
             </div>
 
             <p>
-              Tritox introduced a dedicated quote preparation support model to
-              help separate backend quoting responsibilities from producer
-              activities and create additional operational capacity for the
-              agency.
+              Tritox introduced a dedicated quote preparation support model
+              to help separate backend quoting responsibilities from
+              producer activities and create additional operational capacity
+              for the agency.
             </p>
+
           </div>
 
+
+          {/* =================================================
+              SUCCESS STORY GRID
+          ================================================= */}
+
           <div className="success-story-grid">
+
+            {/* LEFT CONTENT */}
+
             <div className="success-story-content">
+
+              {/* STORY 01 */}
+
               <div className="story-content-block">
-                <span className="story-block-number">01</span>
+
+                <span className="story-block-number">
+                  01
+                </span>
 
                 <div>
-                  <h3>Expanding Capacity as Lead Volume Increased</h3>
+
+                  <h3>
+                    Expanding Capacity as Lead Volume Increased
+                  </h3>
 
                   <p>
                     Before engaging Tritox, the agency’s producers were
                     managing quote preparation alongside their sales and
                     customer-facing responsibilities. As the business grew,
-                    this created additional administrative demands and reduced
-                    the time producers could dedicate to customer engagement,
-                    follow-up, and new-business activity.
+                    this created additional administrative demands and
+                    reduced the time producers could dedicate to customer
+                    engagement, follow-up, and new-business activity.
                   </p>
 
                   <p>
-                    During the engagement, the agency’s lead volume increased
-                    from <strong>10,000+ to 20,000+ leads.</strong> Tritox
-                    supported this growth by providing dedicated, trained team
-                    members to help manage the increased workload.
+                    During the engagement, the agency’s lead volume
+                    increased from{" "}
+                    <strong>10,000+ to 20,000+ leads.</strong>{" "}
+                    Tritox supported this growth by providing dedicated,
+                    trained team members to help manage the increased
+                    workload.
                   </p>
+
                 </div>
+
               </div>
 
+
+              {/* STORY 02 */}
+
               <div className="story-content-block">
-                <span className="story-block-number">02</span>
+
+                <span className="story-block-number">
+                  02
+                </span>
 
                 <div>
-                  <h3>More Capacity for Customer-Facing Work</h3>
+
+                  <h3>
+                    More Capacity for Customer-Facing Work
+                  </h3>
 
                   <p>
-                    This additional backend capacity helped the agency manage a
-                    larger volume of opportunities while allowing producers to
-                    remain focused on customer conversations, timely
-                    follow-ups, and closing new business.
+                    This additional backend capacity helped the agency
+                    manage a larger volume of opportunities while allowing
+                    producers to remain focused on customer conversations,
+                    timely follow-ups, and closing new business.
                   </p>
 
+
                   <div className="story-benefit-points">
+
                     <span>
                       <i>✓</i>
                       Dedicated quote preparation capacity
@@ -297,104 +389,264 @@ function SuccessStoryPage() {
                       <i>✓</i>
                       More producer focus on sales activity
                     </span>
+
                   </div>
+
                 </div>
+
               </div>
+
             </div>
 
-            <aside className="performance-card">
-              <div className="performance-card-top">
-                <span>PERFORMANCE PROGRESSION</span>
-                <i>↗</i>
-              </div>
 
-              <div className="performance-rank-line">
-                <div className="performance-rank rank-four">
-                  <strong>4th</strong>
-                  <span>Before Tritox Support</span>
+            {/* =================================================
+                RIGHT VISUAL
+            ================================================= */}
+
+            <div className="success-story-visual">
+
+              {/* NETWORK IMAGE */}
+
+              <div className="network-image-card">
+
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85"
+                  alt="Connected technology network representing agency workflow"
+                />
+
+                <div className="network-overlay"></div>
+
+
+                <div className="network-content">
+
+                  <span className="network-label">
+                    TRITOX OPERATIONAL NETWORK
+                  </span>
+
+                  <h3>
+                    Connecting People,
+                    <br />
+                    Processes & Growth
+                  </h3>
+
+                  <p>
+                    Dedicated support capacity designed to keep quote
+                    workflows moving while your producers focus on
+                    customers and new business.
+                  </p>
+
+
+                  <div className="network-stats">
+
+                    <div>
+                      <strong>20K+</strong>
+                      <span>Leads Supported</span>
+                    </div>
+
+                    <div>
+                      <strong>5.0</strong>
+                      <span>Client Rating</span>
+                    </div>
+
+                    <div>
+                      <strong>100%</strong>
+                      <span>Workflow Focus</span>
+                    </div>
+
+                  </div>
+
                 </div>
 
-                <span className="rank-arrow">→</span>
-
-                <div className="performance-rank rank-two">
-                  <strong>2nd</strong>
-                  <span>After Two Months</span>
-                </div>
-
-                <span className="rank-arrow">→</span>
-
-                <div className="performance-rank rank-one">
-                  <strong>1st</strong>
-                  <span>By the Third Month</span>
-                </div>
               </div>
 
-              <div className="performance-progress-bar">
-                <span className="progress-start">4th</span>
 
-                <div className="progress-track">
-                  <span className="progress-fill" />
+              {/* =================================================
+                  PERFORMANCE CARD
+              ================================================= */}
+
+              {/* <aside className="performance-card">
+
+                <div className="performance-card-top">
+
+                  <span>
+                    PERFORMANCE PROGRESSION
+                  </span>
+
+                  <i>↗</i>
+
                 </div>
 
-                <span className="progress-end">1st</span>
-              </div>
 
-              <div className="performance-card-summary">
-                <span>✓</span>
+                <div className="performance-rank-line">
 
-                <p>
-                  During the same period, the agency also experienced a
-                  significant improvement in sales performance.
-                </p>
-              </div>
-            </aside>
+                  <div className="performance-rank rank-four">
+
+                    <strong>4th</strong>
+
+                    <span>
+                      Before Tritox Support
+                    </span>
+
+                  </div>
+
+
+                  <span className="rank-arrow">
+                    →
+                  </span>
+
+
+                  <div className="performance-rank rank-two">
+
+                    <strong>2nd</strong>
+
+                    <span>
+                      After Two Months
+                    </span>
+
+                  </div>
+
+
+                  <span className="rank-arrow">
+                    →
+                  </span>
+
+
+                  <div className="performance-rank rank-one">
+
+                    <strong>1st</strong>
+
+                    <span>
+                      By the Third Month
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <div className="performance-progress-bar">
+
+                  <span className="progress-start">
+                    4th
+                  </span>
+
+                  <div className="progress-track">
+                    <span className="progress-fill"></span>
+                  </div>
+
+                  <span className="progress-end">
+                    1st
+                  </span>
+
+                </div>
+
+
+                <div className="performance-card-summary">
+
+                  <span>✓</span>
+
+                  <p>
+                    During the same period, the agency also experienced
+                    a significant improvement in sales performance.
+                  </p>
+
+                </div>
+
+              </aside> */}
+
+            </div>
+
           </div>
+
+
+          {/* =================================================
+              STORY SUMMARY
+          ================================================= */}
 
           <div className="success-story-summary">
-            <span className="success-summary-icon">✓</span>
+
+            <span className="success-summary-icon">
+              ✓
+            </span>
 
             <div>
-              <strong>Dedicated support that enables scalable growth.</strong>
+
+              <strong>
+                Dedicated support that enables scalable growth.
+              </strong>
 
               <p>
-                The agency’s progress reflects the combined efforts of its
-                leadership, producers, sales strategy, and internal team.
-                Tritox is proud to have supported this period of growth by
-                providing the additional quote preparation capacity needed to
-                manage increasing lead volume while allowing producers to focus
-                on customers and new-business growth.
+                The agency’s progress reflects the combined efforts of
+                its leadership, producers, sales strategy, and internal
+                team. Tritox is proud to have supported this period of
+                growth by providing the additional quote preparation
+                capacity needed to manage increasing lead volume while
+                allowing producers to focus on customers and new-business
+                growth.
               </p>
+
             </div>
+
           </div>
+
         </div>
       </section>
 
-      {/* Testimonials */}
+
+      {/* =====================================================
+          TESTIMONIALS
+      ===================================================== */}
+
       <section className="testimonials-section">
         <div className="container">
-          <div className="testimonials-heading">
-            <div>
-              <p className="eyebrow"style={{ fontSize: "18px" }}>Testimonials</p>
 
-              <h2>Recommended by the best in the business.</h2>
+          <div className="testimonials-heading">
+
+            <div>
+
+              <p
+                className="eyebrow"
+                style={{ fontSize: "18px" }}
+              >
+                Testimonials
+              </p>
+
+              <h2>
+                Recommended by the best in the business.
+              </h2>
+
             </div>
 
             <p>
               Direct feedback from agencies supported by Tritox through
               dedicated quote preparation and backend operational assistance.
             </p>
+
           </div>
 
+
           <div className="testimonials-layout">
+
+            {/* RATING */}
+
             <aside className="rating-summary-card">
-              <p className="rating-summary-label">OVERALL CLIENT RATING</p>
+
+              <p className="rating-summary-label">
+                OVERALL CLIENT RATING
+              </p>
 
               <div className="rating-summary-score">
+
                 <strong>5.0</strong>
+
                 <span>/ 5</span>
+
               </div>
 
-              <div className="rating-stars" aria-label="5 out of 5 stars">
+              <div
+                className="rating-stars"
+                aria-label="5 out of 5 stars"
+              >
                 ★★★★★
               </div>
 
@@ -402,119 +654,223 @@ function SuccessStoryPage() {
                 Based on client feedback from agencies we support.
               </p>
 
-              <div className="rating-summary-divider" />
+              <div className="rating-summary-divider"></div>
 
               <div className="rating-summary-service">
+
                 <span>✓</span>
+
                 Quote Preparation Support
+
               </div>
+
             </aside>
 
+
+            {/* TESTIMONIAL CARDS */}
+
             <div className="testimonial-card-grid">
+
               {testimonials.map((testimonial) => (
-                <article key={testimonial.name} className="testimonial-card">
+
+                <article
+                  key={testimonial.name}
+                  className="testimonial-card"
+                >
+
                   <div className="testimonial-card-top">
+
                     <div className="testimonial-rating">
-                      <span className="small-stars">★★★★★</span>
-                      <strong>{testimonial.rating}</strong>
+
+                      <span className="small-stars">
+                        ★★★★★
+                      </span>
+
+                      <strong>
+                        {testimonial.rating}
+                      </strong>
+
                     </div>
 
-                    <span className="quote-mark">“</span>
+                    <span className="quote-mark">
+                      “
+                    </span>
+
                   </div>
+
 
                   <p className="testimonial-quote">
                     “{testimonial.quote}”
                   </p>
 
+
                   <div className="testimonial-footer">
+
                     <div className="testimonial-avatar">
+
                       {testimonial.name
                         .split(" ")
                         .map((name) => name[0])
                         .join("")}
+
                     </div>
 
+
                     <div className="testimonial-client">
-                      <strong>{testimonial.name}</strong>
+
+                      <strong>
+                        {testimonial.name}
+                      </strong>
 
                       <span>
-                        {testimonial.role} | {testimonial.location}
+                        {testimonial.role} |{" "}
+                        {testimonial.location}
                       </span>
 
                       {testimonial.recognition && (
-                        <small>{testimonial.recognition}</small>
+                        <small>
+                          {testimonial.recognition}
+                        </small>
                       )}
+
                     </div>
+
                   </div>
 
+
                   <div className="testimonial-service">
-                    <span>Service:</span>
+
+                    <span>
+                      Service:
+                    </span>
+
                     {testimonial.service}
+
                   </div>
+
                 </article>
+
               ))}
+
             </div>
+
           </div>
+
         </div>
       </section>
 
-      {/* First CTA */}
+
+      {/* =====================================================
+          FIRST CTA
+      ===================================================== */}
+
       <section className="success-final-cta">
+
         <div className="container success-final-cta-content">
+
           <div>
-            <p className="success-light-eyebrow"style={{ fontSize: "18px" }}>Build More Capacity</p>
+
+            <p
+              className="success-light-eyebrow"
+              style={{ fontSize: "18px" }}
+            >
+              Build More Capacity
+            </p>
 
             <h2>
-              Give your producers more time to focus on customers and growth.
+              Give your producers more time to focus on customers and
+              growth.
             </h2>
 
             <p>
-              Tritox helps agencies expand quote preparation capacity while
-              maintaining structured, consistent, and scalable workflows.
+              Tritox helps agencies expand quote preparation capacity
+              while maintaining structured, consistent, and scalable
+              workflows.
             </p>
+
           </div>
 
+
           <div className="success-final-actions">
-            <Link to="/contact" className="success-trial-button">
+
+            <Link
+              to="/contact"
+              className="success-trial-button"
+            >
               Start Your Free Trial →
             </Link>
 
-            <Link to="/services" className="success-services-button">
+            <Link
+              to="/services"
+              className="success-services-button"
+            >
               View Our Services
             </Link>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* FAQ Section */}
-      <section className="faq-section">
-        <div className="container">
-          <div className="faq-heading">
-            <div>
-              <p className="eyebrow"style={{ fontSize: "18px" }}>Frequently Asked Questions</p>
 
-              <h2>Clear Answers About How Tritox Supports Your Agency</h2>
+      {/* =====================================================
+          FAQ
+      ===================================================== */}
+
+      <section className="faq-section">
+
+        <div className="container">
+
+          <div className="faq-heading">
+
+            <div>
+
+              <p
+                className="eyebrow"
+                style={{ fontSize: "18px" }}
+              >
+                Frequently Asked Questions
+              </p>
+
+              <h2>
+                Clear Answers About How Tritox Supports Your Agency
+              </h2>
+
             </div>
 
             <p>
-              Learn more about onboarding, systems access, quote preparation
-              support, data handling, quality procedures, pricing flexibility,
-              and agency workflow alignment.
+              Learn more about onboarding, systems access, quote
+              preparation support, data handling, quality procedures,
+              pricing flexibility, and agency workflow alignment.
             </p>
+
           </div>
 
-          <div className="faq-layout">
-            <aside className="faq-side-card">
-              <span className="faq-side-card-label">TRITOX SUPPORT</span>
 
-              <h3>Have questions about your agency workflow?</h3>
+          <div className="faq-layout">
+
+            {/* FAQ SIDE CARD */}
+
+            <aside className="faq-side-card">
+
+              <span className="faq-side-card-label">
+                TRITOX SUPPORT
+              </span>
+
+              <h3>
+                Have questions about your agency workflow?
+              </h3>
 
               <p>
-                Our team can help you understand how Tritox can align with your
-                quote preparation, CRM, and operational support requirements.
+                Our team can help you understand how Tritox can align
+                with your quote preparation, CRM, and operational
+                support requirements.
               </p>
 
+
               <div className="faq-side-card-points">
+
                 <span>
                   <i>✓</i>
                   Agency workflow alignment
@@ -529,28 +885,44 @@ function SuccessStoryPage() {
                   <i>✓</i>
                   Flexible operational support
                 </span>
+
               </div>
 
-              <Link to="/contact" className="faq-contact-button">
+
+              <Link
+                to="/contact"
+                className="faq-contact-button"
+              >
                 Contact Our Team →
               </Link>
+
             </aside>
 
+
+            {/* FAQ LIST */}
+
             <div className="faq-list">
+
               {faqs.map((faq, index) => {
+
                 const isOpen = openFaq === index;
 
                 return (
+
                   <article
                     key={faq.id}
-                    className={`faq-item ${isOpen ? "faq-open" : ""}`}
+                    className={`faq-item ${
+                      isOpen ? "faq-open" : ""
+                    }`}
                   >
+
                     <button
                       type="button"
                       className="faq-question"
                       onClick={() => toggleFaq(index)}
                       aria-expanded={isOpen}
                     >
+
                       <span className="faq-number">
                         {String(faq.id).padStart(2, "0")}
                       </span>
@@ -562,49 +934,88 @@ function SuccessStoryPage() {
                       <span className="faq-toggle-icon">
                         {isOpen ? "−" : "+"}
                       </span>
+
                     </button>
 
+
                     <div className="faq-answer">
+
                       <div className="faq-answer-inner">
-                        {faq.answers.map((answer, answerIndex) => (
-                          <p key={answerIndex}>{answer}</p>
-                        ))}
+
+                        {faq.answers.map(
+                          (answer, answerIndex) => (
+                            <p key={answerIndex}>
+                              {answer}
+                            </p>
+                          )
+                        )}
+
                       </div>
+
                     </div>
+
                   </article>
+
                 );
+
               })}
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Final Contact CTA */}
+
+      {/* =====================================================
+          FINAL CONTACT CTA
+      ===================================================== */}
+
       <section className="contact-final-cta">
+
         <div className="container contact-final-content">
+
           <div>
-            <p className="contact-light-eyebrow"style={{ fontSize: "18px" }}>Ready to Get Started?</p>
+
+            <p
+              className="contact-light-eyebrow"
+              style={{ fontSize: "18px" }}
+            >
+              Ready to Get Started?
+            </p>
 
             <h2>
-              Build a more efficient quote preparation workflow for your
-              agency.
+              Build a more efficient quote preparation workflow for
+              your agency.
             </h2>
 
             <p>
-              Start your free trial and discover how Tritox can help your
-              agency expand backend capacity while keeping producers focused on
-              customers and new business.
+              Start your free trial and discover how Tritox can help
+              your agency expand backend capacity while keeping
+              producers focused on customers and new business.
             </p>
+
           </div>
 
-          <Link to="/contact" className="contact-final-button">
+
+          {/* <Link
+            to="/contact"
+            className="contact-final-button"
+          >
             Start Your Free Trial →
-          </Link>
+          </Link> */}
+
         </div>
+
       </section>
+
     </main>
   );
 }
+
+
 
 
 function HomePage() {
@@ -863,7 +1274,7 @@ function HomePage() {
 
       {/* ================= CTA ================= */}
 
-      <section className="section home-cta-section">
+      {/* <section className="section home-cta-section">
 
         <div className="container home-cta-content">
 
@@ -892,7 +1303,7 @@ function HomePage() {
 
         </div>
 
-      </section>
+      </section> */}
 
     </main>
   );
@@ -3421,6 +3832,8 @@ function ImpactPage() {
   );
 }
 
+
+
 function PricingPage() {
   const pricingFactors = [
     {
@@ -3492,36 +3905,235 @@ function PricingPage() {
     },
   ];
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <main className="pricing-page">
-      <PageBanner
-        eyebrow="Pricing"
-        title="Simple, Volume-Aligned Pricing"
-        description="Reduce backend support costs by up to 70% compared with an equivalent in-house W-2 resource."
-      />
 
-      {/* Main pricing information */}
+      {/* =========================================================
+          PREMIUM PRICING HERO
+      ========================================================= */}
+      <section className="pricing-hero">
+
+        <div className="pricing-network-bg"></div>
+
+        <div className="pricing-hero-overlay"></div>
+
+        {/* Animated network elements */}
+        <div className="pricing-orb pricing-orb-one"></div>
+        <div className="pricing-orb pricing-orb-two"></div>
+        <div className="pricing-orb pricing-orb-three"></div>
+
+        <div className="pricing-network-line line-one"></div>
+        <div className="pricing-network-line line-two"></div>
+        <div className="pricing-network-line line-three"></div>
+
+        <div className="pricing-node node-one"></div>
+        <div className="pricing-node node-two"></div>
+        <div className="pricing-node node-three"></div>
+        <div className="pricing-node node-four"></div>
+        <div className="pricing-node node-five"></div>
+
+        <div className="container pricing-hero-container">
+
+          <div className="pricing-hero-content">
+
+            <div className="pricing-hero-badge">
+              <span></span>
+              
+              Flexible Pricing Built Around Your Quoting Needs
+            </div>
+
+            <h1>
+              Pricing Designed
+              <span>Around Your Growth</span>
+            </h1>
+
+            <p>Reduce backend support costs by up to 70% compared with an equivalent in-house W-2 resource. 
+            </p>
+{/* 
+            <div className="pricing-hero-price">
+
+              <div className="price-symbol">&lt;</div>
+
+              <div>
+                <strong>$1</strong>
+                <span>per completed eligible quote</span>
+              </div>
+
+            </div> */}
+
+            <div className="pricing-hero-actions">
+
+              <button
+                className="hero-primary-button"
+                onClick={() => scrollToSection("contact")}
+              >
+                Start Your Free Trial
+                <span>→</span>
+              </button>
+
+              <button
+                className="hero-secondary-button"
+                onClick={() => scrollToSection("pricing-factors")}
+              >
+                Explore Pricing
+                <span>↓</span>
+              </button>
+
+            </div>
+
+            <div className="pricing-trust-row">
+
+              <div>
+                <span>✓</span>
+                Simple
+              </div>
+
+              <div>
+                <span>✓</span>
+                Transparent 
+              </div>
+
+              <div>
+                <span>✓</span>
+                Volume-Aligned
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Floating Pricing Visual */}
+          <div className="pricing-hero-visual">
+
+            <div className="floating-price-card">
+
+              <div className="floating-card-glow"></div>
+
+              <div className="floating-card-header">
+                <div>
+                  <small>TRITOX SUPPORT</small>
+                  <h3>Quote Preparation</h3>
+                </div>
+
+                <div className="floating-check">
+                  ✓
+                </div>
+              </div>
+
+              <div className="floating-price">
+                <span>&lt;</span>
+                <strong>$1</strong>
+              </div>
+
+              <p>
+                Starting per completed eligible quote
+              </p>
+
+              <div className="floating-progress">
+
+                <div className="progress-label">
+                  <span>Cost efficiency</span>
+                  <strong>High</strong>
+                </div>
+
+                <div className="progress-bar">
+                  <span></span>
+                </div>
+
+              </div>
+
+              <div className="floating-card-footer">
+
+                <div>
+                  <span>✓</span>
+                  Free Trial
+                </div>
+
+                <div>
+                  <span>✓</span>
+                  No Setup Fee
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="floating-mini-card mini-card-one">
+              <span>↗</span>
+              <div>
+                <strong>70%</strong>
+                <small>Potential Savings*</small>
+              </div>
+              
+              
+            <div className="floating-mini-card mini-card-two">
+              <span>⚡</span>
+              <div>
+                <strong>Flexible</strong>
+                <small>Cost Structure</small>
+              </div>
+            </div>
+            </div>
+{/* 
+            <div className="floating-mini-card mini-card-two">
+              <span>⚡</span>
+              <div>
+                <strong>Flexible</strong>
+                <small>Cost Structure</small>
+              </div>
+            </div> */}
+
+          </div>
+          
+
+        </div>
+        
+
+      </section>
+
+
+      {/* =========================================================
+          MAIN PRICING
+      ========================================================= */}
       <section className="section pricing-main-section">
-        <div className="pricing-background-shape pricing-shape-one" />
-        <div className="pricing-background-shape pricing-shape-two" />
+
+        <div className="pricing-background-shape pricing-shape-one"></div>
+        <div className="pricing-background-shape pricing-shape-two"></div>
 
         <div className="container pricing-main-container">
+
           <div className="pricing-intro-grid">
+
             <div className="pricing-intro-content">
-              <p className="eyebrow"style={{ fontSize: "18px" }}>Quote Preparation Pricing</p>
+
+              <p className="eyebrow">
+                Quote Preparation Pricing
+              </p>
 
               <h2>
                 Quote Preparation Starting at
                 <span> Less Than $1</span>
               </h2>
 
-              <p>
+              <p className="pricing-description">
                 Tritox offers quote preparation starting at less than $1 per
                 completed eligible quote, providing agencies with a cost
                 structure directly aligned with actual quoting volume.
               </p>
 
               <div className="pricing-intro-points">
+
                 <div>
                   <span>✓</span>
                   <p>Volume-aligned support pricing</p>
@@ -3536,50 +4148,71 @@ function PricingPage() {
                   <span>✓</span>
                   <p>No upfront fee to begin your free trial</p>
                 </div>
+
               </div>
+
             </div>
 
+
             <div className="main-price-card">
-              <div className="price-card-top-line" />
 
-              <span className="price-card-label"style={{ fontSize: "18px" }}>QUOTE PREPARATION SUPPORT</span>
+              <div className="price-card-top-line"></div>
 
-              <strong className="price-card-price">
-                &lt; <span>$1</span>
-              </strong>
+              <span className="price-card-label">
+                QUOTE PREPARATION SUPPORT
+              </span>
 
-              <p className="price-card-subtitle">Starting per completed eligible quote</p>
+              <div className="main-price-value">
+                <small>&lt;</small>
+                <strong>$1</strong>
+              </div>
 
-              <div className="price-card-divider" />
+              <p className="price-card-subtitle">
+                Starting per completed eligible quote
+              </p>
+
+              <div className="price-card-divider"></div>
 
               <div className="price-card-row">
-                <span className="price-row-icon">✓</span>
+                <span>✓</span>
                 <p>Free trial available</p>
               </div>
 
               <div className="price-card-row">
-                <span className="price-row-icon">✓</span>
+                <span>✓</span>
                 <p>Monthly billing</p>
               </div>
 
               <div className="price-card-row">
-                <span className="price-row-icon">✓</span>
+                <span>✓</span>
                 <p>Volume-aligned costs</p>
               </div>
 
-              <Link to="/contact" className="price-card-button">
-                Start Your Free Trial →
-              </Link>
+              <button
+                className="price-card-button"
+                onClick={() => scrollToSection("contact")}
+              >
+                Start Your Free Trial
+                <span>→</span>
+              </button>
+
             </div>
+
           </div>
 
+
           <div className="eligible-quote-box">
-            <div className="eligible-icon">✓</div>
+
+            <div className="eligible-icon">
+              ✓
+            </div>
 
             <div>
-              <span style={{ fontSize: "18px" }}>PAY FOR COMPLETED ELIGIBLE QUOTES</span>
+              <span>PAY FOR COMPLETED ELIGIBLE QUOTES</span>
 
-              <h3>Costs stay aligned with your actual quote volume.</h3>
+              <h3>
+                Costs stay aligned with your actual quote volume.
+              </h3>
 
               <p>
                 Your agency pays based on the eligible quotes we complete,
@@ -3588,58 +4221,110 @@ function PricingPage() {
                 process are not billed.
               </p>
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Pricing factors */}
-      <section className="section pricing-factors-section">
-        <div className="container">
-          <div className="pricing-factors-heading">
-            <div>
-              <p className="eyebrow"style={{ fontSize: "18px" }}>Pricing Built Around Your Agency</p>
 
-              <h2>Pricing Aligned to Your Agency’s Requirements</h2>
+      {/* =========================================================
+          PRICING FACTORS
+      ========================================================= */}
+      <section
+        id="pricing-factors"
+        className="section pricing-factors-section"
+      >
+
+        <div className="container">
+
+          <div className="pricing-factors-heading">
+
+            <div>
+              <p className="eyebrow">
+                Pricing Built Around Your Agency
+              </p>
+
+              <h2>
+                Pricing Aligned to Your Requirements
+              </h2>
             </div>
 
             <p>
               Final pricing is structured around the workflow requirements,
               quote complexity, and quote volume unique to your agency.
             </p>
+
           </div>
 
+
           <div className="pricing-factor-grid">
+
             {pricingFactors.map((factor) => (
+
               <article
                 key={factor.number}
                 className={`pricing-factor-card ${factor.type}`}
               >
-                <div className="factor-card-top">
-                  <span className="factor-icon">{factor.icon}</span>
 
-                  <span className="factor-number">{factor.number}</span>
+                <div className="factor-card-top">
+
+                  <span className="factor-icon">
+                    {factor.icon}
+                  </span>
+
+                  <span className="factor-number">
+                    {factor.number}
+                  </span>
+
                 </div>
 
-                <h3>{factor.title}</h3>
+                <h3>
+                  {factor.title}
+                </h3>
 
-                <p>{factor.description}</p>
+                <p>
+                  {factor.description}
+                </p>
 
-                <span className="factor-bottom-line" />
+                <span className="factor-bottom-line"></span>
+
               </article>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Monthly billing */}
+
+      {/* =========================================================
+          MONTHLY BILLING
+      ========================================================= */}
       <section className="section monthly-billing-section">
+
         <div className="container monthly-billing-grid">
+
           <div className="monthly-billing-visual">
+
+            <div className="billing-glow"></div>
+
             <div className="billing-card">
+
               <div className="billing-card-header">
-                <span style={{ fontSize: "18px" }}>TRITOX MONTHLY BILLING</span>
+
+                <div>
+                  <span>TRITOX MONTHLY BILLING</span>
+                  <h3>Simple & Transparent</h3>
+                </div>
+
                 <i>✓</i>
+
               </div>
+
 
               <div className="billing-card-line">
                 <span>Eligible quotes completed</span>
@@ -3648,7 +4333,9 @@ function PricingPage() {
 
               <div className="billing-card-line">
                 <span>Upfront cost</span>
-                <strong className="green-text">No upfront fees</strong>
+                <strong className="green-text">
+                  No upfront fees
+                </strong>
               </div>
 
               <div className="billing-card-line">
@@ -3660,23 +4347,37 @@ function PricingPage() {
                 <span>Cost structure</span>
                 <strong>Simple & transparent</strong>
               </div>
+
             </div>
+
 
             <div className="billing-floating-note">
+
               <span>✓</span>
-              <p>Billing begins after your free trial period.</p>
+
+              <p>
+                Billing begins after your free trial period.
+              </p>
+
             </div>
+
           </div>
 
-          <div className="monthly-billing-content">
-            <p className="eyebrow" style={{ fontSize: "18px" }}>Simple Monthly Billing</p>
 
-            <h2>A transparent cost structure designed for your workflow.</h2>
+          <div className="monthly-billing-content">
+
+            <p className="eyebrow">
+              Simple Monthly Billing
+            </p>
+
+            <h2>
+              A transparent cost structure designed for your workflow.
+            </h2>
 
             <p>
-              There are no upfront fees to begin working with Tritox. Billing
-              starts only after the free trial period is completed and is
-              processed on a monthly basis.
+              There are no upfront fees to begin working with Tritox.
+              Billing starts only after the free trial period is completed
+              and is processed on a monthly basis.
             </p>
 
             <p>
@@ -3685,59 +4386,85 @@ function PricingPage() {
               transparent cost structure.
             </p>
 
-            <Link to="/contact" className="primary-button">
+            <button
+              className="primary-button"
+              onClick={() => scrollToSection("contact")}
+            >
               Request Your Free Trial
-            </Link>
+              <span>→</span>
+            </button>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Cost comparison */}
+
+      {/* =========================================================
+          COST COMPARISON
+      ========================================================= */}
       <section className="cost-comparison-section">
-        <div className="comparison-grid-pattern" />
-        <div className="comparison-circle comparison-circle-one" />
-        <div className="comparison-circle comparison-circle-two" />
+
+        <div className="comparison-grid-pattern"></div>
+
+        <div className="comparison-circle comparison-circle-one"></div>
+        <div className="comparison-circle comparison-circle-two"></div>
 
         <div className="container comparison-container">
+
           <div className="comparison-heading">
-            <p className="eyebrow comparison-eyebrow"style={{ fontSize: "18px" }}>
+
+            <p className="eyebrow comparison-eyebrow">
               Cost Structure & Operational Efficiency
             </p>
 
-            <h2>A More Flexible Approach to Expanding Backend Capacity</h2>
+            <h2>
+              A More Flexible Approach to Expanding Backend Capacity
+            </h2>
 
             <p>
               Expanding an in-house team creates a long-term fixed cost
-              commitment that extends beyond base compensation. Payroll taxes,
-              benefits, recruitment, onboarding, training, equipment, and
-              ongoing employment overhead all contribute to the total cost of
-              additional internal capacity.
+              commitment that extends beyond base compensation. Payroll
+              taxes, benefits, recruitment, onboarding, training, equipment,
+              and ongoing employment overhead all contribute to the total
+              cost of additional internal capacity.
             </p>
 
             <p>
-              Tritox provides a variable support model that allows agencies to
-              expand backend capacity while maintaining greater control over
-              staffing-related costs.
+              Tritox provides a variable support model that allows agencies
+              to expand backend capacity while maintaining greater control
+              over staffing-related costs.
             </p>
+
           </div>
 
+
           <div className="pricing-comparison-card">
+
             <div className="comparison-card-header">
+
               <div>
-                <span className="comparison-small-label"style={{ fontSize: "18px" }}>
+                <span className="comparison-small-label">
                   COST COMPARISON
                 </span>
 
-                <h3>In-House Resource vs Tritox Support</h3>
+                <h3>
+                  In-House Resource vs Tritox Support
+                </h3>
               </div>
 
               <span className="comparison-savings-badge">
-                Up to 70% Lower Cost
+                Up to 70% Lower Cost*
               </span>
+
             </div>
 
+
             <div className="pricing-table-scroll">
+
               <table className="pricing-table">
+
                 <thead>
                   <tr>
                     <th>Cost Consideration</th>
@@ -3747,59 +4474,110 @@ function PricingPage() {
                 </thead>
 
                 <tbody>
+
                   {costRows.map((row) => (
+
                     <tr key={row.consideration}>
-                      <td>{row.consideration}</td>
-                      <td>{row.inHouse}</td>
+
                       <td>
-                        <span className="table-check">✓</span>
+                        {row.consideration}
+                      </td>
+
+                      <td>
+                        {row.inHouse}
+                      </td>
+
+                      <td>
+                        <span className="table-check">
+                          ✓
+                        </span>
+
                         {row.tritox}
                       </td>
+
                     </tr>
+
                   ))}
+
                 </tbody>
+
               </table>
+
             </div>
 
+
             <p className="comparison-disclaimer">
-              *Actual cost differences depend on compensation levels, staffing
-              structure, workflow requirements, quote complexity, and quote
-              volume.
+              *Actual cost differences depend on compensation levels,
+              staffing structure, workflow requirements, quote complexity,
+              and quote volume.
             </p>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Final call to action */}
-      <section className="pricing-final-cta">
+
+      {/* =========================================================
+          FINAL CTA
+      ========================================================= */}
+      {/* <section className="pricing-final-cta">
+
+        <div className="pricing-cta-network"></div>
+        <div className="pricing-cta-overlay"></div>
+
+        <div className="pricing-cta-glow"></div>
+
         <div className="container pricing-final-cta-content">
-          <div>
-            <p className="eyebrow pricing-light-eyebrow"style={{ fontSize: "18px" }}>
+
+          <div className="pricing-cta-copy">
+
+            <p className="eyebrow pricing-light-eyebrow">
               Start With a Free Trial
             </p>
 
-            <h2>Explore a more flexible way to support your agency.</h2>
+            <h2>
+              Explore a more flexible way to support your agency.
+            </h2>
 
             <p>
-              Get quote preparation support aligned with your actual workflow,
-              quote volume, and operational requirements.
+              Get quote preparation support aligned with your actual
+              workflow, quote volume, and operational requirements.
             </p>
+
           </div>
+
 
           <div className="pricing-final-buttons">
-            <Link to="/contact" className="pricing-trial-button">
-              Start Your Free Trial →
-            </Link>
 
-            <Link to="/services" className="pricing-services-button">
+            <button
+              className="pricing-trial-button"
+              onClick={() => scrollToSection("contact")}
+            >
+              Start Your Free Trial
+              <span>→</span>
+            </button>
+
+            <button
+              className="pricing-services-button"
+              onClick={() => scrollToSection("services")}
+            >
               View Our Services
-            </Link>
+              <span>→</span>
+            </button>
+
           </div>
+
         </div>
-      </section>
+
+      </section> */}
+
     </main>
   );
 }
+
+
 
 // function AboutPage() {
 //   const values = [
@@ -4186,11 +4964,11 @@ function ContactPage() {
   
   return (
     <main>
-      <PageBanner
+      {/* <PageBanner
         eyebrow="Contact Us"
         title="Start Your Free Trial"
         description="Tell us about your agency and quote preparation requirements. Our team will help you understand the next steps."
-      />
+      /> */}
 
       {/* Contact form section */}
       <section className="section white-section">
