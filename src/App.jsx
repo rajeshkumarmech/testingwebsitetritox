@@ -1030,7 +1030,7 @@ function ServicesPage() {
 
           <h1>
             Complete Support for
-            <span> Smarter Agency Operations</span>
+            <span> Integrated Operational, CRM, and Quote Preparation Support for Farmers Agencies</span>
           </h1>
 
           <p>
