@@ -3800,7 +3800,7 @@ function ImpactPage() {
 
 
       {/* Final CTA */}
-      <section className="impact-final-cta">
+      {/* <section className="impact-final-cta">
         <div className="container impact-final-cta-content">
           <div>
             <p className="eyebrow impact-light-eyebrow"style={{ fontSize: "18px" }}>
@@ -3828,7 +3828,7 @@ function ImpactPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
