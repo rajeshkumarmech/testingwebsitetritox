@@ -243,9 +243,9 @@
   gap: 80px;
 
   align-items: center;
-
-  padding-top: 80px;
-  padding-bottom: 80px;
+/* 
+  padding-top: 8px;
+  padding-bottom: 80px; */
 }
 
 
@@ -1025,4 +1025,128 @@
     display: none;
   }
 
+}
+
+
+
+/* =========================================================
+   END OF FILE Social media links */
+   /* =========================================================
+   FOOTER SOCIAL LINKS
+========================================================= */
+
+.footer-brand-section {
+  max-width: 420px;
+}
+
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  /* color: #ffffff; */
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.footer-social-link:hover {
+  transform: translateY(-4px);
+
+  background: #1e88e5;
+
+  border-color: #1e88e5;
+
+  box-shadow:
+    0 10px 25px rgba(30, 136, 229, 0.35);
+}
+
+
+/* Instagram */
+
+.footer-social-link.instagram:hover {
+  background: linear-gradient(
+    135deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  );
+
+  border-color: transparent;
+}
+
+
+/* LinkedIn */
+
+.footer-social-link.linkedin:hover {
+  background: #0a66c2;
+
+  border-color: #0a66c2;
+}
+
+
+/* Facebook */
+
+.footer-social-link.facebook:hover {
+  background: #1877f2;
+
+  border-color: #1877f2;
+}
+
+
+/* X / Twitter */
+
+.footer-social-link.x:hover {
+  background: #000000;
+
+  border-color: #333333;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .footer-brand-section {
+    max-width: 100%;
+  }
+
+  .footer-social {
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .footer-social-link {
+    width: 38px;
+    height: 38px;
+  }
 }

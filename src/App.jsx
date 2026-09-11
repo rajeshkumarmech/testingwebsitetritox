@@ -6125,40 +6125,98 @@ function NotFoundPage() {
 // }
 
 function Footer() {
+  const socialLinks = [
+    {
+      name: "Facebook",
+      shortName: "f",
+      href: "https://facebook.com/tritoxtechnologies",
+    },
+    {
+      name: "LinkedIn",
+      shortName: "in",
+      href: "https://linkedin.com/company/tritoxtechnologies",
+    },
+    {
+      name: "Instagram",
+      shortName: "ig",
+      href: "https://instagram.com/tritoxtechnologies",
+    },
+    // {
+    //   name: "X",
+    //   shortName: "𝕏",
+    //   href: "https://x.com/tritoxtechnologies",
+    // },
+  ];
+
   return (
     <footer className="footer">
       <div className="container footer-content">
-        <div>
+
+        {/* Brand */}
+        <div className="footer-brand-section">
           <Link to="/" className="footer-brand">
-              <img
-    src="/tritox_logo.png"
-    
-    className="brand-logo"
-  />
-            Tritox Technologies
+            <img
+              src="/tritox_logo.png"
+            
+              className="brand-logo"
+            />
+
+            <span style={{ color:  "#1565c0" }}>Tritox Technologies</span>
           </Link>
 
           <p>
-            Specialized quote preparation and operational support for insurance
-            agencies.
+            Specialized quote preparation and operational support for
+            insurance agencies.
           </p>
+
+          {/* Social Links */}
+          <div className="footer-social">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+                className={`footer-social-link ${social.name
+                  .toLowerCase()
+                  .replace(" ", "-")}`}
+              >
+                {social.shortName}
+              </a>
+            ))}
+          </div>
         </div>
 
+        {/* Footer Links */}
         <div className="footer-links">
           <Link to="/services">Services</Link>
+
           <Link to="/pricing">Pricing</Link>
+
           {/* <Link to="/about">About</Link> */}
-          <Link to="/success-stories">Success Stories</Link>
-          <Link to="/contact">Contact Us</Link>
+
+          <Link to="/success-stories">
+            Success Stories
+          </Link>
+
+          <Link to="/contact">
+            Contact Us
+          </Link>
         </div>
       </div>
 
+      {/* Bottom */}
       <div className="container footer-bottom">
-        © 2026 Tritox Technologies. All rights reserved.
+        <span>
+          © 2026 Tritox Technologies. All rights reserved.
+        </span>
       </div>
     </footer>
   );
 }
+
+
 
 
 
