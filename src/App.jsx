@@ -3381,9 +3381,9 @@ function ImpactPage() {
               <span>✓ Support capacity adjusts with demand</span>
             </div>
 
-            <Link to="/contact" className="primary-button">
+            {/* <Link to="/contact" className="primary-button">
               Explore Your Support Options
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
