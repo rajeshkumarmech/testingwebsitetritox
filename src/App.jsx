@@ -766,7 +766,7 @@ function SuccessStoryPage() {
       {/* =====================================================
           FIRST CTA
       ===================================================== */}
-
+{/* 
       <section className="success-final-cta">
 
         <div className="container success-final-cta-content">
@@ -816,7 +816,7 @@ function SuccessStoryPage() {
 
       </section>
 
-
+ */}
       {/* =====================================================
           FAQ
       ===================================================== */}
@@ -892,12 +892,12 @@ function SuccessStoryPage() {
               </div>
 
 
-              <Link
+              {/* <Link
                 to="/contact"
                 className="faq-contact-button"
               >
                 Contact Our Team →
-              </Link>
+              </Link> */}
 
             </aside>
 
