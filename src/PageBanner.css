@@ -1,0 +1,320 @@
+
+/* =========================================================
+   PREMIUM PAGE BANNER
+========================================================= */
+
+.page-banner {
+  position: relative;
+  min-height: 430px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:  linear-gradient(
+    rgba(30, 136, 229, 0.65),
+    rgba(30, 136, 229, 0.65)
+  ),
+   
+    url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   PREMIUM BLUE GLOW
+========================================================= */
+
+.page-banner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -180px;
+  top: -220px;
+
+  background: rgba(30, 136, 229, 0.40);
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTTOM GLOW
+========================================================= */
+
+.page-banner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 260px;
+
+  left: -180px;
+  bottom: -150px;
+
+  background: rgba(30, 136, 229, 0.35);
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.services-network-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 85px 30px;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.services-hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 18px;
+
+  margin-bottom: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.30);
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   PULSE DOT
+========================================================= */
+
+.pulse-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 5px rgba(255, 255, 255, 0.15),
+    0 0 18px rgba(255, 255, 255, 0.90);
+
+  animation: bannerPulse 2s infinite;
+}
+
+
+@keyframes bannerPulse {
+
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(255, 255, 255, 0.50),
+      0 0 12px rgba(255, 255, 255, 0.60);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 9px rgba(255, 255, 255, 0),
+      0 0 20px rgba(255, 255, 255, 0.90);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(255, 255, 255, 0),
+      0 0 12px rgba(255, 255, 255, 0.60);
+  }
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.page-banner h1 {
+  max-width: 850px;
+
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: clamp(40px, 5vw, 66px);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  text-align: left;
+
+  text-shadow:
+    0 4px 25px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   BLUE HIGHLIGHT
+========================================================= */
+
+.page-banner h1 span {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.page-banner p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  font-weight: 400;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   OPTIONAL LEFT ACCENT
+========================================================= */
+
+.page-banner h1::before {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 4px;
+
+  margin-bottom: 20px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.50);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .page-banner {
+    min-height: 390px;
+
+    background-position: center;
+  }
+
+  .services-network-content {
+    padding: 70px 25px;
+  }
+
+  .services-hero-badge {
+    font-size: 11px;
+
+    padding: 9px 15px;
+  }
+
+  .page-banner h1 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+  }
+
+  .page-banner p {
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .page-banner {
+    min-height: 350px;
+  }
+
+  .services-network-content {
+    padding: 60px 20px;
+  }
+
+  .page-banner h1 {
+    font-size: 34px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .page-banner p {
+    font-size: 15px;
+  }
+
+  .page-banner h1::before {
+    width: 45px;
+    height: 3px;
+  }
+}

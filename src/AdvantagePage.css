@@ -1408,33 +1408,31 @@ html {
 
   margin-bottom: 25px;
 }
-
 .workflow-number {
   width: 44px;
   height: 44px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 13px;
 
-  background: #f2c94c;
+  /* background: #f2c94c; */
 
-  color: #183b56;
+  /* color: #183b56; */
 
-  font-family:
-    "Poppins",
-    sans-serif;
+  font-family: "Poppins", sans-serif;
 
-  font-size: 14px;
-
+  font-size: 16px;
   font-weight: 800;
 
+  line-height: 1;
+
+  text-shadow: none;
+
   box-shadow:
-    0 10px 20px
-    rgba(0, 0, 0, 0.14);
+    0 8px 18px rgba(0, 0, 0, 0.16);
 }
 
 .workflow-status {

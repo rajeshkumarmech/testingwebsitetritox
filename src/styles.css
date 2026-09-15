@@ -667,7 +667,7 @@ section {
 
 .page-banner {
   position: relative;
-  padding: 170px 0 95px;
+  /* padding: 170px 0 95px; */
   overflow: hidden;
   color: var(--white);
   background: var(--main-blue);
@@ -692,9 +692,10 @@ section {
 .page-banner h1 {
   max-width: 850px;
   color: var(--white);
-  font-family: "Manrope", sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4.3rem);
-  line-height: 1.1;
+  /* font-family: "Manrope", sans-serif; */
+  /* font-size: clamp(2.5rem, 5vw, 4.3rem); */
+  /* line-height: 1; */
+    font-family: "Poppins", "Inter", Arial, sans-serif;
 }
 
 .page-banner-content > p:last-child {
@@ -5854,19 +5855,19 @@ section {
   margin-top: 31px;
   padding: 0 21px;
   border-radius: 8px;
-  color: var(--white);
-  background: var(--blue-dark);
+  color: #0a53a7;
+  background: var(--white);
   box-shadow: 0 12px 24px rgba(6, 54, 117, 0.18);
   font-size: 0.83rem;
   font-weight: 800;
   transition: 0.25s ease;
 }
 
-.about-primary-button:hover {
+/* .about-primary-button:hover {
   background: var(--main-blue);
   box-shadow: 0 17px 30px rgba(6, 54, 117, 0.24);
   transform: translateY(-4px);
-}
+} */
 
 /* Company card */
 

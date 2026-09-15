@@ -6,6 +6,7 @@ import "./AdvantagePage.css";
 import "./SuccessStoryPage.css";
 import "./PricingPage.css";
 import "./AboutPage.css";
+import "./PageBanner.css";
 
 
 import { useEffect, useState } from "react";
@@ -1325,11 +1326,13 @@ function FeatureCard({ number, title, description, type }) {
 function PageBanner({ eyebrow, title, description }) {
   return (
     <section className="page-banner">
-      <div className="page-banner-circle-one" />
-      <div className="page-banner-circle-two" />
+      <div className="page-banner-overlay"></div>
 
-      <div className="container page-banner-content">
-        <p className="eyebrow page-eyebrow"style={{ fontSize: "18px" }}>{eyebrow}</p>
+      <div className="services-network-content container">
+        <div className="services-hero-badge">
+          <span className="pulse-dot"></span>
+          {eyebrow}
+        </div>
 
         <h1>{title}</h1>
 
@@ -2153,34 +2156,50 @@ function ServicesPage() {
             <ul className="operational-list">
 
               <li>
-                <span>✓</span>
+                
                 Agency operations support
               </li>
 
               <li>
-                <span>✓</span>
+               
                 Documentation management
               </li>
 
               <li>
-                <span>✓</span>
+                
                 Process execution assistance
               </li>
 
               <li>
-                <span>✓</span>
+                
                 Consistent backend workflow support
               </li>
 
             </ul>
 
 
-            <a
-              href="#contact"
-              className="primary-button"
-            >
+            {/* <div className="hero-primary-button">
+            <a href="#contact" >
               Start Your Free Trial →
             </a>
+            </div>  */}
+            <button
+                // onClick={() => scrollToSection("contact")}
+                className="hero-primary-button"
+              >
+                <a href="#contact" >
+              Start Your Free Trial  →
+            </a>
+                
+              </button>
+
+              {/* <button
+                onClick={() => scrollToSection("pricing")}
+                className="hero-secondary-button"
+              >
+                View Pricing
+                <span>→</span>
+              </button> */}
 
           </div>
 
@@ -2566,9 +2585,9 @@ function AdvantagePage() {
                 className={`advantage-benefit-card ${benefit.type}`}
               >
 
-                <div className="benefit-card-number">
+                {/* <div className="benefit-card-number">
                   0{index + 1}
-                </div>
+                </div> */}
 
                 <div className="benefit-card-top">
 
@@ -2817,9 +2836,9 @@ function AdvantagePage() {
 
                 </div>
 
-                <div className="workflow-card-arrow">
+                {/* <div className="workflow-card-arrow">
                   →
-                </div>
+                </div> */}
 
               </article>
 
@@ -2894,13 +2913,15 @@ function AdvantagePage() {
             </p>
 
           </div>
-
+          
+{/* 
 
           <div className="advantage-final-actions">
+            
 
             <a
               href="#contact"
-              className="advantage-trial-button"
+              className="hero-primary-button"
             >
               Start Your Free Trial
               <span>→</span>
@@ -2908,13 +2929,14 @@ function AdvantagePage() {
 
             <a
               href="#services"
-              className="advantage-services-button"
+              className="hero-primary-button"
             >
               View Our Services
               <span>→</span>
             </a>
+            
 
-          </div>
+          </div> */}
 
         </div>
 
@@ -3078,7 +3100,7 @@ function ImpactPage() {
   ];
 
   return (
-    <main className="impact-page">
+    <main className="services-page">
       <PageBanner
         eyebrow="Quote Team Impact"
         title="How a Quote Team Impacts the Agency"
@@ -5199,7 +5221,7 @@ function ContactPage() {
         </button>
 
         <button
-          className="about-secondary-button"
+          className="about-primary-button"
           onClick={() =>
             document.getElementById("services")?.scrollIntoView({
               behavior: "smooth",
@@ -5339,9 +5361,6 @@ function ContactPage() {
               processes aligned with each client’s operational requirements.
             </p>
 
-            <Link to="/contact" className="about-primary-button">
-              Speak With Our Team →
-            </Link>
           </div>
 
           <div className="about-company-card">
