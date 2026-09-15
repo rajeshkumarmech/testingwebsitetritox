@@ -1617,7 +1617,7 @@ function ServicesPage() {
 
               <div className="quote-card-image">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85"
                   alt="Home insurance quote preparation"
                 />
 
@@ -1672,7 +1672,7 @@ function ServicesPage() {
 
               <div className="quote-card-image">
                 <img
-                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85"
+                  src="public/bundle.png"
                   alt="Bundle insurance opportunity"
                 />
 
