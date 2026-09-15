@@ -225,7 +225,7 @@ function SuccessStoryPage() {
   };
 
   return (
-    <main className="success-page">
+    <main className="services-page">
 
       {/* =====================================================
           PAGE BANNER
@@ -281,6 +281,7 @@ function SuccessStoryPage() {
         <div className="container">
 
           <div className="success-story-heading">
+            
 
             <div>
               <p
@@ -1049,7 +1050,7 @@ function HomePage() {
           {/* LEFT CONTENT */}
           <div className="hero-content">
 
-            <div className="hero-small-badge">
+            <div className="services-hero-badge">
               <span className="badge-dot" />
               Built for Farmers Insurance Agencies
             </div>
@@ -1071,7 +1072,7 @@ function HomePage() {
 
               <button
                 onClick={() => scrollToSection("contact")}
-                className="start-trial-button"
+                className="hero-primary-button"
               >
                 Start Your Free Trial
                 <span>→</span>
@@ -1079,7 +1080,7 @@ function HomePage() {
 
               <button
                 onClick={() => scrollToSection("pricing")}
-                className="view-pricing-button"
+                className="hero-secondary-button"
               >
                 View Pricing
                 <span>→</span>
@@ -1449,7 +1450,7 @@ function ServicesPage() {
           <p>Tritox provides structured backend support that helps Farmers agencies maintain efficient quote workflows, organized CRM activity, and reliable day-to-day operations.
           </p>
 
-          <div className="services-hero-buttons">
+          {/* <div className="services-hero-buttons">
             <a href="#contact" className="services-primary-btn">
               Start Your Free Trial →
             </a>
@@ -1457,7 +1458,7 @@ function ServicesPage() {
             <a href="#pricing" className="services-secondary-btn">
               View Pricing
             </a>
-          </div>
+          </div> */}
 
           <div className="services-hero-stats">
             <div>
@@ -2353,7 +2354,7 @@ function AdvantagePage() {
   ];
 
   return (
-    <main className="advantage-page">
+    <main className="services-page">
 
       {/* =====================================================
           PAGE BANNER
@@ -2368,8 +2369,8 @@ function AdvantagePage() {
 
     <div className="advantage-hero-content">
 
-      <div className="advantage-hero-badge">
-        <span className="advantage-live-dot" />
+      <div className="services-hero-badge">
+        <span className="pulse-dot" />
         THE TRITOX ADVANTAGE
       </div>
 
@@ -2386,13 +2387,13 @@ function AdvantagePage() {
 
       <div className="advantage-hero-actions">
 
-  <a
-    href="#contact"
-    className="advantage-hero-primary"
-  >
-    Start Your Free Trial
-    <span>→</span>
-  </a>
+  <button
+                className="hero-primary-button"
+                onClick={() => scrollToSection("contact")}
+              >
+                Start Your Free Trial
+                <span>→</span>
+              </button>
 
   <a href="#workflow" className="advantage-hero-secondary">
   Explore Our Workflow
@@ -2670,13 +2671,13 @@ function AdvantagePage() {
 
               </div>
 
-              <a
+              {/* <a
                 href="#contact"
                 className="highlight-banner-button"
               >
                 Start Free Trial
                 <span>→</span>
-              </a>
+              </a> */}
 
             </div>
 
@@ -2852,13 +2853,11 @@ function AdvantagePage() {
 
             </div>
 
-            <a
-              href="#contact"
-              className="workflow-button"
-            >
-              Discuss Your Workflow
-              <span>→</span>
-            </a>
+            
+            <a href="#workflow" className="advantage-hero-secondary">
+  Discuss Your Workflow
+  
+</a>
 
           </div>
 
@@ -3948,8 +3947,8 @@ function PricingPage() {
 
           <div className="pricing-hero-content">
 
-            <div className="pricing-hero-badge">
-              <span></span>
+            <div className="services-hero-badge">
+               <span className="pulse-dot"></span>
               
               Flexible Pricing Built Around Your Quoting Needs
             </div>
@@ -4189,13 +4188,13 @@ function PricingPage() {
                 <p>Volume-aligned costs</p>
               </div>
 
-              <button
+              {/* <button
                 className="price-card-button"
                 onClick={() => scrollToSection("contact")}
               >
                 Start Your Free Trial
                 <span>→</span>
-              </button>
+              </button> */}
 
             </div>
 
@@ -4344,10 +4343,10 @@ function PricingPage() {
                 <strong>Monthly</strong>
               </div>
 
-              <div className="billing-card-total">
+              {/* <div className="billing-card-total">
                 <span>Cost structure</span>
                 <strong>Simple & transparent</strong>
-              </div>
+              </div> */}
 
             </div>
 
@@ -4387,13 +4386,13 @@ function PricingPage() {
               transparent cost structure.
             </p>
 
-            <button
+            {/* <button
               className="primary-button"
               onClick={() => scrollToSection("contact")}
             >
               Request Your Free Trial
               <span>→</span>
-            </button>
+            </button> */}
 
           </div>
 
