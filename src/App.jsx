@@ -105,7 +105,7 @@ function SuccessStoryPage() {
       name: "Aaron Budnick",
       role: "Agency Owner",
       location: "Michigan",
-      recognition: "President’s Council",
+      recognition: "",
       service: "Quote Preparation",
     },
     {
