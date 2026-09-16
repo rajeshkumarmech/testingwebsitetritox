@@ -473,6 +473,7 @@
 .quote-card-image {
   position: relative;
   height: 205px;
+  
   overflow: hidden;
 }
 

@@ -5188,11 +5188,10 @@ function ContactPage() {
   <div className="container about-hero-content">
 
     <div className="about-hero-text">
-
-      <div className="about-eyebrow">
-        <span className="about-eyebrow-dot" />
-        ABOUT TRITOX TECHNOLOGIES
-      </div>
+<div className="about-eyebrow" style={{ color: "#ffffff" }}>
+  <span className="pulse-dot" />
+  ABOUT TRITOX TECHNOLOGIES
+</div>
 
       <h1>
         Structured Operations.
@@ -5601,7 +5600,7 @@ function ContactPage() {
       <section className="about-final-cta">
         <div className="container about-final-cta-content">
           <div>
-            <p className="about-light-eyebrow"style={{ fontSize: "18px" }}>Work With Tritox</p>
+            <h1 className="about-light-eyebrow"style={{ fontSize: "15px" ,color: "#ffffff" }}>Work With Tritox</h1>
 
             <h2>
               Build a more structured and reliable backend support model.
@@ -5613,15 +5612,33 @@ function ContactPage() {
             </p>
           </div>
 
-          <div className="about-final-buttons">
-            <Link to="/contact" className="about-cta-main-button">
-              Contact Our Team →
-            </Link>
+          <div className="hero-buttons">
 
-            <Link to="/services" className="about-cta-secondary-button">
-              Explore Services
-            </Link>
-          </div>
+  <button
+    className="hero-primary-button"
+    onClick={() =>
+      document.getElementById("contact")?.scrollIntoView({
+        behavior: "smooth",
+      })
+    }
+  >
+    Contact Our Team
+    <span>→</span>
+  </button>
+
+  <button
+    className="hero-secondary-button"
+    onClick={() =>
+      document.getElementById("services")?.scrollIntoView({
+        behavior: "smooth",
+      })
+    }
+  >
+    View Our Services
+    <span>→</span>
+  </button>
+
+</div>
         </div>
       </section>
     </main>
@@ -6206,22 +6223,27 @@ function Footer() {
           </div>
         </div>
 
-        {/* Footer Links */}
-        <div className="footer-links">
-          <Link to="/services">Services</Link>
+    
+       {/* Footer Links */}
+<div className="footer-links">
+  <a href="#home">Home</a>
 
-          <Link to="/pricing">Pricing</Link>
+  <a href="#services">Services</a>
+  <a href="#tritox-advantage">Tritox Advantage</a>
 
-          {/* <Link to="/about">About</Link> */}
+  <a href="#pricing">Pricing</a>
 
-          <Link to="/success-stories">
-            Success Stories
-          </Link>
+  <a href="#quote-team-impact">Resource</a>
 
-          <Link to="/contact">
-            Contact Us
-          </Link>
-        </div>
+  <a href="#success-stories">
+    Success Stories
+  </a>
+
+  <a href="#contact">
+    Contact Us
+  </a>
+
+</div>
       </div>
 
       {/* Bottom */}
