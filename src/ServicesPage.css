@@ -473,7 +473,6 @@
 .quote-card-image {
   position: relative;
   height: 205px;
-  
   overflow: hidden;
 }
 
@@ -586,7 +585,7 @@
   flex-wrap: wrap;
   gap: 8px;
 
-  margin: 20px 0;
+  margin: 45px 0;
 }
 
 .service-tag-list span {
@@ -603,9 +602,7 @@
 
 .service-card-note {
   padding-top: 18px;
-
-  border-top: 1px solid #edf2f6;
-
+  border-top: none !important;
   font-size: 12px !important;
 }
 

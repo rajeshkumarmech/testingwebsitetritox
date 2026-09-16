@@ -1597,15 +1597,13 @@ function ServicesPage() {
                   <span>Driver validation</span>
                   <span>Vehicle information</span>
                   <span>Coverage entry</span>
+                  
                 </div>
 
-                {/* <p className="service-card-note">
-                  Support for Farmers and Bristol West quote comparisons in
-                  accordance with agency-defined quoting criteria.
-                </p> */}
+              
 
               </div>
-              <p className="service-card-note">
+              <p className="service-card-note"style={{  paddingTop: "18px" }}>
                   Support for Farmers and Bristol West quote comparisons in
                   accordance with agency-defined quoting criteria.
                 </p>
@@ -1650,8 +1648,8 @@ function ServicesPage() {
                 <div className="service-tag-list">
                   <span>Address validation</span>
                   <span>Property review</span>
-                  <span>Home features</span>
-                  <span>Coverage details</span>
+                  <span>Home features,Coverage details</span>
+                  
                 </div>
 
                 {/* <p className="service-card-note">
