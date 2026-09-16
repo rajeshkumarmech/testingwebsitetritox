@@ -413,7 +413,7 @@ function SuccessStoryPage() {
               <div className="network-image-card">
 
                 <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85"
+                  src="/public/sucessstory.jpg"
                   alt="Connected technology network representing agency workflow"
                 />
 
