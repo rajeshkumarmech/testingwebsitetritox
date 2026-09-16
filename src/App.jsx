@@ -413,7 +413,7 @@ function SuccessStoryPage() {
               <div className="network-image-card">
 
                 <img
-                  src="/public/sucessstory.jpg"
+                  src="/sucessstory.jpg"
                   alt="Connected technology network representing agency workflow"
                 />
 
