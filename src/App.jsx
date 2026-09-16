@@ -1513,7 +1513,7 @@ function ServicesPage() {
               </h2>
             </div>
 
-            <p>
+            <p style={{ fontSize: "18px",color: "#373737", lineHeight: "1.6",fontFamily: "Manrope, sans-serif" }}>
               Tritox provides specialized backend quote preparation support for
               Auto, Home, and Bundle opportunities, aligned with each Farmers
               agency's established coverage standards, quoting criteria, and
@@ -1670,7 +1670,7 @@ function ServicesPage() {
 
               <div className="quote-card-image">
                 <img
-                  src="public/bundle.png"
+                  src="/bundle.png"
                   alt="Bundle insurance opportunity"
                 />
 
