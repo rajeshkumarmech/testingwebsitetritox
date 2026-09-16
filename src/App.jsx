@@ -5494,7 +5494,9 @@ function ContactPage() {
               <article key={value.number} className="value-card">
                 <div className="value-card-top">
                   <span className="value-icon">{value.icon}</span>
-                  <span className="value-number">{value.number}</span>
+                  <span className="value-number">
+  {value.number}
+</span>
                 </div>
 
                 <h3>{value.title}</h3>

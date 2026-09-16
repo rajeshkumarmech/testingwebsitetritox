@@ -5863,11 +5863,11 @@ section {
   transition: 0.25s ease;
 }
 
-/* .about-primary-button:hover {
+.about-primary-button:hover {
   background: var(--main-blue);
   box-shadow: 0 17px 30px rgba(6, 54, 117, 0.24);
   transform: translateY(-4px);
-} */
+}
 
 /* Company card */
 
@@ -6243,7 +6243,7 @@ section {
 }
 
 .value-number {
-  color: rgba(6, 54, 117, 0.38);
+  color: var(--deep-blue);
   font-size: 0.8rem;
   font-weight: 800;
 }
