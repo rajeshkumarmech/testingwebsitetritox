@@ -3204,7 +3204,7 @@ function ImpactPage() {
               </h2>
             </div>
 
-            <p>
+            <p style={{ fontSize: "18px", lineHeight: "1.7" }}>
               The quoting team manages the operational work required to move an
               eligible lead toward a completed quote while maintaining the
               agency’s established standards and workflows.
@@ -3217,7 +3217,7 @@ function ImpactPage() {
                 <span className="task-panel-icon">✓</span>
 
                 <div>
-                  <small>QUOTE TEAM RESPONSIBILITIES</small>
+                  <small style={{ fontSize: "17px", lineHeight: "1.6" }}>QUOTE TEAM RESPONSIBILITIES</small>
                   <h3>Operational work managed by the quote team</h3>
                 </div>
               </div>
@@ -3225,8 +3225,8 @@ function ImpactPage() {
               <div className="task-list">
                 {quoteTeamTasks.map((task, index) => (
                   <div key={task} className="task-list-item">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <p>{task}</p>
+                    <span style={{ fontSize: "14px", lineHeight: "1.6" }}>{String(index + 1).padStart(2, "0")}</span>
+                    <p style={{ fontSize: "14px", lineHeight: "1.6" }}>{task}</p>
                   </div>
                 ))}
               </div>
@@ -3235,30 +3235,30 @@ function ImpactPage() {
             <div className="agency-benefit-card">
               <div className="agency-benefit-icon">↗</div>
 
-              <p className="agency-benefit-label">AGENCY BENEFIT</p>
+              <p className="agency-benefit-label" style={{ fontSize: "17px", lineHeight: "1.6" }}>AGENCY BENEFIT</p>
 
               <h3>More quoting capacity without competing with producer time.</h3>
 
-              <p>
+              <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
                 Creates dedicated quoting capacity, supports rapid quote
                 preparation, maintains process consistency, and prevents
                 backend workload from competing with producer time.
               </p>
 
-              <div className="agency-benefit-stats">
+              <div className="agency-benefit-stats" >
                 <div>
-                  <strong>Rapid</strong>
-                  <span>Quote preparation</span>
+                  <strong style={{ fontSize: "16px", lineHeight: "1.6" }}>Rapid</strong>
+                  <span style={{ fontSize: "14px", lineHeight: "1.6" }}>Quote preparation</span>
                 </div>
 
                 <div>
-                  <strong>Clear</strong>
-                  <span>Role ownership</span>
+                  <strong style={{ fontSize: "16px", lineHeight: "1.6" }}>Clear</strong>
+                  <span style={{ fontSize: "14px", lineHeight: "1.6" }}>Role ownership</span>
                 </div>
 
                 <div>
-                  <strong>Consistent</strong>
-                  <span>Process execution</span>
+                  <strong style={{ fontSize: "16px", lineHeight: "1.6" }}>Consistent</strong>
+                  <span style={{ fontSize: "14px", lineHeight: "1.6" }}>Process execution</span>
                 </div>
               </div>
             </div>
