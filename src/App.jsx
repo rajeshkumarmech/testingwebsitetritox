@@ -2726,7 +2726,7 @@ function AdvantagePage() {
 
             <div className="workflow-eyebrow-wrapper">
 
-              <span className="workflow-live-dot" />
+            
 
               <p className="eyebrow workflow-eyebrow">
                 WORKFLOW
@@ -2898,9 +2898,9 @@ function AdvantagePage() {
 
           <div className="advantage-final-text">
 
-            <p className="eyebrow advantage-light-eyebrow">
+            <h1 className="eyebrow advantage-light-eyebrow"style={{ color: "#1e88e5" }}>
               READY TO SCALE SMARTER?
-            </p>
+            </h1>
 
             <h2>
               Get flexible quote preparation support
