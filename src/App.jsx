@@ -126,6 +126,8 @@ function SuccessStoryPage() {
       role: "Agency Owner",
       location: "Arizona",
       recognition: "",
+      image: "/bundle.png",
+      
       service: "Quote Preparation",
     },
   ];
@@ -715,6 +717,10 @@ function SuccessStoryPage() {
                         .split(" ")
                         .map((name) => name[0])
                         .join("")}
+                         {/* <img
+    src={testimonial.image}
+    alt="Customer"
+  /> */}
 
                     </div>
 
