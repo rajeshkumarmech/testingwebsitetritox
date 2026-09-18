@@ -2421,14 +2421,14 @@ function AdvantagePage() {
       </p>
 
       <div className="advantage-hero-actions">
-
+{/* 
   <button
                 className="hero-primary-button"
                 onClick={() => scrollToSection("contact")}
               >
                 Start Your Free Trial
                 <span>→</span>
-              </button>
+              </button> */}
 
   <a href="#workflow" className="advantage-hero-secondary">
   Explore Our Workflow
