@@ -130,6 +130,18 @@ function SuccessStoryPage() {
       
       service: "Quote Preparation",
     },
+    {
+      rating: "5.0",
+      quote:
+        "Tritox Technologies offers a practical approach to insurance quote preparation and operational support. Their focus on improving workflow efficiency and helping insurance agencies manage their daily quoting requirements can provide valuable support for growing agency networks.",
+name: "Matt Bennett",
+      role: "Farmers Insurance District Manager",
+      location: " Arizona, United States",
+      recognition: "",
+      image: "/bundle.png",
+      
+      service: "Quote Preparation",
+    },
   ];
 
   const faqs = [
