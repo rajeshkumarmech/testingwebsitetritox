@@ -642,48 +642,7 @@ name: "Matt Bennett",
           </div>
 
 
-          <div className="testimonials-layout">
-
-            {/* RATING */}
-
-            <aside className="rating-summary-card">
-
-              <p className="rating-summary-label">
-                OVERALL CLIENT RATING
-              </p>
-
-              <div className="rating-summary-score">
-
-                <strong>5.0</strong>
-
-                <span>/ 5</span>
-
-              </div>
-
-              <div
-                className="rating-stars"
-                aria-label="5 out of 5 stars"
-              >
-                ★★★★★
-              </div>
-
-              <p className="rating-summary-text">
-                Based on client feedback from agencies we support.
-              </p>
-
-              <div className="rating-summary-divider"></div>
-
-              <div className="rating-summary-service">
-
-                <span>✓</span>
-
-                Quote Preparation Support
-
-              </div>
-
-            </aside>
-            </div>
-
+         
 
           {/* TESTIMONIAL CARDS */}
 
@@ -6289,16 +6248,19 @@ function Footer() {
       name: "Facebook",
       shortName: "f",
       href: "https://facebook.com/tritoxtechnologies",
+      image:"/images/socialmedia/facebook.png"
     },
     {
       name: "LinkedIn",
       shortName: "in",
       href: "https://linkedin.com/company/tritoxtechnologies",
+      image:"/images/socialmedia/linkedin.png"
     },
     {
       name: "Instagram",
       shortName: "ig",
       href: "https://instagram.com/tritoxtechnologies",
+      image:"/images/socialmedia/instagram.png"
     },
     // {
     //   name: "X",
@@ -6328,23 +6290,63 @@ function Footer() {
             insurance agencies.
           </p>
 
-          {/* Social Links */}
-          <div className="footer-social">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.name}
-                className={`footer-social-link ${social.name
-                  .toLowerCase()
-                  .replace(" ", "-")}`}
-              >
-                {social.shortName}
-              </a>
-            ))}
-          </div>
+    <div className="footer-social">
+  <a
+    href="https://facebook.com/tritoxtechnologies"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="footer-social-link"
+  >
+    <img
+      src="/images/socialmedia/linkedin.png"
+      alt="Facebook"
+      className="footer-social-icon"
+    />
+  </a>
+
+  <a
+    href="https://linkedin.com/company/tritoxtechnologies"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    className="footer-social-link"
+  >
+    <img
+      src="/images/socialmedia/facebook.png"
+      alt="LinkedIn"
+      className="footer-social-icon"
+    />
+  </a>
+
+  <a
+    href="https://instagram.com/tritoxtechnologies"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="footer-social-link"
+  >
+    <img
+      src="/images/socialmedia/instagram.png"
+      alt="Instagram"
+      className="footer-social-icon"
+    />
+  </a>
+
+  {/* <a
+    href="https://x.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X"
+    className="footer-social-link"
+  >
+    <img
+      src="/x.png"
+      alt="X"
+      className="footer-social-icon"
+    /> 
+  </a>*/}
+</div>
         </div>
 
     
