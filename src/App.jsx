@@ -15,7 +15,7 @@ import "./Navbar.css";
 const navigationItems = [
   { label: "Home", path: "home" },
   { label: "Services", path: "services" },
-  { label: "The Tritox Advantage", path: "tritox-advantage" },
+  { label: "Choose Tritox", path: "tritox-advantage" },
   { label: "Resource", path: "quote-team-impact" },
   { label: "Pricing", path: "pricing" },
   { label: "Success Story", path: "success-stories" },
@@ -135,8 +135,8 @@ function SuccessStoryPage() {
       quote:
         "Tritox Technologies offers a practical approach to insurance quote preparation and operational support. Their focus on improving workflow efficiency and helping insurance agencies manage their daily quoting requirements can provide valuable support for growing agency networks.",
 name: "Matt Bennett",
-      role: "Farmers Insurance District Manager",
-      location: " Arizona, United States",
+      role: " District Manager",
+      location: " United States",
       recognition: "",
       image: "/bundle.png",
       
@@ -456,7 +456,7 @@ name: "Matt Bennett",
                   <div className="network-stats">
 
                     <div>
-                      <strong>20K+</strong>
+                      <strong>150K+</strong>
                       <span>Leads Supported</span>
                     </div>
 
@@ -682,102 +682,111 @@ name: "Matt Bennett",
               </div>
 
             </aside>
-
-
-            {/* TESTIMONIAL CARDS */}
-
-            <div className="testimonial-card-grid">
-
-              {testimonials.map((testimonial) => (
-
-                <article
-                  key={testimonial.name}
-                  className="testimonial-card"
-                >
-
-                  <div className="testimonial-card-top">
-
-                    <div className="testimonial-rating">
-
-                      <span className="small-stars">
-                        ★★★★★
-                      </span>
-
-                      <strong>
-                        {testimonial.rating}
-                      </strong>
-
-                    </div>
-
-                    <span className="quote-mark">
-                      “
-                    </span>
-
-                  </div>
-
-
-                  <p className="testimonial-quote">
-                    “{testimonial.quote}”
-                  </p>
-
-
-                  <div className="testimonial-footer">
-
-                    <div className="testimonial-avatar">
-
-                      {testimonial.name
-                        .split(" ")
-                        .map((name) => name[0])
-                        .join("")}
-                         {/* <img
-    src={testimonial.image}
-    alt="Customer"
-  /> */}
-
-                    </div>
-
-
-                    <div className="testimonial-client">
-
-                      <strong>
-                        {testimonial.name}
-                      </strong>
-
-                      <span>
-                        {testimonial.role} |{" "}
-                        {testimonial.location}
-                      </span>
-
-                      {testimonial.recognition && (
-                        <small>
-                          {testimonial.recognition}
-                        </small>
-                      )}
-
-                    </div>
-
-                  </div>
-
-
-                  <div className="testimonial-service">
-
-                    <span>
-                      Service:
-                    </span>
-
-                    {testimonial.service}
-
-                  </div>
-
-                </article>
-
-              ))}
-
             </div>
 
-          </div>
+
+          {/* TESTIMONIAL CARDS */}
+
+<div className="testimonial-card-grid">
+
+  {testimonials.map((testimonial) => (
+
+    <article
+      key={testimonial.name}
+      className="testimonial-card"
+    >
+
+      {/* CUSTOMER DETAILS - FIRST */}
+
+      <div className="testimonial-footer">
+
+        <div className="testimonial-avatar">
+
+          {testimonial.name
+            .split(" ")
+            .map((name) => name[0])
+            .join("")}
+
+          {/* Optional Image */}
+          {/* <img
+            src={testimonial.image}
+            alt="Customer"
+          /> */}
 
         </div>
+
+        <div className="testimonial-client">
+
+          <strong>
+            {testimonial.name}
+          </strong>
+
+          <span>
+            {testimonial.role} |{" "}
+            {testimonial.location}
+          </span>
+
+          {testimonial.recognition && (
+            <small>
+              {testimonial.recognition}
+            </small>
+          )}
+
+        </div>
+
+      </div>
+
+
+      {/* RATING */}
+
+      <div className="testimonial-card-top">
+
+        <div className="testimonial-rating">
+
+          <span className="small-stars">
+            ★★★★★
+          </span>
+
+          <strong>
+            {testimonial.rating}
+          </strong>
+
+        </div>
+
+        <span className="quote-mark">
+          “
+        </span>
+
+      </div>
+
+
+      {/* TESTIMONIAL QUOTE */}
+
+      <p className="testimonial-quote">
+        “{testimonial.quote}”
+      </p>
+
+
+      {/* SERVICE */}
+
+      <div className="testimonial-service">
+
+        <span>
+          Service:
+        </span>
+
+        {testimonial.service}
+
+      </div>
+
+    </article>
+
+  ))}
+
+</div>
+          </div>
+
+        
       </section>
 
 
@@ -1081,7 +1090,7 @@ function HomePage() {
 
             <p className="hero-description">
               Tritox Technologies provides specialized quote preparation and
-              operational support for Auto, Home, and Bundle quotes, helping
+              operational support for Auto, Home, Bundle, Renters, Umbrella and Life quotes, helping
               Farmers Insurance agencies streamline quoting workflows and
               strengthen day-to-day operational efficiency.
             </p>
@@ -1116,7 +1125,7 @@ function HomePage() {
                 </span>
 
                 <div>
-                  <strong>Auto, Home & Bundle</strong>
+                  <strong>Auto, Home, Renters, Umbrella, Life & Bundle</strong>
                   <small>Quote preparation support</small>
                 </div>
               </div>
@@ -1138,8 +1147,10 @@ function HomePage() {
 
 
           {/* ================= RIGHT VISUAL ================= */}
+          
 
           <div className="hero-logo-side">
+            
 
             {/* Floating top badge */}
             <div className="floating-badge floating-badge-top">
@@ -1268,7 +1279,7 @@ function HomePage() {
             <FeatureCard
               number="01"
               title="Quote Preparation"
-              description="Structured support for Auto, Home, and Bundle quote preparation workflows."
+              description="Structured support for Auto, Home, Renters, Umbrella, Life and Bundle quote preparation workflows."
               type="blue"
             />
 
@@ -1483,7 +1494,7 @@ function ServicesPage() {
 
           <div className="services-hero-stats">
             <div>
-              <strong>03</strong>
+              <strong>06+</strong>
               <span>Core Services</span>
             </div>
 
@@ -1527,50 +1538,77 @@ function ServicesPage() {
 
               <h2>
                 Complete quote preparation support for
-                <span> Auto, Home, and Bundle opportunities.</span>
+                <span> Auto, Home, Renters, Umbrella, Life and Bundle opportunities.</span>
               </h2>
             </div>
 
             <p style={{ fontSize: "18px",color: "#373737", lineHeight: "1.6",fontFamily: "Manrope, sans-serif" }}>
               Tritox provides specialized backend quote preparation support for
-              Auto, Home, and Bundle opportunities, aligned with each Farmers
+              Auto, Home, Bundle, Renters, Umbrella and Life opportunities, aligned with each Farmers
               agency's established coverage standards, quoting criteria, and
               operational requirements.
             </p>
           </div>
 
 
-          {/* Animated Workflow */}
-          <div className="quote-network-flow">
+          
 
-            <div className="network-line network-line-one"></div>
-            <div className="network-line network-line-two"></div>
+{/* Animated Workflow */}
+<div className="quote-network-flow">
 
-            <div className="network-flow-node node-auto">
-              <div className="network-icon">A</div>
-              <strong>Auto</strong>
-              <small>Quote Processing</small>
-            </div>
+  {/* Connecting Lines */}
+  <div className="network-line network-line-one"></div>
+  <div className="network-line network-line-two"></div>
 
-            {/* <div className="network-flow-center">
-              <span className="center-ring"></span>
-              <strong>TRITOX</strong>
-              <small>QUOTE HUB</small>
-            </div> */}
+  {/* Auto */}
+  <div className="network-flow-node node-auto">
+    <div className="network-icon">A</div>
+    <strong>Auto</strong>
+    <small>Quote Processing</small>
+  </div>
 
-            <div className="network-flow-node node-home">
-              <div className="network-icon">H</div>
-              <strong>Home</strong>
-              <small>Quote Processing</small>
-            </div>
+  {/* Home */}
+  <div className="network-flow-node node-home">
+    <div className="network-icon">B</div>
+    <strong>Bundle</strong>
+    <small>Opportunity Support</small>
+  </div>
 
-            <div className="network-flow-node node-bundle">
-              <div className="network-icon">B</div>
-              <strong>Bundle</strong>
-              <small>Opportunity Support</small>
-            </div>
+  {/* Bundle */}
+  <div className="network-flow-node node-bundle">
+    <div className="network-icon">P</div>
+    <strong>Renters</strong>
+    <small>Quote Processing</small>
+  </div>
 
-          </div>
+  {/* Umbrella */}
+  <div className="network-flow-node node-umbrella">
+    <div className="network-icon">L</div>
+    <strong>Life</strong>
+    <small>Coverage Support</small>
+  </div>
+
+  {/* Life */}
+  <div className="network-flow-node node-life">
+    <div className="network-icon">H</div>
+    <strong>Home</strong>
+    <small>Quote Processing</small>
+  </div>
+
+  {/* Renters */}
+  <div className="network-flow-node node-renters">
+    <div className="network-icon">U</div>
+    <strong>Umbrella</strong>
+    <small>
+Coverage Support</small>
+  </div>
+
+  {/* Animated Particles */}
+  <span className="network-particle particle-one"></span>
+  <span className="network-particle particle-two"></span>
+  <span className="network-particle particle-three"></span>
+
+</div>
 
 
           <div className="quote-service-grid">
@@ -1621,9 +1659,10 @@ function ServicesPage() {
               
 
               </div>
-              <p className="service-card-note"style={{  paddingTop: "18px" }}>
-                  Support for Farmers and Bristol West quote comparisons in
-                  accordance with agency-defined quoting criteria.
+              <p className="service-card-note">
+                 
+                  Support for Farmers  in 
+                  accordance with agency defined quoting criteria.
                 </p>
             </article>
 
@@ -1818,7 +1857,7 @@ function ServicesPage() {
                   <h3>Quote Preparation</h3>
 
                   <p>
-                    Structured Auto, Home and Bundle quote preparation
+                    Structured Auto, Home, Renters, Umbrella, Life and Bundle quote preparation
                     support for agency teams.
                   </p>
                 </div>
@@ -1958,13 +1997,13 @@ function ServicesPage() {
 
                   </div>
 
-                  <strong>
+                  {/* <strong>
                     {platform.name}
-                  </strong>
+                  </strong> */}
 
-                  <span className="platform-arrow">
+                  {/* <span className="platform-arrow">
                     →
-                  </span>
+                  </span> */}
 
                 </article>
 
@@ -2406,7 +2445,7 @@ function AdvantagePage() {
 
       <div className="services-hero-badge">
         <span className="pulse-dot" />
-        THE TRITOX ADVANTAGE
+        Our Value
       </div>
 
       <h1>
@@ -2485,8 +2524,8 @@ function AdvantagePage() {
         <div className="advantage-chart">
 
           <div className="chart-labels">
-            <span>Capacity</span>
-            <strong>+70%</strong>
+            {/* <span>Capacity</span> */}
+            <strong>Capacity :  70%</strong>
           </div>
 
           <div className="chart-bars">
@@ -2561,12 +2600,12 @@ function AdvantagePage() {
 
               <div className="advantage-eyebrow">
                 <span className="advantage-eyebrow-dot" />
-                THE TRITOX ADVANTAGE
+                EFFICIENCY THAT SCALES
               </div>
 
               <h2>
                 Smarter costs.
-                <span> Greater producer capacity.</span>
+                <span> Greater producer capacity. </span>
                 Flexible support.
               </h2>
 
@@ -2974,15 +3013,16 @@ function ImpactPage() {
     "Premium option review",
     "Quote documentation",
     "CRM updates and lead progression",
+    "Send  text and e-mail through the CRM"
   ];
 
   const leadToCloseSteps = [
     "Lead Acquisition",
-    "CRM Intake",
+    // "CRM Intake",
     "Eligibility & Data Review",
     "Quote Preparation",
     "Quote Ready",
-    "Producer Engagement",
+    // "Producer Engagement",
     "Follow-Up",
     "Business Close",
   ];
@@ -3305,24 +3345,26 @@ function ImpactPage() {
             </p>
           </div>
 
-          <div className="lead-flow-grid">
-            {leadToCloseSteps.map((step, index) => (
-              <article key={step} className="lead-flow-card">
-                <span className="lead-flow-number">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+          <div className="tritox-lead-flow-scroll">
+  <div className="tritox-lead-flow-track">
+    {leadToCloseSteps.map((step, index) => (
+      <article
+        key={step}
+        className="tritox-lead-flow-card"
+      >
+        <div className="tritox-lead-flow-number">
+          {String(index + 1).padStart(2, "0")}
+        </div>
 
-                <div className="lead-flow-dot" />
+        <div className="tritox-lead-flow-dot" />
 
-                <h3>{step}</h3>
-
-                {index !== leadToCloseSteps.length - 1 && (
-                  <span className="lead-flow-arrow">→</span>
-                )}
-              </article>
-            ))}
-          </div>
-
+        <h3 className="tritox-lead-flow-title">
+          {step}
+        </h3>
+      </article>
+    ))}
+  </div>
+</div>
           <div className="lead-flow-summary">
             <span className="lead-summary-icon">✓</span>
 
@@ -3656,59 +3698,102 @@ function ImpactPage() {
       </section>
 
       {/* Full onboarding process */}
-      <section className="onboarding-workflow-section">
-        <div className="onboarding-workflow-pattern" />
-        <div className="onboarding-workflow-circle onboarding-circle-one" />
-        <div className="onboarding-workflow-circle onboarding-circle-two" />
+   <div className="horizontal-onboarding-section">
 
-        <div className="container onboarding-workflow-container">
-          <div className="onboarding-workflow-heading">
-            <p className="onboarding-light-eyebrow"style={{ fontSize: "18px" }}>
-              Onboarding Workflow
-            </p>
+  {/* TOP TEXT */}
+  <div className="horizontal-onboarding-heading">
 
-            <h2>
-              Six structured steps from eligibility review to production-ready
-              support.
-            </h2>
+    <p
+      className="onboarding-light-eyebrow"
+      style={{ fontSize: "18px" }}
+    >
+      Onboarding Workflow
+    </p>
 
-            <p>
-              This process helps agencies create the required setup,
-              authorized access, CRM responsibilities, and payment arrangements
-              before ongoing support begins.
-            </p>
-          </div>
+    <h2>
+      Six structured steps from eligibility review to
+      production-ready support.
+    </h2>
 
-          <div className="onboarding-steps-grid">
-            {onboardingSteps.map((step) => (
-              <article
-                key={step.number}
-                className={`onboarding-step-card ${step.type}`}
-              >
-                <div className="onboarding-step-top">
-                  <span className="onboarding-step-number">{step.number}</span>
+    <p>
+      This process helps agencies create the required setup,
+      authorized access, CRM responsibilities, and payment
+      arrangements before ongoing support begins.
+    </p>
 
-                  <span className="step-status">Setup Step</span>
-                </div>
+  </div>
 
-                <h3>{step.title}</h3>
 
-                <p>{step.description}</p>
+  {/* HORIZONTAL SCROLL CARDS */}
+  <div className="horizontal-onboarding-list">
 
-                <div className="onboarding-detail-list">
-                  {step.details.map((detail) => (
-                    <span key={detail}>
-                      <i>✓</i>
-                      {detail}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
+    {onboardingSteps.map((step) => (
+
+      <article
+        key={step.number}
+        className={`horizontal-onboarding-card ${step.type}`}
+        style={{
+          flex: "0 0 350px",
+          minWidth: "350px",
+          boxSizing: "border-box",
+        }}
+      >
+
+        {/* Step Header */}
+        <div className="horizontal-onboarding-header">
+
+          <span className="horizontal-onboarding-number">
+            {step.number}
+          </span>
+
+          <span className="horizontal-onboarding-status">
+            Setup Step
+          </span>
+
         </div>
-      </section>
 
+
+        {/* Title */}
+        <h3 className="horizontal-onboarding-title">
+          {step.title}
+        </h3>
+
+
+        {/* Description */}
+        <p className="horizontal-onboarding-description">
+          {step.description}
+        </p>
+
+
+        {/* Details */}
+        <div className="horizontal-onboarding-details">
+
+          {step.details.map((detail) => (
+
+            <span
+              key={detail}
+              className="horizontal-onboarding-detail"
+            >
+
+              <i className="horizontal-onboarding-check">
+                ✓
+              </i>
+
+              {detail}
+
+            </span>
+
+          ))}
+
+        </div>
+
+      </article>
+
+    ))}
+
+  </div>
+
+</div>
       {/* Access environment and CRM */}
       <section className="section access-environment-section">
         <div className="container access-environment-grid">
@@ -3823,7 +3908,7 @@ function ImpactPage() {
               <span>Gusto</span>
               <span>Wise</span>
               <span>Wire Transfer</span>
-              <span>Rippling</span>
+              
               <span>Mutually Agreed Option</span>
             </div>
 
@@ -4199,11 +4284,18 @@ function PricingPage() {
               <span className="price-card-label">
                 QUOTE PREPARATION SUPPORT
               </span>
+<div className="main-price-value">
+  <small
+    style={{
+      fontSize: "60px",
+      
+    }}
+  >
+    &lt;
+  </small>
 
-              <div className="main-price-value">
-                <small>&lt;</small>
-                <strong>$1</strong>
-              </div>
+  <strong>$1</strong>
+</div>
 
               <p className="price-card-subtitle">
                 Starting per completed eligible quote
@@ -5035,6 +5127,20 @@ function ContactPage() {
               <div>
                 <span>✓</span>
                 Bundle quote preparation support
+              </div>
+              <div>
+                <span>✓</span>
+                Umbrella quote preparation support
+              </div>
+
+              <div>
+                <span>✓</span>
+                Renters quote preparation support
+              </div>
+
+              <div>
+                <span>✓</span>
+                Life quote preparation support
               </div>
             </div>
 

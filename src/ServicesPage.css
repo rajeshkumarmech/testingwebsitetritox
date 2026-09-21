@@ -898,6 +898,7 @@
   display: grid;
 
   grid-template-columns: repeat(6, 1fr);
+  
 
   gap: 15px;
 }
@@ -1698,3 +1699,477 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   PREMIUM INSURANCE NETWORK WORKFLOW
+========================================================= */
+
+.quote-network-flow {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  height: 430px;
+  margin: 20px auto 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 1000px;
+}
+
+/* =========================================================
+   INSURANCE NODE BASE
+========================================================= */
+
+.network-flow-node {
+  position: absolute;
+  z-index: 5;
+
+  min-width: 155px;
+  padding: 18px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #dcecff;
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 30px rgba(15, 70, 120, 0.10),
+    0 0 0 rgba(30, 136, 229, 0);
+
+  animation: premiumNodeFloat 5s ease-in-out infinite;
+
+  transition:
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* =========================================================
+   NODE HOVER EFFECT
+========================================================= */
+
+.network-flow-node:hover {
+  border-color: #1e88e5;
+
+  box-shadow:
+    0 20px 45px rgba(30, 136, 229, 0.22),
+    0 0 25px rgba(30, 136, 229, 0.10);
+}
+
+/* =========================================================
+   NODE ICON
+========================================================= */
+
+.network-icon {
+  width: 44px;
+  height: 44px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  color: #1e88e5;
+  background: linear-gradient(
+    135deg,
+    #eaf5ff,
+    #d7ecff
+  );
+
+  font-size: 16px;
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 15px rgba(30, 136, 229, 0.12);
+
+  animation: iconGlow 3s ease-in-out infinite;
+}
+
+/* =========================================================
+   NODE TEXT
+========================================================= */
+
+.network-flow-node strong {
+  display: block;
+  margin-top: 10px;
+
+  color: #12345a;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.network-flow-node small {
+  display: block;
+  margin-top: 4px;
+
+  color: #8091a3;
+  font-size: 11px;
+}
+
+/* =========================================================
+   NODE POSITIONS
+========================================================= */
+
+/* Auto */
+.node-auto {
+  left: 0;
+  top: 110px;
+}
+
+/* Home */
+.node-home {
+  right: 0;
+  top: 110px;
+
+  animation-delay: 0.8s;
+}
+
+/* Bundle */
+.node-bundle {
+  left: 17%;
+  bottom: 5px;
+
+  animation-delay: 1.5s;
+}
+
+/* Umbrella */
+.node-umbrella {
+  right: 17%;
+  bottom: 5px;
+
+  animation-delay: 2.2s;
+}
+
+/* Life */
+.node-life {
+  top: 5px;
+  left: 50%;
+
+  animation: lifeFloat 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Renters */
+.node-renters {
+  left: 50%;
+  bottom: 5px;
+
+  transform: translateX(-50%);
+  animation-delay: 2.8s;
+}
+
+/* =========================================================
+   INSURANCE-SPECIFIC ICON COLORS
+========================================================= */
+
+/* Auto */
+.node-auto .network-icon {
+  color: #1e88e5;
+  background: linear-gradient(
+    135deg,
+    #eaf5ff,
+    #cce5ff
+  );
+}
+
+/* Home */
+.node-home .network-icon {
+  color: #2e7d32;
+  background: linear-gradient(
+    135deg,
+    #edf8ee,
+    #c8e6c9
+  );
+}
+
+/* Bundle */
+.node-bundle .network-icon {
+  color: #8e6b00;
+  background: linear-gradient(
+    135deg,
+    #fff8da,
+    #ffefac
+  );
+}
+
+/* Umbrella */
+.node-umbrella .network-icon {
+  color: #8e6b00;
+  background: linear-gradient(
+    135deg,
+    #fff8da,
+    #ffefac
+  );
+}
+
+/* Life */
+.node-life .network-icon {
+  color: #c0392b;
+  background: linear-gradient(
+    135deg,
+    #fff0ed,
+    #ffdcd6
+  );
+}
+
+/* Renters */
+.node-renters .network-icon {
+  color: #0277bd;
+  background: linear-gradient(
+    135deg,
+    #e1f5fe,
+    #b3e5fc
+  );
+}
+
+/* =========================================================
+   CONNECTING LINES
+========================================================= */
+
+.network-line {
+  position: absolute;
+  z-index: 1;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #1e88e5,
+    #64b5f6,
+    transparent
+  );
+
+  box-shadow:
+    0 0 10px rgba(30, 136, 229, 0.35);
+
+  animation: lineGlow 2.5s ease-in-out infinite;
+}
+
+/* Horizontal Line */
+.network-line-one {
+  left: 12%;
+  top: 48%;
+  width: 76%;
+}
+
+/* Vertical Line */
+.network-line-two {
+  left: 50%;
+  top: 25%;
+  width: 220px;
+
+  transform: translateX(-50%) rotate(90deg);
+}
+
+/* =========================================================
+   ANIMATED PARTICLES
+========================================================= */
+
+.network-particle {
+  position: absolute;
+  z-index: 2;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #f2c94c;
+
+  box-shadow:
+    0 0 15px rgba(242, 201, 76, 0.8);
+
+  animation: particleFloat 4s ease-in-out infinite;
+}
+
+.particle-one {
+  left: 30%;
+  top: 40%;
+}
+
+.particle-two {
+  right: 30%;
+  top: 55%;
+
+  animation-delay: 1.2s;
+}
+
+.particle-three {
+  left: 50%;
+  top: 75%;
+
+  animation-delay: 2s;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+/* General Node Animation */
+@keyframes premiumNodeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Life Centered Animation */
+@keyframes lifeFloat {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* Renters Centered Animation */
+@keyframes rentersFloat {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.node-renters {
+  animation-name: rentersFloat;
+}
+
+/* Icon Glow */
+@keyframes iconGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 5px 15px rgba(30, 136, 229, 0.10);
+  }
+
+  50% {
+    box-shadow:
+      0 5px 25px rgba(30, 136, 229, 0.30);
+  }
+}
+
+/* Line Glow */
+@keyframes lineGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Particle Animation */
+@keyframes particleFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(-25px) scale(1.4);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 650px) {
+  .quote-network-flow {
+    height: 520px;
+    max-width: 100%;
+  }
+
+  .network-flow-node {
+    min-width: 120px;
+    padding: 13px 8px;
+  }
+
+  .network-flow-node strong {
+    font-size: 14px;
+  }
+
+  .network-flow-node small {
+    font-size: 9px;
+  }
+
+  /* Auto */
+  .node-auto {
+    left: 0;
+    top: 120px;
+  }
+
+  /* Home */
+  .node-home {
+    right: 0;
+    top: 120px;
+  }
+
+  /* Life */
+  .node-life {
+    top: 5px;
+  }
+
+  /* Bundle */
+  .node-bundle {
+    left: 0;
+    bottom: 90px;
+  }
+
+  /* Umbrella */
+  .node-umbrella {
+    right: 0;
+    bottom: 90px;
+  }
+
+  /* Renters */
+  .node-renters {
+    left: 50%;
+    bottom: 5px;
+  }
+
+  .network-line-one,
+  .network-line-two {
+    opacity: 0.6;
+  }
+}
+
+
+
+
+
+
+
+

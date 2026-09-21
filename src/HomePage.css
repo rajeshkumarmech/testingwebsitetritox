@@ -13,7 +13,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  
 }
 
 body {
@@ -68,7 +68,7 @@ select {
       #1565c0 100%
     );
 
-  padding: 115px 0 90px;
+  padding: 105px 0 50px;
 }
 
 

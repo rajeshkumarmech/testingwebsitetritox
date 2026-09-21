@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 60px;
 
   background: #ffffff;
 
@@ -188,5 +188,1041 @@
     font-size: 12px;
 
     padding: 8px 11px;
+  }
+}
+
+
+
+/* ==============================
+    scroll in Resources Page workflow
+================================ */
+/* =========================================
+   HORIZONTAL ONBOARDING SECTION
+========================================= */
+
+.horizontal-onboarding-section {
+  width: 100%;
+  margin: 30px 0;
+}
+
+
+/* =================================
+   TOP HEADING
+================================= */
+
+.horizontal-onboarding-heading {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto 30px;
+
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+.horizontal-onboarding-heading
+.onboarding-light-eyebrow {
+  margin-bottom: 10px;
+
+  color: #1e88e5;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+  font-family: "inter", Arial, sans-serif;
+  
+}
+
+
+.horizontal-onboarding-heading h2 {
+  margin: 0 0 15px;
+
+  color: #1e88e5;
+
+  font-size: 32px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+  font-family: "inter", Arial, sans-serif;
+}
+
+
+.horizontal-onboarding-heading > p:last-child {
+  margin: 0 0 0 0 auto;
+
+  max-width: 720px;
+
+  color: #667085;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.horizontal-onboarding-list {
+  position: relative;
+
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+
+  /* Margin */
+  width: calc(100% - 40px);
+  margin-left: 25px;
+  margin-right: 25px;
+
+  /* Spacing */
+  
+
+  /* Horizontal scroll */
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+
+  scrollbar-width: thin;
+
+  /* Animated background */
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(242, 201, 76, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(181, 131, 141, 0.14),
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      #fff8f8,
+      #ffffff,
+      #f8fbff,
+      #fff8f8
+    );
+
+  background-size:
+    180% 180%,
+    180% 180%,
+    300% 300%;
+
+  animation: onboardingBackgroundMove 12s ease infinite;
+
+  border-radius: 30px;
+
+  isolation: isolate;
+}
+
+
+/* =========================================
+   ANIMATED BACKGROUND
+========================================= */
+
+@keyframes onboardingBackgroundMove {
+
+  0% {
+    background-position:
+      0% 50%,
+      100% 50%,
+      0% 50%;
+  }
+
+  50% {
+    background-position:
+      100% 50%,
+      0% 50%,
+      100% 50%;
+  }
+
+  100% {
+    background-position:
+      0% 50%,
+      100% 50%,
+      0% 50%;
+  }
+
+}
+@media (max-width: 768px) {
+  .horizontal-onboarding-list {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+
+    gap: 18px;
+
+    padding: 15px 0 22px;
+  }
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD
+========================================= */
+
+.horizontal-onboarding-card {
+  position: relative;
+
+  flex: 0 0 350px;
+  min-width: 350px;
+
+  box-sizing: border-box;
+
+  padding: 25px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(255, 250, 250, 0.96)
+    );
+
+  border: 1px solid rgba(181, 131, 141, 0.20);
+
+  box-shadow:
+    0 12px 35px rgba(24, 59, 86, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+
+  animation: onboardingCardFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   CARD GLOW
+========================================= */
+
+.horizontal-onboarding-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -80px;
+  right: -80px;
+
+  width: 180px;
+  height: 180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(242, 201, 76, 0.20),
+      transparent 70%
+    );
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  animation: onboardingGlow 5s ease-in-out infinite;
+}
+
+
+/* Bottom decorative glow */
+
+.horizontal-onboarding-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 20%;
+  bottom: -80px;
+
+  width: 200px;
+  height: 150px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(181, 131, 141, 0.12),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CARD FLOAT ANIMATION
+========================================= */
+
+@keyframes onboardingCardFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+}
+
+
+/* =========================================
+   GLOW ANIMATION
+========================================= */
+
+@keyframes onboardingGlow {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.horizontal-onboarding-card:hover {
+  transform: translateY(-12px) scale(1.015);
+
+  border-color: rgba(181, 131, 141, 0.40);
+
+  box-shadow:
+    0 22px 50px rgba(24, 59, 86, 0.14),
+    0 8px 20px rgba(181, 131, 141, 0.10);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.horizontal-onboarding-header {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   STEP NUMBER
+========================================= */
+
+.horizontal-onboarding-number {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f2c94c,
+      #ffd966
+    );
+
+  color: #183b56;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 20px rgba(242, 201, 76, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Number hover */
+
+.horizontal-onboarding-card:hover
+.horizontal-onboarding-number {
+  transform: rotate(-5deg) scale(1.08);
+
+  box-shadow:
+    0 10px 25px rgba(242, 201, 76, 0.40);
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.horizontal-onboarding-status {
+  padding: 7px 13px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(181, 131, 141, 0.09);
+
+  border: 1px solid
+    rgba(181, 131, 141, 0.14);
+
+  color: #8f626d;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.horizontal-onboarding-title {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 12px;
+
+  color: #183b56;
+
+  font-size: 21px;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.horizontal-onboarding-description {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 20px;
+
+  color: #667085;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.horizontal-onboarding-details {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* =========================================
+   DETAIL ITEM
+========================================= */
+
+.horizontal-onboarding-detail {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  color: #344054;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Detail hover */
+
+.horizontal-onboarding-card:hover
+.horizontal-onboarding-detail {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   CHECK ICON
+========================================= */
+
+.horizontal-onboarding-check {
+  flex-shrink: 0;
+
+  width: 21px;
+  height: 21px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8f5e9,
+      #f1f8e9
+    );
+
+  color: #2e7d32;
+
+  font-size: 12px;
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 4px 10px rgba(46, 125, 50, 0.10);
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.horizontal-onboarding-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-onboarding-list::-webkit-scrollbar-track {
+  background: rgba(24, 59, 86, 0.06);
+
+  border-radius: 20px;
+}
+
+.horizontal-onboarding-list::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      90deg,
+      #b5838d,
+      #d4af37
+    );
+
+  border-radius: 20px;
+}
+
+.horizontal-onboarding-list::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #8f626d,
+      #c49b24
+    );
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .horizontal-onboarding-list {
+    gap: 18px;
+
+    padding:
+      15px 0 22px;
+  }
+
+  .horizontal-onboarding-card {
+    flex: 0 0 300px;
+
+    min-width: 300px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+  }
+
+  .horizontal-onboarding-title {
+    font-size: 19px;
+  }
+
+  .horizontal-onboarding-description {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCE MOTION FOR ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .horizontal-onboarding-list,
+  .horizontal-onboarding-card,
+  .horizontal-onboarding-card::before {
+    animation: none;
+  }
+
+  .horizontal-onboarding-card {
+     margin: 30px 20px;
+  }
+
+}
+
+
+/* ==============================
+   Scroll horizontal in Resources Page in A Connected Lead-to-Close Operating Model
+   */
+   /* =========================================
+   TRITOX LEAD TO CLOSE - HORIZONTAL FLOW
+========================================= */
+
+.tritox-lead-flow-scroll {
+  position: relative;
+  width: calc(100% - 40px);
+  margin: 30px 20px;
+  padding: 35px 20px 40px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  box-sizing: border-box;
+  border-radius: 28px;
+
+  scroll-behavior: smooth;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(242, 201, 76, 0.20),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(30, 136, 229, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(181, 131, 141, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      120deg,
+      #fff8f8,
+      #ffffff,
+      #f5faff,
+      #fff8f8
+    );
+
+  background-size:
+    180% 180%,
+    180% 180%,
+    180% 180%,
+    300% 300%;
+
+  animation: tritoxLeadBackground 12s ease infinite;
+
+  box-shadow:
+    0 20px 55px rgba(24, 59, 86, 0.10),
+    inset 0 0 40px rgba(255, 255, 255, 0.7);
+
+  isolation: isolate;
+}
+
+
+/* Moving background */
+
+@keyframes tritoxLeadBackground {
+  0% {
+    background-position:
+      0% 50%,
+      100% 50%,
+      50% 0%,
+      0% 50%;
+  }
+
+  50% {
+    background-position:
+      100% 50%,
+      0% 50%,
+      50% 100%,
+      100% 50%;
+  }
+
+  100% {
+    background-position:
+      0% 50%,
+      100% 50%,
+      50% 0%,
+      0% 50%;
+  }
+}
+
+
+/* Horizontal track */
+
+.tritox-lead-flow-track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  gap: 28px;
+
+  width: max-content;
+  min-width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.tritox-lead-flow-card {
+  position: relative;
+
+  flex: 0 0 250px;
+  width: 250px;
+  min-height: 190px;
+
+  padding: 25px 22px;
+
+  box-sizing: border-box;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid rgba(30, 136, 229, 0.12);
+
+  box-shadow:
+    0 12px 30px rgba(24, 59, 86, 0.10);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  animation: tritoxLeadCardFloat 4s ease-in-out infinite;
+}
+
+
+/* Different animation delay for each card */
+
+.tritox-lead-flow-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.tritox-lead-flow-card:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.tritox-lead-flow-card:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.tritox-lead-flow-card:nth-child(5) {
+  animation-delay: 1.6s;
+}
+
+.tritox-lead-flow-card:nth-child(6) {
+  animation-delay: 2s;
+}
+
+
+@keyframes tritoxLeadCardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+/* Hover */
+
+.tritox-lead-flow-card:hover {
+  transform: translateY(-12px) scale(1.02);
+
+  border-color: rgba(30, 136, 229, 0.35);
+
+  box-shadow:
+    0 22px 45px rgba(30, 136, 229, 0.16),
+    0 0 25px rgba(242, 201, 76, 0.12);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.tritox-lead-flow-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #1e88e5,
+    #1565c0
+  );
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 18px rgba(30, 136, 229, 0.25);
+
+  transition: transform 0.3s ease;
+}
+
+
+.tritox-lead-flow-card:hover .tritox-lead-flow-number {
+  transform: rotate(-5deg) scale(1.08);
+}
+
+
+/* =========================================
+   DOT
+========================================= */
+
+.tritox-lead-flow-dot {
+  position: absolute;
+
+  top: 43px;
+  right: 25px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 0 rgba(34, 197, 94, 0.6);
+
+  animation: tritoxLeadDotPulse 2s infinite;
+}
+
+
+@keyframes tritoxLeadDotPulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(242, 201, 76, 0.6);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 10px rgba(242, 201, 76, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(242, 201, 76, 0);
+  }
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.tritox-lead-flow-title {
+  margin: 0;
+
+  color: #183b56;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.tritox-lead-flow-arrow {
+  position: absolute;
+
+  top: 50%;
+  right: -42px;
+
+  transform: translateY(-50%);
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #f2c94c;
+
+  color: #183b56;
+
+  font-size: 24px;
+  font-weight: 900;
+
+  box-shadow:
+    0 8px 20px rgba(242, 201, 76, 0.35);
+
+  animation: tritoxLeadArrowMove 1.8s ease-in-out infinite;
+}
+
+
+@keyframes tritoxLeadArrowMove {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(7px);
+  }
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.tritox-lead-flow-scroll::-webkit-scrollbar {
+  height: 9px;
+}
+
+.tritox-lead-flow-scroll::-webkit-scrollbar-track {
+  background: rgba(24, 59, 86, 0.08);
+  border-radius: 20px;
+}
+
+.tritox-lead-flow-scroll::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #1e88e5,
+    #f2c94c,
+    #b5838d
+  );
+}
+
+.tritox-lead-flow-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    90deg,
+    #1565c0,
+    #d4af37,
+    #8f626d
+  );
+}
+
+
+/* Firefox */
+
+.tritox-lead-flow-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #1e88e5 rgba(24, 59, 86, 0.08);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .tritox-lead-flow-scroll {
+    width: calc(100% - 20px);
+    margin: 25px 10px;
+
+    padding: 25px 15px 30px;
+
+    border-radius: 22px;
+  }
+
+  .tritox-lead-flow-track {
+    gap: 20px;
+  }
+
+  .tritox-lead-flow-card {
+    flex: 0 0 235px;
+    width: 235px;
+    min-height: 180px;
+
+    padding: 20px;
+  }
+
+  .tritox-lead-flow-title {
+    font-size: 17px;
+  }
+
+  .tritox-lead-flow-arrow {
+    right: -32px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 20px;
   }
 }

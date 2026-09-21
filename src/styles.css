@@ -184,7 +184,7 @@ section {
 .home-hero {
   position: relative;
   min-height: 100vh;
-  padding: 155px 0 85px;
+  /* padding: 155px 0 85px; */
   overflow: hidden;
   color: var(--white);
   background: var(--main-blue);
@@ -9745,3 +9745,10 @@ section {
     font-size: 0.82rem;
   }
 }
+
+
+
+
+
+
+

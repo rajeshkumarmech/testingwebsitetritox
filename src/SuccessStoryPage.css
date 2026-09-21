@@ -791,11 +791,12 @@
 .testimonials-layout {
   display: grid;
 
-  grid-template-columns: 270px 1fr;
+  grid-template-columns: 270px;
 
   gap: 28px;
 
   align-items: start;
+  padding-bottom: 10px;
 }
 
 
@@ -1533,7 +1534,7 @@
 .faq-answer-inner {
   overflow: hidden;
 
-  padding: 0 75px;
+  
 }
 
 .faq-open .faq-answer-inner {
