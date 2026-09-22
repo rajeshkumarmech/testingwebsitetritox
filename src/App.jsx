@@ -142,6 +142,45 @@ name: "Matt Bennett",
       
       service: "Quote Preparation",
     },
+    {
+  rating: "5.0",
+  quote:
+    "Tritox Technologies provides structured insurance quote preparation and operational support that can help Farmers Insurance agencies improve workflow efficiency, reduce repetitive administrative work, and maintain a more consistent quoting process.",
+
+  name: "Holly Kornachuk",
+  role: "Farmers Insurance",
+  location: " United States",
+  recognition: "",
+  image: "/bundle.png",
+
+  service: "Quote Preparation",
+},
+{
+  rating: "5.0",
+  quote:
+    "Tritox Technologies offers a practical approach to insurance agency operations and quote preparation. Their structured support can help agency teams manage daily quoting requirements efficiently while maintaining consistency across insurance workflows.",
+
+  name: "Mirvat Kadouh",
+  role: "District Manager",
+  location: "United States",
+  recognition: "",
+  image: "/bundle.png",
+
+  service: "Quote Preparation",
+},
+{
+  rating: "5.0",
+  quote:
+    "Tritox Technologies provides practical operational support for insurance agencies, with a focus on quote preparation, workflow organization, and day-to-day efficiency. This type of structured support can be valuable for agencies looking to manage growing quoting requirements.",
+
+  name: "Nate Sparrow",
+  role: "Build a Seven-Figure Insurance Agency",
+  location: "Greater Indianapolis",
+  recognition: "",
+  image: "/bundle.png",
+
+  service: "Quote Preparation",
+},
   ];
 
   const faqs = [
@@ -3456,7 +3495,7 @@ function ImpactPage() {
       </section>
 
       {/* Scale section */}
-      <section className="section scale-section">
+      <section className="section scale-section ">
         <div className="container scale-grid">
           <div className="tritox-scale-visual">
 
