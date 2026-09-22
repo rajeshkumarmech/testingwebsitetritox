@@ -2358,7 +2358,7 @@ function AdvantagePage() {
     },
     {
       number: "04",
-      title: "Guidewire PolicyCenter Review & Quote Generation",
+      title: "Guidewire PolicyCenter Review ",
       description:
         "The prepared quote is reviewed within Guidewire PolicyCenter to complete applicable validation before final quote generation.",
       points: [
@@ -2802,63 +2802,59 @@ function AdvantagePage() {
 
           {/* TIMELINE */}
 
-          <div className="workflow-timeline">
+          <div className="tritox-workflow-timeline">
 
-            <div className="workflow-progress-line" />
+  <div className="tritox-workflow-progress-line" />
 
-            {workflowSteps.map((step, index) => (
+  {workflowSteps.map((step, index) => (
 
-              <article
-                key={step.number}
-                className={`workflow-card ${step.color}`}
-              >
+    <article
+      key={step.number}
+      className={`tritox-workflow-card ${step.color}`}
+    >
 
-                <div className="workflow-card-top">
+      <div className="tritox-workflow-card-top">
 
-                  <span className="workflow-number">
-                    {step.number}
-                  </span>
+        <span className="tritox-workflow-number">
+          {step.number}
+        </span>
 
-                  <span className="workflow-status">
+        <span className="tritox-workflow-status">
 
-                    {index === workflowSteps.length - 1
-                      ? "Complete"
-                      : "Workflow Step"}
+          {index === workflowSteps.length - 1
+            ? "Complete"
+            : "Workflow Step"}
 
-                  </span>
+        </span>
 
-                </div>
+      </div>
 
-                <h3>
-                  {step.title}
-                </h3>
+      <h3>
+        {step.title}
+      </h3>
 
-                <p className="workflow-description">
-                  {step.description}
-                </p>
+      <p className="tritox-workflow-description">
+        {step.description}
+      </p>
 
-                <div className="workflow-point-list">
+      <div className="tritox-workflow-point-list">
 
-                  {step.points.map((point) => (
+        {step.points.map((point) => (
 
-                    <span key={point}>
-                      <i>✓</i>
-                      {point}
-                    </span>
+          <span key={point}>
+            <i>✓</i>
+            {point}
+          </span>
 
-                  ))}
+        ))}
 
-                </div>
+      </div>
 
-                {/* <div className="workflow-card-arrow">
-                  →
-                </div> */}
+    </article>
 
-              </article>
+  ))}
 
-            ))}
-
-          </div>
+</div>
 
 
           {/* BOTTOM WORKFLOW CARD */}
@@ -3304,7 +3300,7 @@ function ImpactPage() {
             </p>
           </div>
 
-          <div className="tritox-lead-flow-scroll">
+      <div className="tritox-lead-flow-scroll">
   <div className="tritox-lead-flow-track">
     {leadToCloseSteps.map((step, index) => (
       <article
@@ -3339,41 +3335,176 @@ function ImpactPage() {
       {/* Scale section */}
       <section className="section scale-section">
         <div className="container scale-grid">
-          <div className="scale-visual">
-            <div className="scale-main-panel">
-              <div className="scale-panel-header">
-                <span style={{ fontSize: "18px" }}>SCALABLE QUOTE CAPACITY</span>
-                <i>↗</i>
-              </div>
+          <div className="tritox-scale-visual">
 
-              <div className="scale-chart">
-                <div className="scale-chart-column">
-                  <span className="scale-bar scale-bar-one" />
-                  <small>Lead Volume</small>
-                </div>
+  {/* Graph Card */}
+  <div className="tritox-capacity-graph-card">
 
-                <div className="scale-chart-column">
-                  <span className="scale-bar scale-bar-two" />
-                  <small>Quote Capacity</small>
-                </div>
+    <div className="tritox-capacity-graph-header">
+      <div>
+        <span className="tritox-capacity-eyebrow">
+          SCALABLE OPERATIONS
+        </span>
 
-                <div className="scale-chart-column">
-                  <span className="scale-bar scale-bar-three" />
-                  <small>Producer Focus</small>
-                </div>
-              </div>
+        <h3>Capacity That Grows With Demand</h3>
 
-              <div className="scale-chart-footer">
-                <span className="green-indicator" />
-                Capacity grows as agency demand increases
-              </div>
-            </div>
+        <p>
+          Increase quote volume without increasing operational pressure.
+        </p>
+      </div>
 
-            <div className="scale-floating-card">
-              <strong>Parallel</strong>
-              <span>More opportunities prepared at the same time</span>
-            </div>
-          </div>
+      <div className="tritox-capacity-live">
+        <span className="tritox-capacity-live-dot" />
+        Scaling
+      </div>
+    </div>
+
+
+    {/* Graph */}
+    <div className="tritox-growth-graph">
+
+      {/* Y Axis */}
+      <div className="tritox-growth-y-axis">
+        <span>High</span>
+        <span>Medium</span>
+        <span>Low</span>
+      </div>
+
+      {/* Graph Area */}
+      <div className="tritox-growth-area">
+
+        <div className="tritox-growth-grid-line" />
+        <div className="tritox-growth-grid-line" />
+        <div className="tritox-growth-grid-line" />
+        <div className="tritox-growth-grid-line" />
+
+        <svg
+          className="tritox-growth-svg"
+          viewBox="0 0 700 260"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient
+              id="tritoxGrowthGradient"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+              <stop
+                offset="0%"
+                stopColor="#1e88e5"
+                stopOpacity="0.28"
+              />
+
+              <stop
+                offset="100%"
+                stopColor="#1e88e5"
+                stopOpacity="0"
+              />
+            </linearGradient>
+          </defs>
+
+          {/* Filled growth area */}
+          <path
+            className="tritox-growth-fill"
+            d="
+              M 0 220
+              C 100 205, 130 185, 200 190
+              C 270 195, 300 150, 350 155
+              C 430 160, 450 110, 510 115
+              C 580 120, 610 65, 700 30
+              L 700 260
+              L 0 260
+              Z
+            "
+          />
+
+          {/* Growth Line */}
+          <path
+            className="tritox-growth-line"
+            d="
+              M 0 220
+              C 100 205, 130 185, 200 190
+              C 270 195, 300 150, 350 155
+              C 430 160, 450 110, 510 115
+              C 580 120, 610 65, 700 30
+            "
+          />
+
+          {/* Data points */}
+          <circle cx="0" cy="220" r="6" />
+          <circle cx="200" cy="190" r="6" />
+          <circle cx="350" cy="155" r="6" />
+          <circle cx="510" cy="115" r="6" />
+          <circle cx="700" cy="30" r="7" />
+        </svg>
+
+
+        {/* Graph labels */}
+        <div className="tritox-growth-labels">
+          <span>Current</span>
+          <span>Growing</span>
+          <span>Scaling</span>
+          <span>High Volume</span>
+          <span>Expansion</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    {/* Metrics */}
+    <div className="tritox-capacity-metrics">
+
+      <div className="tritox-capacity-metric">
+        <strong>Lead Volume</strong>
+        <span>↑ Increasing</span>
+      </div>
+
+      <div className="tritox-capacity-metric">
+        <strong>Quote Capacity</strong>
+        <span>↑ Expanding</span>
+      </div>
+
+      <div className="tritox-capacity-metric">
+        <strong>Producer Focus</strong>
+        <span>↑ Protected</span>
+      </div>
+
+    </div>
+
+
+    {/* Footer */}
+    <div className="tritox-capacity-footer">
+      <span className="tritox-capacity-footer-dot" />
+
+      <span>
+        Capacity grows as agency demand increases
+      </span>
+    </div>
+
+  </div>
+
+
+  {/* Floating Card */}
+  <div className="tritox-parallel-card">
+
+    <div className="tritox-parallel-icon">
+      ↗
+    </div>
+
+    <div>
+      <strong>Parallel Processing</strong>
+
+      <span>
+        More opportunities prepared at the same time
+      </span>
+    </div>
+
+  </div>
+
+</div>
 
           <div className="scale-content">
             <p className="eyebrow"style={{ fontSize: "18px" }}>A Structure Built to Scale</p>
@@ -3434,20 +3565,32 @@ function ImpactPage() {
             <span>Customer Growth</span>
           </div>
 
-          <div className="growth-card-grid">
-            {growthSteps.map((step) => (
-              <article
-                key={step.number}
-                className={`growth-card ${step.type}`}
-              >
-                <span className="growth-card-number">{step.number}</span>
+          <div className="tritox-growth-card-grid">
+  {growthSteps.map((step, index) => (
+    <article
+      key={step.number}
+      className={`tritox-growth-card tritox-growth-card-${index + 1} ${step.type}`}
+    >
+      <div className="tritox-growth-card-top">
+        <span className="tritox-growth-card-number">
+          {step.number}
+        </span>
 
-                <h3>{step.title}</h3>
+        <span className="tritox-growth-card-arrow">
+          ↗
+        </span>
+      </div>
 
-                <p>{step.description}</p>
-              </article>
-            ))}
-          </div>
+      <div className="tritox-growth-card-content">
+        <h3>{step.title}</h3>
+
+        <p>{step.description}</p>
+      </div>
+
+      <div className="tritox-growth-card-line" />
+    </article>
+  ))}
+</div>
 
           <div className="growth-summary-card">
             <span className="growth-summary-check">✓</span>
@@ -3465,11 +3608,75 @@ function ImpactPage() {
           </div>
         </div>
       </section>
-        <PageBanner
-        eyebrow="International Staff Onboarding"
-        title="Authorized International Staff Setup for Farmers Agency Support"
-        description="A structured onboarding process for approved international staff supporting Farmers agency operations through authorized access and defined responsibilities."
-      />
+        <section className="tritox-onboarding-hero">
+  <div className="tritox-onboarding-hero-container">
+
+    {/* LEFT SIDE */}
+    <div className="tritox-onboarding-hero-left">
+
+      <span className="tritox-onboarding-status">
+        <span className="tritox-onboarding-status-dot"></span>
+        Ready to Onboard
+      </span>
+
+      <h2>
+        We already have an existing{" "}
+        <span>Farmers ID</span>
+      </h2>
+
+      <p>
+        Easy onboarding for authorized international staff with a
+        structured setup process and clearly defined responsibilities.
+      </p>
+
+      <div className="tritox-onboarding-easy">
+        <span className="tritox-onboarding-check">✓</span>
+
+        <div>
+          <strong>Easy Onboarding</strong>
+          <small>
+            Simple and guided setup for approved international staff.
+          </small>
+        </div>
+      </div>
+
+      <a
+        href="/Onboarding document.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="tritox-onboarding-pdf-btn"
+      >
+        <span>Click Here to Know About Onboarding</span>
+
+        <span className="tritox-onboarding-pdf-arrow">
+          →
+        </span>
+      </a>
+
+    </div>
+
+
+    {/* RIGHT SIDE */}
+    <div className="tritox-onboarding-hero-right">
+
+      <span className="tritox-onboarding-hero-eyebrow">
+        International Staff Onboarding
+      </span>
+
+      <h1>
+        Authorized International Staff Setup for Farmers Agency Support
+      </h1>
+
+      <p>
+        A structured onboarding process for approved international staff
+        supporting Farmers agency operations through authorized access
+        and defined responsibilities.
+      </p>
+
+    </div>
+
+  </div>
+</section>
 
       {/* Onboarding introduction */}
       <section className="section onboarding-intro-section">

@@ -3209,8 +3209,8 @@ html {
 }
 
 .advantage-floating-two {
-  right: -25px;
-  bottom: 65px;
+  right: -45px;
+  bottom: 5px;
 
   animation-delay:
     .8s;
@@ -3644,6 +3644,523 @@ html {
 
   .advantage-final-text h2 {
     font-size: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   TRITOX WORKFLOW TIMELINE
+========================================= */
+
+.tritox-workflow-timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 70px 30px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(30, 136, 229, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(34, 197, 94, 0.12),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbff 0%,
+      #eef6fc 45%,
+      #f7fbff 100%
+    );
+
+  border: 1px solid rgba(30, 136, 229, 0.08);
+  border-radius: 32px;
+
+  box-shadow:
+    0 30px 80px rgba(23, 50, 77, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.tritox-workflow-timeline::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(30, 136, 229, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(30, 136, 229, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.tritox-workflow-timeline::after {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  top: -100px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(30, 136, 229, 0.10);
+
+  filter: blur(30px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PROGRESS LINE
+========================================= */
+
+.tritox-workflow-progress-line {
+  position: absolute;
+
+  left: 9%;
+  right: 9%;
+  top: 108px;
+
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #1e88e5,
+    #22c55e,
+    #1e88e5
+  );
+
+  border-radius: 50px;
+
+  opacity: 0.45;
+
+  box-shadow:
+    0 0 10px rgba(30, 136, 229, 0.20),
+    0 0 20px rgba(34, 197, 94, 0.10);
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   TRITOX WORKFLOW CARD
+========================================= */
+
+.tritox-workflow-card {
+  --tritox-workflow-accent: #1e88e5;
+
+  position: relative;
+  z-index: 2;
+
+  min-height: 310px;
+
+  padding: 28px;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(248, 252, 255, 0.90)
+    );
+
+  backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 20px 45px rgba(23, 50, 77, 0.09),
+    0 5px 15px rgba(30, 136, 229, 0.04);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.tritox-workflow-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(30, 136, 229, 0.25);
+
+  box-shadow:
+    0 30px 65px rgba(23, 50, 77, 0.14),
+    0 10px 30px rgba(30, 136, 229, 0.10);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.tritox-workflow-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.tritox-workflow-number {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1e88e5,
+      #1565c0
+    );
+
+  box-shadow:
+    0 10px 25px rgba(30, 136, 229, 0.25);
+
+  transition: transform 0.35s ease;
+}
+
+
+.tritox-workflow-card:hover .tritox-workflow-number {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.tritox-workflow-status {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 12px;
+
+  border-radius: 50px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  color: #166534;
+
+  background: rgba(34, 197, 94, 0.10);
+
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+
+/* Status dot */
+
+.tritox-workflow-status::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.10);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.tritox-workflow-card h3 {
+  margin: 0 0 12px;
+
+  color: #17324d;
+
+  font-size: 22px;
+  line-height: 1.25;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.tritox-workflow-description {
+  margin: 0 0 22px;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   POINT LIST
+========================================= */
+
+.tritox-workflow-point-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+
+.tritox-workflow-point-list span {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: #475569;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   CHECK ICON
+========================================= */
+
+.tritox-workflow-point-list i {
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-style: normal;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 4px 10px rgba(34, 197, 94, 0.18);
+}
+
+
+/* =========================================
+   CARD COLOR VARIATIONS
+========================================= */
+
+.tritox-workflow-card.blue {
+  --tritox-workflow-accent: #1e88e5;
+}
+
+.tritox-workflow-card.green {
+  --tritox-workflow-accent: #22c55e;
+}
+
+.tritox-workflow-card.yellow {
+  --tritox-workflow-accent: #f2c94c;
+}
+
+
+/* =========================================
+   TOP ACCENT LINE
+========================================= */
+
+.tritox-workflow-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+  right: 28px;
+
+  height: 3px;
+
+  border-radius: 0 0 10px 10px;
+
+  background: var(--tritox-workflow-accent);
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   CARD GLOW
+========================================= */
+
+.tritox-workflow-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  right: -35px;
+  bottom: -40px;
+
+  border-radius: 50%;
+
+  background: var(--tritox-workflow-accent);
+
+  opacity: 0.06;
+
+  filter: blur(5px);
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+
+.tritox-workflow-card:hover::after {
+  transform: scale(1.5);
+  opacity: 0.10;
+}
+
+
+/* =========================================
+   COMPLETE STATUS
+========================================= */
+
+.tritox-workflow-card:last-child
+.tritox-workflow-status {
+  color: #166534;
+
+  background: rgba(34, 197, 94, 0.13);
+
+  border-color: rgba(34, 197, 94, 0.25);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .tritox-workflow-timeline {
+    grid-template-columns: 1fr 1fr;
+    padding: 55px 24px;
+  }
+
+  .tritox-workflow-progress-line {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 680px) {
+
+  .tritox-workflow-timeline {
+    grid-template-columns: 1fr;
+
+    padding: 40px 18px;
+
+    border-radius: 24px;
+  }
+
+  .tritox-workflow-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .tritox-workflow-card h3 {
+    font-size: 20px;
+  }
+
+  .tritox-workflow-progress-line {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tritox-workflow-card,
+  .tritox-workflow-number,
+  .tritox-workflow-card::after {
+    transition: none;
   }
 }
 

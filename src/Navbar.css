@@ -814,87 +814,33 @@
    /* =========================================
    TRITOX LEAD TO CLOSE - HORIZONTAL FLOW
 ========================================= */
+/* =========================================
+   TRITOX LEAD TO CLOSE FLOW
+========================================= */
 
 .tritox-lead-flow-scroll {
-  position: relative;
-  width: calc(100% - 40px);
-  margin: 30px 20px;
-  padding: 35px 20px 40px;
-
+  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-
+  padding: 30px 45px 45px;
   box-sizing: border-box;
-  border-radius: 28px;
 
+  scrollbar-width: thin;
   scroll-behavior: smooth;
-
-  background:
-    radial-gradient(
-      circle at 10% 20%,
-      rgba(242, 201, 76, 0.20),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(30, 136, 229, 0.18),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(181, 131, 141, 0.12),
-      transparent 35%
-    ),
-    linear-gradient(
-      120deg,
-      #fff8f8,
-      #ffffff,
-      #f5faff,
-      #fff8f8
-    );
-
-  background-size:
-    180% 180%,
-    180% 180%,
-    180% 180%,
-    300% 300%;
-
-  animation: tritoxLeadBackground 12s ease infinite;
-
-  box-shadow:
-    0 20px 55px rgba(24, 59, 86, 0.10),
-    inset 0 0 40px rgba(255, 255, 255, 0.7);
-
-  isolation: isolate;
 }
 
+.tritox-lead-flow-scroll::-webkit-scrollbar {
+  height: 6px;
+}
 
-/* Moving background */
+.tritox-lead-flow-scroll::-webkit-scrollbar-track {
+  background: #eef3f8;
+  border-radius: 20px;
+}
 
-@keyframes tritoxLeadBackground {
-  0% {
-    background-position:
-      0% 50%,
-      100% 50%,
-      50% 0%,
-      0% 50%;
-  }
-
-  50% {
-    background-position:
-      100% 50%,
-      0% 50%,
-      50% 100%,
-      100% 50%;
-  }
-
-  100% {
-    background-position:
-      0% 50%,
-      100% 50%,
-      50% 0%,
-      0% 50%;
-  }
+.tritox-lead-flow-scroll::-webkit-scrollbar-thumb {
+  background: #1e88e5;
+  border-radius: 20px;
 }
 
 
@@ -902,15 +848,11 @@
 
 .tritox-lead-flow-track {
   display: flex;
-  flex-wrap: nowrap;
   align-items: stretch;
-
-  gap: 28px;
+  gap: 70px;
 
   width: max-content;
   min-width: 100%;
-
-  box-sizing: border-box;
 }
 
 
@@ -921,79 +863,43 @@
 .tritox-lead-flow-card {
   position: relative;
 
-  flex: 0 0 250px;
-  width: 250px;
+  width: 220px;
+  min-width: 220px;
   min-height: 190px;
 
-  padding: 25px 22px;
+  padding: 28px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(30, 136, 229, 0.12);
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(18, 57, 92, 0.07);
 
   box-sizing: border-box;
 
-  border-radius: 22px;
-
-  background: rgba(255, 255, 255, 0.88);
-
-  border: 1px solid rgba(30, 136, 229, 0.12);
-
-  box-shadow:
-    0 12px 30px rgba(24, 59, 86, 0.10);
-
-  backdrop-filter: blur(12px);
-
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
-
-  animation: tritoxLeadCardFloat 4s ease-in-out infinite;
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 
-/* Different animation delay for each card */
-
-.tritox-lead-flow-card:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.tritox-lead-flow-card:nth-child(3) {
-  animation-delay: 0.8s;
-}
-
-.tritox-lead-flow-card:nth-child(4) {
-  animation-delay: 1.2s;
-}
-
-.tritox-lead-flow-card:nth-child(5) {
-  animation-delay: 1.6s;
-}
-
-.tritox-lead-flow-card:nth-child(6) {
-  animation-delay: 2s;
-}
-
-
-@keyframes tritoxLeadCardFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-
-/* Hover */
+/* Card hover */
 
 .tritox-lead-flow-card:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-7px);
 
   border-color: rgba(30, 136, 229, 0.35);
 
   box-shadow:
-    0 22px 45px rgba(30, 136, 229, 0.16),
-    0 0 25px rgba(242, 201, 76, 0.12);
+    0 16px 35px rgba(18, 57, 92, 0.12);
 }
 
 
@@ -1002,38 +908,13 @@
 ========================================= */
 
 .tritox-lead-flow-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 
-  width: 48px;
-  height: 48px;
+  color: #1e88e5;
 
-  margin-bottom: 18px;
-
-  border-radius: 14px;
-
-  background: linear-gradient(
-    135deg,
-    #1e88e5,
-    #1565c0
-  );
-
-  color: #ffffff;
-
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-
-  box-shadow:
-    0 8px 18px rgba(30, 136, 229, 0.25);
-
-  transition: transform 0.3s ease;
-}
-
-
-.tritox-lead-flow-card:hover .tritox-lead-flow-number {
-  transform: rotate(-5deg) scale(1.08);
+  margin-bottom: 20px;
 }
 
 
@@ -1042,11 +923,6 @@
 ========================================= */
 
 .tritox-lead-flow-dot {
-  position: absolute;
-
-  top: 43px;
-  right: 25px;
-
   width: 12px;
   height: 12px;
 
@@ -1054,28 +930,24 @@
 
   background: #22c55e;
 
-  box-shadow:
-    0 0 0 0 rgba(34, 197, 94, 0.6);
+  margin-bottom: 18px;
 
-  animation: tritoxLeadDotPulse 2s infinite;
+  box-shadow:
+    0 0 0 5px rgba(34, 197, 94, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
-@keyframes tritoxLeadDotPulse {
-  0% {
-    box-shadow:
-      0 0 0 0 rgba(242, 201, 76, 0.6);
-  }
+/* Dot hover */
 
-  70% {
-    box-shadow:
-      0 0 0 10px rgba(242, 201, 76, 0);
-  }
+.tritox-lead-flow-card:hover .tritox-lead-flow-dot {
+  transform: scale(1.2);
 
-  100% {
-    box-shadow:
-      0 0 0 0 rgba(242, 201, 76, 0);
-  }
+  box-shadow:
+    0 0 0 7px rgba(34, 197, 94, 0.12);
 }
 
 
@@ -1086,144 +958,182 @@
 .tritox-lead-flow-title {
   margin: 0;
 
-  color: #183b56;
-
-  font-family: "Poppins", sans-serif;
   font-size: 15px;
-  line-height: 1.45;
+  line-height: 1.35;
+
   font-weight: 600;
+
+  color: #17324d;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 
 /* =========================================
-   ARROW
+   ARROW CONNECTOR
 ========================================= */
 
-.tritox-lead-flow-arrow {
+.tritox-lead-flow-card:not(:last-child)::after {
+  content: "→";
+
   position: absolute;
 
   top: 50%;
-  right: -42px;
+  right: -54px;
 
   transform: translateY(-50%);
-
-  z-index: 5;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
 
-  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 700;
 
-  background: #f2c94c;
+  color: #1e88e5;
 
-  color: #183b56;
+  opacity: 0.65;
 
-  font-size: 24px;
-  font-weight: 900;
-
-  box-shadow:
-    0 8px 20px rgba(242, 201, 76, 0.35);
-
-  animation: tritoxLeadArrowMove 1.8s ease-in-out infinite;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 
-@keyframes tritoxLeadArrowMove {
-  0%,
-  100% {
-    transform: translateY(-50%) translateX(0);
-  }
+/* Arrow hover */
 
-  50% {
-    transform: translateY(-50%) translateX(7px);
-  }
+.tritox-lead-flow-card:hover::after {
+  transform: translate(7px, -50%);
+  opacity: 1;
 }
 
 
 /* =========================================
-   SCROLLBAR
-========================================= */
-
-.tritox-lead-flow-scroll::-webkit-scrollbar {
-  height: 9px;
-}
-
-.tritox-lead-flow-scroll::-webkit-scrollbar-track {
-  background: rgba(24, 59, 86, 0.08);
-  border-radius: 20px;
-}
-
-.tritox-lead-flow-scroll::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-
-  background: linear-gradient(
-    90deg,
-    #1e88e5,
-    #f2c94c,
-    #b5838d
-  );
-}
-
-.tritox-lead-flow-scroll::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    90deg,
-    #1565c0,
-    #d4af37,
-    #8f626d
-  );
-}
-
-
-/* Firefox */
-
-.tritox-lead-flow-scroll {
-  scrollbar-width: thin;
-  scrollbar-color: #1e88e5 rgba(24, 59, 86, 0.08);
-}
-
-
-/* =========================================
-   MOBILE
+   RESPONSIVE
 ========================================= */
 
 @media (max-width: 768px) {
 
   .tritox-lead-flow-scroll {
-    width: calc(100% - 20px);
-    margin: 25px 10px;
-
-    padding: 25px 15px 30px;
-
-    border-radius: 22px;
+    padding: 25px 20px 35px;
   }
 
   .tritox-lead-flow-track {
-    gap: 20px;
+    gap: 55px;
   }
 
   .tritox-lead-flow-card {
-    flex: 0 0 235px;
-    width: 235px;
-    min-height: 180px;
+    width: 200px;
+    min-width: 200px;
+    min-height: 175px;
 
-    padding: 20px;
+    padding: 24px 20px;
+  }
+
+  .tritox-lead-flow-card:not(:last-child)::after {
+    right: -44px;
+
+    width: 32px;
+    height: 32px;
+
+    font-size: 22px;
   }
 
   .tritox-lead-flow-title {
     font-size: 17px;
   }
+}
+/* =========================================
+   ANIMATED ARROW
+========================================= */
 
-  .tritox-lead-flow-arrow {
-    right: -32px;
+.tritox-lead-flow-card:not(:last-child)::after {
+  content: "→";
 
-    width: 34px;
-    height: 34px;
+  position: absolute;
+  top: 50%;
+  right: -54px;
 
-    font-size: 20px;
+  transform: translateY(-50%);
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  color: #1e88e5;
+
+  opacity: 0.65;
+
+  animation: tritoxArrowFlow 1.8s ease-in-out infinite;
+}
+
+
+/* Arrow movement */
+
+@keyframes tritoxArrowFlow {
+  0% {
+    transform: translate(-4px, -50%);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translate(6px, -50%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-4px, -50%);
+    opacity: 0.35;
+  }
+}
+
+
+/* =========================================
+   ANIMATED DOT
+========================================= */
+
+.tritox-lead-flow-dot {
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 0 0 5px rgba(34, 197, 94, 0.12);
+
+  animation: tritoxDotPulse 1.8s ease-in-out infinite;
+}
+
+
+@keyframes tritoxDotPulse {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 5px rgba(34, 197, 94, 0.12);
+  }
+
+  50% {
+    transform: scale(1.25);
+    box-shadow:
+      0 0 0 9px rgba(34, 197, 94, 0.05);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 5px rgba(34, 197, 94, 0.12);
   }
 }
 
@@ -1342,5 +1252,1886 @@
   .footer-social-icon {
     width: 21px;
     height: 21px;
+  }
+}
+
+
+
+
+
+
+/* =========================================
+   TRITOX SCALE VISUAL
+========================================= */
+
+.tritox-scale-visual {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   GRAPH CARD in Resource Page
+========================================= */
+
+.tritox-capacity-graph-card {
+  position: relative;
+
+  padding: 34px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(30, 136, 229, 0.12);
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 60px rgba(22, 65, 105, 0.09);
+
+  overflow: hidden;
+}
+
+
+/* subtle background glow */
+
+.tritox-capacity-graph-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -180px;
+  right: -100px;
+
+  background: rgba(30, 136, 229, 0.07);
+
+  border-radius: 50%;
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.tritox-capacity-graph-header {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+
+.tritox-capacity-eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+  color: #1e88e5;
+}
+
+
+.tritox-capacity-graph-header h3 {
+  margin: 0 0 8px;
+
+  font-size: 26px;
+  line-height: 1.25;
+
+  color: #17324d;
+}
+
+
+.tritox-capacity-graph-header p {
+  margin: 0;
+
+  max-width: 520px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: #718096;
+}
+
+
+/* =========================================
+   LIVE INDICATOR
+========================================= */
+
+.tritox-capacity-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  border-radius: 30px;
+
+  background: #f0fdf4;
+
+  color: #16803c;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+.tritox-capacity-live-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 5px rgba(34, 197, 94, 0.12);
+
+  animation: tritoxLivePulse 1.8s infinite;
+}
+
+
+@keyframes tritoxLivePulse {
+
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(34, 197, 94, 0.25);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 7px rgba(34, 197, 94, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+
+/* =========================================
+   GRAPH
+========================================= */
+
+.tritox-growth-graph {
+  display: flex;
+
+  width: 100%;
+  height: 310px;
+}
+
+
+.tritox-growth-y-axis {
+  width: 55px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 12px 0 35px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  color: #9aa9b8;
+}
+
+
+/* Graph area */
+
+.tritox-growth-area {
+  position: relative;
+
+  flex: 1;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+}
+
+
+/* Grid */
+
+.tritox-growth-grid-line {
+  position: relative;
+
+  height: 25%;
+
+  border-top: 1px dashed rgba(30, 136, 229, 0.12);
+}
+
+
+/* SVG */
+
+.tritox-growth-svg {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  width: 100%;
+  height: calc(100% - 35px);
+
+  overflow: visible;
+}
+
+
+/* Fill */
+
+.tritox-growth-fill {
+  fill: url(#tritoxGrowthGradient);
+
+  animation:
+    tritoxGraphFill 1.8s ease-out forwards;
+}
+
+
+/* Line */
+
+.tritox-growth-line {
+  fill: none;
+
+  stroke: #1e88e5;
+
+  stroke-width: 5;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+
+  animation:
+    tritoxGraphDraw 2.5s ease-out forwards;
+}
+
+
+/* Points */
+
+.tritox-growth-svg circle {
+  fill: #ffffff;
+
+  stroke: #1e88e5;
+
+  stroke-width: 4;
+
+  animation:
+    tritoxPointAppear 0.5s ease-out forwards;
+
+  transform-origin: center;
+}
+
+
+@keyframes tritoxGraphDraw {
+
+  to {
+    stroke-dashoffset: 0;
+  }
+
+}
+
+
+@keyframes tritoxGraphFill {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes tritoxPointAppear {
+
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================
+   GRAPH LABELS
+========================================= */
+
+.tritox-growth-labels {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 8px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  color: #8999a8;
+}
+
+
+/* =========================================
+   METRICS
+========================================= */
+
+.tritox-capacity-metrics {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+
+.tritox-capacity-metric {
+  padding: 15px 17px;
+
+  border-radius: 13px;
+
+  background: #f8fbfe;
+
+  border: 1px solid rgba(30, 136, 229, 0.08);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.tritox-capacity-metric strong {
+  font-size: 13px;
+
+  color: #25435d;
+}
+
+
+.tritox-capacity-metric span {
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #22a05a;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.tritox-capacity-footer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 22px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #63778a;
+}
+
+
+.tritox-capacity-footer-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+
+/* =========================================
+   FLOATING PARALLEL CARD
+========================================= */
+
+.tritox-parallel-card {
+  position: absolute;
+
+  right: -7px;
+  bottom: -65px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  width: 245px;
+
+  padding: 17px 20px;
+
+  background: #0F2740;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 18px 40px rgba(23, 50, 77, 0.22);
+
+  color: #ffffff;
+
+  z-index: 3;
+
+  animation: tritoxParallelFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes tritoxParallelFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
+}
+
+
+.tritox-parallel-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 20px;
+}
+
+
+.tritox-parallel-card strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 13px;
+}
+
+
+.tritox-parallel-card span {
+  display: block;
+
+  font-size: 10px;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .tritox-parallel-card {
+    position: relative;
+
+    right: auto;
+    bottom: auto;
+
+    margin: -10px 20px 0 auto;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .tritox-capacity-graph-card {
+    padding: 24px 20px;
+  }
+
+  .tritox-capacity-graph-header {
+    flex-direction: column;
+  }
+
+  .tritox-capacity-graph-header h3 {
+    font-size: 22px;
+  }
+
+  .tritox-growth-graph {
+    height: 260px;
+  }
+
+  .tritox-capacity-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .tritox-parallel-card {
+    width: auto;
+    margin: 15px 0 0;
+  }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tritox-growth-line,
+  .tritox-growth-fill,
+  .tritox-growth-svg circle,
+  .tritox-capacity-live-dot,
+  .tritox-parallel-card {
+    animation: none;
+  }
+
+}
+
+
+
+
+/* =========================================
+   TRITOX GROWTH CARD GRID
+========================================= */
+
+.tritox-growth-card-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   GROWTH CARD
+========================================= */
+
+.tritox-growth-card {
+  position: relative;
+
+  min-height: 245px;
+
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(30, 136, 229, 0.10);
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 35px rgba(23, 50, 77, 0.07);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* Top blue accent */
+
+.tritox-growth-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: #1e88e5;
+
+  transform: scaleX(0.35);
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+
+/* Soft background glow */
+
+.tritox-growth-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -90px;
+  bottom: -90px;
+
+  background: rgba(30, 136, 229, 0.07);
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.tritox-growth-card:hover {
+  transform: translateY(-9px);
+
+  border-color: rgba(30, 136, 229, 0.25);
+
+  box-shadow:
+    0 20px 45px rgba(23, 50, 77, 0.13);
+}
+
+
+.tritox-growth-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+.tritox-growth-card:hover::after {
+  transform: scale(1.5);
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.tritox-growth-card-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.tritox-growth-card-number {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #eef6fc;
+
+  color: #1e88e5;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.tritox-growth-card:hover .tritox-growth-card-number {
+  background: #1e88e5;
+
+  color: #ffffff;
+
+  transform: rotate(-4deg) scale(1.05);
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.tritox-growth-card-arrow {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f5f9fc;
+
+  color: #718096;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.tritox-growth-card:hover .tritox-growth-card-arrow {
+  background: #17324d;
+
+  color: #ffffff;
+
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.tritox-growth-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.tritox-growth-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 21px;
+  line-height: 1.3;
+
+  color: #17324d;
+
+  font-weight: 750;
+}
+
+
+.tritox-growth-card p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: #718096;
+}
+
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.tritox-growth-card-line {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 22px;
+
+  height: 2px;
+
+  background: #eef3f7;
+
+  overflow: hidden;
+}
+
+
+.tritox-growth-card-line::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 35%;
+  height: 100%;
+
+  background: #1e88e5;
+
+  transition: width 0.4s ease;
+}
+
+
+.tritox-growth-card:hover .tritox-growth-card-line::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   DIFFERENT CARD ACCENTS
+========================================= */
+
+.tritox-growth-card-1::before {
+  background: #1e88e5;
+}
+
+.tritox-growth-card-2::before {
+  background: #22c55e;
+}
+
+.tritox-growth-card-3::before {
+  background: #f2c94c;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .tritox-growth-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .tritox-growth-card-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .tritox-growth-card {
+    min-height: 220px;
+
+    padding: 24px;
+  }
+
+  .tritox-growth-card h3 {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .tritox-growth-card,
+  .tritox-growth-card::before,
+  .tritox-growth-card::after,
+  .tritox-growth-card-number,
+  .tritox-growth-card-arrow,
+  .tritox-growth-card-line::after {
+    transition: none;
+  }
+}
+
+
+
+
+/* =========================================================
+   TRITOX — PREMIUM ONBOARDING HERO
+   ========================================================= */
+
+.tritox-onboarding-hero {
+  position: relative;
+  width: 100%;
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 95px 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(30, 136, 229, 0.13),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 82%,
+      rgba(34, 197, 94, 0.09),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbfe 0%,
+      #eef6fc 48%,
+      #f8fbfd 100%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+   ========================================================= */
+
+.tritox-onboarding-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  top: -260px;
+  right: -170px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(30, 136, 229, 0.10);
+
+  box-shadow:
+    0 0 0 70px rgba(30, 136, 229, 0.025),
+    0 0 0 140px rgba(30, 136, 229, 0.018);
+
+  pointer-events: none;
+}
+
+
+.tritox-onboarding-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  bottom: -280px;
+  left: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(34, 197, 94, 0.05);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.tritox-onboarding-hero-container {
+  position: relative;
+  z-index: 3;
+
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.88fr)
+    minmax(0, 1.12fr);
+
+  align-items: center;
+
+  gap: 85px;
+}
+
+
+/* =========================================================
+   LEFT — ONBOARDING CARD
+   ========================================================= */
+
+.tritox-onboarding-hero-left {
+  position: relative;
+
+  width: 100%;
+  max-width: 500px;
+
+  padding: 36px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(248, 252, 255, 0.90)
+    );
+
+  box-shadow:
+    0 35px 80px rgba(23, 50, 77, 0.12),
+    0 8px 25px rgba(30, 136, 229, 0.06);
+
+  backdrop-filter: blur(18px);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+.tritox-onboarding-hero-left:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 45px 95px rgba(23, 50, 77, 0.16),
+    0 12px 35px rgba(30, 136, 229, 0.09);
+}
+
+
+/* Top gradient */
+
+.tritox-onboarding-hero-left::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1e88e5,
+      #22c55e
+    );
+}
+
+
+/* Decorative glow */
+
+.tritox-onboarding-hero-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  top: -130px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(30, 136, 229, 0.13),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   STATUS BADGE
+   ========================================================= */
+
+.tritox-onboarding-status {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 14px;
+
+  margin-bottom: 23px;
+
+  border: 1px solid rgba(34, 197, 94, 0.18);
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(34, 197, 94, 0.10),
+      rgba(34, 197, 94, 0.04)
+    );
+
+  color: #15803d;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* Status dot */
+
+.tritox-onboarding-status-dot {
+  position: relative;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 5px rgba(34, 197, 94, 0.11);
+
+  animation:
+    tritoxOnboardingStatusPulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   LEFT TITLE
+   ========================================================= */
+
+.tritox-onboarding-hero-left h2 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 16px;
+
+  color: #17324d;
+
+  font-size: clamp(29px, 3vw, 40px);
+
+  line-height: 1.15;
+
+  font-weight: 650;
+
+  letter-spacing: -1.3px;
+  font-family: "Inter", sans-serif;
+}
+
+
+.tritox-onboarding-hero-left h2 span {
+  position: relative;
+
+  color: #1e88e5;
+}
+
+
+/* Underline */
+
+.tritox-onboarding-hero-left h2 span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -3px;
+
+  width: 100%;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1e88e5,
+      rgba(30, 136, 229, 0)
+    );
+}
+
+
+/* =========================================================
+   LEFT DESCRIPTION
+   ========================================================= */
+
+.tritox-onboarding-hero-left > p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 430px;
+
+  margin: 0 0 24px;
+
+  color: #687b8e;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   EASY ONBOARDING
+   ========================================================= */
+
+.tritox-onboarding-easy {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 15px 17px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid rgba(34, 197, 94, 0.13);
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(34, 197, 94, 0.08),
+      rgba(255, 255, 255, 0.7)
+    );
+}
+
+
+/* Check circle */
+
+.tritox-onboarding-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #16a34a
+    );
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: 900;
+
+  box-shadow:
+    0 8px 18px rgba(34, 197, 94, 0.22);
+}
+
+
+/* Easy title */
+
+.tritox-onboarding-easy strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #17324d;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+
+/* Easy description */
+
+.tritox-onboarding-easy small {
+  display: block;
+
+  color: #718397;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PDF CTA
+   ========================================================= */
+
+.tritox-onboarding-pdf-btn {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 9px 10px 9px 20px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border: 0;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #17324d 0%,
+      #214c70 100%
+    );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  box-shadow:
+    0 12px 28px rgba(23, 50, 77, 0.18);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+
+/* Shine */
+
+.tritox-onboarding-pdf-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.12),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.7s ease;
+}
+
+
+.tritox-onboarding-pdf-btn:hover::before {
+  left: 130%;
+}
+
+
+.tritox-onboarding-pdf-btn:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #1e88e5,
+      #176bb7
+    );
+
+  box-shadow:
+    0 18px 35px rgba(30, 136, 229, 0.25);
+}
+
+
+/* Arrow */
+
+.tritox-onboarding-pdf-arrow {
+  position: relative;
+  z-index: 2;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  font-size: 20px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.tritox-onboarding-pdf-btn:hover
+.tritox-onboarding-pdf-arrow {
+  transform: translateX(5px);
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+   ========================================================= */
+
+.tritox-onboarding-hero-right {
+  position: relative;
+
+  max-width: 650px;
+}
+
+
+/* Small eyebrow */
+
+.tritox-onboarding-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+
+  margin-bottom: 20px;
+
+  color: #1e88e5;
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+
+.tritox-onboarding-hero-eyebrow::before {
+  content: "";
+
+  width: 34px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1e88e5,
+      #22c55e
+    );
+}
+
+
+/* =========================================================
+   RIGHT HEADING
+   ========================================================= */
+
+.tritox-onboarding-hero-right h1 {
+  margin: 0 0 25px;
+
+  color: #17324d;
+
+  font-size: clamp(40px, 4.5vw, 62px);
+
+  line-height: 1.05;
+
+  font-weight: 650;
+
+  letter-spacing: -2.2px;
+  font-family: "Inter", sans-serif;
+}
+
+
+/* Heading accent */
+
+.tritox-onboarding-hero-right h1::selection {
+  background: rgba(30, 136, 229, 0.2);
+}
+
+
+/* =========================================================
+   RIGHT DESCRIPTION
+   ========================================================= */
+
+.tritox-onboarding-hero-right p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #687b8e;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FLOATING DECORATIVE ELEMENTS
+   ========================================================= */
+
+.tritox-onboarding-hero-right::before {
+  content: "";
+
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  top: -80px;
+  right: 20px;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(30, 136, 229, 0.10);
+
+  transform: rotate(18deg);
+
+  animation:
+    tritoxOnboardingFloat 5s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+.tritox-onboarding-hero-right::after {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  right: 10%;
+  bottom: -50px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 8px rgba(34, 197, 94, 0.08),
+    0 0 30px rgba(34, 197, 94, 0.25);
+
+  animation:
+    tritoxOnboardingFloat 4s ease-in-out infinite reverse;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes tritoxOnboardingStatusPulse {
+
+  0% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 0 5px rgba(34, 197, 94, 0.11);
+  }
+
+  50% {
+    transform: scale(1.2);
+
+    box-shadow:
+      0 0 0 9px rgba(34, 197, 94, 0.03);
+  }
+
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 0 5px rgba(34, 197, 94, 0.11);
+  }
+}
+
+
+@keyframes tritoxOnboardingFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(18deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(21deg);
+  }
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .tritox-onboarding-hero {
+    padding: 80px 0;
+  }
+
+  .tritox-onboarding-hero-container {
+    gap: 55px;
+  }
+
+  .tritox-onboarding-hero-right h1 {
+    font-size: clamp(38px, 4.8vw, 52px);
+  }
+
+  .tritox-onboarding-hero-left {
+    padding: 30px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .tritox-onboarding-hero {
+    min-height: auto;
+
+    padding: 65px 0;
+  }
+
+  .tritox-onboarding-hero-container {
+    width: min(92%, 600px);
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .tritox-onboarding-hero-right {
+    order: 1;
+
+    max-width: 100%;
+  }
+
+  .tritox-onboarding-hero-left {
+    order: 2;
+
+    max-width: 100%;
+  }
+
+  .tritox-onboarding-hero-right h1 {
+    font-size: clamp(36px, 8vw, 50px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .tritox-onboarding-hero-right p {
+    font-size: 15px;
+  }
+
+  .tritox-onboarding-hero-right::before,
+  .tritox-onboarding-hero-right::after {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .tritox-onboarding-hero {
+    padding: 50px 0;
+  }
+
+  .tritox-onboarding-hero-container {
+    width: 90%;
+
+    gap: 35px;
+  }
+
+  .tritox-onboarding-hero-left {
+    padding: 25px;
+
+    border-radius: 22px;
+  }
+
+  .tritox-onboarding-status {
+    margin-bottom: 18px;
+
+    padding: 7px 11px;
+
+    font-size: 10px;
+  }
+
+  .tritox-onboarding-hero-left h2 {
+    font-size: 28px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .tritox-onboarding-hero-left > p {
+    font-size: 14px;
+  }
+
+  .tritox-onboarding-hero-right h1 {
+    font-size: 34px;
+
+    line-height: 1.1;
+  }
+
+  .tritox-onboarding-hero-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 1.3px;
+  }
+
+  .tritox-onboarding-hero-right p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .tritox-onboarding-easy {
+    padding: 13px;
+
+    gap: 11px;
+  }
+
+  .tritox-onboarding-check {
+    width: 34px;
+    height: 34px;
+  }
+
+  .tritox-onboarding-pdf-btn {
+    min-height: 55px;
+
+    padding-left: 16px;
+
+    font-size: 12px;
+  }
+
+  .tritox-onboarding-pdf-arrow {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .tritox-onboarding-hero-left {
+    padding: 21px;
+  }
+
+  .tritox-onboarding-hero-left h2 {
+    font-size: 25px;
+  }
+
+  .tritox-onboarding-hero-right h1 {
+    font-size: 30px;
+  }
+
+  .tritox-onboarding-pdf-btn {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.tritox-onboarding-pdf-btn:focus-visible {
+  outline: 3px solid rgba(30, 136, 229, 0.3);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tritox-onboarding-status-dot,
+  .tritox-onboarding-hero-right::before,
+  .tritox-onboarding-hero-right::after {
+    animation: none;
+  }
+
+  .tritox-onboarding-hero-left,
+  .tritox-onboarding-pdf-btn,
+  .tritox-onboarding-pdf-arrow,
+  .tritox-onboarding-pdf-btn::before {
+    transition: none;
   }
 }
