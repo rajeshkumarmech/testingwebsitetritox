@@ -1156,34 +1156,6 @@ function HomePage() {
             </div>
 
 
-            {/* Price floating card */}
-            {/* <div className="floating-price-card">
-
-              <span className="price-label">
-                Support from
-              </span>
-
-              <strong>
-                &lt; $1
-              </strong>
-
-              <span className="price-per">
-                per quote
-              </span>
-
-            </div> */}
-
-
-            {/* Quote types card */}
-            {/* <div className="floating-types-card">
-
-              <span>Auto</span>
-              <span>Home</span>
-              <span>Bundle</span>
-
-            </div> */}
-
-
             {/* Caption */}
             <div className="logo-caption">
 
@@ -1263,38 +1235,6 @@ function HomePage() {
       </section>
 
 
-      {/* ================= CTA ================= */}
-
-      {/* <section className="section home-cta-section">
-
-        <div className="container home-cta-content">
-
-          <div>
-
-            <p
-              className="eyebrow light-eyebrow"
-              style={{ fontSize: "18px" }}
-            >
-              Start Today
-            </p>
-
-            <h2>
-              Ready to improve your quote preparation workflow?
-            </h2>
-
-          </div>
-
-
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="cta-yellow-button"
-          >
-            Start Your Free Trial →
-          </button>
-
-        </div>
-
-      </section> */}
 
     </main>
   );
@@ -1571,173 +1511,372 @@ Coverage Support</small>
 
 
           <div className="quote-service-grid">
+{/* ================================
+    AUTO
+================================ */}
 
-            {/* AUTO */}
-            <article className="quote-service-card auto-service-card">
+<article className="tritox-quote-service-card tritox-auto-service-card">
 
-              <div className="quote-card-image">
-                <img
-                  src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=85"
-                  alt="Auto insurance quote preparation"
-                />
+  <div className="tritox-quote-card-image">
 
-                <div className="quote-image-label">
-                  AUTO
-                </div>
-              </div>
+    <img
+      src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=85"
+      alt="Auto insurance quote preparation"
+    />
 
-              <div className="quote-card-content">
+    <div className="tritox-quote-image-label">
+      AUTO
+    </div>
 
-                <div className="service-card-top">
-                  <div className="service-card-icon auto-icon">
-                    A
-                  </div>
+  </div>
 
-                  <span className="service-card-number">
-                    01
-                  </span>
-                </div>
+  <div className="tritox-quote-card-content">
 
-                <h3>Auto Quote Preparation</h3>
+    <div className="tritox-service-card-top">
 
-                <p>
-                  Comprehensive support covering customer and prior-insurance
-                  information validation, driver and vehicle data review,
-                  coverage entry based on agency standards, and premium option
-                  comparison.
-                </p>
+      <div className="tritox-service-card-icon tritox-auto-icon">
+        A
+      </div>
 
-                <div className="service-tag-list">
-                  <span>Customer data review</span>
-                  <span>Driver validation</span>
-                  <span>Vehicle information</span>
-                  <span>Coverage entry</span>
-                  
-                </div>
+      <span className="tritox-service-card-number">
+        01
+      </span>
 
-              
+    </div>
 
-              </div>
-              <p className="service-card-note">
-                 
-                  Support for Farmers  in 
-                  accordance with agency defined quoting criteria.
-                </p>
-            </article>
+    <h3>Auto Quote Preparation</h3>
 
+    <p>
+      Comprehensive support covering customer and prior-insurance
+      information validation, driver and vehicle data review,
+      coverage entry based on agency standards, and premium
+      option comparison.
+    </p>
 
-            {/* HOME */}
-            <article className="quote-service-card home-service-card">
+    <div className="tritox-service-tag-list">
 
-              <div className="quote-card-image">
-                <img
-                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85"
-                  alt="Home insurance quote preparation"
-                />
+      <span>Customer data review</span>
 
-                <div className="quote-image-label">
-                  HOME
-                </div>
-              </div>
+      <span>Driver validation</span>
 
-              <div className="quote-card-content">
+      <span>Vehicle information</span>
 
-                <div className="service-card-top">
-                  <div className="service-card-icon home-icon">
-                    H
-                  </div>
+      <span>Coverage entry</span>
 
-                  <span className="service-card-number">
-                    02
-                  </span>
-                </div>
+    </div>
 
-                <h3>Home Quote Preparation</h3>
+  </div>
 
-                <p>
-                  Structured support covering property address validation,
-                  home characteristics and feature review, and applicable
-                  coverage entry aligned with the agency's established Home
-                  quoting standards.
-                </p>
+  <p className="tritox-service-card-note">
+    Support for Farmers in accordance with agency defined
+    quoting criteria.
+  </p>
 
-                <div className="service-tag-list">
-                  <span>Address validation</span>
-                  <span>Property review</span>
-                  <span>Home features,Coverage details</span>
-                  
-                </div>
-
-                {/* <p className="service-card-note">
-                  Consistent preparation support designed around your agency's
-                  Home quoting workflow.
-                </p> */}
-
-              </div>
-              <p className="service-card-note">
-                  Consistent preparation support designed around your agency's
-                  Home quoting workflow.
-                </p>
-            </article>
+</article>
 
 
-            {/* BUNDLE */}
-            <article className="quote-service-card bundle-service-card">
+{/* ================================
+    HOME
+================================ */}
 
-              <div className="quote-card-image">
-                <img
-                  src="/bundle.png"
-                  alt="Bundle insurance opportunity"
-                />
+<article className="tritox-quote-service-card tritox-home-service-card">
 
-                <div className="quote-image-label">
-                  BUNDLE
-                </div>
-              </div>
+  <div className="tritox-quote-card-image">
 
-              <div className="quote-card-content">
+    <img
+      src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85"
+      alt="Home insurance quote preparation"
+    />
 
-                <div className="service-card-top">
-                  <div className="service-card-icon bundle-icon">
-                    B
-                  </div>
+    <div className="tritox-quote-image-label">
+      HOME
+    </div>
 
-                  <span className="service-card-number">
-                    03
-                  </span>
-                </div>
+  </div>
 
-                <h3>Bundle Quote Preparation</h3>
+  <div className="tritox-quote-card-content">
 
-                <p>
-                  Coordinated preparation of Auto and Home opportunities,
-                  covering customer, vehicle, property, and coverage information
-                  across both lines.
-                </p>
+    <div className="tritox-service-card-top">
 
-                <div className="service-tag-list">
-                  <span>Auto + Home data</span>
-                  <span>Coverage alignment</span>
-                  <span>Complete records,Bundle consistency</span>
-                  
-                </div>
+      <div className="tritox-service-card-icon tritox-home-icon">
+        H
+      </div>
 
-                {/* <p className="service-card-note">
-                  Maintain complete, accurate, and consistent quote data within
-                  bundled opportunities.
-                </p> */}
+      <span className="tritox-service-card-number">
+        02
+      </span>
 
-              </div>
-              <p className="service-card-note">
-                  Maintain complete, accurate, and consistent quote data within
-                  bundled opportunities.
-                </p> 
-            </article>
+    </div>
+
+    <h3>Home Quote Preparation</h3>
+
+    <p>
+      Structured support covering property address validation,
+      home characteristics and feature review, and applicable
+      coverage entry aligned with the agency's established Home
+      quoting standards.
+    </p>
+
+    <div className="tritox-service-tag-list">
+
+      <span>Address validation</span>
+
+      <span>Property review</span>
+
+      <span>Home features</span>
+
+      <span>Coverage details</span>
+
+    </div>
+
+  </div>
+
+  <p className="tritox-service-card-note">
+    Consistent preparation support designed around your agency's
+    Home quoting workflow.
+  </p>
+
+</article>
+
+
+{/* ================================
+    BUNDLE
+================================ */}
+
+<article className="tritox-quote-service-card tritox-bundle-service-card">
+
+  <div className="tritox-quote-card-image">
+
+    <img
+      src="/bundle.png"
+      alt="Bundle insurance opportunity"
+    />
+
+    <div className="tritox-quote-image-label">
+      BUNDLE
+    </div>
+
+  </div>
+
+  <div className="tritox-quote-card-content">
+
+    <div className="tritox-service-card-top">
+
+      <div className="tritox-service-card-icon tritox-bundle-icon">
+        B
+      </div>
+
+      <span className="tritox-service-card-number">
+        03
+      </span>
+
+    </div>
+
+    <h3>Bundle Quote Preparation</h3>
+
+    <p>
+      Coordinated preparation of Auto and Home opportunities,
+      covering customer, vehicle, property, and coverage
+      information across both lines.
+    </p>
+
+    <div className="tritox-service-tag-list">
+
+      <span>Auto + Home data</span>
+
+      <span>Coverage alignment</span>
+
+      <span>Complete records</span>
+
+      <span>Bundle consistency</span>
+
+    </div>
+
+  </div>
+
+  <p className="tritox-service-card-note">
+    Maintain complete, accurate, and consistent quote data
+    within bundled opportunities.
+  </p>
+
+</article>
+            {/* ================================
+    RENTERS QUOTE PREPARATION
+================================ */}
+
+<article className="tritox-quote-service-card tritox-renters-service-card">
+
+  <div className="tritox-quote-card-image">
+    <img
+      src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=85"
+      alt="Renters insurance quote preparation"
+    />
+
+    <div className="tritox-quote-image-label">
+      RENTERS
+    </div>
+  </div>
+
+  <div className="tritox-quote-card-content">
+
+    <div className="tritox-service-card-top">
+
+      <div className="tritox-service-card-icon tritox-renters-icon">
+        R
+      </div>
+
+      <span className="tritox-service-card-number">
+        03
+      </span>
+
+    </div>
+
+    <h3>Renters Quote Preparation</h3>
+
+    <p>
+      Structured support covering property address validation,
+      rental and occupancy details, personal property information,
+      and applicable coverage entry aligned with the agency's
+      established Renters quoting standards.
+    </p>
+
+    <div className="tritox-service-tag-list">
+      <span>Address validation</span>
+      <span>Rental details</span>
+      <span>Personal property</span>
+      <span>Coverage details</span>
+    </div>
+
+  </div>
+
+  <p className="tritox-service-card-note">
+    Consistent preparation support designed around your agency's
+    Renters quoting workflow.
+  </p>
+
+</article>
+
+
+{/* ================================
+    UMBRELLA QUOTE PREPARATION
+================================ */}
+
+<article className="tritox-quote-service-card tritox-umbrella-service-card">
+
+  <div className="tritox-quote-card-image">
+    <img
+      src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+      alt="Umbrella insurance quote preparation"
+    />
+
+    <div className="tritox-quote-image-label">
+      UMBRELLA
+    </div>
+  </div>
+
+  <div className="tritox-quote-card-content">
+
+    <div className="tritox-service-card-top">
+
+      <div className="tritox-service-card-icon tritox-umbrella-icon">
+        U
+      </div>
+
+      <span className="tritox-service-card-number">
+        04
+      </span>
+
+    </div>
+
+    <h3>Umbrella Quote Preparation</h3>
+
+    <p>
+      Structured support covering personal liability details,
+      underlying policy information, household and asset
+      considerations, and applicable coverage entry aligned
+      with the agency's established Umbrella quoting standards.
+    </p>
+
+    <div className="tritox-service-tag-list">
+      <span>Liability details</span>
+      <span>Underlying policies</span>
+      <span>Asset review</span>
+      <span>Coverage details</span>
+    </div>
+
+  </div>
+
+  <p className="tritox-service-card-note">
+    Consistent preparation support designed around your agency's
+    Umbrella quoting workflow.
+  </p>
+
+</article>
+
+
+{/* ================================
+    LIFE QUOTE PREPARATION
+================================ */}
+
+<article className="tritox-quote-service-card tritox-life-service-card">
+
+  <div className="tritox-quote-card-image">
+    <img
+      src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=85"
+      alt="Life insurance quote preparation"
+    />
+
+    <div className="tritox-quote-image-label">
+      LIFE
+    </div>
+  </div>
+
+  <div className="tritox-quote-card-content">
+
+    <div className="tritox-service-card-top">
+
+      <div className="tritox-service-card-icon tritox-life-icon">
+        L
+      </div>
+
+      <span className="tritox-service-card-number">
+        05
+      </span>
+
+    </div>
+
+    <h3>Life Quote Preparation</h3>
+
+    <p>
+      Structured support covering applicant information,
+      coverage requirements, beneficiary details, and
+      applicable policy information aligned with the
+      agency's established Life quoting standards.
+    </p>
+
+    <div className="tritox-service-tag-list">
+      <span>Applicant details</span>
+      <span>Coverage needs</span>
+      <span>Beneficiary information</span>
+      <span>Policy details</span>
+    </div>
+
+  </div>
+
+  <p className="tritox-service-card-note">
+    Consistent preparation support designed around your agency's
+    Life quoting workflow.
+  </p>
+
+</article>
 
           </div>
 
         </div>
       </section>
+
+
+
 
 
       {/* =====================================================
@@ -1931,44 +2070,28 @@ Coverage Support</small>
             </div>
 
 
-            <div className="crm-platform-grid">
-
-              {crmPlatforms.map((platform) => (
-
-                <article
-                  key={platform.name}
-                  className={`crm-platform-card ${platform.className}`}
-                >
-
-                  <div className="crm-platform-logo-wrapper">
-
-                    {platform.logo ? (
-                      <img
-                        src={platform.logo}
-                        alt={`${platform.name} logo`}
-                        className="crm-platform-logo-image"
-                      />
-                    ) : (
-                      <span className="crm-platform-mark">
-                        {platform.shortName}
-                      </span>
-                    )}
-
-                  </div>
-
-                  {/* <strong>
-                    {platform.name}
-                  </strong> */}
-
-                  {/* <span className="platform-arrow">
-                    →
-                  </span> */}
-
-                </article>
-
-              ))}
-
-            </div>
+            <div className="tritox-crm-platform-grid">
+  {crmPlatforms.map((platform) => (
+    <article
+      key={platform.name}
+      className={`tritox-crm-platform-card ${platform.className}`}
+    >
+      <div className="tritox-crm-platform-image-wrapper">
+        {platform.logo ? (
+          <img
+            src={platform.logo}
+            alt={`${platform.name} logo`}
+            className="tritox-crm-platform-image"
+          />
+        ) : (
+          <span className="tritox-crm-platform-mark">
+            {platform.shortName}
+          </span>
+        )}
+      </div>
+    </article>
+  ))}
+</div>
 
           </div>
 
@@ -2439,7 +2562,7 @@ function AdvantagePage() {
       <div className="advantage-hero-stats">
 
         <div className="advantage-stat">
-          <strong>70%</strong>
+          <strong>70% </strong>
           <span>Potential Cost Savings</span>
         </div>
 
@@ -2484,7 +2607,7 @@ function AdvantagePage() {
 
           <div className="chart-labels">
             {/* <span>Capacity</span> */}
-            <strong>Capacity :  70%</strong>
+            <strong>Capacity :  70% ↑</strong>
           </div>
 
           <div className="chart-bars">
@@ -3166,14 +3289,14 @@ function ImpactPage() {
               </div>
 
               <div className="team-role-row quote-team-role">
-                <div className="team-role-icon">Q</div>
+                <div className="team-role-icon" style={{ fontSize: "22px" }}>Q</div>
 
                 <div>
-                  <strong>Dedicated Quote Team</strong>
-                  <small>Backend quote preparation and CRM workflow</small>
+                  <strong style={{ fontSize: "16px" }}>Dedicated Quote Team</strong>
+                  <small style={{ fontSize: "14px" }}>Backend quote preparation and CRM workflow</small>
                 </div>
 
-                <span className="team-role-status">Focused</span>
+                <span className="team-role-status" style={{ fontSize: "12px" }}>Focused</span>
               </div>
 
               <div className="team-connection-line">
@@ -3183,17 +3306,17 @@ function ImpactPage() {
               </div>
 
               <div className="team-role-row producer-team-role">
-                <div className="team-role-icon">P</div>
+                <div className="team-role-icon" style={{ fontSize: "22px" }}>P</div>
 
                 <div>
-                  <strong>Producer Team</strong>
-                  <small>Customer engagement, follow-up, and closing</small>
+                  <strong style={{ fontSize: "16px" }}>Producer Team</strong>
+                  <small style={{ fontSize: "14px" }}>Customer engagement, follow-up, and closing</small>
                 </div>
 
-                <span className="team-role-status">Client-facing</span>
+                <span className="team-role-status" style={{ fontSize: "12px" }}>Client-facing</span>
               </div>
 
-              <div className="team-structure-footer">
+              <div className="team-structure-footer" style={{ fontSize: "15px" }}>
                 <span>✓</span>
                 Clear ownership. Better focus. Stronger workflow.
               </div>
