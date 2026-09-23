@@ -2102,7 +2102,7 @@ Coverage Support</small>
             <div className="crm-dashboard-image">
 
               <img
-                src="public/graph.png"
+                src="images/crm/graph.png"
                 alt="CRM analytics dashboard"
               />
 
