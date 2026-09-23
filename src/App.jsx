@@ -760,7 +760,7 @@ name: "Matt Bennett",
 
       {/* TESTIMONIAL QUOTE */}
 
-      <p className="testimonial-quote">
+      <p className="testimonial-quote" style={{ fontSize: "14px" }}>
         “{testimonial.quote}”
       </p>
 
