@@ -19,7 +19,10 @@ const navigationItems = [
   { label: "Resource", path: "quote-team-impact" },
   { label: "Pricing", path: "pricing" },
   { label: "Success Story", path: "success-stories" },
+  
   { label: "Contact Us", path: "contact" },
+  // { label: "About", path: "about" },
+  
 ];
 
 function Navbar() {
@@ -1166,6 +1169,7 @@ function HomePage() {
 
 
             {/* Main image card */}
+            /*
             <div className="logo-card">
 
               <div className="card-shine" />
@@ -1953,7 +1957,7 @@ Coverage Support</small>
             <div className="bpo-image-card">
 
               <img
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+                src="public/graph.png"
                 alt="Insurance BPO operations team"
               />
 
@@ -2098,7 +2102,7 @@ Coverage Support</small>
             <div className="crm-dashboard-image">
 
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85"
+                src="public/graph.png"
                 alt="CRM analytics dashboard"
               />
 
@@ -5612,7 +5616,7 @@ function ContactPage() {
         </div>
       </section> */}
        {/* About Hero */}
-      <section className="about-hero">
+      <section id="about" className="about-hero">
 
   {/* Network background */}
   <div className="about-network-bg" />
@@ -6795,6 +6799,12 @@ function App() {
         <section id="success-stories" className="page-section">
           <SuccessStoryPage />
         </section>
+        {/* About */}
+        {/* <section id="about" className="about-hero">
+          <AboutPage />
+
+          
+        </section> */}
 
         {/* Contact */}
         <section id="contact" className="page-section">
