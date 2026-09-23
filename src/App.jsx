@@ -1957,7 +1957,7 @@ Coverage Support</small>
             <div className="bpo-image-card">
 
               <img
-                src="/images/crm/graph.png"
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
                 alt="Insurance BPO operations team"
               />
 
