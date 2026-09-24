@@ -2572,6 +2572,21 @@ function AdvantagePage() {
     },
     {
       number: "04",
+      title: "Renters & Umbrella Quote Preparation",
+      description:
+        "TWe also prepare Renters and Umbrella quotes when they’re part of an agency’s quoting process.",
+      points: [
+        "Verify customer and property details",
+        "Select coverage limits as per agency standards",
+        "Multi-policy discount verification",
+        "Check eligibility and quote details",
+        "Review the premium before completion",
+      ],
+      color: "blue-workflow-card",
+    },
+
+    {
+      number: "05",
       title: "Guidewire PolicyCenter Review ",
       description:
         "The prepared quote is reviewed within Guidewire PolicyCenter to complete applicable validation before final quote generation.",
@@ -2585,7 +2600,7 @@ function AdvantagePage() {
       color: "blue-workflow-card",
     },
     {
-      number: "05",
+      number: "06",
       title: "CRM Documentation & Workflow Completion",
       description:
         "Completed quote documents are uploaded to the corresponding CRM record and reviewed alongside lead information.",
@@ -3185,16 +3200,32 @@ function ImpactPage() {
     "Send  text and e-mail through the CRM"
   ];
 
-  const leadToCloseSteps = [
-    "Lead Acquisition",
-    // "CRM Intake",
-    "Eligibility & Data Review",
-    "Quote Preparation",
-    "Quote Ready",
-    // "Producer Engagement",
-    "Follow-Up",
-    "Business Close",
-  ];
+ const leadToCloseSteps = [
+  {
+    title: "Lead Acquisition",
+    type: "onboarding-yellow-step",
+  },
+  {
+    title: "Eligibility & Data Review",
+    type: "onboarding-green-step",
+  },
+  {
+    title: "Quote Preparation",
+    type: "onboarding-blue-step",
+  },
+  {
+    title: "Quote Ready",
+    type: "onboarding-yellow-step",
+  },
+  {
+    title: "Follow-Up",
+    type: "onboarding-green-step",
+  },
+  {
+    title: "Business Close",
+    type: "onboarding-blue-step",
+  },
+];
     const approvedCountries = [
     "Argentina",
     "Brazil",
@@ -3315,6 +3346,7 @@ function ImpactPage() {
         "Once a quote is ready, producers can contact the customer sooner while the opportunity is still active.",
       type: "growth-blue-card",
     },
+    
     {
       number: "05",
       title: "Stronger Conversion Opportunity",
@@ -3322,6 +3354,16 @@ function ImpactPage() {
         "Faster response times and consistent follow-up can improve the likelihood of converting qualified leads into new customers.",
       type: "growth-green-card",
     },
+        {
+      number: "06",
+      title: "Growing Customer Base",
+      description:
+        "When producers follow up sooner, they have a better chance to connect with interested leads and turn more of them into customers.",
+      type: "growth-yellow-card",
+    },
+    
+
+    
   ];
 
   return (
@@ -3514,14 +3556,14 @@ function ImpactPage() {
             </p>
           </div>
 
-     <div className="tritox-lead-flow-carousel">
+  <div className="tritox-lead-flow-carousel">
   <div className="tritox-lead-flow-track">
 
     {/* Original cards */}
     {leadToCloseSteps.map((step, index) => (
       <article
         key={`original-${index}`}
-        className="tritox-lead-flow-card"
+        className={`tritox-lead-flow-card ${step.type}`}
       >
         <div className="tritox-lead-flow-number">
           {String(index + 1).padStart(2, "0")}
@@ -3530,7 +3572,7 @@ function ImpactPage() {
         <div className="tritox-lead-flow-dot" />
 
         <h3 className="tritox-lead-flow-title">
-          {step}
+          {step.title}
         </h3>
       </article>
     ))}
@@ -3539,7 +3581,7 @@ function ImpactPage() {
     {leadToCloseSteps.map((step, index) => (
       <article
         key={`duplicate-${index}`}
-        className="tritox-lead-flow-card"
+        className={`tritox-lead-flow-card ${step.type}`}
         aria-hidden="true"
       >
         <div className="tritox-lead-flow-number">
@@ -3549,7 +3591,7 @@ function ImpactPage() {
         <div className="tritox-lead-flow-dot" />
 
         <h3 className="tritox-lead-flow-title">
-          {step}
+          {step.title}
         </h3>
       </article>
     ))}

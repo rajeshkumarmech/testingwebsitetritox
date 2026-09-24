@@ -818,88 +818,180 @@
    TRITOX LEAD TO CLOSE FLOW
 ========================================= */
 
-.tritox-lead-flow-scroll {
+/* =========================================
+   TRITOX LEAD FLOW CAROUSEL
+========================================= */
+
+.tritox-lead-flow-carousel {
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 30px 45px 45px;
-  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  padding: 35px 0;
 
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-}
+  background:
+    radial-gradient(
+      circle at 10% 50%,
+      rgba(30, 136, 229, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 50%,
+      rgba(46, 125, 50, 0.08),
+      transparent 30%
+    ),
+    #f6f9fc;
 
-.tritox-lead-flow-scroll::-webkit-scrollbar {
-  height: 6px;
-}
+  border-radius: 24px;
 
-.tritox-lead-flow-scroll::-webkit-scrollbar-track {
-  background: #eef3f8;
-  border-radius: 20px;
-}
+  /* Smooth fade at both sides */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
 
-.tritox-lead-flow-scroll::-webkit-scrollbar-thumb {
-  background: #1e88e5;
-  border-radius: 20px;
-}
-
-
-/* Horizontal track */
-
-.tritox-lead-flow-track {
-  display: flex;
-  align-items: stretch;
-  gap: 70px;
-
-  width: max-content;
-  min-width: 100%;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
 }
 
 
 /* =========================================
-   CARD
+   INFINITE CAROUSEL TRACK
+========================================= */
+
+.tritox-lead-flow-track {
+  display: flex;
+  width: max-content;
+  gap: 22px;
+
+  animation: tritoxLeadFlow 28s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* Pause carousel when mouse is over it */
+
+.tritox-lead-flow-carousel:hover
+.tritox-lead-flow-track {
+  animation-play-state: paused;
+}
+
+
+/* Infinite movement */
+
+@keyframes tritoxLeadFlow {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================
+   COMMON CARD
 ========================================= */
 
 .tritox-lead-flow-card {
   position: relative;
 
-  width: 220px;
-  min-width: 220px;
-  min-height: 190px;
+  flex: 0 0 250px;
+  height: 175px;
 
-  padding: 28px 24px;
+  padding: 28px;
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
 
-  background: #ffffff;
+  overflow: hidden;
 
-  border: 1px solid rgba(30, 136, 229, 0.12);
-  border-radius: 18px;
+  border-radius: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
 
   box-shadow:
-    0 8px 25px rgba(18, 57, 92, 0.07);
-
-  box-sizing: border-box;
+    0 12px 30px rgba(20, 50, 80, 0.10);
 
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-sizing: border-box;
 }
 
 
 /* Card hover */
 
 .tritox-lead-flow-card:hover {
-  transform: translateY(-7px);
-
-  border-color: rgba(30, 136, 229, 0.35);
+  transform: translateY(-9px) scale(1.02);
 
   box-shadow:
-    0 16px 35px rgba(18, 57, 92, 0.12);
+    0 22px 45px rgba(20, 50, 80, 0.18);
+}
+
+
+/* =========================================
+   YELLOW STEP
+   Lead Acquisition / Quote Ready
+========================================= */
+
+.tritox-lead-flow-card.onboarding-yellow-step {
+  background:
+    linear-gradient(
+      135deg,
+      #fffdf2 0%,
+      #fff7c7 50%,
+      #ffe98a 100%
+    );
+
+  border-color: rgba(230, 180, 20, 0.25);
+}
+
+
+/* =========================================
+   GREEN STEP
+   Eligibility / Follow-Up
+========================================= */
+
+.tritox-lead-flow-card.onboarding-green-step {
+  background:
+    linear-gradient(
+      135deg,
+      #f2fff7 0%,
+      #d9f7e5 50%,
+      #b9ebcc 100%
+    );
+
+  border-color: rgba(46, 125, 50, 0.20);
+}
+
+
+/* =========================================
+   BLUE STEP
+   Quote Preparation / Business Close
+========================================= */
+
+.tritox-lead-flow-card.onboarding-blue-step {
+  background:
+    linear-gradient(
+      135deg,
+      #f1f8ff 0%,
+      #d9edff 50%,
+      #b8dcff 100%
+    );
+
+  border-color: rgba(30, 136, 229, 0.22);
 }
 
 
@@ -908,13 +1000,48 @@
 ========================================= */
 
 .tritox-lead-flow-number {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  position: absolute;
 
-  color: #1e88e5;
+  top: 17px;
+  left: 18px;
 
-  margin-bottom: 20px;
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Number colors */
+
+.onboarding-yellow-step .tritox-lead-flow-number {
+  color: #a87900;
+}
+
+.onboarding-green-step .tritox-lead-flow-number {
+  color: #237a39;
+}
+
+.onboarding-blue-step .tritox-lead-flow-number {
+  color: #1769aa;
 }
 
 
@@ -923,31 +1050,61 @@
 ========================================= */
 
 .tritox-lead-flow-dot {
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
+
+  margin-bottom: 20px;
 
   border-radius: 50%;
 
-  background: #22c55e;
-
-  margin-bottom: 18px;
-
-  box-shadow:
-    0 0 0 5px rgba(34, 197, 94, 0.12);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  animation: tritoxDotPulse 2s ease-in-out infinite;
 }
 
 
-/* Dot hover */
+/* Yellow dot */
 
-.tritox-lead-flow-card:hover .tritox-lead-flow-dot {
-  transform: scale(1.2);
+.onboarding-yellow-step .tritox-lead-flow-dot {
+  background: #e6b800;
 
   box-shadow:
-    0 0 0 7px rgba(34, 197, 94, 0.12);
+    0 0 0 6px rgba(230, 184, 0, 0.12),
+    0 0 20px rgba(230, 184, 0, 0.35);
+}
+
+
+/* Green dot */
+
+.onboarding-green-step .tritox-lead-flow-dot {
+  background: #2e8b57;
+
+  box-shadow:
+    0 0 0 6px rgba(46, 139, 87, 0.12),
+    0 0 20px rgba(46, 139, 87, 0.35);
+}
+
+
+/* Blue dot */
+
+.onboarding-blue-step .tritox-lead-flow-dot {
+  background: #1e88e5;
+
+  box-shadow:
+    0 0 0 6px rgba(30, 136, 229, 0.12),
+    0 0 20px rgba(30, 136, 229, 0.35);
+}
+
+
+/* Dot animation */
+
+@keyframes tritoxDotPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
 }
 
 
@@ -958,191 +1115,148 @@
 .tritox-lead-flow-title {
   margin: 0;
 
-  font-size: 15px;
+  max-width: 185px;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 20px;
   line-height: 1.35;
 
-  font-weight: 600;
+  font-weight: 750;
 
   color: #17324d;
-  font-family: "Poppins", Arial, sans-serif;
+
+  letter-spacing: -0.3px;
 }
 
 
 /* =========================================
-   ARROW CONNECTOR
+   LIGHT SHINE EFFECT
 ========================================= */
 
-.tritox-lead-flow-card:not(:last-child)::after {
-  content: "→";
+.tritox-lead-flow-card::before {
+  content: "";
 
   position: absolute;
 
-  top: 50%;
-  right: -54px;
+  top: 0;
+  left: -120%;
 
-  transform: translateY(-50%);
+  width: 70%;
+  height: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
 
-  width: 38px;
-  height: 38px;
+  transform: skewX(-20deg);
 
-  font-size: 25px;
-  font-weight: 700;
+  transition: left 0.8s ease;
 
-  color: #1e88e5;
-
-  opacity: 0.65;
-
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  pointer-events: none;
 }
 
 
-/* Arrow hover */
-
-.tritox-lead-flow-card:hover::after {
-  transform: translate(7px, -50%);
-  opacity: 1;
+.tritox-lead-flow-card:hover::before {
+  left: 150%;
 }
 
 
 /* =========================================
-   RESPONSIVE
+   CONNECTING LINE
+========================================= */
+
+.tritox-lead-flow-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -22px;
+  top: 50%;
+
+  width: 22px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(30, 136, 229, 0.35),
+    transparent
+  );
+}
+
+
+/* =========================================
+   MOBILE
 ========================================= */
 
 @media (max-width: 768px) {
 
-  .tritox-lead-flow-scroll {
-    padding: 25px 20px 35px;
+  .tritox-lead-flow-carousel {
+    padding: 25px 0;
+
+    border-radius: 18px;
+
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 3%,
+      black 97%,
+      transparent
+    );
+
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 3%,
+      black 97%,
+      transparent
+    );
   }
 
   .tritox-lead-flow-track {
-    gap: 55px;
+    gap: 15px;
+
+    animation-duration: 24s;
   }
 
   .tritox-lead-flow-card {
-    width: 200px;
-    min-width: 200px;
-    min-height: 175px;
+    flex: 0 0 220px;
 
-    padding: 24px 20px;
-  }
+    height: 155px;
 
-  .tritox-lead-flow-card:not(:last-child)::after {
-    right: -44px;
+    padding: 23px;
 
-    width: 32px;
-    height: 32px;
-
-    font-size: 22px;
+    border-radius: 18px;
   }
 
   .tritox-lead-flow-title {
-    font-size: 17px;
-  }
-}
-/* =========================================
-   ANIMATED ARROW
-========================================= */
-
-.tritox-lead-flow-card:not(:last-child)::after {
-  content: "→";
-
-  position: absolute;
-  top: 50%;
-  right: -54px;
-
-  transform: translateY(-50%);
-
-  width: 38px;
-  height: 38px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 26px;
-  font-weight: 700;
-
-  color: #1e88e5;
-
-  opacity: 0.65;
-
-  animation: tritoxArrowFlow 1.8s ease-in-out infinite;
-}
-
-
-/* Arrow movement */
-
-@keyframes tritoxArrowFlow {
-  0% {
-    transform: translate(-4px, -50%);
-    opacity: 0.35;
+    font-size: 18px;
   }
 
-  50% {
-    transform: translate(6px, -50%);
-    opacity: 1;
-  }
+  .tritox-lead-flow-number {
+    width: 38px;
+    height: 38px;
 
-  100% {
-    transform: translate(-4px, -50%);
-    opacity: 0.35;
+    top: 14px;
+    right: 14px;
   }
 }
 
 
 /* =========================================
-   ANIMATED DOT
+   REDUCED MOTION
 ========================================= */
 
-.tritox-lead-flow-dot {
-  width: 12px;
-  height: 12px;
+@media (prefers-reduced-motion: reduce) {
 
-  border-radius: 50%;
-
-  background: #22c55e;
-
-  margin-bottom: 18px;
-
-  box-shadow:
-    0 0 0 5px rgba(34, 197, 94, 0.12);
-
-  animation: tritoxDotPulse 1.8s ease-in-out infinite;
-}
-
-
-@keyframes tritoxDotPulse {
-  0% {
-    transform: scale(1);
-    box-shadow:
-      0 0 0 5px rgba(34, 197, 94, 0.12);
-  }
-
-  50% {
-    transform: scale(1.25);
-    box-shadow:
-      0 0 0 9px rgba(34, 197, 94, 0.05);
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow:
-      0 0 0 5px rgba(34, 197, 94, 0.12);
+  .tritox-lead-flow-track,
+  .tritox-lead-flow-dot {
+    animation: none;
   }
 }
-
-
-
-
-
-
-
 
 /* ========================================
    FOOTER SOCIAL MEDIA
