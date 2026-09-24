@@ -1570,7 +1570,7 @@ function ServicesPage() {
 
   {/* Bundle */}
   <div className="network-flow-node node-bundle">
-    <div className="network-icon">P</div>
+    <div className="network-icon">R</div>
     <strong>Renters</strong>
     <small>Quote Processing</small>
   </div>
@@ -2117,6 +2117,7 @@ Coverage Support</small>
           <div className="premium-section-heading">
 
             <div>
+              
 
               <span
   className="eyebrow crm-eyebrow"
@@ -2127,21 +2128,16 @@ Coverage Support</small>
 
               <h2>
                 Accurate CRM data.
-              <span
-  style={{
-    
-    color: "#ffffff",
-    
-  }}
->
-  Clear pipeline visibility.
-</span>
+              <span style={{color: "#ffffff", }}>
+                    Clear pipeline visibility.
+                  </span>
                 Better sales operations.
               </h2>
+              
 
             </div>
 
-            <p>
+            <p >
               Tritox provides structured CRM management support across leading
               insurance agency platforms, helping Farmers agencies maintain
               accurate, organized, and actionable lead and opportunity data
@@ -6715,46 +6711,22 @@ function NotFoundPage() {
 // }
 
 function Footer() {
-  const socialLinks = [
-    {
-      name: "Facebook",
-      shortName: "f",
-      href: "https://facebook.com/tritoxtechnologies",
-      image:"/images/socialmedia/facebook.png"
-    },
-    {
-      name: "LinkedIn",
-      shortName: "in",
-      href: "https://linkedin.com/company/tritoxtechnologies",
-      image:"/images/socialmedia/linkedin.png"
-    },
-    {
-      name: "Instagram",
-      shortName: "ig",
-      href: "https://instagram.com/tritoxtechnologies",
-      image:"/images/socialmedia/instagram.png"
-    },
-    // {
-    //   name: "X",
-    //   shortName: "𝕏",
-    //   href: "https://x.com/tritoxtechnologies",
-    // },
-  ];
-
   return (
     <footer className="footer">
       <div className="container footer-content">
 
-        {/* Brand */}
+        {/* COLUMN 1 - BRAND */}
         <div className="footer-brand-section">
           <Link to="/" className="footer-brand">
             <img
               src="/tritox_logo.png"
-            
+              alt="Tritox Technologies"
               className="brand-logo"
             />
 
-            <span style={{ color:  "#1565c0" }}>Tritox Technologies</span>
+            <span style={{ color: "#1565c0" }}>
+              Tritox Technologies
+            </span>
           </Link>
 
           <p>
@@ -6762,87 +6734,81 @@ function Footer() {
             insurance agencies.
           </p>
 
-    <div className="footer-social">
-  <a
-    href="https://facebook.com/tritoxtechnologies"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-    className="footer-social-link"
-  >
-    <img
-      src="/images/socialmedia/linkedin.png"
-      alt="Facebook"
-      className="footer-social-icon"
-    />
-  </a>
+          {/* Social Media */}
+          <div className="footer-social">
 
-  <a
-    href="https://linkedin.com/company/tritoxtechnologies"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-    className="footer-social-link"
-  >
-    <img
-      src="/images/socialmedia/facebook.png"
-      alt="LinkedIn"
-      className="footer-social-icon"
-    />
-  </a>
+            <a
+              href="https://facebook.com/tritoxtechnologies"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="footer-social-link"
+            >
+              <img
+                src="/images/socialmedia/facebook.png"
+                alt="Facebook"
+                className="footer-social-icon"
+              />
+            </a>
 
-  <a
-    href="https://instagram.com/tritoxtechnologies"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-    className="footer-social-link"
-  >
-    <img
-      src="/images/socialmedia/instagram.png"
-      alt="Instagram"
-      className="footer-social-icon"
-    />
-  </a>
+            <a
+              href="https://linkedin.com/company/tritoxtechnologies"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="footer-social-link"
+            >
+              <img
+                src="/images/socialmedia/linkedin.png"
+                alt="LinkedIn"
+                className="footer-social-icon"
+              />
+            </a>
 
-  {/* <a
-    href="https://x.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="X"
-    className="footer-social-link"
-  >
-    <img
-      src="/x.png"
-      alt="X"
-      className="footer-social-icon"
-    /> 
-  </a>*/}
-</div>
+            <a
+              href="https://instagram.com/tritoxtechnologies"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="footer-social-link"
+            >
+              <img
+                src="/images/socialmedia/instagram.png"
+                alt="Instagram"
+                className="footer-social-icon"
+              />
+            </a>
+
+          </div>
         </div>
 
-    
-       {/* Footer Links */}
-<div className="footer-links">
-  <a href="#home">Home</a>
 
-  <a href="#services">Services</a>
-  <a href="#tritox-advantage">Tritox Advantage</a>
+        {/* COLUMN 2 - QUICK LINKS */}
+        <div className="footer-column">
+          <h4>Quick Links</h4>
 
-  <a href="#pricing">Pricing</a>
+          <div className="footer-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#tritox-advantage">Tritox Advantage</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+        </div>
 
-  <a href="#quote-team-impact">Resource</a>
 
-  <a href="#success-stories">
-    Success Stories
-  </a>
+        {/* COLUMN 3 - COMPANY */}
+        <div className="footer-column">
+          <h4>Explore</h4>
 
-  <a href="#contact">
-    Contact Us
-  </a>
+          <div className="footer-links">
+            <a href="#quote-team-impact">Resource</a>
+            <a href="#success-stories">Success Stories</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </div>
 
-</div>
       </div>
+
 
       {/* Bottom */}
       <div className="container footer-bottom">
@@ -6853,7 +6819,6 @@ function Footer() {
     </footer>
   );
 }
-
 
 
 
