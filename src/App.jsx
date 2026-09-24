@@ -100,6 +100,8 @@ function Navbar() {
 function SuccessStoryPage() {
   const [openFaq, setOpenFaq] = useState(null);
 
+  
+
   const testimonials = [
     {
       rating: "5.0",
@@ -687,103 +689,153 @@ name: "Matt Bennett",
          
 
           {/* TESTIMONIAL CARDS */}
+<div className="testimonial-carousel">
+  <div className="testimonial-carousel-track">
 
-<div className="testimonial-card-grid">
+    {/* FIRST SET */}
+    {testimonials.map((testimonial, index) => (
+      <article
+        key={`first-${index}`}
+        className="testimonial-carousel-card"
+      >
 
-  {testimonials.map((testimonial) => (
+        <div className="testimonial-carousel-footer">
 
-    <article
-      key={testimonial.name}
-      className="testimonial-card"
-    >
+          <div className="testimonial-carousel-avatar">
+            {testimonial.name
+              .split(" ")
+              .map((name) => name[0])
+              .join("")}
+          </div>
 
-      {/* CUSTOMER DETAILS - FIRST */}
+          <div className="testimonial-carousel-client">
 
-      <div className="testimonial-footer">
+            <strong>
+              {testimonial.name}
+            </strong>
 
-        <div className="testimonial-avatar">
+            <span>
+              {testimonial.role} | {testimonial.location}
+            </span>
 
-          {testimonial.name
-            .split(" ")
-            .map((name) => name[0])
-            .join("")}
+            {testimonial.recognition && (
+              <small>
+                {testimonial.recognition}
+              </small>
+            )}
 
-          {/* Optional Image */}
-          {/* <img
-            src={testimonial.image}
-            alt="Customer"
-          /> */}
+          </div>
 
         </div>
 
-        <div className="testimonial-client">
 
-          <strong>
-            {testimonial.name}
-          </strong>
+        <div className="testimonial-carousel-top">
 
-          <span>
-            {testimonial.role} |{" "}
-            {testimonial.location}
+          <div className="testimonial-carousel-rating">
+
+            <span className="testimonial-small-stars">
+              ★★★★★
+            </span>
+
+            <strong>
+              {testimonial.rating}
+            </strong>
+
+          </div>
+
+          <span className="testimonial-quote-mark">
+            “
           </span>
 
-          {testimonial.recognition && (
-            <small>
-              {testimonial.recognition}
-            </small>
-          )}
+        </div>
+
+
+        <p className="testimonial-carousel-quote">
+          “{testimonial.quote}”
+        </p>
+
+
+        <div className="testimonial-carousel-service">
+          <span>Service:</span>{" "}
+          {testimonial.service}
+        </div>
+
+      </article>
+    ))}
+
+
+    {/* DUPLICATE SET FOR SEAMLESS LOOP */}
+    {testimonials.map((testimonial, index) => (
+      <article
+        key={`second-${index}`}
+        className="testimonial-carousel-card"
+      >
+
+        <div className="testimonial-carousel-footer">
+
+          <div className="testimonial-carousel-avatar">
+            {testimonial.name
+              .split(" ")
+              .map((name) => name[0])
+              .join("")}
+          </div>
+
+          <div className="testimonial-carousel-client">
+
+            <strong>
+              {testimonial.name}
+            </strong>
+
+            <span>
+              {testimonial.role} | {testimonial.location}
+            </span>
+
+            {testimonial.recognition && (
+              <small>
+                {testimonial.recognition}
+              </small>
+            )}
+
+          </div>
 
         </div>
 
-      </div>
 
+        <div className="testimonial-carousel-top">
 
-      {/* RATING */}
+          <div className="testimonial-carousel-rating">
 
-      <div className="testimonial-card-top">
+            <span className="testimonial-small-stars">
+              ★★★★★
+            </span>
 
-        <div className="testimonial-rating">
+            <strong>
+              {testimonial.rating}
+            </strong>
 
-          <span className="small-stars">
-            ★★★★★
+          </div>
+
+          <span className="testimonial-quote-mark">
+            “
           </span>
 
-          <strong>
-            {testimonial.rating}
-          </strong>
-
         </div>
 
-        <span className="quote-mark">
-          “
-        </span>
 
-      </div>
-
-
-      {/* TESTIMONIAL QUOTE */}
-
-      <p className="testimonial-quote" style={{ fontSize: "14px" }}>
-        “{testimonial.quote}”
-      </p>
+        <p className="testimonial-carousel-quote">
+          “{testimonial.quote}”
+        </p>
 
 
-      {/* SERVICE */}
+        <div className="testimonial-carousel-service">
+          <span>Service:</span>{" "}
+          {testimonial.service}
+        </div>
 
-      <div className="testimonial-service">
+      </article>
+    ))}
 
-        <span>
-          Service:
-        </span>
-
-        {testimonial.service}
-
-      </div>
-
-    </article>
-
-  ))}
-
+  </div>
 </div>
           </div>
 
@@ -1086,7 +1138,7 @@ function HomePage() {
 
             <h1>
               Farmers Insurance Quote Preparation Support
-              <span> Less Than $1 per Quote</span>
+              <span style={{fontSize: "42px"}}> Less Than $1 per Quote</span>
             </h1>
 
             <p className="hero-description">
@@ -2066,9 +2118,12 @@ Coverage Support</small>
 
             <div>
 
-              <p className="eyebrow crm-eyebrow">
-                CRM MANAGEMENT
-              </p>
+              <span
+  className="eyebrow crm-eyebrow"
+  style={{ fontFamily: "poppins, Arial, sans-serif" }}
+>
+  Crm Management 
+</span>
 
               <h2>
                 Accurate CRM data.
@@ -3466,11 +3521,13 @@ function ImpactPage() {
             </p>
           </div>
 
-      <div className="tritox-lead-flow-scroll">
+     <div className="tritox-lead-flow-carousel">
   <div className="tritox-lead-flow-track">
+
+    {/* Original cards */}
     {leadToCloseSteps.map((step, index) => (
       <article
-        key={step}
+        key={`original-${index}`}
         className="tritox-lead-flow-card"
       >
         <div className="tritox-lead-flow-number">
@@ -3484,6 +3541,26 @@ function ImpactPage() {
         </h3>
       </article>
     ))}
+
+    {/* Duplicate cards for seamless carousel */}
+    {leadToCloseSteps.map((step, index) => (
+      <article
+        key={`duplicate-${index}`}
+        className="tritox-lead-flow-card"
+        aria-hidden="true"
+      >
+        <div className="tritox-lead-flow-number">
+          {String(index + 1).padStart(2, "0")}
+        </div>
+
+        <div className="tritox-lead-flow-dot" />
+
+        <h3 className="tritox-lead-flow-title">
+          {step}
+        </h3>
+      </article>
+    ))}
+
   </div>
 </div>
           <div className="lead-flow-summary">
@@ -3807,7 +3884,7 @@ function ImpactPage() {
       </div>
 
       <a
-        href="/Onboarding document.pdf"
+        href="/Onboarding guidence.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="tritox-onboarding-pdf-btn"
@@ -4057,23 +4134,15 @@ function ImpactPage() {
 
 
   {/* HORIZONTAL SCROLL CARDS */}
+  <div className="horizontal-onboarding-carousel">
   <div className="horizontal-onboarding-list">
-
     {onboardingSteps.map((step) => (
-
       <article
         key={step.number}
         className={`horizontal-onboarding-card ${step.type}`}
-        style={{
-          flex: "0 0 350px",
-          minWidth: "350px",
-          boxSizing: "border-box",
-        }}
       >
-
         {/* Step Header */}
         <div className="horizontal-onboarding-header">
-
           <span className="horizontal-onboarding-number">
             {step.number}
           </span>
@@ -4081,49 +4150,79 @@ function ImpactPage() {
           <span className="horizontal-onboarding-status">
             Setup Step
           </span>
-
         </div>
-
 
         {/* Title */}
         <h3 className="horizontal-onboarding-title">
           {step.title}
         </h3>
 
-
         {/* Description */}
         <p className="horizontal-onboarding-description">
           {step.description}
         </p>
 
-
         {/* Details */}
         <div className="horizontal-onboarding-details">
-
           {step.details.map((detail) => (
-
             <span
               key={detail}
               className="horizontal-onboarding-detail"
             >
-
               <i className="horizontal-onboarding-check">
                 ✓
               </i>
 
               {detail}
-
             </span>
-
           ))}
-
         </div>
-
       </article>
-
     ))}
 
+    {/* Duplicate cards for continuous flow */}
+    {onboardingSteps.map((step) => (
+      <article
+        key={`duplicate-${step.number}`}
+        className={`horizontal-onboarding-card ${step.type}`}
+        aria-hidden="true"
+      >
+        <div className="horizontal-onboarding-header">
+          <span className="horizontal-onboarding-number">
+            {step.number}
+          </span>
+
+          <span className="horizontal-onboarding-status">
+            Setup Step
+          </span>
+        </div>
+
+        <h3 className="horizontal-onboarding-title">
+          {step.title}
+        </h3>
+
+        <p className="horizontal-onboarding-description">
+          {step.description}
+        </p>
+
+        <div className="horizontal-onboarding-details">
+          {step.details.map((detail) => (
+            <span
+              key={detail}
+              className="horizontal-onboarding-detail"
+            >
+              <i className="horizontal-onboarding-check">
+                ✓
+              </i>
+
+              {detail}
+            </span>
+          ))}
+        </div>
+      </article>
+    ))}
   </div>
+</div>
 
 </div>
       {/* Access environment and CRM */}

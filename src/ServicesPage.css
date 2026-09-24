@@ -5,13 +5,13 @@
 .services-page {
   overflow: hidden;
   background: #ffffff;
-  font-family: "Inter", "Poppins", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .services-page h1,
 .services-page h2,
 .services-page h3 {
-  font-family: 'Poppins', arial, sans-serif;
+  font-family: "Inter", arial, sans-serif;
 }
 
 
