@@ -1221,34 +1221,31 @@ function HomePage() {
 
 
             {/* Main image card */}
-            /*
-            <div className="logo-card">
+            <div className="insurance-hero-card">
 
-              <div className="card-shine" />
+  <div className="insurance-card-shine" />
 
-              <div className="logo-card-line" />
+  <img
+    src="/hpme_img.png"
+    className="insurance-hero-image"
+    alt="Insurance technology and protection"
+  />
 
-              <img
-                src="/farmer_img.png"
-                className="hero-logo"
-                alt="Farmers Insurance quote support"
-              />
+  {/* Bottom information overlay */}
+  <div className="insurance-image-info">
 
-              {/* Bottom card information */}
-              <div className="image-card-info">
+    <div className="insurance-status">
+      <span className="insurance-status-dot" />
+      Operational Support
+    </div>
 
-                <div>
-                  <span className="status-dot" />
-                  Operational Support
-                </div>
+    <strong>
+      Insurance Quote Preparation
+    </strong>
 
-                <strong>
-                  Quote Preparation
-                </strong>
+  </div>
 
-              </div>
-
-            </div>
+</div>
 
 
             {/* Caption */}
