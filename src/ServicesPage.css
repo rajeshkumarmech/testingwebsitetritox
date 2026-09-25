@@ -220,8 +220,8 @@
 
 .premium-section-heading {
   display: grid;
-  grid-template-columns: 1.1fr .79fr;
-  gap: 70px;
+  grid-template-columns: 1.2fr .62fr;
+  gap: 60px;
   align-items: end;
 
   margin-bottom: 65px;

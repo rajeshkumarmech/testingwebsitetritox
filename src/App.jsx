@@ -6829,7 +6829,7 @@ function Footer() {
           <div className="footer-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
-            <a href="#tritox-advantage">Tritox Advantage</a>
+            <a href="#tritox-advantage">Choose Tritox </a>
             <a href="#pricing">Pricing</a>
           </div>
         </div>
