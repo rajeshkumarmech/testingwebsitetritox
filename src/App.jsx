@@ -15,13 +15,14 @@ import "./Navbar.css";
 const navigationItems = [
   { label: "Home", path: "home" },
   { label: "Services", path: "services" },
-  { label: "Choose Tritox", path: "tritox-advantage" },
+  { label: "Tritox Difference", path: "tritox-advantage" },
   { label: "Resource", path: "quote-team-impact" },
   { label: "Pricing", path: "pricing" },
   { label: "Success Story", path: "success-stories" },
+  { label: "About", path: "about" },
   
   { label: "Contact Us", path: "contact" },
-  // { label: "About", path: "about" },
+  //  { label: "About", path: "about" },
   
 ];
 
@@ -1137,7 +1138,7 @@ function HomePage() {
             </div>
 
             <h1>
-              Farmers Insurance Quote Preparation Support
+              Farmers Insurance Quote Support
               <span style={{fontSize: "42px"}}> Less Than $1 per Quote</span>
             </h1>
 
@@ -2574,7 +2575,7 @@ function AdvantagePage() {
       number: "04",
       title: "Renters & Umbrella Quote Preparation",
       description:
-        "TWe also prepare Renters and Umbrella quotes when they’re part of an agency’s quoting process.",
+        "We also prepare Renters and Umbrella quotes when they’re part of an agency’s quoting process.",
       points: [
         "Verify customer and property details",
         "Select coverage limits as per agency standards",
@@ -3556,43 +3557,63 @@ function ImpactPage() {
             </p>
           </div>
 
-  <div className="tritox-lead-flow-carousel">
-  <div className="tritox-lead-flow-track">
+ <div className="tritox-process-carousel">
+  <div className="tritox-process-track">
 
-    {/* Original cards */}
+    {/* =========================================
+        ORIGINAL CARDS
+    ========================================= */}
     {leadToCloseSteps.map((step, index) => (
       <article
         key={`original-${index}`}
-        className={`tritox-lead-flow-card ${step.type}`}
+        className={`tritox-process-card ${step.type}`}
       >
-        <div className="tritox-lead-flow-number">
+
+        {/* Number */}
+        <div className="tritox-process-number">
           {String(index + 1).padStart(2, "0")}
         </div>
 
-        <div className="tritox-lead-flow-dot" />
+        {/* Arrow */}
+        <div className="tritox-process-arrow">
+          ↗
+        </div>
 
-        <h3 className="tritox-lead-flow-title">
+        {/* Title */}
+        <h3 className="tritox-process-title">
           {step.title}
         </h3>
+
       </article>
     ))}
 
-    {/* Duplicate cards for seamless carousel */}
+
+    {/* =========================================
+        DUPLICATE CARDS
+        Required for seamless infinite carousel
+    ========================================= */}
     {leadToCloseSteps.map((step, index) => (
       <article
         key={`duplicate-${index}`}
-        className={`tritox-lead-flow-card ${step.type}`}
+        className={`tritox-process-card ${step.type}`}
         aria-hidden="true"
       >
-        <div className="tritox-lead-flow-number">
+
+        {/* Number */}
+        <div className="tritox-process-number">
           {String(index + 1).padStart(2, "0")}
         </div>
 
-        <div className="tritox-lead-flow-dot" />
+        {/* Arrow */}
+        <div className="tritox-process-arrow">
+          ⟶
+        </div>
 
-        <h3 className="tritox-lead-flow-title">
+        {/* Title */}
+        <h3 className="tritox-process-title">
           {step.title}
         </h3>
+
       </article>
     ))}
 
@@ -5749,488 +5770,7 @@ function ContactPage() {
           </Link>
         </div>
       </section> */}
-       {/* About Hero */}
-      <section id="about" className="about-hero">
-
-  {/* Network background */}
-  <div className="about-network-bg" />
-
-  {/* Dark/blue overlay */}
-  <div className="about-hero-overlay" />
-
-  {/* Grid */}
-  <div className="about-hero-grid-pattern" />
-
-  {/* Decorative circles */}
-  <div className="about-hero-circle about-hero-circle-one" />
-  <div className="about-hero-circle about-hero-circle-two" />
-  <div className="about-hero-circle about-hero-circle-three" />
-
-  {/* Animated glowing nodes */}
-  <span className="about-network-node about-node-one" />
-  <span className="about-network-node about-node-two" />
-  <span className="about-network-node about-node-three" />
-  <span className="about-network-node about-node-four" />
-  <span className="about-network-node about-node-five" />
-
-  <div className="container about-hero-content">
-
-    <div className="about-hero-text">
-<div className="about-eyebrow" style={{ color: "#ffffff" }}>
-  <span className="pulse-dot" />
-  ABOUT TRITOX TECHNOLOGIES
-</div>
-
-      <h1>
-        Structured Operations.
-        <span>Reliable Backend Support.</span>
-      </h1>
-
-      <p>
-        Tritox Technologies Private Limited is a specialized business
-        operations and backend support company serving clients worldwide.
-        We help businesses build dependable operational capacity through
-        structured processes, dedicated support, and scalable solutions.
-      </p>
-
-      <div className="about-hero-actions">
-
-        <button
-          className="about-primary-button"
-          onClick={() =>
-            document.getElementById("contact")?.scrollIntoView({
-              behavior: "smooth",
-            })
-          }
-        >
-          Talk With Our Team
-          <span>→</span>
-        </button>
-
-        <button
-          className="about-primary-button"
-          onClick={() =>
-            document.getElementById("services")?.scrollIntoView({
-              behavior: "smooth",
-            })
-          }
-        >
-          Explore Our Services
-          <span>↓</span>
-        </button>
-
-      </div>
-
-    </div>
-
-
-    {/* Right side visual */}
-    <div className="about-hero-visual">
-
-      <div className="about-glow" />
-
-      <div className="about-operation-card">
-
-        <div className="about-card-header">
-
-          <div>
-            <span>TRITOX TECHNOLOGIES</span>
-            <h3>Operational Support</h3>
-          </div>
-
-          <div className="about-status">
-            <span />
-            Active
-          </div>
-
-        </div>
-
-
-        <div className="about-card-divider" />
-
-
-        <div className="about-operation-item">
-
-          <div className="about-operation-icon">
-            ✓
-          </div>
-
-          <div>
-            <strong>Structured Workflows</strong>
-            <span>Process-driven operations</span>
-          </div>
-
-        </div>
-
-
-        <div className="about-operation-item">
-
-          <div className="about-operation-icon">
-            ↗
-          </div>
-
-          <div>
-            <strong>Scalable Capacity</strong>
-            <span>Support built around demand</span>
-          </div>
-
-        </div>
-
-
-        <div className="about-operation-item">
-
-          <div className="about-operation-icon">
-            ⚡
-          </div>
-
-          <div>
-            <strong>Reliable Execution</strong>
-            <span>Focused on consistency</span>
-          </div>
-
-        </div>
-
-
-        <div className="about-card-footer">
-
-          <span>Business Operations</span>
-
-          <strong>01</strong>
-
-        </div>
-
-      </div>
-
-
-      <div className="about-floating-badge badge-one">
-        <span>✓</span>
-        <div>
-          <strong>Reliable</strong>
-          <small>Backend Support</small>
-        </div>
-      </div>
-
-
-      <div className="about-floating-badge badge-two">
-        <span>↗</span>
-        <div>
-          <strong>Scalable</strong>
-          <small>Operations</small>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-      {/* Company introduction */}
-      <section className="section about-introduction-section">
-        <div className="container about-introduction-grid">
-          <div className="about-introduction-content">
-            <p className="eyebrow"style={{ fontSize: "18px" }}>Who We Are</p>
-
-            <h2>
-              A dependable operations partner built around disciplined
-              execution.
-            </h2>
-
-            <p>
-              Tritox Technologies Private Limited provides specialized business
-              operations and backend support services for organizations that
-              need structured, reliable, and scalable operational assistance.
-            </p>
-
-            <p>
-              Our capabilities include Farmers Insurance Quote Preparation
-              Support, Real Estate Backend Support, Broker Price Opinions
-              (BPO), and Data Entry Services—delivered through structured
-              processes aligned with each client’s operational requirements.
-            </p>
-
-          </div>
-
-          <div className="about-company-card">
-            <div className="company-card-header">
-              <span style={{ fontSize: "18px" }}>TRITOX TECHNOLOGIES</span>
-              <i>●</i>
-            </div>
-
-            <div className="company-card-main">
-              <div className="company-monogram">T</div>
-
-              <div>
-                <h3>Tritox Technologies Private Limited</h3>
-                <p>Business Operations & Backend Support</p>
-              </div>
-            </div>
-
-            <div className="company-info-grid">
-              <div>
-                <small>Founded</small>
-                <strong>2023</strong>
-              </div>
-
-              <div>
-                <small>Headquartered</small>
-                <strong>Tamil Nadu, India</strong>
-              </div>
-
-              <div>
-                <small>Structure</small>
-                <strong>Private Limited Company</strong>
-              </div>
-
-              <div>
-                <small>Service Model</small>
-                <strong>Global Client Support</strong>
-              </div>
-            </div>
-
-            <div className="company-card-footer">
-              <span>✓</span>
-              Structured processes aligned with client operations.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Operating model */}
-      <section className="about-operating-section">
-        <div className="container about-operating-grid">
-          <div className="operating-visual-card">
-            <div className="operating-card-top">
-              <span style={{ fontSize: "18px" }}>TRITOX OPERATING MODEL</span>
-              <i>✓</i>
-            </div>
-
-            <div className="operating-flow">
-              <div className="operating-flow-item">
-                <span>01</span>
-                <p>Defined Process</p>
-              </div>
-
-              <i className="operating-flow-line" />
-
-              <div className="operating-flow-item">
-                <span>02</span>
-                <p>Responsible Access</p>
-              </div>
-
-              <i className="operating-flow-line" />
-
-              <div className="operating-flow-item">
-                <span>03</span>
-                <p>Consistent Execution</p>
-              </div>
-            </div>
-
-            <div className="operating-card-bottom">
-              <div>
-                <strong>Client-Aligned</strong>
-                <small>Built around established workflows</small>
-              </div>
-
-              <span>→</span>
-            </div>
-          </div>
-
-          <div className="about-operating-content">
-            <p className="about-light-eyebrow"style={{ fontSize: "18px" }}>Built for Consistency</p>
-
-            <h2>
-              A practical operating model aligned with client systems and
-              standards.
-            </h2>
-
-            <p>
-              Founded in 2023 in Tamil Nadu, India, Tritox has built its
-              operating model around disciplined execution, domain expertise,
-              secure information handling, and consistent process alignment.
-            </p>
-
-            <p>
-              As a registered Private Limited Company, we operate with a strong
-              emphasis on corporate accountability, confidentiality,
-              operational consistency, and responsible business practices.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* What we stand for */}
-      <section className="section values-section">
-        <div className="container">
-          <div className="values-heading">
-            <div>
-              <p className="eyebrow"style={{ fontSize: "18px" }}>What We Stand For</p>
-
-              <h2>
-                Professional support delivered through clarity, discipline, and
-                responsible execution.
-              </h2>
-            </div>
-
-            <p>
-              Our approach is built to support long-term operational alignment
-              and reliable day-to-day collaboration with every client.
-            </p>
-          </div>
-
-          <div className="values-grid">
-            {values.map((value) => (
-              <article key={value.number} className="value-card">
-                <div className="value-card-top">
-                  <span className="value-icon">{value.icon}</span>
-                  <span className="value-number">
-  {value.number}
-</span>
-                </div>
-
-                <h3>{value.title}</h3>
-
-                <p>{value.description}</p>
-
-                <span className="value-card-line" />
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Security section */}
-      <section className="section security-section">
-        <div className="container security-grid">
-          <div className="security-content">
-            <p className="eyebrow"style={{ fontSize: "18px" }}>Security & Infrastructure</p>
-
-            <h2>Secure Access. Controlled Operations. Responsible Data Handling.</h2>
-
-            <p>
-              Tritox maintains a structured operating environment designed to
-              support secure, controlled, and consistent client operations.
-            </p>
-
-            <p>
-              Our teams work through authorized system access, secure
-              connectivity, defined access responsibilities, and controlled
-              data-handling practices to help safeguard agency and customer
-              information throughout day-to-day operations.
-            </p>
-
-            <div className="security-list">
-              <span>
-                <i>✓</i>
-                Authorized system access
-              </span>
-
-              <span>
-                <i>✓</i>
-                Role-based responsibilities
-              </span>
-
-              <span>
-                <i>✓</i>
-                Controlled data handling practices
-              </span>
-
-              <span>
-                <i>✓</i>
-                Consistent operational processes
-              </span>
-            </div>
-          </div>
-
-          <div className="security-visual">
-            <div className="security-panel">
-              <div className="security-panel-header">
-                <span>SECURE OPERATIONS</span>
-                <i>●</i>
-              </div>
-
-              <div className="security-lock">
-                <div className="lock-shackle" />
-                <div className="lock-body">✓</div>
-              </div>
-
-              <strong>Controlled Client Access</strong>
-
-              <p>
-                Access responsibilities aligned with assigned operational
-                requirements.
-              </p>
-
-              <div className="security-status-list">
-                <div>
-                  <span />
-                  Authorized Access
-                </div>
-
-                <div>
-                  <span />
-                  Defined Responsibilities
-                </div>
-
-                <div>
-                  <span />
-                  Controlled Operations
-                </div>
-              </div>
-            </div>
-
-            <div className="security-floating-label">
-              <span>✓</span>
-              Confidentiality-focused operations
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final call to action */}
-      <section className="about-final-cta">
-        <div className="container about-final-cta-content">
-          <div>
-            <h1 className="about-light-eyebrow"style={{ fontSize: "15px" ,color: "#ffffff" }}>Work With Tritox</h1>
-
-            <h2>
-              Build a more structured and reliable backend support model.
-            </h2>
-
-            <p>
-              Discover how Tritox can align with your existing workflows and
-              support your operational requirements.
-            </p>
-          </div>
-
-          <div className="hero-buttons">
-
-  <button
-    className="hero-primary-button"
-    onClick={() =>
-      document.getElementById("contact")?.scrollIntoView({
-        behavior: "smooth",
-      })
-    }
-  >
-    Contact Our Team
-    <span>→</span>
-  </button>
-
-  <button
-    className="hero-secondary-button"
-    onClick={() =>
-      document.getElementById("services")?.scrollIntoView({
-        behavior: "smooth",
-      })
-    }
-  >
-    View Our Services
-    <span>→</span>
-  </button>
-
-</div>
-        </div>
-      </section>
+     
     </main>
   );
 }
@@ -6749,6 +6289,7 @@ function NotFoundPage() {
 //   );
 // }
 
+
 function Footer() {
   return (
     <footer className="footer">
@@ -6829,13 +6370,13 @@ function Footer() {
           <div className="footer-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
-            <a href="#tritox-advantage">Choose Tritox </a>
+            <a href="#tritox-advantage">Choose Tritox</a>
             <a href="#pricing">Pricing</a>
           </div>
         </div>
 
 
-        {/* COLUMN 3 - COMPANY */}
+        {/* COLUMN 3 - EXPLORE */}
         <div className="footer-column">
           <h4>Explore</h4>
 
@@ -6843,6 +6384,40 @@ function Footer() {
             <a href="#quote-team-impact">Resource</a>
             <a href="#success-stories">Success Stories</a>
             <a href="#contact">Contact Us</a>
+          </div>
+        </div>
+
+
+        {/* COLUMN 4 - CONTACT */}
+        <div className="footer-column footer-contact">
+          <h4>Contact Us</h4>
+
+          <div className="footer-contact-info">
+
+            {/* Phone */}
+            <p>
+              <span className="contact-icon">📞</span>
+              <a href="tel:+919XXXXXXXXX">
+                +91 9XXXXXXXXX
+              </a>
+            </p>
+
+            {/* Email */}
+            <p>
+              <span className="contact-icon">✉️</span>
+              <a href="mailto:info@tritoxtechnologies.com">
+                info@tritoxtechnologies.com
+              </a>
+            </p>
+
+            {/* Address */}
+            <p className="footer-address">
+              <span className="contact-icon">📍</span>
+              Tritox Technologies,<br />
+              Your Office Address,<br />
+              Tamil Nadu, India
+            </p>
+
           </div>
         </div>
 
@@ -6858,6 +6433,645 @@ function Footer() {
     </footer>
   );
 }
+
+
+
+
+
+
+function AboutPage() {
+   const values = [
+    {
+      number: "01",
+      title: "Professional Discipline",
+      description:
+        "We operate through defined processes, clear accountability, consistent communication, and disciplined execution. Every engagement is managed with a strong focus on operational accuracy, reliability, and adherence to client-specific requirements.",
+      icon: "✓",
+    },
+    {
+      number: "02",
+      title: "Insurance Workflow Knowledge",
+      description:
+        "Our teams are trained in the systems, terminology, quoting requirements, and operational workflows associated with Farmers Insurance agency operations. This enables Tritox to work effectively within established agency environments with minimal disruption to existing processes.",
+      icon: "◈",
+    },
+    {
+      number: "03",
+      title: "Confidentiality & Responsible Access",
+      description:
+        "Agency and customer information is handled through authorized, role-based access controls and defined confidentiality procedures. Team members are provided only the access required to perform their assigned responsibilities.",
+      icon: "⌁",
+    },
+    {
+      number: "04",
+      title: "Long-Term Operational Alignment",
+      description:
+        "Tritox works to align with each client’s systems, standards, and operating model rather than introducing a separate process. This creates stronger continuity between our support functions and the client’s internal operations over time.",
+      icon: "↗",
+    },
+  ];
+
+  return (
+    <>
+      {/* ================================
+          ABOUT HERO
+      ================================= */}
+      <main className="about-page">
+      <section id="about" className="about-hero">
+
+        <div className="about-network-bg" />
+        <div className="about-hero-overlay" />
+        <div className="about-hero-grid-pattern" />
+
+        <div className="about-hero-circle about-hero-circle-one" />
+        <div className="about-hero-circle about-hero-circle-two" />
+        <div className="about-hero-circle about-hero-circle-three" />
+
+        <span className="about-network-node about-node-one" />
+        <span className="about-network-node about-node-two" />
+        <span className="about-network-node about-node-three" />
+        <span className="about-network-node about-node-four" />
+        <span className="about-network-node about-node-five" />
+
+        <div className="container about-hero-content">
+
+          <div className="about-hero-text">
+
+            <div
+              className="about-eyebrow"
+              style={{ color: "#ffffff" }}
+            >
+              <span className="pulse-dot" />
+              ABOUT TRITOX TECHNOLOGIES
+            </div>
+
+            <h1>
+              Structured Operations.
+              <span>Reliable Backend Support.</span>
+            </h1>
+
+            <p>
+              Tritox Technologies Private Limited is a specialized business
+              operations and backend support company serving clients worldwide.
+              We help businesses build dependable operational capacity through
+              structured processes, dedicated support, and scalable solutions.
+            </p>
+
+            <div className="about-hero-actions">
+
+              <button
+                className="about-primary-button"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Talk With Our Team
+                <span>→</span>
+              </button>
+
+              <button
+                className="about-primary-button"
+                onClick={() =>
+                  document
+                    .getElementById("services")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Explore Our Services
+                <span>↓</span>
+              </button>
+
+            </div>
+          </div>
+
+          {/* RIGHT VISUAL */}
+          <div className="about-hero-visual">
+
+            <div className="about-glow" />
+
+            <div className="about-operation-card">
+
+              <div className="about-card-header">
+
+                <div>
+                  <span>TRITOX TECHNOLOGIES</span>
+                  <h3>Operational Support</h3>
+                </div>
+
+                <div className="about-status">
+                  <span />
+                  Active
+                </div>
+
+              </div>
+
+              <div className="about-card-divider" />
+
+              <div className="about-operation-item">
+                <div className="about-operation-icon">✓</div>
+
+                <div>
+                  <strong>Structured Workflows</strong>
+                  <span>Process-driven operations</span>
+                </div>
+              </div>
+
+              <div className="about-operation-item">
+                <div className="about-operation-icon">↗</div>
+
+                <div>
+                  <strong>Scalable Capacity</strong>
+                  <span>Support built around demand</span>
+                </div>
+              </div>
+
+              <div className="about-operation-item">
+                <div className="about-operation-icon">⚡</div>
+
+                <div>
+                  <strong>Reliable Execution</strong>
+                  <span>Focused on consistency</span>
+                </div>
+              </div>
+
+              <div className="about-card-footer">
+                <span>Business Operations</span>
+                <strong>01</strong>
+              </div>
+
+            </div>
+
+            <div className="about-floating-badge badge-one">
+              <span>✓</span>
+
+              <div>
+                <strong>Reliable</strong>
+                <small>Backend Support</small>
+              </div>
+            </div>
+
+            <div className="about-floating-badge badge-two">
+              <span>↗</span>
+
+              <div>
+                <strong>Scalable</strong>
+                <small>Operations</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      {/* ================================
+          COMPANY INTRODUCTION
+      ================================= */}
+      <section className="section about-introduction-section">
+
+        <div className="container about-introduction-grid">
+
+          <div className="about-introduction-content">
+
+            <p
+              className="eyebrow"
+              style={{ fontSize: "18px" }}
+            >
+              Who We Are
+            </p>
+
+            <h2>
+              A dependable operations partner built around disciplined
+              execution.
+            </h2>
+
+            <p>
+              Tritox Technologies Private Limited provides specialized business
+              operations and backend support services for organizations that
+              need structured, reliable, and scalable operational assistance.
+            </p>
+
+            <p>
+              Our capabilities include Farmers Insurance Quote Preparation
+              Support, Real Estate Backend Support, Broker Price Opinions
+              (BPO), and Data Entry Services—delivered through structured
+              processes aligned with each client’s operational requirements.
+            </p>
+
+          </div>
+
+          <div className="about-company-card">
+
+            <div className="company-card-header">
+              <span style={{ fontSize: "18px" }}>
+                TRITOX TECHNOLOGIES
+              </span>
+              <i>●</i>
+            </div>
+
+            <div className="company-card-main">
+
+              <div className="company-monogram">
+                T
+              </div>
+
+              <div>
+                <h3>
+                  Tritox Technologies Private Limited
+                </h3>
+
+                <p>
+                  Business Operations & Backend Support
+                </p>
+              </div>
+
+            </div>
+
+            <div className="company-info-grid">
+
+              <div>
+                <small>Founded</small>
+                <strong>2023</strong>
+              </div>
+
+              <div>
+                <small>Headquartered</small>
+                <strong>Tamil Nadu, India</strong>
+              </div>
+
+              <div>
+                <small>Structure</small>
+                <strong>Private Limited Company</strong>
+              </div>
+
+              <div>
+                <small>Service Model</small>
+                <strong>Global Client Support</strong>
+              </div>
+
+            </div>
+
+            <div className="company-card-footer">
+              <span>✓</span>
+              Structured processes aligned with client operations.
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* ================================
+          OPERATING MODEL
+      ================================= */}
+      <section className="about-operating-section">
+
+        <div className="container about-operating-grid">
+
+          <div className="operating-visual-card">
+
+            <div className="operating-card-top">
+              <span style={{ fontSize: "18px" }}>
+                TRITOX OPERATING MODEL
+              </span>
+
+              <i>✓</i>
+            </div>
+
+            <div className="operating-flow">
+
+              <div className="operating-flow-item">
+                <span>01</span>
+                <p>Defined Process</p>
+              </div>
+
+              <i className="operating-flow-line" />
+
+              <div className="operating-flow-item">
+                <span>02</span>
+                <p>Responsible Access</p>
+              </div>
+
+              <i className="operating-flow-line" />
+
+              <div className="operating-flow-item">
+                <span>03</span>
+                <p>Consistent Execution</p>
+              </div>
+
+            </div>
+
+            <div className="operating-card-bottom">
+
+              <div>
+                <strong>Client-Aligned</strong>
+                <small>
+                  Built around established workflows
+                </small>
+              </div>
+
+              <span>→</span>
+
+            </div>
+
+          </div>
+
+
+          <div className="about-operating-content">
+
+            <p
+              className="about-light-eyebrow"
+              style={{ fontSize: "18px" }}
+            >
+              Built for Consistency
+            </p>
+
+            <h2>
+              A practical operating model aligned with client systems and
+              standards.
+            </h2>
+
+            <p>
+              Founded in 2023 in Tamil Nadu, India, Tritox has built its
+              operating model around disciplined execution, domain expertise,
+              secure information handling, and consistent process alignment.
+            </p>
+
+            <p>
+              As a registered Private Limited Company, we operate with a
+              strong emphasis on corporate accountability, confidentiality,
+              operational consistency, and responsible business practices.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* ================================
+          VALUES
+      ================================= */}
+      <section className="section values-section">
+
+        <div className="container">
+
+          <div className="values-heading">
+
+            <div>
+
+              <p
+                className="eyebrow"
+                style={{ fontSize: "18px" }}
+              >
+                What We Stand For
+              </p>
+
+              <h2>
+                Professional support delivered through clarity, discipline,
+                and responsible execution.
+              </h2>
+
+            </div>
+
+            <p>
+              Our approach is built to support long-term operational
+              alignment and reliable day-to-day collaboration with every
+              client.
+            </p>
+
+          </div>
+
+
+          <div className="values-grid">
+
+            {values.map((value) => (
+
+              <article
+                key={value.number}
+                className="value-card"
+              >
+
+                <div className="value-card-top">
+
+                  <span className="value-icon">
+                    {value.icon}
+                  </span>
+
+                  <span className="value-number">
+                    {value.number}
+                  </span>
+
+                </div>
+
+                <h3>
+                  {value.title}
+                </h3>
+
+                <p>
+                  {value.description}
+                </p>
+
+                <span className="value-card-line" />
+
+              </article>
+
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* ================================
+          SECURITY
+      ================================= */}
+      <section className="section security-section">
+
+        <div className="container security-grid">
+
+          <div className="security-content">
+
+            <p
+              className="eyebrow"
+              style={{ fontSize: "18px" }}
+            >
+              Security & Infrastructure
+            </p>
+
+            <h2>
+              Secure Access. Controlled Operations. Responsible Data Handling.
+            </h2>
+
+            <p>
+              Tritox maintains a structured operating environment designed to
+              support secure, controlled, and consistent client operations.
+            </p>
+
+            <p>
+              Our teams work through authorized system access, secure
+              connectivity, defined access responsibilities, and controlled
+              data-handling practices to help safeguard agency and customer
+              information throughout day-to-day operations.
+            </p>
+
+            <div className="security-list">
+
+              <span>
+                <i>✓</i>
+                Authorized system access
+              </span>
+
+              <span>
+                <i>✓</i>
+                Role-based responsibilities
+              </span>
+
+              <span>
+                <i>✓</i>
+                Controlled data handling practices
+              </span>
+
+              <span>
+                <i>✓</i>
+                Consistent operational processes
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div className="security-visual">
+
+            <div className="security-panel">
+
+              <div className="security-panel-header">
+                <span>SECURE OPERATIONS</span>
+                <i>●</i>
+              </div>
+
+              <div className="security-lock">
+                <div className="lock-shackle" />
+                <div className="lock-body">✓</div>
+              </div>
+
+              <strong>
+                Controlled Client Access
+              </strong>
+
+              <p>
+                Access responsibilities aligned with assigned operational
+                requirements.
+              </p>
+
+              <div className="security-status-list">
+
+                <div>
+                  <span />
+                  Authorized Access
+                </div>
+
+                <div>
+                  <span />
+                  Defined Responsibilities
+                </div>
+
+                <div>
+                  <span />
+                  Controlled Operations
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="security-floating-label">
+              <span>✓</span>
+              Confidentiality-focused operations
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* ================================
+          FINAL CTA
+      ================================= */}
+      <section className="about-final-cta">
+
+        <div className="container about-final-cta-content">
+
+          <div>
+
+            <h1
+              className="about-light-eyebrow"
+              style={{
+                fontSize: "15px",
+                color: "#ffffff",
+              }}
+            >
+              Work With Tritox
+            </h1>
+
+            <h2>
+              Build a more structured and reliable backend support model.
+            </h2>
+
+            <p>
+              Discover how Tritox can align with your existing workflows and
+              support your operational requirements.
+            </p>
+
+          </div>
+
+
+          <div className="hero-buttons">
+
+            <button
+              className="hero-primary-button"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({
+                    behavior: "smooth",
+                  })
+              }
+            >
+              Contact Our Team
+              <span>→</span>
+            </button>
+
+            <button
+              className="hero-secondary-button"
+              onClick={() =>
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({
+                    behavior: "smooth",
+                  })
+              }
+            >
+              View Our Services
+              <span>→</span>
+            </button>
+
+          </div>
+
+        </div>
+      </section>
+      </main>
+    </>
+  );
+}
+
+
 
 
 
@@ -6903,11 +7117,11 @@ function App() {
           <SuccessStoryPage />
         </section>
         {/* About */}
-        {/* <section id="about" className="about-hero">
+        <section id="about" className="page-section">
           <AboutPage />
 
           
-        </section> */}
+        </section>
 
         {/* Contact */}
         <section id="contact" className="page-section">
