@@ -6390,35 +6390,9 @@ function Footer() {
 
         {/* COLUMN 4 - CONTACT */}
         <div className="footer-column footer-contact">
-          <h4>Contact Us</h4>
+          
 
-          <div className="footer-contact-info">
-
-            {/* Phone */}
-            <p>
-              <span className="contact-icon">📞</span>
-              <a href="tel:+919XXXXXXXXX">
-                +91 9XXXXXXXXX
-              </a>
-            </p>
-
-            {/* Email */}
-            <p>
-              <span className="contact-icon">✉️</span>
-              <a href="mailto:info@tritoxtechnologies.com">
-                info@tritoxtechnologies.com
-              </a>
-            </p>
-
-            {/* Address */}
-            <p className="footer-address">
-              <span className="contact-icon">📍</span>
-              Tritox Technologies,<br />
-              Your Office Address,<br />
-              Tamil Nadu, India
-            </p>
-
-          </div>
+          
         </div>
 
       </div>
