@@ -15,11 +15,11 @@ import "./Navbar.css";
 const navigationItems = [
   { label: "Home", path: "home" },
   { label: "Services", path: "services" },
-  { label: "Tritox Difference", path: "tritox-advantage" },
+  { label: "Tritox Capabilities", path: "tritox-advantage" },
   { label: "Resource", path: "quote-team-impact" },
   { label: "Pricing", path: "pricing" },
   { label: "Success Story", path: "success-stories" },
-  { label: "About", path: "about" },
+  // { label: "About", path: "about" },
   
   { label: "Contact Us", path: "contact" },
   //  { label: "About", path: "about" },
@@ -28,7 +28,9 @@ const navigationItems = [
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
+  const [resourceOpen, setResourceOpen] = useState(false);
 
+  /* ACTIVE SECTION WHILE SCROLLING */
   useEffect(() => {
     const handleScroll = () => {
       const sections = navigationItems.map((item) =>
@@ -40,7 +42,6 @@ function Navbar() {
       sections.forEach((section) => {
         if (section) {
           const sectionTop = section.getBoundingClientRect().top;
-
           if (sectionTop <= 150) {
             currentSection = section.id;
           }
@@ -51,48 +52,170 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  /* CLOSE RESOURCE DROPDOWN WHEN CLICKING OUTSIDE */
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".resource-dropdown")) {
+        setResourceOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
+  /* NORMAL NAVIGATION SCROLL */
+  const handleNavigation = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const navbarHeight = 100;
+    const sectionPosition =
+      section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+    window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+  };
+
+  /* RESOURCE DROPDOWN NAVIGATION (Onboarding / Workflow) */
+  const handleResourceClick = (sectionId) => {
+    setResourceOpen(false);
+
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+
+      const navbarHeight = 100;
+      const sectionPosition =
+        section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+    }, 100);
+  };
 
   return (
     <header className="navbar">
       <div className="container navbar-content">
-
-        {/* Logo */}
-        <a href="#home" className="brand">
-          <img
-            src="/tritox_logo.png"
-            className="brand-logo"
-            
-          />
-
+        {/* LOGO */}
+        <a
+          href="#home"
+          className="brand"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavigation("home");
+          }}
+        >
+          <img src="/tritox_logo.png" className="brand-logo" alt="Tritox Technologies" />
           <span style={{ color: "#1565c0" }}>Tritox Technologies</span>
         </a>
 
-        {/* Navigation */}
+        {/* NAVIGATION */}
         <nav className="nav-links">
-          {navigationItems.map((item) => (
-            <a
-              key={item.path}
-              href={`#${item.path}`}
-              className={
-                activeSection === item.path ? "active" : ""
-              }
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+          {navigationItems.map((item) => {
+            // Render the "Resource" item as a dropdown that ALSO scrolls
+            if (item.label === "Resource") {
+              return (
+                <div className="resource-dropdown" key={item.path}>
+                 <button
+  type="button"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "6px",
+    border: "none",
+    cursor: "pointer",
+    fontfamily: "inter",
+    fontWeight:600,
 
+  fontSize: "14px",
+
+  
+    padding: "6px 12px",
+    borderRadius: "6px",
+    backgroundColor: activeSection === item.path ? "#1669c1" : "transparent",
+    color: activeSection === item.path ? "#ffffff" : "#12345a",
+    //  fontWeight: activeSection === item.path ? 600 : 400,
+  }}
+  onClick={(e) => {
+    e.stopPropagation();
+    handleNavigation(item.path);
+    setResourceOpen((prev) => !prev);
+  }}
+>
+  <span>{item.label}</span>
+  <span
+    style={{
+      display: "inline-flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: "10px",
+      lineHeight: "0.4",
+      color: activeSection === item.path ? "#ffffff" : "#12345a",
+    }}
+  >
+    <span>•</span>
+    <span>•</span>
+    <span>•</span>
+  </span>
+</button>
+
+                  {resourceOpen && (
+                    <div className="resource-dropdown-menu">
+                      <button
+                        type="button"
+                        onClick={() => handleResourceClick("onboarding-intro-section")}
+                      >
+                        <span className="resource-menu-icon">01</span>
+                        <span className="resource-menu-text">
+                          <strong>Onboarding</strong>
+                          <small>International staff onboarding</small>
+                        </span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => handleResourceClick("workflow-resource")}
+                      >
+                        <span className="resource-menu-icon">02</span>
+                        <span className="resource-menu-text">
+                          <strong>Workflow</strong>
+                          <small>Lead-to-close workflow</small>
+                        </span>
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            // Every other item renders as a normal nav link
+            return (
+              <a
+                key={item.path}
+                href={`#${item.path}`}
+                className={activeSection === item.path ? "active" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation(item.path);
+                }}
+              >
+                {item.label}
+              </a>
+            );
+          })}
+
+          {/* ABOUT - SEPARATE PAGE */}
+          {/* <a href="/about" className="about-link">About</a> */}
+        </nav>
       </div>
     </header>
   );
 }
-
-
 
 
 
@@ -1858,7 +1981,7 @@ Coverage Support</small>
 
   <div className="tritox-quote-card-image">
     <img
-      src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+      src="/umberlla.jpg"
       alt="Umbrella insurance quote preparation"
     />
 
@@ -3460,7 +3583,7 @@ function ImpactPage() {
       </section>
 
       {/* Dedicated Quote Team */}
-      <section className="section dedicated-team-section">
+      <section  className="section dedicated-team-section">
         <div className="container">
           <div className="dedicated-team-heading">
             <div>
@@ -3907,7 +4030,7 @@ function ImpactPage() {
           </div>
         </div>
       </section>
-        <section className="tritox-onboarding-hero">
+        <section id="onboarding-intro-section"  className="tritox-onboarding-hero">
   <div className="tritox-onboarding-hero-container">
 
     {/* LEFT SIDE */}
@@ -4163,7 +4286,7 @@ function ImpactPage() {
       </section>
 
       {/* Full onboarding process */}
-   <div className="horizontal-onboarding-section">
+   <div id="workflow-resource" className="horizontal-onboarding-section">
 
   {/* TOP TEXT */}
   <div className="horizontal-onboarding-heading">
@@ -5547,45 +5670,11 @@ function PricingPage() {
 
 function ContactPage() {
   
-  const values = [
-    {
-      number: "01",
-      title: "Professional Discipline",
-      description:
-        "We operate through defined processes, clear accountability, consistent communication, and disciplined execution. Every engagement is managed with a strong focus on operational accuracy, reliability, and adherence to client-specific requirements.",
-      icon: "✓",
-    },
-    {
-      number: "02",
-      title: "Insurance Workflow Knowledge",
-      description:
-        "Our teams are trained in the systems, terminology, quoting requirements, and operational workflows associated with Farmers Insurance agency operations. This enables Tritox to work effectively within established agency environments with minimal disruption to existing processes.",
-      icon: "◈",
-    },
-    {
-      number: "03",
-      title: "Confidentiality & Responsible Access",
-      description:
-        "Agency and customer information is handled through authorized, role-based access controls and defined confidentiality procedures. Team members are provided only the access required to perform their assigned responsibilities.",
-      icon: "⌁",
-    },
-    {
-      number: "04",
-      title: "Long-Term Operational Alignment",
-      description:
-        "Tritox works to align with each client’s systems, standards, and operating model rather than introducing a separate process. This creates stronger continuity between our support functions and the client’s internal operations over time.",
-      icon: "↗",
-    },
-  ];
 
   
   return (
     <main>
-      {/* <PageBanner
-        eyebrow="Contact Us"
-        title="Start Your Free Trial"
-        description="Tell us about your agency and quote preparation requirements. Our team will help you understand the next steps."
-      /> */}
+      
 
       {/* Contact form section */}
       <section className="section white-section">
@@ -5639,6 +5728,22 @@ function ContactPage() {
                 standards, CRM process, and operational requirements.
               </p>
             </div>
+            <div style={{ marginTop: "20px" }}>
+  <a  href="/about"
+    style={{
+      display: "inline-block",
+      padding: "10px 24px",
+      backgroundColor: "#07509c",
+      color: "#ffffff",
+      fontSize: "15px",
+      fontWeight: "700",
+      textDecoration: "none",
+      borderRadius: "6px",
+    }}
+  >
+    Learn About Us →
+  </a>
+</div>
             
           </div>
 
@@ -5745,31 +5850,6 @@ function ContactPage() {
       </section>
 
 
-      {/* Final CTA */}
-      {/* <section className="contact-final-cta">
-        <div className="container contact-final-content">
-          <div>
-            <p className="contact-light-eyebrow">
-              Ready to Get Started?
-            </p>
-
-            <h2>
-              Build a more efficient quote preparation workflow for your
-              agency.
-            </h2>
-
-            <p>
-              Start your free trial and discover how Tritox can help your
-              agency expand backend capacity while keeping producers focused on
-              customers and new business.
-            </p>
-          </div>
-
-          <Link to="/contact" className="contact-final-button">
-            Start Your Free Trial →
-          </Link>
-        </div>
-      </section> */}
      
     </main>
   );
@@ -6370,8 +6450,9 @@ function Footer() {
           <div className="footer-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
-            <a href="#tritox-advantage">Choose Tritox</a>
-            <a href="#pricing">Pricing</a>
+            <a href="#tritox-advantage">Tritox Capabilities</a>
+            
+           
           </div>
         </div>
 
@@ -6382,15 +6463,27 @@ function Footer() {
 
           <div className="footer-links">
             <a href="#quote-team-impact">Resource</a>
-            <a href="#success-stories">Success Stories</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#success-stories">Success Story</a>
+             <a href="#pricing">Pricing</a>
           </div>
         </div>
 
 
         {/* COLUMN 4 - CONTACT */}
         <div className="footer-column footer-contact">
+            <h4>Connect</h4>
+
+          <div className="footer-links">
+            <a href="#contact">Contact Us</a>
+            
+            
+          </div>
           
+
+          
+        </div>
+        <div className="footer-column footer-contact">
+           
 
           
         </div>
@@ -6450,7 +6543,7 @@ function AboutPage() {
       {/* ================================
           ABOUT HERO
       ================================= */}
-      <main className="about-page">
+      <main  className="about-page">
       <section id="about" className="about-hero">
 
         <div className="about-network-bg" />
@@ -6493,7 +6586,7 @@ function AboutPage() {
 
             <div className="about-hero-actions">
 
-              <button
+              {/* <button
                 className="about-primary-button"
                 onClick={() =>
                   document
@@ -6503,19 +6596,21 @@ function AboutPage() {
               >
                 Talk With Our Team
                 <span>→</span>
-              </button>
-
-              <button
-                className="about-primary-button"
-                onClick={() =>
-                  document
-                    .getElementById("services")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                Explore Our Services
-                <span>↓</span>
-              </button>
+              </button> */}
+   <a
+        href="/"
+        style={{
+          display: "inline-block",
+          marginTop: "30px",
+          padding: "12px 24px",
+          background: "#1565c0",
+          color: "#ffffff",
+          textDecoration: "none",
+          borderRadius: "6px",
+        }}
+      >
+       ⬅ Back to Home
+      </a>
 
             </div>
           </div>
@@ -7006,7 +7101,7 @@ function AboutPage() {
           </div>
 
 
-          <div className="hero-buttons">
+          {/* <div className="hero-buttons">
 
             <button
               className="hero-primary-button"
@@ -7034,9 +7129,9 @@ function AboutPage() {
             >
               View Our Services
               <span>→</span>
-            </button>
+            </button> */}
 
-          </div>
+          {/* </div> */}
 
         </div>
       </section>
@@ -7052,56 +7147,88 @@ function AboutPage() {
 
 
 
-function App() {
+function MainPage() {
   return (
     <>
-      {/* Navbar */}
       <Navbar />
 
-      {/* Single Page Content */}
       <main className="single-page">
 
-        {/* Home */}
         <section id="home" className="page-section">
           <HomePage />
         </section>
 
-        {/* Services */}
         <section id="services" className="page-section">
           <ServicesPage />
         </section>
 
-        {/* Tritox Advantage */}
         <section id="tritox-advantage" className="page-section">
           <AdvantagePage />
         </section>
 
-        {/* Resource / Quote Team Impact */}
         <section id="quote-team-impact" className="page-section">
           <ImpactPage />
         </section>
 
-        {/* Pricing */}
         <section id="pricing" className="page-section">
           <PricingPage />
         </section>
 
-        {/* Success Stories */}
         <section id="success-stories" className="page-section">
           <SuccessStoryPage />
         </section>
-        {/* About */}
-        <section id="about" className="page-section">
-          <AboutPage />
 
-          
-        </section>
-
-        {/* Contact */}
         <section id="contact" className="page-section">
           <ContactPage />
           <Footer />
-          
+        </section>
+
+      </main>
+    </>
+  );
+}
+function App() {
+  const isAboutPage = window.location.pathname === "/about";
+  if (isAboutPage) {
+    return (
+      <div className="about-only-page">
+        <AboutPage />
+      </div>
+    );
+  }
+  return (
+    <>
+      <Navbar />
+
+      <main className="single-page">
+
+        <section id="home" className="page-section">
+          <HomePage />
+        </section>
+
+        <section id="services" className="page-section">
+          <ServicesPage />
+        </section>
+
+        <section id="tritox-advantage" className="page-section">
+          <AdvantagePage />
+        </section>
+
+        <section id="quote-team-impact" className="page-section">
+          <ImpactPage />
+        </section>
+
+        <section id="pricing" className="page-section">
+          <PricingPage />
+        </section>
+
+        <section id="success-stories" className="page-section">
+          <SuccessStoryPage />
+        </section>
+
+        <section id="contact" className="page-section">
+          <ContactPage />
+          <Footer />
         </section>
 
       </main>
