@@ -2535,7 +2535,7 @@ Coverage Support</small>
               Start Your Free Trial →
             </a>
             </div>  */}
-            <button
+            {/* <button
                 // onClick={() => scrollToSection("contact")}
                 className="hero-primary-button"
               >
@@ -2543,7 +2543,7 @@ Coverage Support</small>
               Start Your Free Trial  →
             </a>
                 
-              </button>
+              </button> */}
 
               {/* <button
                 onClick={() => scrollToSection("pricing")}
