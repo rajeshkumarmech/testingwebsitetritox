@@ -1269,7 +1269,7 @@ function HomePage() {
               Tritox Technologies provides specialized quote preparation and
               operational support for Auto, Home, Bundle, Renters, Umbrella and Life quotes, helping
               Farmers Insurance agencies streamline quoting workflows and
-              strengthen day-to-day operational efficiency.
+              strength day-to-day operational efficiency.
             </p>
 
             {/* Buttons */}
