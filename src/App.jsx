@@ -265,7 +265,7 @@ function SuccessStoryPage() {
         "Tritox Technologies offers a practical approach to insurance quote preparation and operational support. Their focus on improving workflow efficiency and helping insurance agencies manage their daily quoting requirements can provide valuable support for growing agency.",
 name: "Matt Bennett",
       role: " District Manager",
-      location: " United States",
+      location: "Arizona",
       recognition: "",
       image: "/bundle.png",
       
@@ -277,8 +277,8 @@ name: "Matt Bennett",
     "Tritox Technologies provides structured insurance quote preparation and operational support that can help Farmers Insurance agencies improve workflow efficiency, reduce repetitive administrative work, and maintain a more consistent quoting process.",
 
   name: "Holly Kornachuk",
-  role: "Farmers Insurance",
-  location: " United States",
+  role: "Agency Owner",
+  location: " Michigan",
   recognition: "",
   image: "/bundle.png",
 
@@ -291,7 +291,7 @@ name: "Matt Bennett",
 
   name: "Mirvat Kadouh",
   role: "District Manager",
-  location: "United States",
+  location: "Michigan",
   recognition: "",
   image: "/bundle.png",
 
