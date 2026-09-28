@@ -262,7 +262,7 @@ function SuccessStoryPage() {
     {
       rating: "5.0",
       quote:
-        "Tritox Technologies offers a practical approach to insurance quote preparation and operational support. Their focus on improving workflow efficiency and helping insurance agencies manage their daily quoting requirements can provide valuable support for growing agency networks.",
+        "Tritox Technologies offers a practical approach to insurance quote preparation and operational support. Their focus on improving workflow efficiency and helping insurance agencies manage their daily quoting requirements can provide valuable support for growing agency.",
 name: "Matt Bennett",
       role: " District Manager",
       location: " United States",
@@ -300,10 +300,10 @@ name: "Matt Bennett",
 {
   rating: "5.0",
   quote:
-    "Tritox Technologies provides practical operational support for insurance agencies, with a focus on quote preparation, workflow organization, and day-to-day efficiency. This type of structured support can be valuable for agencies looking to manage growing quoting requirements.",
+    "Tritox Technologies provides practical operational support for insurance agencies, with a focus on quote preparation, workflow organization, and day-to-day efficiency. This type of structured support can be valuable for agencies.",
 
   name: "Nate Sparrow",
-  role: "Build a Seven-Figure Insurance Agency",
+  role: " Insurance Agency",
   location: "Greater Indianapolis",
   recognition: "",
   image: "/bundle.png",
@@ -2240,12 +2240,9 @@ Coverage Support</small>
             <div>
               
 
-              <span
-  className="eyebrow crm-eyebrow"
-  style={{ fontFamily: "poppins, Arial, sans-serif" }}
->
-  Crm Management 
-</span>
+              <span // className="eyebrow crm-eyebrow"
+                style={{ fontFamily: "poppins, Arial, sans-serif",fontSize:"20px",fontWeight:600 ,}}>
+                 CRM MANAGEMENT </span>
 
               <h2>
                 Accurate CRM data.
@@ -4131,38 +4128,43 @@ function ImpactPage() {
 
             <div className="onboarding-status-card">
               <div className="onboarding-status-header">
-                <span>ONBOARDING OVERVIEW</span>
+                <span style={{ fontSize: "16px" }}>ONBOARDING OVERVIEW</span>
                 <i>✓</i>
               </div>
 
               <div className="onboarding-status-item">
-                <span className="status-item-number">01</span>
+                <span className="status-item-number" style={{ fontSize: "15px" }}>01</span>
 
                 <div>
-                  <strong>Eligibility & Compliance</strong>
-                  <small>Agency confirms eligibility and assigned duties</small>
+  <strong style={{ fontSize: "18px" }}>
+    Eligibility & Compliance
+  </strong>
+
+  <small style={{ fontSize: "13px" }}>
+    Agency confirms eligibility and assigned duties
+  </small>
+</div>
+              </div>
+
+              <div className="onboarding-status-item">
+                <span className="status-item-number" style={{ fontSize: "15px" }}>02</span>
+
+                <div>
+                  <strong style={{ fontSize: "18px" }}>Farmers System Access</strong>
+                  <small style={{ fontSize: "13px" }}>Existing ID link or new staff request process</small>
                 </div>
               </div>
 
               <div className="onboarding-status-item">
-                <span className="status-item-number">02</span>
+                <span className="status-item-number" style={{ fontSize: "15px" }}>03</span>
 
                 <div>
-                  <strong>Farmers System Access</strong>
-                  <small>Existing ID link or new staff request process</small>
+                  <strong style={{ fontSize: "18px" }}>CRM & Production Setup</strong>
+                  <small style={{ fontSize: "13px" }}>Dedicated CRM access and support readiness</small>
                 </div>
               </div>
 
-              <div className="onboarding-status-item">
-                <span className="status-item-number">03</span>
-
-                <div>
-                  <strong>CRM & Production Setup</strong>
-                  <small>Dedicated CRM access and support readiness</small>
-                </div>
-              </div>
-
-              <div className="onboarding-status-footer">
+              <div className="onboarding-status-footer" style={{ fontSize: "15px" }}>
                 <span>✓</span>
                 Structured agency-led onboarding process
               </div>
