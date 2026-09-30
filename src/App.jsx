@@ -2239,10 +2239,10 @@ Coverage Support</small>
 
             <div>
               
-
-              <span // className="eyebrow crm-eyebrow"
-                style={{ fontFamily: "poppins, Arial, sans-serif",fontSize:"20px",fontWeight:600 ,}}>
-                 CRM MANAGEMENT </span>
+ <div className="services-hero-badge">
+            <span className="pulse-dot"></span>
+            CRM MANAGEMENT
+          </div>
 
               <h2>
                 Accurate CRM data.
@@ -3092,9 +3092,10 @@ function AdvantagePage() {
 
             
 
-              <p className="eyebrow workflow-eyebrow">
-                WORKFLOW
-              </p>
+               <div className="services-hero-badge">
+            <span className="pulse-dot"></span>
+            WORK FLOW
+          </div>
 
             </div>
 
@@ -3584,9 +3585,11 @@ function ImpactPage() {
         <div className="container">
           <div className="dedicated-team-heading">
             <div>
-              <p className="eyebrow dedicated-team-eyebrow"style={{ fontSize: "18px" }}>
-                Dedicated Quoting Team
-              </p>
+               <div className="services-hero-badge">
+            <span className="pulse-dot"></span>
+            Dedicated Quoting Team
+          </div>
+              
 
               <h2>
                 Structured backend support that moves eligible leads toward
@@ -5157,9 +5160,11 @@ function PricingPage() {
 
           <div className="comparison-heading">
 
-            <p className="eyebrow comparison-eyebrow">
-              Cost Structure & Operational Efficiency
-            </p>
+            
+            <div className="services-hero-badge">
+            <span className="pulse-dot"></span>
+            Cost Structure & Operational Efficiency
+          </div>
 
             <h2>
               A More Flexible Approach to Expanding Backend Capacity
