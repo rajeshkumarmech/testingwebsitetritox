@@ -110,7 +110,51 @@ function Navbar() {
           }}
         >
           <img src="/tritox_logo.png" className="brand-logo" alt="Tritox Technologies" />
-          <span style={{ color: "#1565c0" }}>Tritox Technologies</span>
+          {/* <span style={{ color: "#1565c0" }}>Tritox Technologies</span> */}
+          {/* <span style={{
+    display: "inline-block",
+    color: "#1565c0",
+    fontWeight: "700",
+    background: "linear-gradient(90deg, #1565c0, #42a5f5)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    padding: "2px 8px",
+    borderRadius: "8px",
+    position: "relative",
+  }}
+>
+  Tritox Technologies
+</span> */}
+{/* <span
+  style={{
+    display: "inline-block",
+    color: "#1565c0",
+    fontWeight: "700",
+    padding: "6px 14px",
+    borderRadius: "20px",
+    background: "linear-gradient(135deg, #e3f2fd, #ffffff)",
+    border: "1px solid #90caf9",
+    boxShadow: "0 4px 12px rgba(21, 101, 192, 0.15)",
+    letterSpacing: "0.3px",
+  }}
+>
+  Tritox Technologies
+</span> */}
+<span
+  style={{
+    display: "inline-block",
+    fontWeight: "700",
+    letterSpacing: "0.4px",
+    padding: "5px 14px",
+    borderRadius: "12px",
+    color: "#1565c0",
+    background: "linear-gradient(135deg, #e8f4ff, #ffffff)",
+    border: "1px solid rgba(21, 101, 192, 0.25)",
+    boxShadow: "0 5px 15px rgba(21, 101, 192, 0.12)",
+  }}
+>
+  Tritox Technologies
+</span>
         </a>
 
         {/* NAVIGATION */}
@@ -303,7 +347,7 @@ name: "Matt Bennett",
     "Tritox Technologies provides practical operational support for insurance agencies, with a focus on quote preparation, workflow organization, and day-to-day efficiency. This type of structured support can be valuable for agencies.",
 
   name: "Nate Sparrow",
-  role: " Insurance Agency",
+  role: " Agency Owner",
   location: "Greater Indianapolis",
   recognition: "",
   image: "/bundle.png",
@@ -2239,10 +2283,10 @@ Coverage Support</small>
 
             <div>
               
- <div className="services-hero-badge">
-            <span className="pulse-dot"></span>
-            CRM MANAGEMENT
-          </div>
+            <div className="services-hero-badge">
+                <span className="pulse-dot"></span>
+                    CRM MANAGEMENT
+            </div>
 
               <h2>
                 Accurate CRM data.
@@ -2255,12 +2299,19 @@ Coverage Support</small>
 
             </div>
 
-            <p >
-              Tritox provides structured CRM management support across leading
-              insurance agency platforms, helping Farmers agencies maintain
-              accurate, organized, and actionable lead and opportunity data
-              throughout the quoting lifecycle.
-            </p>
+            <p
+  style={{
+    borderLeft: "4px solid #f5d21f",
+    paddingLeft: "24px",
+    marginLeft: "0",
+    lineHeight: "1.8",
+  }}
+>
+  Tritox provides structured CRM management support across leading
+  insurance agency platforms, helping Farmers agencies maintain accurate,
+  organized, and actionable lead and opportunity data throughout the quoting
+  lifecycle.
+</p>
 
           </div>
 
